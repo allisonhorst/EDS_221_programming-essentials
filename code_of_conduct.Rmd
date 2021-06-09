@@ -1,0 +1,61 @@
+---
+title: "Code of Conduct"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+All enrolled students, auditors, and course visitors are expected to comply with the following code of conduct. We expect cooperation from all members to help ensure a safe and welcoming environment for everybody.
+
+### Overview
+
+We are determined to make our courses welcoming, inclusive and harassment-free for everyone regardless of gender, gender identity and expression, race, age, sexual orientation, disability, physical appearance, body size, or religion (or lack thereof). We do not tolerate harassment of class participants, teaching assistants, or instructors in any form. Derogatory, abusive, demeaning or sexual language and imagery is not appropriate or acceptable. Saying something "as a joke" does not make it less offensive, harmful, or consequential.  
+
+Anything not covered here but that exists in the [UCSB Student Conduct Code](https://www.sa.ucsb.edu/regulations/student-conduct-code/student-conduct-code) also applies, and will be enforced by UCSB Policy. 
+
+These expectations and consequences apply to synchronous discussions, office hours, the course Slack workspace, and all other modes of communication, posting or discussion by course participants.
+
+### Examples of behavior that contributes to creating a positive environment include:
+
+- Using welcoming and inclusive language
+- Being an aware and respectful colleague (raise your hand when asked, respect others’ time and space, include peers in small discussions, don’t dominate meetings, etc.)
+- Giving proper credit to the creator (of an idea/material/solution/etc.)
+- Being respectful of differing viewpoints and experiences
+- Showing empathy towards all community members
+- Understanding that an individual’s experience and worldview are influenced by multiple (and often compounding) facets of their identity, and that your perception of a situation/topic/reaction may be very different from your classmates’
+
+### Examples of unacceptable behavior by class participants include:
+
+- Distracting other students in classes in labs, or otherwise distracting from their education
+- Any abuse, disrespect or harassment of teaching assistants, other students, or teachers, is not tolerated and will result in disciplinary action as needed
+- The use of unwelcome sexual attention or advances
+- Trolling, insulting/derogatory comments or language, and personal or political attacks
+- Public or private harassment
+- Publishing others' private information, such as a physical or electronic address, without explicit permission
+- Other conduct which could reasonably be considered inappropriate in a professional setting
+
+Members asked to stop any harassing behavior are expected to comply immediately. If you are being harassed, notice that someone else is being harassed, or have any other concerns in or related to these classes, you are welcome to contact Allison or use outside resources.
+
+### Other resources at UCSB
+
+At Campus Advocacy, Resources and Education (CARE) you can chat with a UCSB staff member in a confidential setting. CARE assists faculty, staff and students who have been impacted by sexual harassment, sexual assault, domestic/dating violence, and stalking. The office is confidential so you can talk with a staff member in private without any reporting obligations. 
+
+- Phone: (805) 893-4613. 
+- Office is located in the Student Resource Building (SRB) near parking lot 23. 
+
+Another confidential resource is the Campus Ombuds office. The Ombuds office is particularly helpful if you would like to describe a sensitive issue in a confidential setting and learn more about campus resources to address the issue. The Ombuds office is located at 1205-K Girvetz Hall and their phone number is 805-893-3285. The Ombuds office provides consultation, mediation, and facilitation, among other services, for faculty, staff and students.
+
+UCSB Academic Counseling is a resource outside of the Bren department that can help with a number of topics from academic planning to “balancing personal difficulties in academics.”
+
+- Graduate counselor: Ryan Sims
+- Phone: 805-893-2068
+- Email: ryan.sims\@graddiv.ucsb.edu
+
+
+This is a living document, that we are always hoping to improve. If you have suggestions, questions or ideas for how we can update our Code of Conduct, we encourage you to reach out to us and will be grateful for your feedback. 
+
+Contributions by: 
+
+- Allison Horst
+- Jessica Couture

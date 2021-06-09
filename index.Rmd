@@ -1,6 +1,6 @@
 ---
-title: "EDS 123: Optional MEDS Template"
-description: "A minimal website skeleton and theme for MEDS course with distill (by RStudio)"
+title: "EDS 221: Scientific programming essentials"
+description: "Programming essentials for environmental data science in R and Python"
 site: distill::distill_website
 ---
 
@@ -15,99 +15,132 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ```
 
-```{r, out.width = "100%", fig.cap = "Update this image by dropping your new image into the img folder of the project, then open the index.Rmd & change the path to point to the new image. Image: Mississippi River south of Memphis, TN, from USGS shared on Unsplash (https://unsplash.com/photos/35Z2ylLRCO8)."}
+```{r, out.width = "100%"}
 
 # UPDATE IMAGE HERE 
 # or copy/paste this code elsewhere, updating the file path, to add other images to your site!
-knitr::include_graphics("img/usgs_sat.jpeg")
+knitr::include_graphics("img/rick-mason-lego-unsplash.jpg")
 ```
+<center>
+<p style="color:gray; font-size:15px;">
+<i>Assorted lego pile. Photo by <a href="https://unsplash.com/@egnaro?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Rick Mason</a> on <a href="https://unsplash.com/s/photos/legos?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>.</i>
+</p>
+</center>
 
-## Welcome to the MEDS distill template
+## Instructor
 
-Welcome to the MEDS Course Website template! This template is made with [distill](https://rstudio.github.io/distill/), a package to build lightweight and robust websites in R. This method for creating a course website may make the most sense for MEDS teachers who are familiar with RStudio, R Markdown, git and GitHub (or who want to learn!). For those of you who do *not* want to create your website with distill in R, but still want a course website, check out [Course-in-a-Box](https://course-in-a-box.p2pu.org/) to create a site with no prior coding experience.
-
-For those wanting to take the distill/R websites path: this template acts as both a starting point for your site, and place to learn basics ways to customize it (different topics currently populate the different modules, which I expect teachers will replace with different weeks or lessons or topics as useful for your courses). 
-
-### Some starting points:
-
-- Follow along with the "Getting started with the MEDS distill template" (COMING SOON) instructions to set up your own distill website. Please reach out to Allison for help getting your website started, and submit problems and suggestions as issues [here](https://github.com/allisonhorst/meds-distill-template). 
-
-- The "Weekly materials" section of this template site can be updated with your course materials, but also in this template serves the additional purpose of showing you how to customize some things on your page.
-
-- See the [EDS 212 Website](https://allisonhorst.github.io/EDS_212_essential-math/) for an example of what a customized live course site can look like using this template.
-
-<p style="color: #ba5e00"><b>TO UPDATE THIS PAGE:</b> Open and edit the <b>index.Rmd</b> file, in the project root, to delete this placeholder text and customize with your own!</p>
-
-## Course description
-
-<p style="color: #ba5e00"><b>NOTE:</b> A lot of this home page information can be directly from your syllabus.</p>
-
-Add your course description here.
-
-## Teaching team
-
-**Instructor:** Mike Wazowski (wazowski\@monstersinc.org)
-
--   **Office:** Closet 100
--   **Office hours:** Friday 9pm - 11pm
-
-**Teaching assistant:** Boo (boo\@monstersinc.org)
-
--   **Office:** Boo's Room
--   **Office hours:** Saturday 7am - 8am
+Allison Horst (ahorst\@ucsb.edu)
 
 ## Important links
 
--   Link to full course syllabus (here is the [MEDS optional syllabus template](https://docs.google.com/document/d/1b2CElvwKk-haEA1axY5KvTEBbiSPUf7dIRUNX7gCI6w/edit?usp=sharing))
+-   [Course syllabus](https://docs.google.com/document/d/1OGbc6U3STKdsThUKd9Nj5UgzeB7djgM130ku1UUH1gU/edit?usp=sharing)
+-   [Code of Conduct](code_of_conduct.html)
 
--   Link to Code of Conduct (Bren / UCSB)
+## Course description
 
--   Link to course GitHub Classroom, other essential resources
+In EDS 221, students will build key scientific programming skills essential for environmental data analysis and problem solving. Topics include structured programming and algorithm development, iteration, conditionals, functions and objects, documentation, testing and troubleshooting, tidy data structure, and an introduction to data wrangling and visualization. The course will be taught in R and Python.
 
-## Weekly course schedule
+## Expected lecture topics
 
--   **Lectures:** MW 8am - 9:15am (Warehouse Room 1)
--   **Labs:** Th 10am - 12pm (Warehouse Room 2)
++-----+------------------------------------------------------------------------------+
+| Day | Session : Topic                                                              |
++=====+==============================================================================+
+| 1   | **A:** "Hello, world." Course introduction, meet our tools and environments. |
+|     |                                                                              |
+|     | **B:** Project oriented workflows: projects, file paths, scripted code       |
++-----+------------------------------------------------------------------------------+
+| 2   | **A:** Data types and representation                                         |
+|     |                                                                              |
+|     | **B:** Common data types and structures in EDS                               |
++-----+------------------------------------------------------------------------------+
+| 3   | **A:** Conditionals and logical operations                                   |
+|     |                                                                              |
+|     | **B:** For loops                                                             |
++-----+------------------------------------------------------------------------------+
+| 4   | **A:** Introduction to functions in R and Python                             |
+|     |                                                                              |
+|     | **B:** Functions continued                                                   |
++-----+------------------------------------------------------------------------------+
+| 5   | **A:** Functions continued: testing, documentation, functionals              |
+|     |                                                                              |
+|     | **B:** Modules and packages                                                  |
++-----+------------------------------------------------------------------------------+
+| 6   | **A:** Tidy data and making it                                               |
+|     |                                                                              |
+|     | **B:** Data wrangling                                                        |
++-----+------------------------------------------------------------------------------+
+| 7   | **A:** Data wrangling continued                                              |
+|     |                                                                              |
+|     | **B:** Working with dates and times                                          |
++-----+------------------------------------------------------------------------------+
+| 8   | **A:** Data visualization with `ggplot2` and `seaborn` - Part 1              |
+|     |                                                                              |
+|     | **B:** Data visualization with `ggplot2` and `seaborn` - Part 2              |
++-----+------------------------------------------------------------------------------+
+| 9   | **A:** Troubleshooting (exploring, Googling, getting help, helping yourself) |
+|     |                                                                              |
+|     | **B:** Troubleshooting continued (tracing, reprex)                           |
++-----+------------------------------------------------------------------------------+
+| 10  | **A:** Working with data from external files and accessing data              |
+|     |                                                                              |
+|     | **B:** Wild data continued                                                   |
++-----+------------------------------------------------------------------------------+
+
+## Predictable daily schedule
+
+**Course dates:** Monday (2021-08-09) - Friday (2021-08-20)
+
+EDS 221 is an intensive 2-week long 4-unit course. Students should plan to attend all scheduled sessions. All course requirements will be completed between 8am and 5pm PST (M - F), i.e. you are not expected to do additional work for EDS 221 outside of those hours, unless you are working with the Teaching Assistant in student hours.
+
+Tentative daily schedule (subject to change):
+
+|                   |                                                            |
+|-------------------|------------------------------------------------------------|
+| **Time (PST)**    | **Activity**                                               |
+| 8:00am - 9:00am   | *Lecture 1 (60 min)*                                       |
+| 9:00am - 9:15am   | *Break 1 (15 min)*                                         |
+| 9:15am - 10:15am  | *Interactive Session 1 (60 min)*                           |
+| 10:15am - 11:00am | *Flex time (45 min)*                                       |
+| 11:00am - 12:15pm | *Break 2 (75 min)*                                         |
+| 12:15pm - 1:15pm  | *Lecture 2 (60 min)*                                       |
+| 1:15pm - 2:15pm   | *Interactive Session 2 (60 min)*                           |
+| 2:15pm - 3:15pm   | *Flex time (60 min)*                                       |
+| 3:15pm - 5:00pm   | *Interactive Session 3: Group & challenge tasks (105 min)* |
 
 ## Learning objectives
 
-Condimentum id venenatis a condimentum. Ultricies mi quis hendrerit dolor magna eget est. Turpis egestas maecenas pharetra convallis. Sem nulla pharetra diam sit amet. Diam volutpat commodo sed egestas egestas fringilla. Mauris in aliquam sem fringilla ut morbi tincidunt augue interdum. Ornare massa eget egestas purus viverra accumsan in.
+By the end of EDS 221, students should be able to:
 
--   Vulputate eu scelerisque felis imperdiet proin.
--   Euismod nisi porta lorem mollis aliquam.
--   Urna molestie at elementum eu facilisis sed odio morbi quis.
--   Convallis a cras semper auctor neque. Semper quis lectus nulla at volutpat diam ut venenatis tellus.
+-   **Design, implement, test and document algorithms** in R and Python (including functions with iteration, conditionals, messages and warnings)
+
+-   **Understand, create, convert, and work with different data structures** (e.g. vectors, data frames, lists) **and types** (e.g. numeric, character, factor, logical, datetimes)
+
+-   **Perform basic data wrangling and visualization** with real world  environmental data with tidyverse (in R) and pandas/seaborn (in Python)
+
+-   **Employ troubleshooting and debugging strategies** (tools, mindsets, strategies, resources)
+
+-   **Use basic (non-collaborative) project-oriented workflows** with reproducible code (R scripts, R Markdown, Python scripts) and version control (git/GitHub basics)
 
 ## Course requirements
 
 ### Computing
 
--   Minimum device requirements
+-   Minimum [MEDS device requirements](https://ucsb-meds.github.io/computer_reqs.html) (bring to all sessions + charger!)
 
--   Software requirements
+-   R version 4.0.2 (or higher)
 
--   Account requirements
+-   RStudio version 1.4.1103 (or higher)
 
-### Textbook
+## About this website
 
--   Required textbook / information
+This website was created with gratitude using [distill](https://rstudio.github.io/distill/) from [RStudio](https://www.rstudio.com/) by JJ Allaire, Rich Iannone, Alison Presmanes Hill, and Yihui Xie.
 
-### Other requirements
+This website is one piece of the EDS 221 course materials in addition to lectures, computational activities, discussions, and individual and group tasks, and important materials may exist partially or not at all on this site. While this website is public, it is not meant as a standalone online course.
 
--   Anything else
--   Important for students to know
+Other packages used to create this website:
 
-## Tentative topics
+-   `rmarkdown` for...pretty much everything: JJ Allaire and Yihui Xie and Jonathan McPherson and Javier Luraschi and Kevin Ushey and Aron Atkins and Hadley Wickham and Joe Cheng and Winston Chang and Richard Iannone (2021). rmarkdown: Dynamic Documents for R. R package version 2.7. URL <https://rmarkdown.rstudio.com>.
 
-| Week | Lecture topics | Lab topics |
-|------|----------------|------------|
-| 1    | Topics         | Topics     |
-| 2    | Topics         | Topics     |
-| 3    | Topics         | Topics     |
-| 4    | Topics         | Topics     |
-| 5    | Topics         | Topics     |
-| 6    | Topics         | Topics     |
-| 7    | Topics         | Topics     |
-| 8    | Topics         | Topics     |
-| 9    | Topics         | Topics     |
-| 10   | Topics         | Topics     |
+-   `kableExtra` for formatted tables: Hao Zhu (2020). kableExtra: Construct Complex Table with 'kable' and Pipe Syntax. R package version 1.3.1. <https://CRAN.R-project.org/package=kableExtra>
+
+-   Slides were made in R with `xaringan`: Yihui Xie (2021). xaringan: Presentation Ninja. R package version 0.20.2. <https://github.com/yihui/xaringan>
