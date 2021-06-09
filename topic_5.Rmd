@@ -1,0 +1,9 @@
+---
+title: "Topic 5: Basic formatting"
+---
+
+<p style="color: #ba5e00"><b>TO UPDATE THIS PAGE:</b> Open and edit the <b>topic_5.Rmd</b> file, in the project root, to delete this placeholder text and customize with your own!</p>
+
+If you're familiar with markdown, use standard syntax to update font styles, add bulleted lists, subscripts/superscripts, etc. (or learn more from the [R Markdown cheatsheet](https://www.rstudio.org/links/r_markdown_cheat_sheet)). 
+
+If you're not familiar with markdown and want an easier way to update formatting, there is a Visual Editor in RStudio versions > 1.4. It is absolutely worth it to check it out for easier formatting of text, images, tables, citations, and more. Read more about the new RStudio Visual Editor [here](https://blog.rstudio.com/2020/09/30/rstudio-v1-4-preview-visual-markdown-editing/).

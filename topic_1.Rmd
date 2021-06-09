@@ -1,0 +1,56 @@
+---
+title: "Topic 1: Add/remove a site page"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+**NOTE:** There are 10 toy Topic sections here, expecting that some teachers may want to have one page per week (for a 10 week course). You are encouraged to structure your course **however works best for your class**. All of your course information could be on a single page, or you might have a different number of topics, or organize weekly, or any other organization that works for you.
+
+<p style="color: #ba5e00"><b>TO UPDATE THIS PAGE:</b> Open and edit the <b>topic_1.Rmd</b> file, in the project root, to delete this placeholder text and customize with your own!</p>
+
+## Add a site page
+
+### The quick version: 
+
+- Make a new R Markdown document, save
+- Add the rendered .html to _site.yaml so the page exists on the site
+- Build to see updated site
+
+Below for a bit more detail...
+
+### Make each page an R Markdown document
+
+To make a new page:
+
+1. Within your website Project, create a new .Rmd (File > New File > R Markdown). Save it to the project root. For this example, let's say you've saved it as `new_page.Rmd.`
+
+2. In that .Rmd file, remove everything but the title (which you can change) from the YAML - that's the top section of the .Rmd, where by default it has title, author, date, etc.
+
+3. Update the .Rmd to contain whatever you want to have on that page. Don't know a lot about markdown? Considering switching over to the [Visual Editor in RStudio](https://blog.rstudio.com/2020/09/30/rstudio-v1-4-preview-visual-markdown-editing/) (versions >= 1.4). 
+
+4. Save the .Rmd
+
+### Add it to your navigation bar
+
+5. Open the `_site.yml` file in your Project
+
+6. Add the information to the YAML navbar section, which will almost always be the text that you want to appear in the navigation bar, and the file name of the **knitted html** that will be automatically rendered to /docs when you Build your website. That would be `new_page.html` for this example (since the .Rmd it is rendered from is `new_page.Rmd`). So in the `_site.yml` I would need to add this to the navbar section: 
+
+```
+    - text: "A new page!"
+      href: new_page.html
+```
+
+**Note:** YAML is space & indentation specific. Follow the structure that already exists in this template to avoid YAML errors.
+
+How is the website finding the html? Notice in the `_site.yml` file, the `output_dir` is set to `docs`. That means when we press 'Build website' (in the Build tab in RStudio), our .Rmd pages are knitted to HTML & sent to the `_docs` folder. This is also important because when we deploy the site (make it live), we will want to deploy **from that docs folder** using GitHub pages.
+
+Take a look at some other pages in this template (Resources, Assignments, etc.) to see the structure, & give it a shot!
+
+## Delete/disappear a site page
+
+The safest thing to do if you don't want a page to *show up* is to remove it from the `_site.yml` navbar listings. That way, the material on the page still exists as a file in your project, but doesn't show up on the website -- don't delete a page file unless you are REALLY SURE that you're never going to want the material on that page ever again.
+
+

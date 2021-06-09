@@ -1,0 +1,50 @@
+---
+title: "Topic 9: Changing site fonts"
+---
+
+<p style="color: #ba5e00"><b>TO UPDATE THIS PAGE:</b> Open and edit the <b>topic_9.Rmd</b> file, in the project root, to delete this placeholder text and customize with your own!</p>
+
+You are welcome to use any fonts you want on your website. Here, only using Google fonts is described (there are other methods for downloading fonts and adding, not included here). 
+
+## Fonts are imported and specified in theme.css
+
+In your Project in RStudio, open the `theme.css` file. 
+
+Near the top, you'll see some lines that look like this: 
+
+
+    /* Header font */
+    @import url('https://fonts.googleapis.com/css2?family=Sanchez&display=swap');
+
+    /* Body font */
+    @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400&display=swap');
+
+    /* Code font (Roboto Mono) */
+    @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400&display=swap');
+
+
+Those are the import command to get 3 different Google fonts (Sanchez, Nunito Sans, and Roboto Mono). You can explore many different Google fonts [here](https://fonts.google.com/). 
+
+## Use different fonts
+
+1. Find a [Google Font](https://fonts.google.com/) you like.
+
+2. Click on the font. To the right of the font example text, you should see an option to '+ Select this style'. Click the one(s) you want to select.
+
+3. That will probably bring up a side menu. If you *don't* see that side menu, you can see your selected styles at any time by clicking on the top-right menu icon that is a grid with 3 squares and a plus sign - hovering reveals this is to 'View your selected families'. In the *Use on the web* section of the side menu that appears, **select the radio button for @import**. It'll look weird like this (for the Zen Dots Google Font):
+
+```
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap');
+    </style> 
+```
+
+
+4. Copy everything BETWEEN (but excluding) the ending `<style>` and `</style>`tags
+
+5. Paste the `@import` line you've copied into the top section of `theme.css` near the other fonts imported there. It is now available for use in your theme.
+
+6. Update the css with your new fonts, replacing the existing font names with the name you've imported. You might want to use a Find & Replace All if you want to make sure you're updating a font everywhere it appears in the current theme.
+
+7. Repeat for as many different fonts as you want to update in your theme.
+
