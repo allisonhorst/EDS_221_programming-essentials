@@ -23,6 +23,7 @@
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
 div.sourceCode { margin: 1em 0; }
 pre.sourceCode { margin: 0; }
@@ -55,7 +56,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }
 code span.al { color: #ad0000; } /* Alert */
 code span.an { color: #5e5e5e; } /* Annotation */
-code span.at { } /* Attribute */
+code span.at { color: #20794d; } /* Attribute */
 code span.bn { color: #ad0000; } /* BaseN */
 code span.bu { } /* BuiltIn */
 code span.cf { color: #007ba5; } /* ControlFlow */
@@ -76,7 +77,7 @@ code span.kw { color: #007ba5; } /* Keyword */
 code span.op { color: #5e5e5e; } /* Operator */
 code span.ot { color: #007ba5; } /* Other */
 code span.pp { color: #ad0000; } /* Preprocessor */
-code span.sc { color: #5e5e5e; } /* SpecialChar */
+code span.sc { color: #20794d; } /* SpecialChar */
 code span.ss { color: #20794d; } /* SpecialString */
 code span.st { color: #20794d; } /* String */
 code span.va { color: #111111; } /* Variable */
@@ -85,22 +86,22 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </style>
 
   <!--radix_placeholder_meta_tags-->
-  <title>EDS 123: EDS 221: Scientific programming essentials</title>
+  <title>EDS 221: EDS 221: Scientific programming essentials</title>
 
   <meta property="description" itemprop="description" content="Programming essentials for environmental data science in R and Python"/>
 
 
 
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
-  <meta property="og:title" content="EDS 123: EDS 221: Scientific programming essentials"/>
+  <meta property="og:title" content="EDS 221: EDS 221: Scientific programming essentials"/>
   <meta property="og:type" content="article"/>
   <meta property="og:description" content="Programming essentials for environmental data science in R and Python"/>
   <meta property="og:locale" content="en_US"/>
-  <meta property="og:site_name" content="EDS 123"/>
+  <meta property="og:site_name" content="EDS 221"/>
 
   <!--  https://dev.twitter.com/cards/types/summary -->
   <meta property="twitter:card" content="summary"/>
-  <meta property="twitter:title" content="EDS 123: EDS 221: Scientific programming essentials"/>
+  <meta property="twitter:title" content="EDS 221: EDS 221: Scientific programming essentials"/>
   <meta property="twitter:description" content="Programming essentials for environmental data science in R and Python"/>
 
   <!--/radix_placeholder_meta_tags-->
@@ -1861,10 +1862,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
       // hoverable references
       $('span.citation[data-cites]').each(function() {
-        var refs = $(this).attr('data-cites').split(" ");
-        var refHtml = refs.map(function(ref) {
-          return "<p>" + $('#ref-' + ref).html() + "</p>";
-        }).join("\n");
+        var refHtml = $('#ref-' + $(this).attr('data-cites')).html();
         window.tippy(this, {
           allowHTML: true,
           content: refHtml,
@@ -2444,7 +2442,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     color: var(--hover-color, white);
   }</style>
   <!--/radix_placeholder_distill-->
-  <script src="site_libs/header-attrs-2.7/header-attrs.js"></script>
+  <script src="site_libs/header-attrs-2.8/header-attrs.js"></script>
   <script src="site_libs/popper-2.6.0/popper.min.js"></script>
   <link href="site_libs/tippy-6.2.7/tippy.css" rel="stylesheet" />
   <link href="site_libs/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
@@ -2472,32 +2470,31 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <header class="header header--fixed" role="banner">
 <nav class="distill-site-nav distill-site-header">
 <div class="nav-left">
-<a href="index.html" class="title">EDS 123</a>
+<a href="index.html" class="title">EDS 221</a>
 </div>
 <div class="nav-right">
 <a href="index.html">Home</a>
 <div class="nav-dropdown">
 <button class="nav-dropbtn">
-Topics
+Daily materials
  
 <span class="down-arrow">&#x25BE;</span>
 </button>
 <div class="nav-dropdown-content">
-<a href="topic_1.html">Topic 1: Add a new site page</a>
-<a href="topic_2.html">Topic 2: Update site title &amp; subtitle</a>
-<a href="topic_3.html">Topic 3: Add images</a>
-<a href="topic_4.html">Topic 4: Change the theme</a>
-<a href="topic_5.html">Topic 5: Basic formatting</a>
-<a href="topic_6.html">Topic 6: Internal &amp; external links</a>
-<a href="topic_7.html">Topic 7: Remove tables of contents</a>
-<a href="topic_8.html">Topic 8: Add a dropdown menu from navigation bar item</a>
-<a href="topic_9.html">Topic 9: Change site fonts</a>
-<a href="topic_10.html">Topic 10: Add a table</a>
+<a href="day_1.html">Day 1</a>
+<a href="day_2.html">Day 2</a>
+<a href="day_3.html">Day 3</a>
+<a href="day_4.html">Day 4</a>
+<a href="day_5.html">Day 5</a>
+<a href="day_6.html">Day 6</a>
+<a href="day_7.html">Day 7</a>
+<a href="day_8.html">Day 8</a>
+<a href="day_9.html">Day 9</a>
+<a href="day_10.html">Day 10</a>
 </div>
 </div>
-<a href="assignments.html">Assignments</a>
 <a href="resources.html">Resources</a>
-<a href="https://github.com/allisonhorst/meds-distill-template">
+<a href="https://github.com/allisonhorst/EDS_221_programming-essentials">
 <i class="fab fa-github" aria-hidden="true"></i>
 </a>
 <a href="javascript:void(0);" class="nav-toggle">&#9776;</a>
@@ -2540,7 +2537,7 @@ Topics
 </div>
 <center>
 <p style="color:gray; font-size:15px;">
-<i>Honeycomb hex patterns. Photo by <a href="https://unsplash.com/@laughvender?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Shilo Labelle</a> on <a href="https://unsplash.com/s/photos/hexagons?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>.</i>
+<p><i>Honeycomb hex patterns. Photo by <a href="https://unsplash.com/@laughvender?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Shilo Labelle</a> on <a href="https://unsplash.com/s/photos/hexagons?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>.</i></p>
 </p>
 </center>
 <h2 id="instructor">Instructor</h2>
@@ -2555,13 +2552,15 @@ Topics
 <h2 id="expected-lecture-topics">Expected lecture topics</h2>
 <table>
 <colgroup>
-<col style="width: 7%" />
-<col style="width: 92%" />
+<col style="width: 4%" />
+<col style="width: 63%" />
+<col style="width: 31%" />
 </colgroup>
 <thead>
 <tr class="header">
 <th>Day</th>
 <th>Session : Topic</th>
+<th>Lecture Slides</th>
 </tr>
 </thead>
 <tbody>
@@ -2569,51 +2568,61 @@ Topics
 <td>1</td>
 <td><p><strong>A:</strong> “Hello, world.” Course introduction, meet our tools and environments.</p>
 <p><strong>B:</strong> Project oriented workflows: projects, file paths, scripted code</p></td>
+<td></td>
 </tr>
 <tr class="even">
 <td>2</td>
 <td><p><strong>A:</strong> Data types and representation</p>
 <p><strong>B:</strong> Common data types and structures in EDS</p></td>
+<td></td>
 </tr>
 <tr class="odd">
 <td>3</td>
 <td><p><strong>A:</strong> Conditionals and logical operations</p>
 <p><strong>B:</strong> For loops</p></td>
+<td></td>
 </tr>
 <tr class="even">
 <td>4</td>
 <td><p><strong>A:</strong> Introduction to functions in R and Python</p>
 <p><strong>B:</strong> Functions continued</p></td>
+<td></td>
 </tr>
 <tr class="odd">
 <td>5</td>
 <td><p><strong>A:</strong> Functions continued: testing, documentation, functionals</p>
 <p><strong>B:</strong> Modules and packages</p></td>
+<td></td>
 </tr>
 <tr class="even">
 <td>6</td>
 <td><p><strong>A:</strong> Tidy data and making it</p>
-<p><strong>B:</strong> Data wrangling</p></td>
+<p><strong>B:</strong> Data wrangling with <code>dplyr</code> and <code>pandas</code></p></td>
+<td></td>
 </tr>
 <tr class="odd">
 <td>7</td>
 <td><p><strong>A:</strong> Data wrangling continued</p>
 <p><strong>B:</strong> Working with dates and times</p></td>
+<td></td>
 </tr>
 <tr class="even">
 <td>8</td>
 <td><p><strong>A:</strong> Data visualization with <code>ggplot2</code> and <code>seaborn</code> - Part 1</p>
 <p><strong>B:</strong> Data visualization with <code>ggplot2</code> and <code>seaborn</code> - Part 2</p></td>
+<td></td>
 </tr>
 <tr class="odd">
 <td>9</td>
 <td><p><strong>A:</strong> Troubleshooting (exploring, Googling, getting help, helping yourself)</p>
 <p><strong>B:</strong> Troubleshooting continued (tracing, reprex)</p></td>
+<td></td>
 </tr>
 <tr class="even">
 <td>10</td>
 <td><p><strong>A:</strong> Working with data from external files and accessing data</p>
 <p><strong>B:</strong> Wild data continued</p></td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -2670,7 +2679,7 @@ Topics
 <ul>
 <li><p><strong>Design, implement, test and document algorithms</strong> in R and Python (including functions with iteration, conditionals, messages and warnings)</p></li>
 <li><p><strong>Understand, create, convert, and work with different data structures</strong> (e.g. vectors, data frames, lists) <strong>and types</strong> (e.g. numeric, character, factor, logical, datetimes)</p></li>
-<li><p><strong>Perform basic data wrangling and visualization</strong> with real world  environmental data with tidyverse (in R) and pandas/seaborn (in Python)</p></li>
+<li><p><strong>Perform basic data wrangling and visualization</strong> with real world environmental data with tidyverse (in R) and pandas/seaborn (in Python)</p></li>
 <li><p><strong>Employ troubleshooting and debugging strategies</strong> (tools, mindsets, strategies, resources)</p></li>
 <li><p><strong>Use basic (non-collaborative) project-oriented workflows</strong> with reproducible code (R scripts, R Markdown, Python scripts) and version control (git/GitHub basics)</p></li>
 </ul>

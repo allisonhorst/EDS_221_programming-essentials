@@ -21,10 +21,15 @@ knitr::opts_chunk$set(echo = FALSE)
 # or copy/paste this code elsewhere, updating the file path, to add other images to your site!
 knitr::include_graphics("img/shilo-labelle-honeycomb-unsplash.jpg")
 ```
+
 <center>
+
 <p style="color:gray; font-size:15px;">
+
 <i>Honeycomb hex patterns. Photo by <a href="https://unsplash.com/@laughvender?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Shilo Labelle</a> on <a href="https://unsplash.com/s/photos/hexagons?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>.</i>
+
 </p>
+
 </center>
 
 ## Instructor
@@ -42,49 +47,49 @@ In EDS 221, students will build key scientific programming skills essential for 
 
 ## Expected lecture topics
 
-+-----+------------------------------------------------------------------------------+
-| Day | Session : Topic                                                              |
-+=====+==============================================================================+
-| 1   | **A:** "Hello, world." Course introduction, meet our tools and environments. |
-|     |                                                                              |
-|     | **B:** Project oriented workflows: projects, file paths, scripted code       |
-+-----+------------------------------------------------------------------------------+
-| 2   | **A:** Data types and representation                                         |
-|     |                                                                              |
-|     | **B:** Common data types and structures in EDS                               |
-+-----+------------------------------------------------------------------------------+
-| 3   | **A:** Conditionals and logical operations                                   |
-|     |                                                                              |
-|     | **B:** For loops                                                             |
-+-----+------------------------------------------------------------------------------+
-| 4   | **A:** Introduction to functions in R and Python                             |
-|     |                                                                              |
-|     | **B:** Functions continued                                                   |
-+-----+------------------------------------------------------------------------------+
-| 5   | **A:** Functions continued: testing, documentation, functionals              |
-|     |                                                                              |
-|     | **B:** Modules and packages                                                  |
-+-----+------------------------------------------------------------------------------+
-| 6   | **A:** Tidy data and making it                                               |
-|     |                                                                              |
-|     | **B:** Data wrangling                                                        |
-+-----+------------------------------------------------------------------------------+
-| 7   | **A:** Data wrangling continued                                              |
-|     |                                                                              |
-|     | **B:** Working with dates and times                                          |
-+-----+------------------------------------------------------------------------------+
-| 8   | **A:** Data visualization with `ggplot2` and `seaborn` - Part 1              |
-|     |                                                                              |
-|     | **B:** Data visualization with `ggplot2` and `seaborn` - Part 2              |
-+-----+------------------------------------------------------------------------------+
-| 9   | **A:** Troubleshooting (exploring, Googling, getting help, helping yourself) |
-|     |                                                                              |
-|     | **B:** Troubleshooting continued (tracing, reprex)                           |
-+-----+------------------------------------------------------------------------------+
-| 10  | **A:** Working with data from external files and accessing data              |
-|     |                                                                              |
-|     | **B:** Wild data continued                                                   |
-+-----+------------------------------------------------------------------------------+
++-----+------------------------------------------------------------------------------+--------------------------------------+
+| Day | Session : Topic                                                              | Lecture Slides                       |
++=====+==============================================================================+======================================+
+| 1   | **A:** "Hello, world." Course introduction, meet our tools and environments. |                                      |
+|     |                                                                              |                                      |
+|     | **B:** Project oriented workflows: projects, file paths, scripted code       |                                      |
++-----+------------------------------------------------------------------------------+--------------------------------------+
+| 2   | **A:** Data types and representation                                         |                                      |
+|     |                                                                              |                                      |
+|     | **B:** Common data types and structures in EDS                               |                                      |
++-----+------------------------------------------------------------------------------+--------------------------------------+
+| 3   | **A:** Conditionals and logical operations                                   |                                      |
+|     |                                                                              |                                      |
+|     | **B:** For loops                                                             |                                      |
++-----+------------------------------------------------------------------------------+--------------------------------------+
+| 4   | **A:** Introduction to functions in R and Python                             |                                      |
+|     |                                                                              |                                      |
+|     | **B:** Functions continued                                                   |                                      |
++-----+------------------------------------------------------------------------------+--------------------------------------+
+| 5   | **A:** Functions continued: testing, documentation, functionals              |                                      |
+|     |                                                                              |                                      |
+|     | **B:** Modules and packages                                                  |                                      |
++-----+------------------------------------------------------------------------------+--------------------------------------+
+| 6   | **A:** Tidy data and making it                                               |                                      |
+|     |                                                                              |                                      |
+|     | **B:** Data wrangling with `dplyr` and `pandas`                              |                                      |
++-----+------------------------------------------------------------------------------+--------------------------------------+
+| 7   | **A:** Data wrangling continued                                              |                                      |
+|     |                                                                              |                                      |
+|     | **B:** Working with dates and times                                          |                                      |
++-----+------------------------------------------------------------------------------+--------------------------------------+
+| 8   | **A:** Data visualization with `ggplot2` and `seaborn` - Part 1              |                                      |
+|     |                                                                              |                                      |
+|     | **B:** Data visualization with `ggplot2` and `seaborn` - Part 2              |                                      |
++-----+------------------------------------------------------------------------------+--------------------------------------+
+| 9   | **A:** Troubleshooting (exploring, Googling, getting help, helping yourself) |                                      |
+|     |                                                                              |                                      |
+|     | **B:** Troubleshooting continued (tracing, reprex)                           |                                      |
++-----+------------------------------------------------------------------------------+--------------------------------------+
+| 10  | **A:** Working with data from external files and accessing data              |                                      |
+|     |                                                                              |                                      |
+|     | **B:** Wild data continued                                                   |                                      |
++-----+------------------------------------------------------------------------------+--------------------------------------+
 
 ## Predictable daily schedule
 
@@ -115,7 +120,7 @@ By the end of EDS 221, students should be able to:
 
 -   **Understand, create, convert, and work with different data structures** (e.g. vectors, data frames, lists) **and types** (e.g. numeric, character, factor, logical, datetimes)
 
--   **Perform basic data wrangling and visualization** with real world  environmental data with tidyverse (in R) and pandas/seaborn (in Python)
+-   **Perform basic data wrangling and visualization** with real world environmental data with tidyverse (in R) and pandas/seaborn (in Python)
 
 -   **Employ troubleshooting and debugging strategies** (tools, mindsets, strategies, resources)
 

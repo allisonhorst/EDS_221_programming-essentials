@@ -1,40 +1,38 @@
 name: "meds-distill-template"
-title: "EDS 123"
+title: "EDS 221"
 description: |
-  MEDS Courses distill template
+  EDS 221: Scientific Programming Essentials
 output_dir: "docs"
 navbar:
   right:
     - text: "Home"
       href: index.html
-    - text: "Topics"
+    - text: "Daily materials"
       menu:
-        - text: "Topic 1: Add a new site page"
-          href: topic_1.html
-        - text: "Topic 2: Update site title & subtitle"
-          href: topic_2.html
-        - text: "Topic 3: Add images"
-          href: topic_3.html
-        - text: "Topic 4: Change the theme"
-          href: topic_4.html
-        - text: "Topic 5: Basic formatting"
-          href: topic_5.html
-        - text: "Topic 6: Internal & external links"
-          href: topic_6.html
-        - text: "Topic 7: Remove tables of contents"
-          href: topic_7.html
-        - text: "Topic 8: Add a dropdown menu from navigation bar item"
-          href: topic_8.html
-        - text: "Topic 9: Change site fonts"
-          href: topic_9.html
-        - text: "Topic 10: Add a table"
-          href: topic_10.html
-    - text: "Assignments"
-      href: assignments.html
+        - text: "Day 1"
+          href: day_1.html
+        - text: "Day 2"
+          href: day_2.html
+        - text: "Day 3"
+          href: day_3.html
+        - text: "Day 4"
+          href: day_4.html
+        - text: "Day 5"
+          href: day_5.html
+        - text: "Day 6"
+          href: day_6.html
+        - text: "Day 7"
+          href: day_7.html
+        - text: "Day 8"
+          href: day_8.html
+        - text: "Day 9"
+          href: day_9.html
+        - text: "Day 10"
+          href: day_10.html
     - text: "Resources"
       href: resources.html
     - icon: fab fa-github
-      href: https://github.com/allisonhorst/meds-distill-template
+      href: https://github.com/allisonhorst/EDS_221_programming-essentials
 output:
   distill::distill_article:
     toc: true

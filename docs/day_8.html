@@ -23,6 +23,7 @@
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
 div.sourceCode { margin: 1em 0; }
 pre.sourceCode { margin: 0; }
@@ -55,7 +56,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }
 code span.al { color: #ad0000; } /* Alert */
 code span.an { color: #5e5e5e; } /* Annotation */
-code span.at { } /* Attribute */
+code span.at { color: #20794d; } /* Attribute */
 code span.bn { color: #ad0000; } /* BaseN */
 code span.bu { } /* BuiltIn */
 code span.cf { color: #007ba5; } /* ControlFlow */
@@ -76,7 +77,7 @@ code span.kw { color: #007ba5; } /* Keyword */
 code span.op { color: #5e5e5e; } /* Operator */
 code span.ot { color: #007ba5; } /* Other */
 code span.pp { color: #ad0000; } /* Preprocessor */
-code span.sc { color: #5e5e5e; } /* SpecialChar */
+code span.sc { color: #20794d; } /* SpecialChar */
 code span.ss { color: #20794d; } /* SpecialString */
 code span.st { color: #20794d; } /* String */
 code span.va { color: #111111; } /* Variable */
@@ -85,26 +86,26 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </style>
 
   <!--radix_placeholder_meta_tags-->
-  <title>EDS 123: Topic 1: Add/remove a site page</title>
+  <title>EDS 221: Day 8 materials</title>
 
 
 
 
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
-  <meta property="og:title" content="EDS 123: Topic 1: Add/remove a site page"/>
+  <meta property="og:title" content="EDS 221: Day 8 materials"/>
   <meta property="og:type" content="article"/>
   <meta property="og:locale" content="en_US"/>
-  <meta property="og:site_name" content="EDS 123"/>
+  <meta property="og:site_name" content="EDS 221"/>
 
   <!--  https://dev.twitter.com/cards/types/summary -->
   <meta property="twitter:card" content="summary"/>
-  <meta property="twitter:title" content="EDS 123: Topic 1: Add/remove a site page"/>
+  <meta property="twitter:title" content="EDS 221: Day 8 materials"/>
 
   <!--/radix_placeholder_meta_tags-->
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title"]}},"value":[{"type":"character","attributes":{},"value":["Topic 1: Add/remove a site page"]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title"]}},"value":[{"type":"character","attributes":{},"value":["Day 8 materials"]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   <!--radix_placeholder_navigation_in_header-->
@@ -1858,10 +1859,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
       // hoverable references
       $('span.citation[data-cites]').each(function() {
-        var refs = $(this).attr('data-cites').split(" ");
-        var refHtml = refs.map(function(ref) {
-          return "<p>" + $('#ref-' + ref).html() + "</p>";
-        }).join("\n");
+        var refHtml = $('#ref-' + $(this).attr('data-cites')).html();
         window.tippy(this, {
           allowHTML: true,
           content: refHtml,
@@ -2441,7 +2439,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     color: var(--hover-color, white);
   }</style>
   <!--/radix_placeholder_distill-->
-  <script src="site_libs/header-attrs-2.7/header-attrs.js"></script>
+  <script src="site_libs/header-attrs-2.8/header-attrs.js"></script>
   <script src="site_libs/popper-2.6.0/popper.min.js"></script>
   <link href="site_libs/tippy-6.2.7/tippy.css" rel="stylesheet" />
   <link href="site_libs/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
@@ -2461,7 +2459,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"Topic 1: Add/remove a site page","authors":[]}
+{"title":"Day 8 materials","authors":[]}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -2469,32 +2467,31 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <header class="header header--fixed" role="banner">
 <nav class="distill-site-nav distill-site-header">
 <div class="nav-left">
-<a href="index.html" class="title">EDS 123</a>
+<a href="index.html" class="title">EDS 221</a>
 </div>
 <div class="nav-right">
 <a href="index.html">Home</a>
 <div class="nav-dropdown">
 <button class="nav-dropbtn">
-Topics
+Daily materials
  
 <span class="down-arrow">&#x25BE;</span>
 </button>
 <div class="nav-dropdown-content">
-<a href="topic_1.html">Topic 1: Add a new site page</a>
-<a href="topic_2.html">Topic 2: Update site title &amp; subtitle</a>
-<a href="topic_3.html">Topic 3: Add images</a>
-<a href="topic_4.html">Topic 4: Change the theme</a>
-<a href="topic_5.html">Topic 5: Basic formatting</a>
-<a href="topic_6.html">Topic 6: Internal &amp; external links</a>
-<a href="topic_7.html">Topic 7: Remove tables of contents</a>
-<a href="topic_8.html">Topic 8: Add a dropdown menu from navigation bar item</a>
-<a href="topic_9.html">Topic 9: Change site fonts</a>
-<a href="topic_10.html">Topic 10: Add a table</a>
+<a href="day_1.html">Day 1</a>
+<a href="day_2.html">Day 2</a>
+<a href="day_3.html">Day 3</a>
+<a href="day_4.html">Day 4</a>
+<a href="day_5.html">Day 5</a>
+<a href="day_6.html">Day 6</a>
+<a href="day_7.html">Day 7</a>
+<a href="day_8.html">Day 8</a>
+<a href="day_9.html">Day 9</a>
+<a href="day_10.html">Day 10</a>
 </div>
 </div>
-<a href="assignments.html">Assignments</a>
 <a href="resources.html">Resources</a>
-<a href="https://github.com/allisonhorst/meds-distill-template">
+<a href="https://github.com/allisonhorst/EDS_221_programming-essentials">
 <i class="fab fa-github" aria-hidden="true"></i>
 </a>
 <a href="javascript:void(0);" class="nav-toggle">&#9776;</a>
@@ -2506,7 +2503,7 @@ Topics
 <!--/radix_placeholder_site_before_body-->
 
 <div class="d-title">
-<h1>Topic 1: Add/remove a site page</h1>
+<h1>Day 8 materials</h1>
 <!--radix_placeholder_categories-->
 <!--/radix_placeholder_categories-->
 
@@ -2514,53 +2511,7 @@ Topics
 
 
 <div class="d-article">
-<div class="d-contents d-contents-float">
-<nav class="l-text toc figcaption" id="TOC">
-<h3>Contents</h3>
-<ul>
-<li><a href="#add-a-site-page">Add a site page</a>
-<ul>
-<li><a href="#the-quick-version">The quick version:</a></li>
-<li><a href="#make-each-page-an-r-markdown-document">Make each page an R Markdown document</a></li>
-<li><a href="#add-it-to-your-navigation-bar">Add it to your navigation bar</a></li>
-</ul></li>
-<li><a href="#deletedisappear-a-site-page">Delete/disappear a site page</a></li>
-</ul>
-</nav>
-</div>
-<p><strong>NOTE:</strong> There are 10 toy Topic sections here, expecting that some teachers may want to have one page per week (for a 10 week course). You are encouraged to structure your course <strong>however works best for your class</strong>. All of your course information could be on a single page, or you might have a different number of topics, or organize weekly, or any other organization that works for you.</p>
-<p style="color: #ba5e00">
-<b>TO UPDATE THIS PAGE:</b> Open and edit the <b>topic_1.Rmd</b> file, in the project root, to delete this placeholder text and customize with your own!
-</p>
-<h2 id="add-a-site-page">Add a site page</h2>
-<h3 id="the-quick-version">The quick version:</h3>
-<ul>
-<li>Make a new R Markdown document, save</li>
-<li>Add the rendered .html to _site.yaml so the page exists on the site</li>
-<li>Build to see updated site</li>
-</ul>
-<p>Below for a bit more detail…</p>
-<h3 id="make-each-page-an-r-markdown-document">Make each page an R Markdown document</h3>
-<p>To make a new page:</p>
-<ol type="1">
-<li><p>Within your website Project, create a new .Rmd (File &gt; New File &gt; R Markdown). Save it to the project root. For this example, let’s say you’ve saved it as <code>new_page.Rmd.</code></p></li>
-<li><p>In that .Rmd file, remove everything but the title (which you can change) from the YAML - that’s the top section of the .Rmd, where by default it has title, author, date, etc.</p></li>
-<li><p>Update the .Rmd to contain whatever you want to have on that page. Don’t know a lot about markdown? Considering switching over to the <a href="https://blog.rstudio.com/2020/09/30/rstudio-v1-4-preview-visual-markdown-editing/">Visual Editor in RStudio</a> (versions &gt;= 1.4).</p></li>
-<li><p>Save the .Rmd</p></li>
-</ol>
-<h3 id="add-it-to-your-navigation-bar">Add it to your navigation bar</h3>
-<ol start="5" type="1">
-<li><p>Open the <code>_site.yml</code> file in your Project</p></li>
-<li><p>Add the information to the YAML navbar section, which will almost always be the text that you want to appear in the navigation bar, and the file name of the <strong>knitted html</strong> that will be automatically rendered to /docs when you Build your website. That would be <code>new_page.html</code> for this example (since the .Rmd it is rendered from is <code>new_page.Rmd</code>). So in the <code>_site.yml</code> I would need to add this to the navbar section:</p></li>
-</ol>
-<pre><code>    - text: &quot;A new page!&quot;
-      href: new_page.html</code></pre>
-<p><strong>Note:</strong> YAML is space &amp; indentation specific. Follow the structure that already exists in this template to avoid YAML errors.</p>
-<p>How is the website finding the html? Notice in the <code>_site.yml</code> file, the <code>output_dir</code> is set to <code>docs</code>. That means when we press ‘Build website’ (in the Build tab in RStudio), our .Rmd pages are knitted to HTML &amp; sent to the <code>_docs</code> folder. This is also important because when we deploy the site (make it live), we will want to deploy <strong>from that docs folder</strong> using GitHub pages.</p>
-<p>Take a look at some other pages in this template (Resources, Assignments, etc.) to see the structure, &amp; give it a shot!</p>
-<h2 id="deletedisappear-a-site-page">Delete/disappear a site page</h2>
-<p>The safest thing to do if you don’t want a page to <em>show up</em> is to remove it from the <code>_site.yml</code> navbar listings. That way, the material on the page still exists as a file in your project, but doesn’t show up on the website – don’t delete a page file unless you are REALLY SURE that you’re never going to want the material on that page ever again.</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>
