@@ -1,7 +1,39 @@
 ---
-title: "Day 9 materials"
+title: "Day 9: Troubleshooting"
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
+
+## Day 9 topics: 
+
+- Troubleshooting strategies and reminders
+- Pre-emptive help (annotation, structure, reproducibility, etc.)
+
+## Day 9 lecture slides:
+
+- Day 9 (morning lecture)
+- Day 9 (afternoon lecture)
+
+## Day 9 lab materials:
+
+- Day 9 (morning lab)
+- Day 9 (afternoon lab)
+
+## Flex sessions
+
+- Morning flex: Debugging puzzles
+- Afternoon flex: 
+
+## Activities: 
+
+- Make a debugging buddy
+- A few of my favorite bugs (learn then teach)
+    - `== c("A", "B")`: Why is this almost always NOT what you want to do?
+    - Missing values of different `NA` classes
+    - `select` masked
+    - 
+- Debugapalooza broken code hackfest
+
+## Efficiency tips (inspired by Dr. Julia Lowndes)

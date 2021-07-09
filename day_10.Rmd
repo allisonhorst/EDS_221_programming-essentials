@@ -1,7 +1,36 @@
 ---
-title: "Day 10 materials"
+title: "Day 10: Wild data import, wrangling & exploration"
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
+
+## Day 10 topics: 
+
+- File types to expect (and importing them)
+- What wild environmental data can look like
+- You will do some pre-cleaning in Excel or Googlesheets. What to remember when you do.
+- Course conclusion and what's next
+
+## Day 10 lecture slides:
+
+- Day 10 (morning lecture)
+- Day 10 (afternoon lecture)
+
+## Day 10 lab materials:
+
+- Day 10 (morning lab)
+- Day 10 (afternoon lab)
+
+## Flex sessions:
+
+- Morning flex: Wild data wrangling
+- Afternoon flex (move to EOD): Wild data wrangling
+
+## Activities:
+
+- A complete workflow - from data access to exploration to communication with wild caught data
+- Revisiting our expanded Venn diagram
+
+## Efficiency tips (inspired by Dr. Julia Lowndes)

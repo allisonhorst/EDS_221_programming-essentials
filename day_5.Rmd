@@ -1,8 +1,38 @@
 ---
-title: "Day 5 materials"
+title: "Day 5: Functions continued, R & Py packages"
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
+
+## Day 5 topics: 
+
+- Functions continued
+- Testing functions
+- Function documentation
+
+
+## Day 5 lecture slides:
+
+- Day 5 (morning lecture)
+- Day 5 (afternoon lecture)
+
+## Day 5 lab materials:
+
+- Day 5 (morning lab)
+- Day 5 (afternoon lab)
+
+## Flex sessions
+
+- Morning flex: Biased algorithms?
+- Afternoon flex: Presentation skills activity (elevator pitch)
+
+## Activities: 
+
+- Writing functions
+- Put them in an R package! 
+- Use a function that your classmate has made by installing their package (remember to install `remotes` first)
+
+## Efficiency tips (inspired by Dr. Julia Lowndes)
 

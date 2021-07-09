@@ -1,9 +1,40 @@
 ---
-title: "Day 1 materials"
+title: "Day 1: Meet our tools & workflows"
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-Add Day 1 materials
+## Day 1 topics
+
+- What is scientific programming?
+- R & Python for environmental data science
+- R Markdown & Jupyter Notebooks
+- Workflow pieces (e.g. R Projects, here, .Rmd)
+
+## Day 1 lecture slides:
+
+- Day 1 (morning lecture)
+- Day 1 (afternoon lecture)
+
+## Day 1 lab materials:
+
+- Day 1 (morning lab)
+- Day 1 (afternoon lab)
+
+## Flex sessions
+
+- Morning flex: Add a blog to your website
+- Afternoon flex: Git branches for solo & collaborative work
+
+## Activities:
+
+- A full code-free workflow
+- Save this workflow (a coworker has emailed you their .Rmd and the data they've used to create an HTML - also attached). Help them out by making this project reproducible, identifying key places where the workflow breaks down or can be improved (assuming they know git / GitHub). 
+
+## Efficiency tips (inspired by Dr. Julia Lowndes)
+
+
+
+

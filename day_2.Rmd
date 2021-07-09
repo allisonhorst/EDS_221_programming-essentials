@@ -1,8 +1,39 @@
 ---
-title: "Day 2 materials"
+title: "Day 2: Data representation and types"
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
+
+### Day 2 topics:
+
+- Bits & bytes
+- Data structures
+- Creating data
+- Accessing data 
+
+## Day 2 lecture slides:
+
+- Day 2 (morning lecture)
+- Day 2 (afternoon lecture)
+
+## Day 2 lab materials:
+
+- Day 2 (morning lab)
+- Day 2 (afternoon lab)
+
+## Flex sessions
+
+- Morning flex: Panel from data science community leaders (eco-data-sci, R-Ladies, R-users Group, Openscapes)
+- Afternoon flex: A webpage from any .Rmd
+
+## Activities
+
+- Making data and accessing pieces of it
+- Storing objects and working with them
+- Analog bits & bytes problems
+- Talking about data
+
+## Efficiency tips (inspired by Dr. Julia Lowndes)
 

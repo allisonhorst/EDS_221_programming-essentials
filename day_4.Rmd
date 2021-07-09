@@ -1,8 +1,37 @@
 ---
-title: "Day 4 materials"
+title: "Day 4: Functions"
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
+
+## Day 4 topics: 
+
+- When you'd want to write a function
+- Pieces of a function
+- Function syntax and best practices
+- Writing functions in R and Python
+
+## Day 4 lecture slides:
+
+- Day 4 (morning lecture)
+- Day 4 (afternoon lecture)
+
+## Day 4 lab materials:
+
+- Day 4 (morning lab)
+- Day 4 (afternoon lab)
+
+## Flex sessions:
+
+- Morning flex: Little bits of useful things (see discussion from 244 in W2021, e.g. .Rprofile, never save workspace, rainbow parentheses)
+- Afternoon flex: Mental health activity for coders? 
+
+## Activities:
+
+- Writing functions
+- Fixing broken functions
+
+## Efficiency tips (inspired by Dr. Julia Lowndes)
 

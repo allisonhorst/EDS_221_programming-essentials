@@ -9,25 +9,25 @@ navbar:
       href: index.html
     - text: "Daily materials"
       menu:
-        - text: "Day 1"
+        - text: "Day 1: Hello world"
           href: day_1.html
-        - text: "Day 2"
+        - text: "Day 2: Data types"
           href: day_2.html
-        - text: "Day 3"
+        - text: "Day 3: Logicals & loops"
           href: day_3.html
-        - text: "Day 4"
+        - text: "Day 4: Functions Part 1"
           href: day_4.html
-        - text: "Day 5"
+        - text: "Day 5: Functions Part 2"
           href: day_5.html
-        - text: "Day 6"
+        - text: "Day 6: Tidy data"
           href: day_6.html
-        - text: "Day 7"
+        - text: "Day 7: Data wrangling"
           href: day_7.html
-        - text: "Day 8"
+        - text: "Day 8: Data visualization"
           href: day_8.html
-        - text: "Day 9"
+        - text: "Day 9: Troubleshooting"
           href: day_9.html
-        - text: "Day 10"
+        - text: "Day 10: Wild data"
           href: day_10.html
     - text: "Resources"
       href: resources.html

@@ -1,7 +1,28 @@
 ---
-title: "Day 8 materials"
+title: "Day 8: Data visualization"
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
+
+## Day 8 topics: 
+
+## Day 8 lecture slides:
+
+- Day 8 (morning lecture)
+- Day 8 (afternoon lecture)
+
+## Day 8 lab materials:
+
+- Day 8 (morning lab)
+- Day 8 (afternoon lab)
+
+## No flex (late Wednesday start)
+
+## Activities
+
+- Do your (dataviz) worst
+- Copycat graphs
+
+## Efficiency tips (inspired by Dr. Julia Lowndes)

@@ -1,7 +1,37 @@
 ---
-title: "Day 7 materials"
+title: "Day 7: Data wrangling continued"
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
+
+## Day 7 topics: 
+
+- What makes data coder-friendly?
+- Making the data you want to see in the world
+- Quick & powerful: `janitor`, `tidyr` functions to love
+- `dplyr`, `stringr`, `pandas`, `lubridate`
+
+## Day 7 lecture slides:
+
+- Day 7 (morning lecture)
+- Day 7 (afternoon lecture)
+
+## Day 7 lab materials:
+
+- Day 7 (morning lab)
+- Day 7 (afternoon lab)
+
+## Flex sessions:
+
+- Morning flex: Designated time to organize your house
+- Afternoon flex: Ask an environmental data scientist
+
+## Activities:
+
+- Fix & annotate some wrangling code (running line-by-line)
+- Wrangling challenge tasks (from this, get this - then explain it to us)
+
+## Efficiency tips (inspired by Dr. Julia Lowndes)
+

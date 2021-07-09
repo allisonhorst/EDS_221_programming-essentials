@@ -1,8 +1,36 @@
 ---
-title: "Day 3 materials"
+title: "Day 3: Logicals & loops"
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
+
+### Day 3 topics: 
+
+- Logical operations
+- For loops
+- For loops with conditions
+- `apply` and `purrr` functions 
+
+## Day 3 lecture slides:
+
+- Day 3 (morning lecture)
+- Day 3 (afternoon lecture)
+
+## Day 3 lab materials:
+
+- Day 3 (morning lab)
+- Day 3 (afternoon lab)
+
+## No flex sessions (Wednesday late start)
+
+## Activities: 
+
+- Logical operations practice tasks (communicating with a computer)
+- For loops (the game)
+- For loop challenge tasks
+
+## Efficiency tips (inspired by Dr. Julia Lowndes)
+
 

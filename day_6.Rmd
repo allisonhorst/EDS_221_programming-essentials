@@ -1,7 +1,49 @@
 ---
-title: "Day 6 materials"
+title: "Day 6: Tidy data and making it"
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
+
+Tidy data is one of the most important concepts for any data scientist. It provides predictable organization for data that makes coding, analysis, and collaboration easier. Tidy data satisfies the following conditions:
+
+- Each observation is in a row
+- Each variable in a column
+- Each value is in a single cell
+
+In Day 6, we'll learn about tidy data structure, common ways that data are *untidy*, and useful skills for tidying untidy data.  
+
+## Day 6 lecture slides:
+
+- Day 6 morning lecture
+- Day 6 afternoon lecture
+
+## Day 6 lab materials:
+
+- Day 6 morning lab
+- Day 6 afternoon lab
+
+## Flex sessions:
+
+- Morning flex: Capstone projects information day (ask Jamie - TODO)
+- Afternoon flex: Dena Montague - Environmental Data Justice?
+
+## Activities: 
+
+- Talking tidy: talking about data with other humans
+- Data tidying challenge tasks
+
+## Efficiency tips (inspired by Dr. Julia Lowndes)
+
+## Resources
+
+### Reading: 
+
+- Lowndes & Horst Tidy Data blog
+- Wickham Tidy Data 
+- Grolemund & Wickham R for Data Science
+
+### Coding: 
+
+**Allison note TODO:** Relate tidy data to relational databases to prep them for Frew's class
