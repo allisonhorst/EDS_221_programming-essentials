@@ -24,7 +24,7 @@ knitr::opts_chunk$set(echo = TRUE)
 ## Flex sessions
 
 - Morning flex: Debugging puzzles
-- Afternoon flex: 
+- Afternoon flex: Generative art in R
 
 ## Activities: 
 

@@ -26,8 +26,8 @@ In Day 6, we'll learn about tidy data structure, common ways that data are *unti
 
 ## Flex sessions:
 
-- Morning flex: Capstone projects information day (ask Jamie - TODO)
-- Afternoon flex: Dena Montague - Environmental Data Justice?
+- Morning flex: Talking tidy data (group discussion & presentations)
+- Afternoon flex: Open (optional Goleta Beach walk)
 
 ## Activities: 
 
