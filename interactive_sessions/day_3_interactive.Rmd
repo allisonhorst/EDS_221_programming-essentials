@@ -1,0 +1,437 @@
+---
+title: "Day 3 Interactive Session Materials"
+subtitle: "Conditionals and intro to for loops"
+output: 
+  html_document:
+    css: comp_session_theme.css
+    toc: true
+    toc_float: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(reticulate)
+library(palmerpenguins)
+```
+
+## Part 1: Boolean operator review
+
+In [EDS 212](https://allisonhorst.github.io/EDS_212_essential-math/), we learned about Boolean operations and logic - the land of TRUE and FALSE. Boolean operations are ubiquitous in scientific programming. Whether looking for string pattern matches, comparing values, or filtering data frames, Boolean operators show up *all* the time - and even if we aren't writing them explicitly, are working behind the scenes. 
+
+Let's refresh some basic Boolean (logical) operators for programming: 
+
+```{r}
+# Create some objects (let's say these are tree heights)
+pinyon_pine <- 14
+lodgepole_pine <- 46
+
+# Some logical expressions: 
+pinyon_pine == 10 # Exact match?
+pinyon_pine < lodgepole_pine # Less than?
+lodgepole_pine >= 46 # Greater than or equal?
+pinyon_pine != 25 # Not equal to? 
+
+```
+
+## Part 2: Conditionals
+
+We write conditionals to tell a computer what do to based on whether or not some conditions that we set are satisfied. For example, we may want to use conditionals to: 
+
+- Only keep observations from counties with median home value > $600,000
+
+- Re-categorize farms as "moderate implementation" if they implement between 4 and 8 best management practices for mitigating nutrient runoff
+
+### A basic `if` statement
+
+The fundamental conditional statement is an `if` statement, which we can read as "If this condition is met, then do this."
+
+An example in R:
+
+```{r}
+burrito <- 2.4 # Assign an object value
+
+# Write a short 'if' statement:
+if (burrito > 2) {
+  print("I love burritos!")
+}
+```
+Try changing the value of burritos to 1.5. What is returned when the `if` statement condition isn't met? 
+
+This is important: for a solely "if" statement, there is no "else" option. So nothing happens if the condition isn't met.
+
+In Python: 
+
+```{python}
+burrito = 2.4
+
+if burrito > 2:
+  print("I love burritos!")
+  
+```
+
+#### An example with strings:
+
+Here, we're using a new function from the `stringr` package: `stringr::str_detect()`. First, let's learn something about how `str_detect()` works (see `?str_detect()` for more information).
+
+`str_detect()` "detects the presence or absence of a pattern in a string." For example: 
+
+```{r}
+my_ships <- c("Millenium Falcon", "X-wing", "Tie-Fighter", "Death Star")
+str_detect(my_ships, pattern = "r") # Asks: which elements in the vector contain "r"
+```
+Notice that it returns a *logical* TRUE or FALSE for each element in the vector, based on whether or not they contain the string pattern "r". 
+
+Now let's try using it in a conditional statement. Here, if a phrase contains the word "love", return the phrase "Big burrito fan!" Otherwise, return nothing.
+ 
+```{r}
+phrase <- "I love burritos"
+
+if (str_detect(phrase, "love")) {
+  print("Big burrito fan!")
+}
+
+```
+
+Try updating the phrase or string pattern in the code above to test different variations. 
+
+### A basic `if-else` statement
+
+In the examples above, there was a lonely "if" statement, which returned something if the condition was met, but otherwise returned nothing. Usually, we'll want our code to return something *else* if our condition is *not* met. In that case, we can write an `if-else` statement. Here are a couple of examples: 
+
+In R: 
+
+```{r}
+pika <- 89.1
+
+if (pika > 60) {
+  print("mega pika")
+} else
+  print("normal pika")
+```
+In Python: 
+
+```{python}
+pika = 89.1
+
+if pika > 60:
+  print("mega pika")
+else:
+  print("normal pika")
+```
+
+#### An example with strings: 
+
+```{r}
+food <- "I love enchiladas!"
+
+if (str_detect(food, "burritos")) {
+  print("yay burritos!")
+} else
+  print("what about burritos?")
+
+```
+
+### More options: `if-else if-else` statements
+
+Sometimes there aren't just two outcomes! In that case, you can specify different options using the `if-else if-else` structure. Several examples are shown below.
+
+In R: 
+
+```{r}
+marmot <- 2.8
+
+if (marmot < 0.5) {
+  print("a small marmot!")
+} else if (marmot >= 0.5 & marmot < 3) {
+  print("a medium marmot!")
+} else 
+  print("a large marmot!")
+
+```
+
+```{python}
+marmot = 2.8
+
+if marmot < 0.5:
+  print("a small marmot!")
+elif 0.5 <= marmot < 3: 
+  print("a medium marmot!")
+else: 
+  print("a large marmot!")
+```
+
+### `switch` statements
+
+A slightly more efficient tool is the `switch()` function, which allows you to "select one of a list of alternatives." See `?switch` for more information. This can be particularly useful for switching between different character strings, based on a condition or user selection. 
+
+In R: 
+
+```{r}
+species = "mouse"
+
+switch(species,
+       "cat" = print("Meow"),
+       "dog" = print("Woof!"),
+       "mouse" = print("Squeak"))
+```
+
+### Helpful functionals for conditional statements
+
+As we get into Week 2 of EDS 221, we'll learn other functions that make conditionals a bit more read and writable. For example, the `dplyr::case_when()` function is very helpful for writing vectorized if-else statements! 
+
+## Part 3. Introduction to for loops
+
+A general guideline from RStudio Chief Scientist Hadley Wickham is that if we copy something more than twice, we should write a function or a loop. Avoiding redundancy in code can make it more readable, reproducible and efficient. 
+
+We write a for loop to iterate through different elements of a data structure (e.g. values in a vector, or columns in a data frame), applying some operation to each, and returning the new output. In this section, we'll learn some for loop basics. 
+
+### Basic for loop
+
+Let's start with a very basic for loop: for each element in a vector, do something to it and return the new thing. Here, we start with a vector of puppy names. Starting with the first name "Teddy", we enter the loop and add "My dog's name is" to the beginning of the string. Then we move on to the next name in the vector, continuing until we have applied the updated text to all puppy names.
+
+In R: 
+
+```{r}
+dog_names <- c("Teddy", "Khora", "Banjo", "Waffle")
+
+for (pupster in dog_names) {
+  print(paste("My dog's name is", pupster))
+}
+
+# Or similarly (\n is for new line):
+for (pupster in dog_names) {
+  cat("My dog's name is", pupster, "\n")
+}
+```
+
+In Python: 
+
+```{python}
+dog_names = ["Teddy", "Khora", "Banjo", "Waffle"]
+
+for i in dog_names: 
+  print("My dog's name is " + i)
+```
+
+### Another basic for loop example: 
+
+Let's check out another little example. Here, we create a sequence that ranges from 0 to 3 by increments of 0.5. Then, for each element in that vector, we add 2 to it, then move on to the next element. 
+
+In R: 
+
+```{r}
+mass <- seq(from = 0, to = 3, by = 0.5)
+
+for (i in mass) {
+  new_val = i + 2
+  print(new_val)
+}
+```
+
+Or, using `seq_along()`:
+
+```{r}
+mass <- seq(from = 0, to = 3, by = 0.5)
+
+for (i in seq_along(mass)) {
+  new_val = mass[i] + 2
+  print(new_val)
+}
+```
+
+
+Let's try another one with `seq_along()`: 
+
+For each element in a vector, find the sum of that value plus the next value in the sequence: 
+
+```{r}
+tree_height <- c(1,2,6,10)
+
+for (i in seq_along(tree_height)) {
+  val = tree_height[i] + tree_height[i + 1]
+  print(val)
+}
+```
+
+## Part 4. For loops with conditional statements
+
+Earlier in this session, we learned how to write a conditional `if` or `if-else` statement. Sometimes we'll want to change what a for loop does based on a conditional - so we'll have a conditional statement *within* a for loop. Let's take a look and talk through an example: 
+
+A basic conditional for loop in R: Here, we have a vector of animals called `animal`. Running through each animal in the vector, if the species is "dog" we want to return "I love dogs!". For all other animals, we'll return "These are other animals!"
+
+```{r}
+# Create the animals vector:
+animal <- c("cat", "dog", "dog", "zebra", "dog")
+
+# Create the for loop with conditional statement: 
+for (i in seq_along(animal)) {
+  if (animal[i] == "dog") {
+    print("I love dogs!")
+  } else
+    print("These are other animals!")
+}
+
+```
+
+Or, for a numerical example: 
+
+```{r}
+# Animal types:
+species <- c("dog", "elephant", "goat", "dog", "dog", "elephant")
+
+# And their respective ages in human years:
+age_human <- c(3, 8, 4, 6, 12, 18)
+
+# Convert ages to "animal years" using the following:
+# 1 human year = 7 in dog years
+# 1 human year = 0.88 in elephant years
+# 1 human year = 4.7 in goat years
+
+for (i in seq_along(species)) {
+  if (species[i] == "dog") {
+    animal_age <- age_human[i] * 7
+  } else if (species[i] == "elephant") {
+    animal_age <- age_human[i] * 0.88
+  } else if (species[i] == "goat") {
+    animal_age <- age_human[i] * 4.7
+  }
+  print(animal_age)
+}
+
+```
+
+**Reminder:** Keep this idea in mind when we learn `dplyr::case_when()`! 
+
+## Part 5. Storing outputs of a for loop
+
+So far, we've returned outputs of a for loop, but we haven't *stored* the outputs of a for loop as a new object in our environment. 
+
+To store outputs of a for loop, we'll create an empty vector, then populate it with the for loop elements as they're created. It's important to do this - it will make your loops quicker, which is critical once you start working with big data. 
+
+```{r}
+# Create the empty vector animal_ages:
+animal_ages <- vector(mode = "numeric", length = length(species))
+
+# Vectors with species and human age: 
+species <- c("dog", "elephant", "goat", "dog", "dog", "elephant")
+
+age_human <- c(3, 8, 4, 6, 12, 18)
+
+# Same loop as above, with additional piece added
+# To populate our empty vector
+
+for (i in seq_along(species)) {
+  if (species[i] == "dog") {
+    animal_age <- age_human[i] * 7
+  } else if (species[i] == "elephant") {
+    animal_age <- age_human[i] * 0.88
+  } else if (species[i] == "goat") {
+    animal_age <- age_human[i] * 4.7
+  }
+  animal_ages[i] <- animal_age # Populate our empty vector
+}
+
+```
+
+Another example of storing an output: 
+
+```{r}
+tigers <- c(29, 34, 82)
+lions <- c(2, 18, 6)
+
+big_cats <- vector(mode = "numeric", length = length(tigers))
+
+for (i in seq_along(tigers)) {
+  total_cats <- tigers[i] + lions[i]
+  big_cats[i] <- total_cats
+}
+
+```
+
+**Note:** Don't make your life harder for no reason. What's the easiest way to fine the `big_cats` values as calculated above? 
+
+### For loops across columns of a data frame
+
+Recall from lecture: `df[[i]]` calls the i^th^ column from the `df` data frame with simplification (i.e., it is pulled out as a vector, not a 1-d data frame).
+
+Write a loop that iteratively calculates the mean of value of each column in mtcars.
+
+```{r}
+# Create our storage vector
+# Note: ncol() returns the number of columns in a data frame
+mean_mtcars <- vector(mode = "numeric", length = ncol(mtcars))
+
+# Write the loop
+for (i in 1:ncol(mtcars)) {
+  mean_val <- mean(mtcars[[i]], na.rm = TRUE)
+  mean_mtcars[[i]] <- mean_val
+}
+
+# Tada.
+```
+
+### A for loop over columns with a condition
+
+Sometimes you'll want to iterate over *some*, but not all, columns in a data frame. Then, you may want to write a for loop with a condition. 
+
+For example, starting with the `penguins` data frame (from the `palmerpenguins` package), let's find the median value of all **numeric** variables. 
+
+```{r}
+
+for (i in seq_along(penguins)) {
+  if (is.numeric(penguins[[i]])) {
+    penguin_med <- median(penguins[[i]], na.rm = TRUE)
+    print(penguin_med)
+  }
+}
+
+```
+
+## Part 6. Functional programming - some sugar in R
+
+For loops are a critical skill for any data scientist to understand. However, you may not end up writing many of them from scratch. That's because there exist a number of useful tools (functions) to make iteration easier for us. Here, we'll briefly learn about two: 
+
+- The `apply` family of functions for iteration
+- Making iteration `{purrr}`
+
+### `apply`
+
+The `apply` functions simplify iteration over elements of a data structure (e.g., a data frame). To use `apply()` most simply, we need to tell it 3 things:
+
+- What is the data we're iterating over?
+- Are we iterating across rows (1) or columns (2)?
+- What function are we applying to each element we're iterating over? 
+
+For example, let's say we want to find the mean value of all *columns* in the `mtcars` data frame: 
+
+```{r}
+apply(X = mtcars, MARGIN = 2, FUN = mean)
+```
+
+Take a moment to break down what each argument does in the `apply()` function above. Keep this in mind - we can also write *our own function* that we'd want to apply to each element! 
+
+There are also variations on `apply`, like `lapply` and `sapply`, that are worth looking into for specific use cases. 
+
+### `{purrr}`
+
+The documentation for `?purrr::map()` is titled "Apply a function to each element of a list or atomic vector." Which should ring your for loop brain bells. 
+
+There are a number of functions within the `purrr::map()` family to best suit your specific needs. 
+
+The equivalent `map()` approach to the example above (finding the mean of each column in the `mtcars` data frame) is as follows: 
+
+```{r}
+map(.x = mtcars, .f = mean)
+
+# Or, to return the output in a data frame (instead of a list):
+map_df(.x = mtcars, .f = mean)
+```
+
+### Reading in multiple files simultaneously with `map_df()`
+
+A common use case of loops for data science is reading in a number of different files simultaneously. 
+
+### For loop in environmental data science
+
+

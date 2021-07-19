@@ -1,0 +1,289 @@
+---
+title: "Day 3 Interactive Session Materials"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(reticulate)
+```
+
+## Boolean operator review
+
+## Conditionals
+
+### A basic `if` statement: 
+
+In R: 
+
+```{r}
+burrito <- 2.4 # Assign an object value
+
+# Write a short 'if' statement:
+if (burrito > 2) {
+  print("I love burritos!")
+}
+```
+Try changing the value of burritos to 1.5. What is returned when the `if` statement condition isn't met? 
+
+This is important: for a singular "if" statement, there is no "else" option. So nothing happens if the condition isn't met.
+
+In Python: 
+
+```{python}
+burrito = 2.4
+
+if burrito > 2:
+  print("I love burritos!")
+  
+```
+
+#### An example with strings:
+
+```{r}
+phrase <- "I love burritos"
+
+if (str_detect(phrase, "love")) {
+  print("yay burritos!")
+}
+
+```
+
+
+
+### A basic `if-else` statement
+
+In R: 
+
+```{r}
+pika <- 89.1
+
+if (pika > 60) {
+  print("mega pika")
+} else
+  print("normal pika")
+```
+In Python: 
+```{python}
+pika = 89.1
+
+if pika > 60:
+  print("mega pika")
+else:
+  print("normal pika")
+```
+
+
+#### An example with strings: 
+
+```{r}
+food <- "I love enchiladas!"
+
+if (str_detect(food, "burritos")) {
+  print("yay burritos!")
+} else
+  print("what about burritos?")
+
+```
+
+
+### More options: `if-else if-else` statements
+
+In R: 
+
+```{r}
+marmot <- 2.8
+
+if (marmot < 0.5) {
+  print("a small marmot!")
+} else if (marmot >= 0.5 & marmot < 3) {
+  print("a medium marmot!")
+} else 
+  print("a large marmot!")
+
+```
+
+```{python}
+marmot = 2.8
+
+if marmot < 0.5:
+  print("a small marmot!")
+elif 0.5 <= marmot < 3: 
+  print("a medium marmot!")
+else: 
+  print("a large marmot!")
+```
+
+### `switch` statements
+
+In R: 
+
+```{r}
+species = "mouse"
+
+switch(species,
+       "cat" = print("Meow"),
+       "dog" = print("Woof!"),
+       "mouse" = print("Squeak"))
+```
+
+
+
+## For loops
+
+### Basic for loop
+
+In R: 
+
+```{r}
+dog_names <- c("Teddy", "Khora", "Banjo", "Waffle")
+
+for (pupster in dog_names) {
+  print(paste("My dog's name is", pupster))
+}
+
+# Or similarly:
+for (pupster in dog_names) {
+  cat("My dog's name is", pupster, sep = " The Amazing ")
+}
+```
+
+In Python: 
+
+```{python}
+dog_names = ["Teddy", "Khora", "Banjo", "Waffle"]
+
+for i in dog_names: 
+  print("My dog's name is " + i)
+```
+
+### Another basic for loop example: 
+
+In R: 
+
+```{r}
+mass <- seq(from = 0, to = 12, by = 0.5)
+
+for (i in mass) {
+  new_val = i + 2
+  print(new_val)
+}
+```
+
+Or, using `seq_along()`:
+
+```{r}
+mass <- seq(from = 0, to = 12, by = 0.5)
+
+for (i in seq_along(mass)) {
+  new_val = mass[i] + 2
+  print(new_val)
+}
+```
+
+Let's try another one: 
+
+For each element in a vector, find the sum of that value plus the next value in the sequence: 
+
+```{r}
+tree_height <- c(1,2,6,10)
+
+for (i in seq_along(tree_height)) {
+  val = tree_height[i] + tree_height[i + 1]
+  print(val)
+}
+```
+
+## For loops with conditional statements
+
+A basic conditional for loop in R:
+
+```{r}
+animal <- c("cat", "dog", "dog", "zebra", "dog")
+
+for (i in seq_along(animal)) {
+  if (animal[i] == "dog") {
+    print("I love dogs!")
+  } else
+    print("These are other animals!")
+}
+
+```
+
+Or, for a numerical example: 
+
+```{r}
+species <- c("dog", "elephant", "goat", "dog", "dog", "elephant")
+
+age_human <- c(3, 8, 4, 6, 12, 18)
+
+# Convert ages to "animal years" using the following:
+# 1 human year = 7 in dog years
+# 1 human year = 0.88 in elephant years
+# 1 human year = 4.7 in goat years
+
+for (i in seq_along(species)) {
+  if (species[i] == "dog") {
+    animal_age <- age_human[i] * 7
+  } else if (species[i] == "elephant") {
+    animal_age <- age_human[i] * 0.88
+  } else if (species[i] == "goat") {
+    animal_age <- age_human[i] * 4.7
+  }
+  print(animal_age)
+}
+
+
+
+```
+
+## Storing outputs of a for loop
+
+To store outputs of a for loop, we'll create an empty vector, then populate it with the for loop elements as they're created. It's important to do this - it will make your loops quicker, which is critical once you start working with big data! 
+
+```{r}
+# Create the empty vector animal_ages:
+animal_ages <- vector(mode = "numeric", length = length(species))
+
+# Vectors with species and human age: 
+species <- c("dog", "elephant", "goat", "dog", "dog", "elephant")
+
+age_human <- c(3, 8, 4, 6, 12, 18)
+
+# Same loop as above, with additional piece added
+# To populate our empty vector
+
+for (i in seq_along(species)) {
+  if (species[i] == "dog") {
+    animal_age <- age_human[i] * 7
+  } else if (species[i] == "elephant") {
+    animal_age <- age_human[i] * 0.88
+  } else if (species[i] == "goat") {
+    animal_age <- age_human[i] * 4.7
+  }
+  animal_ages[i] <- animal_age # Populate our empty vector
+}
+
+```
+
+Another example of storing an output: 
+
+```{r}
+tigers <- c(29, 34, 82)
+lions <- c(2, 18, 6)
+
+big_cats <- vector(mode = "numeric", length = length(tigers))
+
+for (i in seq_along(tigers)) {
+  total_cats <- tigers[i] + lions[i]
+  big_cats[i] <- total_cats
+}
+
+```
+
+Don't make your life harder for no reason. What's the easiest way to fine the `big_cats` values as calculated above? 
+
+
+
+
+

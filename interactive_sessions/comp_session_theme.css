@@ -1,0 +1,76 @@
+/* Header font */
+@import url('https://fonts.googleapis.com/css2?family=Sanchez&display=swap');
+
+/* Body font */
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400&display=swap');
+
+/* Code font (Roboto Mono) */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400&display=swap');
+
+h1 {
+  font-family: Sanchez;
+  color: #003660;
+}
+
+h2, h3 {
+  font-family: Sanchez;
+  color: rgba(4, 124, 145, 0.8);
+}
+
+body {
+  font-family: Nunito Sans;
+}
+
+a.title {
+  font-style: bold;
+}
+
+a, .nav-dropdown .nav-dropbtn {
+  font-weight: 500;
+}
+
+/* Set colors for headers */
+d-article h1, d-article h2, d-article h3, d-article h4, d-article h5, d-article h6 {
+    color: rgba(4, 124, 145, 0.8);
+}
+
+/* Formatting tables (can update here or individually) */
+table, td, tr, th {
+  border-collapse: collapse;
+  font-family: Nunito Sans;
+  border: 1px solid gainsboro;
+  vertical-align: top;
+}
+
+d-article table th, d-article table td {
+    font-size: 15px;
+    padding: 2px 8px;
+    border: 1px solid gainsboro;
+}
+
+/* Code style formatting of text */
+code {
+  font-family: Roboto Mono;
+}
+
+.distill-site-header a, .distill-site-header .title {
+    text-align: left;
+    padding: 14px 14px 14px 14px;
+}
+
+d-title h1 {
+    grid-column: text;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 1.1em;
+    margin: 0 0 0.5rem;
+}
+
+/* Update toc list font */
+.d-contents nav ul li {
+    font-size: 20px;
+}
+
+.list-group-item.active, .list-group-item.active:focus, .list-group-item.active:hover {
+  background-color: #003660;
+}
