@@ -1,0 +1,26 @@
+---
+title: 'Flex session: reading in data'
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+The goal of this flex session is to read in several different common data types in R and Python, and to identify similarities across the methods & languages. 
+
+We will learn/refresh how to import data from: 
+
+- Comma separated value (.csv) files
+- Excel (.xls, .xlsx) files
+- Text (.txt) files
+- Googlesheets (?)
+- Shapefiles (.shp)
+- Data from a URL
+
+## 1. Data from a CSV
+
+
+```{r}
+
+```
+
