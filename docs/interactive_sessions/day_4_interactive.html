@@ -327,18 +327,15 @@ my_age(age = 10)</code></pre>
     print(age * 7)
   } else if (animal == &quot;goat&quot;) {
     print(age * 4.7)
-  } else {
-    stop(&quot;Animal must be dog or goat.&quot;)
-  }
+  } 
 }
-
-# Try a cow &amp; see what is returned: 
-# animal_age(animal = &quot;cow&quot;, age = 12)
 
 # Try an 8 year old dog.
 animal_age(animal = &quot;dog&quot;, age = 8)</code></pre>
 <pre><code>## [1] 56</code></pre>
-<p><strong>Question:</strong> What does <code>stop()</code> do? How is that different from using <code>print()</code> here? Check out the change it makes!</p>
+<pre class="r"><code># Try a cow &amp; see what is returned. What happens? Consider.
+animal_age(animal = &quot;cow&quot;, age = 12)</code></pre>
+<p><strong>What if the input isn’t dog or goat?</strong> Remember this question - we’ll return to it later on.</p>
 <p><strong>A question to keep in mind:</strong> it’s easy enough to manually code in the animal species and conversion factor since we only have two animals. Would we want to manually write this out if we had 20 species? 50 species?</p>
 </div>
 <div id="example-3" class="section level4">
@@ -415,17 +412,93 @@ df_means(df = the_fish)</code></pre>
 <p>A function containing <code>switch()</code>? See <a href="https://statisticsglobe.com/switch-function-in-r/" class="uri">https://statisticsglobe.com/switch-function-in-r/</a></p>
 </div>
 </div>
-<div id="part-6-building-in-errors-with-stop" class="section level2">
-<h2>Part 6: Building in errors with <code>stop()</code></h2>
+<div id="part-6-adding-helpful-error-and-warning-messages" class="section level2">
+<h2>Part 6: Adding helpful error and warning messages</h2>
+<p>We now know a bit about writing functions. But we also want them to be as <em>helpful</em> as possible - meaning that we need to create useful error messages, documentation and tests. We’ll start by adding some <code>stop()</code> statements to create error messages.</p>
+<p>First, it’s important when designing a function to think about what will make it fail. For example, if a function does an age conversion on a number, what happens if the user inputs a character? What happens if a user only enters one argument value, but the function requires two? Let’s take a look at some examples for adding error messages.</p>
+<div id="adding-error-messages-with-conditional-checks-stop" class="section level3">
+<h3>Adding error messages with conditional checks + <code>stop()</code></h3>
+<p>Returning to our function to convert animal ages:</p>
+<pre class="r"><code>animal_age &lt;- function(animal, age) {
+  if (animal == &quot;dog&quot;) {
+    print(age * 7)
+  } else if (animal == &quot;goat&quot;) {
+    print(age * 4.7)
+  }
+}</code></pre>
+<p>We want to add some error messages that are helpful to the user of the function. We’ll use the <code>stop()</code> function</p>
+<pre class="r"><code>animal_age_stop &lt;- function(animal, age) {
+  
+  if (!animal %in% c(&quot;dog&quot;, &quot;goat&quot;)) {
+    stop(&quot;Oops! Animal must be a dog or a goat.&quot;)
+  }
+  
+  if (is.numeric(age) == FALSE) {
+    stop(&quot;The age must be a number between 0 and 100&quot;)
+  }
+  
+  if (age &lt;= 0) {
+    stop(&quot;Age must be a number greater than zero.&quot;)
+  }
+  
+  if (animal == &quot;dog&quot;) {
+    print(age * 7)
+  } else if (animal == &quot;goat&quot;) {
+    print(age * 4.7)
+  }
+}</code></pre>
+</div>
+<div id="adding-warning-messages" class="section level3">
+<h3>Adding warning messages</h3>
+<p>Sometimes, you still want code to <em>run</em> (i.e., not throw an error message and stop), but there might be something suspicious about the inputs or outputs that you’d want to alert the user about. For example, maybe you’ll flag an input for dog age if the person adds a value over 22 years - it won’t <em>not</em> work, but it’ll give a friendly heads up that that’s a very old dog, are you sure that’s the value you wanted to enter?</p>
+<p>We can add <strong>warning messages</strong> to functions in R using <code>warning()</code>. Keep in mind that the function will still run - this is very different than a hard stop from an error message.</p>
+<p><strong>Example:</strong> Betz’ Limit</p>
+<p>The full power in wind hitting a turbine is:</p>
+<p><span class="math display">\[P = 0.5\rho Av^3\]</span></p>
+<p>where <span class="math inline">\(P\)</span> is power in Watts (joules/second), <span class="math inline">\(\rho\)</span> is the air density (kg/m<sup>3</sup>), <span class="math inline">\(A\)</span> is the area covered by the turbine blades (square meters), and <span class="math inline">\(v\)</span> is the wind velocity (m/s).</p>
+<p>However, the <a href="https://energyeducation.ca/encyclopedia/Betz_limit">Betz Limit</a> means that turbines can only collect ~60% of the total wind power, which updates the theoretical “collectable” power (before accounting for inefficiencies, losses, etc.) to:</p>
+<p><span class="math display">\[P = 0.3\rho Av^3\]</span></p>
+<p>Write a function to calculate <em>maximum collectable</em> wind power (Watts) by a turbine requiring three inputs:</p>
+<ul>
+<li>Air density (in kg/m<sup>3</sup>)</li>
+<li>Rotor radius (in meters)</li>
+<li>Wind velocity (in m/s)</li>
+</ul>
+<p>Add the following errors and warnings:</p>
+<ul>
+<li>A warning if the windspeed entered is &gt; 130 (m/s)</li>
+<li>A warning if the air density is &gt; 1.225 kg / m<sup>3</sup> (air density at sea level)</li>
+<li>An error if the rotor radius is &lt; 0</li>
+</ul>
+<pre class="r"><code>calc_windpower &lt;- function(rho, radius, windspeed) {
+  
+  if (windspeed &gt; 130) {
+    warning(&quot;Whoa, that&#39;s a high windspeed! Are you sure that&#39;s correct?&quot;)
+  }
+  
+  if (rho &gt; 1.225) {
+    warning(&quot;That air density is suspicious.&quot;)
+  }
+  
+  if (radius &lt; 0) {
+    stop(&quot;Rotor radius must be a positive value (meters).&quot;)
+  }
+  
+  0.3*rho*pi*(radius^2)*(windspeed^3)
+  
+}</code></pre>
+<p>Now test your function with different inputs. Are your messages working?</p>
+</div>
 </div>
 <div id="part-7-testing-functions-with-testthat" class="section level2">
 <h2>Part 7: Testing functions with <code>{testthat}</code></h2>
-</div>
-<div id="part-8-sourcing-functions---where-things-live" class="section level2">
-<h2>Part 8: Sourcing functions - where things live</h2>
-</div>
-<div id="part-9-creating-a-package-with-a-documented-function" class="section level2">
-<h2>Part 9: Creating a package with a documented function</h2>
+<p>As we develop algorithms, we’ll change our code. We want a way to automatically check our function to make sure it’s behaving as expected. The <code>testthat</code> function creates a fun way to create unit tests for your code.</p>
+<p><strong>unit test:</strong> TODO definition</p>
+<p>Let’s say, for example, we’re writing a function to find the mean value of each column, then return the lowest and highest mean calculated (in that order). We would expect:</p>
+<ul>
+<li>The outcome to be a numeric vector of length 2</li>
+<li>Where the first value in the vector is smaller than the second value in that vector</li>
+</ul>
 </div>
 
 
@@ -466,6 +539,9 @@ $(document).ready(function () {
 
 <script>
 $(document).ready(function ()  {
+
+    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
+    $('.unlisted.unnumbered').addClass('toc-ignore')
 
     // move toc-ignore selectors from section div to header
     $('div.section.toc-ignore')

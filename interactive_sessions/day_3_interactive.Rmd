@@ -413,6 +413,18 @@ Take a moment to break down what each argument does in the `apply()` function ab
 
 There are also variations on `apply`, like `lapply` and `sapply`, that are worth looking into for specific use cases. 
 
+### `dplyr::across()`, `group_by()` and `summarize()` in combo
+
+If the takeaway is "Whoa, there are a lot of options..." - YES. There are many existing functions that can help you loop over elements of your data and apply a function. 
+
+Here' we'll learn some of my favorites - to loop over columns and by group - and return a nice table of values. 
+
+```{r}
+penguins %>% 
+  group_by(species) %>% 
+  summarize(across(where(is.numeric), mean, na.rm = TRUE))
+```
+
 ### `{purrr}`
 
 The documentation for `?purrr::map()` is titled "Apply a function to each element of a list or atomic vector." Which should ring your for loop brain bells. 
@@ -427,10 +439,3 @@ map(.x = mtcars, .f = mean)
 # Or, to return the output in a data frame (instead of a list):
 map_df(.x = mtcars, .f = mean)
 ```
-
-### Reading in multiple files simultaneously with `map_df()`
-
-A common use case of loops for data science is reading in a number of different files simultaneously. 
-
-
-

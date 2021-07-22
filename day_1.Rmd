@@ -33,7 +33,7 @@ knitr::opts_chunk$set(echo = TRUE)
 - A full code-free workflow
 - Save this workflow (a coworker has emailed you their .Rmd and the data they've used to create an HTML - also attached). Help them out by making this project reproducible, identifying key places where the workflow breaks down or can be improved (assuming they know git / GitHub). 
 
-## Efficiency tips (inspired by Dr. Julia Lowndes)
+
 
 
 

@@ -35,5 +35,5 @@ knitr::opts_chunk$set(echo = TRUE)
 - Analog bits & bytes problems
 - Talking about data
 
-## Efficiency tips (inspired by Dr. Julia Lowndes)
+
 

@@ -601,6 +601,20 @@ for (i in 1:ncol(mtcars)) {
 <p>Take a moment to break down what each argument does in the <code>apply()</code> function above. Keep this in mind - we can also write <em>our own function</em> that we’d want to apply to each element!</p>
 <p>There are also variations on <code>apply</code>, like <code>lapply</code> and <code>sapply</code>, that are worth looking into for specific use cases.</p>
 </div>
+<div id="dplyracross-group_by-and-summarize-in-combo" class="section level3">
+<h3><code>dplyr::across()</code>, <code>group_by()</code> and <code>summarize()</code> in combo</h3>
+<p>If the takeaway is “Whoa, there are a lot of options…” - YES. There are many existing functions that can help you loop over elements of your data and apply a function.</p>
+<p>Here’ we’ll learn some of my favorites - to loop over columns and by group - and return a nice table of values.</p>
+<pre class="r"><code>penguins %&gt;% 
+  group_by(species) %&gt;% 
+  summarize(across(where(is.numeric), mean, na.rm = TRUE))</code></pre>
+<pre><code>## # A tibble: 3 x 6
+##   species   bill_length_mm bill_depth_mm flipper_length_mm body_mass_g  year
+##   &lt;fct&gt;              &lt;dbl&gt;         &lt;dbl&gt;             &lt;dbl&gt;       &lt;dbl&gt; &lt;dbl&gt;
+## 1 Adelie              38.8          18.3              190.       3701. 2008.
+## 2 Chinstrap           48.8          18.4              196.       3733. 2008.
+## 3 Gentoo              47.5          15.0              217.       5076. 2008.</code></pre>
+</div>
 <div id="purrr" class="section level3">
 <h3><code>{purrr}</code></h3>
 <p>The documentation for <code>?purrr::map()</code> is titled “Apply a function to each element of a list or atomic vector.” Which should ring your for loop brain bells.</p>
@@ -646,12 +660,6 @@ map_df(.x = mtcars, .f = mean)</code></pre>
 ##   &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
 ## 1  20.1  6.19  231.  147.  3.60  3.22  17.8 0.438 0.406  3.69  2.81</code></pre>
 </div>
-<div id="reading-in-multiple-files-simultaneously-with-map_df" class="section level3">
-<h3>Reading in multiple files simultaneously with <code>map_df()</code></h3>
-</div>
-<div id="for-loop-in-environmental-data-science" class="section level3">
-<h3>For loop in environmental data science</h3>
-</div>
 </div>
 
 
@@ -692,6 +700,9 @@ $(document).ready(function () {
 
 <script>
 $(document).ready(function ()  {
+
+    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
+    $('.unlisted.unnumbered').addClass('toc-ignore')
 
     // move toc-ignore selectors from section div to header
     $('div.section.toc-ignore')
