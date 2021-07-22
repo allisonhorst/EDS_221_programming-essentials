@@ -306,5 +306,14 @@ Now test your function with different inputs. Are your messages working?
 
 ## Part 7: Testing functions with `{testthat}`
 
+As we develop algorithms, we'll change our code. We want a way to automatically check our function to make sure it's behaving as expected. The `testthat` function creates a fun way to create unit tests for your code. 
+
+**unit test:** TODO definition
+
+Let's say, for example, we're writing a function to find the mean value of each column, then return the lowest and highest mean calculated (in that order). We would expect: 
+
+- The outcome to be a numeric vector of length 2
+- Where the first value in the vector is smaller than the second value in that vector
+
 
 

@@ -1,26 +1,64 @@
 ---
-title: 'Flex session: reading in data'
+title: 'Flex session: basics of reading in data with `readr`'
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(palmerpenguins)
 ```
 
-The goal of this flex session is to read in several different common data types in R and Python, and to identify similarities across the methods & languages. 
+The goal of this flex session is to read in several different common data types in R using functions in the `readr` package. We'll also see what the analogous Python functions look like for comparison. 
+
+### Wait, what's a flat file? 
 
 We will learn/refresh how to import data from: 
 
 - Comma separated value (.csv) files
 - Excel (.xls, .xlsx) files
 - Text (.txt) files
-- Googlesheets (?)
 - Shapefiles (.shp)
 - Data from a URL
 
-## 1. Data from a CSV
+## 1. Read in delimited data
 
+The general function in the `{readr}` package (in R, part of the tidyverse) to read in delimited flat files (like comma- and tab-separated value files) is `read_delim()`. The user specifies the delimiter as the second argument in the function. The functions `read_csv()` and  `read_tsv()` are "special cases of the general `read_delim()`" (from R documentation). 
+
+First, let's look at examples for those three functions: 
+
+### `readr::read_delim()`
+
+Read in the `penguins.csv` file using `read_delim()`:
 
 ```{r}
-
+penguins_delim <- read_delim("penguins.csv", delim = ",")
 ```
+### `readr::read_csv()`
+
+Since the delimiter is a comma, we can use `read_csv()` directly: 
+
+```{r}
+penguins_csv <- read_csv(here("flex_sessions", "penguins.csv"))
+```
+
+### Useful options
+
+Check `?read_delim()` and `?read_csv()` to see options for reading in data. Some of my favorites are: 
+
+- `skip = `: how many lines to skip when reading in (default is 0)
+- `na = c()`: what values should be converted to `NA` (default is "", "NA")
+
+## 2. Data from an Excel file
+
+Read in data from an Excel file (.xls or .xlsx) using the `readxl` package (in R). Install the package using `install.packages("readxl")`.
+
+Use `read_excel()` to read in data from an excel worksheet (works for both .xls and .xlsx). The default is to read in the *first* worksheet. 
+
+Examples [TODO]
+
+- read in first worksheet
+- read in non-first worksheet
+- read in & concatenate multiple worksheets
+
+## 3. Get some spatial data, make a map!
 

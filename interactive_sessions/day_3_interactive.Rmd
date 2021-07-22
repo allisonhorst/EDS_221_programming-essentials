@@ -432,6 +432,5 @@ map_df(.x = mtcars, .f = mean)
 
 A common use case of loops for data science is reading in a number of different files simultaneously. 
 
-### For loop in environmental data science
 
 
