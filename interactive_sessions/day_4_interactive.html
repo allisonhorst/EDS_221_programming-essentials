@@ -276,21 +276,41 @@ div.tocify {
 <h3>Components of a function</h3>
 <p>From <a href="https://r4ds.had.co.nz/functions.html">Chapter 19 - Functions</a> in R for Data Science: &quot;There are three key steps to creating a new function:</p>
 <ul>
-<li><p>You need to pick a name for the function. Here I’ve used rescale01 because this function rescales a vector to lie between 0 and 1.</p></li>
-<li><p>You list the inputs, or arguments, to the function inside function. Here we have just one argument. If we had more the call would look like function(x, y, z).</p></li>
-<li><p>You place the code you have developed in body of the function, a { block that immediately follows function(…).&quot;</p></li>
+<li><p>You need to pick a name for the function.</p></li>
+<li><p>You list the inputs, or arguments, to the function inside function.</p></li>
+<li><p>You place the code you have developed in body of the function.&quot;</p></li>
 </ul>
 </div>
 </div>
 <div id="part-3-getting-started---function-examples-in-r-python" class="section level2">
 <h2>Part 3: Getting started - function examples in R &amp; Python</h2>
-<div id="example-1" class="section level4">
-<h4>Example 1</h4>
+<div id="example-1-from-lecture-slides" class="section level4">
+<h4>Example 1 (from lecture slides)</h4>
+<p>The bird-dog sum example in R:</p>
+<pre class="r"><code>birddog_sum &lt;- function(bird, dog) {
+  pets = bird + dog
+  return(pets)
+}
+
+# Use it! 
+birddog_sum(bird = 2, dog = 5)</code></pre>
+<pre><code>## [1] 7</code></pre>
+<p>The bird-dog sum example in Python:</p>
+<pre class="python"><code>def birddog_sum(bird, dog):
+  pets = bird + dog
+  return(pets)
+  
+birddog_sum(bird = 10, dog = 99)</code></pre>
+<pre><code>## 109</code></pre>
+<p>Note the similarities and differences in syntax between R and Python functions.</p>
+</div>
+<div id="example-2" class="section level4">
+<h4>Example 2</h4>
 <p>Make a function called <code>double_it</code> that doubles any value input value.</p>
 <p>In R:</p>
 <pre class="r"><code># Create the function: 
 double_it &lt;- function (x) {
-  2 * x
+  print(2 * x)
 }
 
 # Try it out! 
@@ -300,18 +320,74 @@ double_it(24) </code></pre>
 double_it(c(1, 0.5, -200))</code></pre>
 <pre><code>## [1]    2    1 -400</code></pre>
 <p>In Python:</p>
+<pre class="python"><code>import numpy as np
+
+def double_it(x):
+  print(2 * x)
+  
+double_it(25)
+
+# Create a vector (NumPy array)</code></pre>
+<pre><code>## 50</code></pre>
+<pre class="python"><code>v = np.array([4, 1])
+
+# Use the function to double all elements in the vector: 
+double_it(v)
+
+# Question: what if you apply double_it() to a LIST in Python? </code></pre>
+<pre><code>## [8 2]</code></pre>
+<pre class="python"><code>w = [3,5,8]
+
+double_it(w) # Note this behavior - lists &amp; tuples are operated on differently than NumPy arrays / vectors! </code></pre>
+<pre><code>## [3, 5, 8, 3, 5, 8]</code></pre>
 </div>
-<div id="example-2" class="section level4">
-<h4>Example 2</h4>
+<div id="example-3" class="section level4">
+<h4>Example 3</h4>
 <p>Write a function that returns the statement “I am ___ years old!”, where the blank is entered by the user as argument <code>age</code>.</p>
 <p>In R:</p>
-<pre class="r"><code>my_age &lt;- function(age) {
+<pre class="r"><code>exclaim_age &lt;- function(age) {
   print(paste(&quot;I am&quot;, age, &quot;years old!&quot;))
 }
 
-my_age(age = 10)</code></pre>
+exclaim_age(age = 10)</code></pre>
 <pre><code>## [1] &quot;I am 10 years old!&quot;</code></pre>
 <p>In Python:</p>
+<pre class="python"><code>def exclaim_age(age):
+  print(&quot;I am&quot;, str(age), &quot;years old!&quot;)
+  
+exclaim_age(age = 2)</code></pre>
+<pre><code>## I am 2 years old!</code></pre>
+</div>
+<div id="print-versus-return" class="section level3">
+<h3><code>print()</code> versus <code>return()</code></h3>
+<p>What’s the difference between <code>print()</code> and <code>return()?</code>. The <code>print()</code> function just makes something visible to us. It does not get stored for later use. If we want an output to be stored for use, we use <code>return()</code>.</p>
+<div id="what" class="section level4">
+<h4>What?</h4>
+<p>Yeah the difference can be kind of tricky, because it sometimes <em>seems</em> like when we use <code>print()</code> it has stored something. Let’s check out an example that highlights the difference.</p>
+</div>
+<div id="example-4" class="section level4">
+<h4>Example 4</h4>
+<p>A Python example:</p>
+<pre class="python"><code>def find_max(val_1, val_2):
+  if (val_1 &gt; val_2):
+    return(val_1)
+  elif (val_2 &gt; val_1):
+    return(val_2)
+
+# We can use that returned output for another calculation: 
+5 * find_max(7, 3)
+  </code></pre>
+<pre><code>## 35</code></pre>
+<p>What happens if instead of <code>return()</code> we’d used <code>print()</code> here?</p>
+<pre class="python"><code>def find_max(val_1, val_2):
+  if (val_1 &gt; val_2):
+    print(val_1)
+  elif (val_2 &gt; val_1):
+    print(val_2)
+  
+# And when we try to use output for something else: 
+5 * find_max(7, 3)</code></pre>
+</div>
 </div>
 </div>
 <div id="part-4-functions-with-conditionals" class="section level2">
@@ -334,11 +410,23 @@ my_age(age = 10)</code></pre>
 animal_age(animal = &quot;dog&quot;, age = 8)</code></pre>
 <pre><code>## [1] 56</code></pre>
 <pre class="r"><code># Try a cow &amp; see what is returned. What happens? Consider.
-animal_age(animal = &quot;cow&quot;, age = 12)</code></pre>
+animal_age(animal = &quot;cow&quot;, age = 12)
+
+# Try a dog that is &quot;yellow&quot; years old:
+# animal_age(animal = &quot;dog&quot;, age = &quot;yellow&quot;)</code></pre>
 <p><strong>What if the input isn’t dog or goat?</strong> Remember this question - we’ll return to it later on.</p>
 <p><strong>A question to keep in mind:</strong> it’s easy enough to manually code in the animal species and conversion factor since we only have two animals. Would we want to manually write this out if we had 20 species? 50 species?</p>
+<p>In Python:</p>
+<pre class="python"><code>def animal_age(animal, age):
+  if (animal == &quot;dog&quot;):
+    print(age * 7)
+  elif (animal == &quot;goat&quot;):
+    print(age * 4.7)
+    
+animal_age(animal = &quot;dog&quot;, age = 15)</code></pre>
+<pre><code>## 105</code></pre>
 </div>
-<div id="example-3" class="section level4">
+<div id="example-1" class="section level4">
 <h4>Example</h4>
 <p>Let’s say we have a table of the dogs’ favorite foods.</p>
 <pre><code>## # A tibble: 4 x 2
@@ -368,7 +456,7 @@ dog_menu(name = &quot;Khora&quot;)</code></pre>
 <div id="part-5-functions-meet-for-loops" class="section level2">
 <h2>Part 5: Functions meet for loops</h2>
 <p>Sometimes, we’ll want to iterate over different elements of a data structure (e.g. data frame columns), applying a function we write to each of them. We’ve learned a couple of coder-friendly tools to loop over columns (e.g. <code>apply</code>, <code>purrr::map()</code>), but let’s write one from scratch first.</p>
-<div id="example-4" class="section level4">
+<div id="example-5" class="section level4">
 <h4>Example</h4>
 <p>Write a function that iterates over each column in a data frame (name gets specified), calculating the mean value for each and returning the phrase “The mean value of (column name) is _____.”</p>
 <p>Note: the <code>colnames()</code> function in base R returns column names.</p>

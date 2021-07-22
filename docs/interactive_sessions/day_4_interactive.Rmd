@@ -45,15 +45,42 @@ To see function documentation in Python, run `help(functionname)`. This will bri
 
 From [Chapter 19 - Functions](https://r4ds.had.co.nz/functions.html) in R for Data Science: "There are three key steps to creating a new function:
 
-- You need to pick a name for the function. Here I’ve used rescale01 because this function rescales a vector to lie between 0 and 1.
+- You need to pick a name for the function. 
 
-- You list the inputs, or arguments, to the function inside function. Here we have just one argument. If we had more the call would look like function(x, y, z).
+- You list the inputs, or arguments, to the function inside function.
 
-- You place the code you have developed in body of the function, a { block that immediately follows function(...)."
+- You place the code you have developed in body of the function."
 
 ## Part 3: Getting started - function examples in R & Python
 
-#### Example 1
+#### Example 1 (from lecture slides)
+
+The bird-dog sum example in R: 
+
+```{r}
+birddog_sum <- function(bird, dog) {
+  pets = bird + dog
+  return(pets)
+}
+
+# Use it! 
+birddog_sum(bird = 2, dog = 5)
+```
+
+The bird-dog sum example in Python: 
+
+```{python}
+def birddog_sum(bird, dog):
+  pets = bird + dog
+  return(pets)
+  
+birddog_sum(bird = 10, dog = 99)
+
+```
+
+Note the similarities and differences in syntax between R and Python functions. 
+
+#### Example 2
 
 Make a function called `double_it` that doubles any value input value. 
 
@@ -62,7 +89,7 @@ In R:
 ```{r}
 # Create the function: 
 double_it <- function (x) {
-  2 * x
+  print(2 * x)
 }
 
 # Try it out! 
@@ -74,28 +101,87 @@ double_it(c(1, 0.5, -200))
 
 In Python: 
 
-```{r}
+```{python}
+import numpy as np
+
+def double_it(x):
+  print(2 * x)
+  
+double_it(25)
+
+# Create a vector (NumPy array)
+v = np.array([4, 1])
+
+# Use the function to double all elements in the vector: 
+double_it(v)
+
+# Question: what if you apply double_it() to a LIST in Python? 
+w = [3,5,8]
+
+double_it(w) # Note this behavior - lists & tuples are operated on differently than NumPy arrays / vectors! 
 
 ```
 
-#### Example 2
+#### Example 3
 
 Write a function that returns the statement "I am ___ years old!", where the blank is entered by the user as argument `age`. 
 
 In R: 
 ```{r}
-my_age <- function(age) {
+exclaim_age <- function(age) {
   print(paste("I am", age, "years old!"))
 }
 
-my_age(age = 10)
+exclaim_age(age = 10)
 ```
 
 In Python: 
 
 ```{python}
-
+def exclaim_age(age):
+  print("I am", str(age), "years old!")
+  
+exclaim_age(age = 2)
 ```
+
+### `print()` versus `return()`
+
+What's the difference between `print()` and `return()?`. The `print()` function just makes something visible to us. It does not get stored for later use. If we want an output to be stored for use, we use `return()`. 
+
+#### What? 
+
+Yeah the difference can be kind of tricky, because it sometimes *seems* like when we use `print()` it has stored something. Let's check out an example that highlights the difference. 
+
+#### Example 4
+
+A Python example: 
+
+```{python}
+def find_max(val_1, val_2):
+  if (val_1 > val_2):
+    return(val_1)
+  elif (val_2 > val_1):
+    return(val_2)
+
+# We can use that returned output for another calculation: 
+5 * find_max(7, 3)
+  
+```
+
+What happens if instead of `return()` we'd used `print()` here? 
+
+```{python, eval = FALSE}
+def find_max(val_1, val_2):
+  if (val_1 > val_2):
+    print(val_1)
+  elif (val_2 > val_1):
+    print(val_2)
+  
+# And when we try to use output for something else: 
+5 * find_max(7, 3)
+  
+```
+
 
 ## Part 4: Functions with conditionals
 
@@ -124,11 +210,26 @@ animal_age(animal = "dog", age = 8)
 
 # Try a cow & see what is returned. What happens? Consider.
 animal_age(animal = "cow", age = 12)
+
+# Try a dog that is "yellow" years old:
+# animal_age(animal = "dog", age = "yellow")
 ```
 
 **What if the input isn't dog or goat?** Remember this question - we'll return to it later on. 
 
 **A question to keep in mind:** it's easy enough to manually code in the animal species and conversion factor since we only have two animals. Would we want to manually write this out if we had 20 species? 50 species? 
+
+In Python: 
+```{python}
+def animal_age(animal, age):
+  if (animal == "dog"):
+    print(age * 7)
+  elif (animal == "goat"):
+    print(age * 4.7)
+    
+animal_age(animal = "dog", age = 15)
+```
+
 
 #### Example
 
