@@ -304,9 +304,7 @@ the_fish <- tribble(
 
 df_means(df = the_fish)
 ```
-#### Another example
 
-A function containing `switch()`? See https://statisticsglobe.com/switch-function-in-r/
 
 ## Part 6: Adding helpful error and warning messages
 
@@ -448,7 +446,7 @@ pop_35 <- logistic_growth(N0 = 100, K = 6000, r = 0.27, time = time_vec)
 pop_time_35 <- data.frame(time_vec, pop_35)
 
 # Always take a look at it
-View(pop_time_35)
+# View(pop_time_35)
 
 # Alternatively with an inner for loop: 
 pop_35_vec <- vector(mode = "numeric", length = length(time_vec))

@@ -495,10 +495,6 @@ df_means(df = the_fish)</code></pre>
 ## [1] &quot;The mean value of rainbow is 13.475&quot;
 ## [1] &quot;The mean value of cutthroat is 24.175&quot;</code></pre>
 </div>
-<div id="another-example" class="section level4">
-<h4>Another example</h4>
-<p>A function containing <code>switch()</code>? See <a href="https://statisticsglobe.com/switch-function-in-r/" class="uri">https://statisticsglobe.com/switch-function-in-r/</a></p>
-</div>
 </div>
 <div id="part-6-adding-helpful-error-and-warning-messages" class="section level2">
 <h2>Part 6: Adding helpful error and warning messages</h2>
@@ -611,7 +607,15 @@ pop_35 &lt;- logistic_growth(N0 = 100, K = 6000, r = 0.27, time = time_vec)
 pop_time_35 &lt;- data.frame(time_vec, pop_35)
 
 # Always take a look at it
-# View(pop_time_35)</code></pre>
+# View(pop_time_35)
+
+# Alternatively with an inner for loop: 
+pop_35_vec &lt;- vector(mode = &quot;numeric&quot;, length = length(time_vec))
+
+for(i in 1:length(time_vec)) {
+  population &lt;- logistic_growth(N0 = 100, K = 6000, r = 0.27, time = time_vec[i])
+  pop_35_vec[i] &lt;- population
+}</code></pre>
 <p>Now, a graph of the output:</p>
 <pre class="r"><code># Make a little graph: 
 ggplot(data = pop_time_35, aes(x = time_vec, y = pop_35)) +
@@ -655,13 +659,47 @@ ggplot(data = out_df_long, aes(x = time, y = population)) +
 </div>
 <div id="part-8-testing-functions-with-testthat" class="section level2">
 <h2>Part 8: Testing functions with <code>{testthat}</code></h2>
-<p>As we develop algorithms, we’ll change our code. We want a way to automatically check our function to make sure it’s behaving as expected. The <code>testthat</code> function creates a fun way to create unit tests for your code.</p>
-<p><strong>unit test:</strong> TODO definition</p>
-<p>Let’s say, for example, we’re writing a function to find the mean value of each column, then return the lowest and highest mean calculated (in that order). We would expect:</p>
+<p>As we develop algorithms, we’ll change our code. We want a way to automatically check our function to make sure it’s behaving as expected. The <code>testthat</code> package “tries to make testing as fun as possible.”</p>
+<p><strong>Unit test:</strong> A unit test is an automated check of a piece (“unit”) of your code</p>
+<p>Let’s consider an example. We’re writing a function to find the mean value of each column, then return the lowest and highest mean calculated (in that order). We would expect:</p>
 <ul>
 <li>The outcome to be a numeric vector of length 2</li>
 <li>Where the first value in the vector is smaller than the second value in that vector</li>
 </ul>
+<p>Let’s write the function, then some accompanying tests to make sure they’re working.</p>
+<pre class="r"><code>mean_range &lt;- function(df) {
+  col_means &lt;- map_df(df, .f = mean) # Returns column means as a df
+  col_mean_max &lt;- max(col_means) # Looks for the maximum value
+  col_mean_min &lt;- min(col_means) # Looks for the minimum value
+  print(c(col_mean_min, col_mean_max))
+}
+
+# Try it out:
+mean_range(df = mtcars)</code></pre>
+<pre><code>## [1]   0.40625 230.72188</code></pre>
+<p>OK great. But we’re doing some work on this code, and we don’t want to have to try a bunch of different things manually each time we change it to see how it breaks. Instead, we’ll write some <strong>automated tests</strong> for this function that help us avoid that (tomorrow!).</p>
+</div>
+<div id="end." class="section level2">
+<h2>End.</h2>
+<p>Extra:</p>
+<p>What’s the output of this nested for loop?</p>
+<pre class="r"><code>apples &lt;- seq(from = 1, to = 3, by = 1)
+price &lt;- c(7, 10, 25)
+
+fruit_out &lt;- matrix(nrow = length(price), ncol = length(apples))
+
+for (i in seq_along(apples)) {
+  for (j in seq_along(price)) {
+    total_cost &lt;- price[j] * apples[i]
+    fruit_out[j, i] &lt;- total_cost
+  }
+}
+
+fruit_out</code></pre>
+<pre><code>##      [,1] [,2] [,3]
+## [1,]    7   14   21
+## [2,]   10   20   30
+## [3,]   25   50   75</code></pre>
 </div>
 
 
