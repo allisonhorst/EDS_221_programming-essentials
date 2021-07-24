@@ -405,16 +405,169 @@ calc_windpower <- function(rho, radius, windspeed) {
 
 Now test your function with different inputs. Are your messages working? 
 
-## Part 7: Testing functions with `{testthat}`
+## Part 7: A few more interesting functions
 
-As we develop algorithms, we'll change our code. We want a way to automatically check our function to make sure it's behaving as expected. The `testthat` function creates a fun way to create unit tests for your code. 
+- Logistic growth equation (within a for loop where growth rate changes)
 
-**unit test:** TODO definition
+- Sinusoidal function with varying parameters
 
-Let's say, for example, we're writing a function to find the mean value of each column, then return the lowest and highest mean calculated (in that order). We would expect: 
+### Logistic growth equation
+
+In EDS 212, we learned about the logistic growth equation: 
+
+$$N_t=\frac{K}{1+[\frac{K-N_0}{N_0}]e^{-rt}}$$
+
+Where $N_0$ is the initial population size at time ($t$) 0, $K$ is the carrying capacity, $r$ is the population growth rate, and $N_t$ is the population size at time $t$. 
+
+First, let's write write the bare-bones function: 
+
+```{r}
+
+# Build & check the minimum function
+logistic_growth <- function(N0, K, r, time) {
+  Nt <- K / (1 + ((K - N0) / N0) * exp(-r * time))
+  print(Nt)
+}
+
+# Do the values check out when you test this? 
+logistic_growth(N0 = 100, K = 6000, r = 0.27, time = 40)
+```
+
+Cool. So this seems to be working when we assign single values for the different parameters. 
+
+Now, let's explore what this looks like over a whole sequence of times (e.g. from t = 0 to t = 40):
+
+```{r, results = "hide"}
+# Create a vector of times:
+time_vec <- seq(from = 0, to = 35, by = 0.1)
+
+# Apply the logistic growth function to that vector of times (& store):
+pop_35 <- logistic_growth(N0 = 100, K = 6000, r = 0.27, time = time_vec)
+
+# Bind together the time_vec and population:
+pop_time_35 <- data.frame(time_vec, pop_35)
+
+# Always take a look at it
+View(pop_time_35)
+
+# Alternatively with an inner for loop: 
+pop_35_vec <- vector(mode = "numeric", length = length(time_vec))
+
+for(i in 1:length(time_vec)) {
+  population <- logistic_growth(N0 = 100, K = 6000, r = 0.27, time = time_vec[i])
+  pop_35_vec[i] <- population
+}
+```
+
+
+Now, a graph of the output: 
+```{r}
+# Make a little graph: 
+ggplot(data = pop_time_35, aes(x = time_vec, y = pop_35)) +
+  geom_line(size = 0.5)
+
+```
+
+
+But we can imagine that we may want to ask: What does this look like as we change the initial population size? Or the growth rate? Etc. 
+
+In that case, we may want to apply our function over a range of growth rates (from 0.20 to 0.40, by increments of 0.01), for the time sequence we used here (0 to 35). 
+
+```{r}
+
+# Create a sequence of growth rate values: 
+r_seq <- seq(from = 0.20, to = 0.40, by = 0.01)
+
+```
+
+Create a nested for loop! 
+```{r, results = "hide"}
+
+# Create a for loop that goes through each, apply the 
+# logistic growth function for a range of times for each growth rate
+
+# Need to create a MATRIX to store the outputs in: 
+out_matrix <- matrix(nrow = length(time_vec), ncol = length(r_seq))
+
+# Now, a nested for loop:
+for (i in 1:length(r_seq)) { # Outer loop is the growth rates
+  for (j in 1:length(time_vec)) { # Inner loop is the time sequence values
+  pop <- logistic_growth(N0 = 100, K = 6000, r = r_seq[i], time = time_vec[j])
+  out_matrix[j, i] <- pop # Store the value in the appropriate row & column
+  } 
+}
+
+```
+
+
+Now some wrangling so we can visualize it: 
+```{r}
+
+# Let's wrangling it a little bit 
+out_df <- data.frame(out_matrix, time = time_vec) # Make it a data frame and add time
+
+# Update the column names of out_df, keeping time column name the same
+colnames(out_df) <- c(paste("gr_", r_seq, sep = ""), "time")
+
+# pivot_longer to make it tidy (you'll learn more about this next week)
+out_df_long <- out_df %>% 
+  pivot_longer(cols = -time, names_to = "growth_rate", values_to = "population")
+
+# Then plot it: 
+ggplot(data = out_df_long, aes(x = time, y = population)) +
+  geom_line(aes(color = growth_rate)) +
+  theme_minimal()
+
+```
+
+
+## Part 8: Testing functions with `{testthat}`
+
+As we develop algorithms, we'll change our code. We want a way to automatically check our function to make sure it's behaving as expected. The `testthat` package "tries to make testing as fun as possible."
+
+**Unit test:** A unit test is an automated check of a piece ("unit") of your code
+
+Let's consider an example. We're writing a function to find the mean value of each column, then return the lowest and highest mean calculated (in that order). We would expect: 
 
 - The outcome to be a numeric vector of length 2
 - Where the first value in the vector is smaller than the second value in that vector
+
+Let's write the function, then some accompanying tests to make sure they're working. 
+
+```{r}
+mean_range <- function(df) {
+  col_means <- map_df(df, .f = mean) # Returns column means as a df
+  col_mean_max <- max(col_means) # Looks for the maximum value
+  col_mean_min <- min(col_means) # Looks for the minimum value
+  print(c(col_mean_min, col_mean_max))
+}
+
+# Try it out:
+mean_range(df = mtcars)
+```
+
+OK great. But we're doing some work on this code, and we don't want to have to try a bunch of different things manually each time we change it to see how it breaks. Instead, we'll write some **automated tests** for this function that help us avoid that (tomorrow!).
+
+## End.
+
+Extra: 
+
+What's the output of this nested for loop? 
+```{r}
+apples <- seq(from = 1, to = 3, by = 1)
+price <- c(7, 10, 25)
+
+fruit_out <- matrix(nrow = length(price), ncol = length(apples))
+
+for (i in seq_along(apples)) {
+  for (j in seq_along(price)) {
+    total_cost <- price[j] * apples[i]
+    fruit_out[j, i] <- total_cost
+  }
+}
+
+fruit_out
+```
 
 
 

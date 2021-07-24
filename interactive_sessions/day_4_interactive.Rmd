@@ -448,7 +448,15 @@ pop_35 <- logistic_growth(N0 = 100, K = 6000, r = 0.27, time = time_vec)
 pop_time_35 <- data.frame(time_vec, pop_35)
 
 # Always take a look at it
-# View(pop_time_35)
+View(pop_time_35)
+
+# Alternatively with an inner for loop: 
+pop_35_vec <- vector(mode = "numeric", length = length(time_vec))
+
+for(i in 1:length(time_vec)) {
+  population <- logistic_growth(N0 = 100, K = 6000, r = 0.27, time = time_vec[i])
+  pop_35_vec[i] <- population
+}
 ```
 
 
@@ -463,12 +471,12 @@ ggplot(data = pop_time_35, aes(x = time_vec, y = pop_35)) +
 
 But we can imagine that we may want to ask: What does this look like as we change the initial population size? Or the growth rate? Etc. 
 
-In that case, we may want to apply our function over a range of growth rates (from 0.05 to 0.40), for the time sequence we used here (0 to 35). 
+In that case, we may want to apply our function over a range of growth rates (from 0.20 to 0.40, by increments of 0.01), for the time sequence we used here (0 to 35). 
 
 ```{r}
 
 # Create a sequence of growth rate values: 
-r_seq <- seq(from = 0.05, to = 0.40, by = 0.05)
+r_seq <- seq(from = 0.20, to = 0.40, by = 0.01)
 
 ```
 
@@ -492,7 +500,7 @@ for (i in 1:length(r_seq)) { # Outer loop is the growth rates
 ```
 
 
-Now some wrangling so we can graph it: 
+Now some wrangling so we can visualize it: 
 ```{r}
 
 # Let's wrangling it a little bit 
@@ -503,7 +511,7 @@ colnames(out_df) <- c(paste("gr_", r_seq, sep = ""), "time")
 
 # pivot_longer to make it tidy (you'll learn more about this next week)
 out_df_long <- out_df %>% 
-  pivot_longer(cols = 1:8, names_to = "growth_rate", values_to = "population")
+  pivot_longer(cols = -time, names_to = "growth_rate", values_to = "population")
 
 # Then plot it: 
 ggplot(data = out_df_long, aes(x = time, y = population)) +
@@ -515,14 +523,51 @@ ggplot(data = out_df_long, aes(x = time, y = population)) +
 
 ## Part 8: Testing functions with `{testthat}`
 
-As we develop algorithms, we'll change our code. We want a way to automatically check our function to make sure it's behaving as expected. The `testthat` function creates a fun way to create unit tests for your code. 
+As we develop algorithms, we'll change our code. We want a way to automatically check our function to make sure it's behaving as expected. The `testthat` package "tries to make testing as fun as possible."
 
-**unit test:** TODO definition
+**Unit test:** A unit test is an automated check of a piece ("unit") of your code
 
-Let's say, for example, we're writing a function to find the mean value of each column, then return the lowest and highest mean calculated (in that order). We would expect: 
+Let's consider an example. We're writing a function to find the mean value of each column, then return the lowest and highest mean calculated (in that order). We would expect: 
 
 - The outcome to be a numeric vector of length 2
 - Where the first value in the vector is smaller than the second value in that vector
+
+Let's write the function, then some accompanying tests to make sure they're working. 
+
+```{r}
+mean_range <- function(df) {
+  col_means <- map_df(df, .f = mean) # Returns column means as a df
+  col_mean_max <- max(col_means) # Looks for the maximum value
+  col_mean_min <- min(col_means) # Looks for the minimum value
+  print(c(col_mean_min, col_mean_max))
+}
+
+# Try it out:
+mean_range(df = mtcars)
+```
+
+OK great. But we're doing some work on this code, and we don't want to have to try a bunch of different things manually each time we change it to see how it breaks. Instead, we'll write some **automated tests** for this function that help us avoid that (tomorrow!).
+
+## End.
+
+Extra: 
+
+What's the output of this nested for loop? 
+```{r}
+apples <- seq(from = 1, to = 3, by = 1)
+price <- c(7, 10, 25)
+
+fruit_out <- matrix(nrow = length(price), ncol = length(apples))
+
+for (i in seq_along(apples)) {
+  for (j in seq_along(price)) {
+    total_cost <- price[j] * apples[i]
+    fruit_out[j, i] <- total_cost
+  }
+}
+
+fruit_out
+```
 
 
 
