@@ -599,8 +599,38 @@ Select the citation you want to insert. For example, data used in this example a
 <p>Learn more about citations in R Markdown: <a href="https://blog.rstudio.com/2020/11/09/rstudio-1-4-preview-citations/" class="uri">https://blog.rstudio.com/2020/11/09/rstudio-1-4-preview-citations/</a></p>
 </div>
 </div>
-<div id="end" class="section level2 unnumbered">
-<h2 class="unnumbered">END</h2>
+<div id="end" class="section level2">
+<h2>END</h2>
+<p>Extra unit test example (from lecture):</p>
+<pre class="r"><code>fish_mass &lt;- function(alpha, beta, fish_length) {
+  
+  if (fish_length &lt;= 0) {
+    stop(&quot;Fish length must be greater than or equal to 0.&quot;)
+  }
+  
+  mass &lt;- alpha * (fish_length ^ beta)
+  return(mass)
+  
+}
+
+# Unit tests
+
+expect_length(fish_mass(alpha = 1, beta = 2, fish_length = 3), 2)</code></pre>
+<pre><code>## Error: fish_mass(alpha = 1, beta = 2, fish_length = 3) has length 1, not length 2.</code></pre>
+<p>Extra Roxygen example:</p>
+<pre class="r"><code>#&#39; Calculate the distance traveled in miles
+#&#39;
+#&#39; @param rate a number in units of miles per hour
+#&#39; @param time a number in units of hours
+#&#39;
+#&#39; @return a number indicating the distance traveled in miles
+#&#39; @export
+#&#39;
+#&#39; @examples
+distance &lt;- function(rate, time) {
+  dist &lt;- rate * time
+  return(dist)
+}</code></pre>
 <div id="refs" class="references csl-bib-body hanging-indent">
 <div id="ref-horst2020a" class="csl-entry">
 Horst, Allison, Alison Presmanes Hill, and Kristen B Gorman. 2020. <em>Palmerpenguins: Palmer Archipelago (Antarctica) Penguin Data</em>. <a href="https://allisonhorst.github.io/palmerpenguins/">https://allisonhorst.github.io/palmerpenguins/</a>.

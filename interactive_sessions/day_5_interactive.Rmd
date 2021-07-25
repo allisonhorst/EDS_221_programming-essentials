@@ -413,3 +413,40 @@ Click on the citation text for a preview of how it'll show up in the final docum
 Learn more about citations in R Markdown: <https://blog.rstudio.com/2020/11/09/rstudio-1-4-preview-citations/>
 
 ## END
+
+Extra unit test example (from lecture):
+
+```{r, error=TRUE}
+fish_mass <- function(alpha, beta, fish_length) {
+  
+  if (fish_length <= 0) {
+    stop("Fish length must be greater than or equal to 0.")
+  }
+  
+  mass <- alpha * (fish_length ^ beta)
+  return(mass)
+  
+}
+
+# Unit tests
+
+expect_length(fish_mass(alpha = 1, beta = 2, fish_length = 3), 2)
+```
+
+Extra Roxygen example:
+
+```{r}
+#' Calculate the distance traveled in miles
+#'
+#' @param rate a number in units of miles per hour
+#' @param time a number in units of hours
+#'
+#' @return a number indicating the distance traveled in miles
+#' @export
+#'
+#' @examples
+distance <- function(rate, time) {
+  dist <- rate * time
+  return(dist)
+}
+```
