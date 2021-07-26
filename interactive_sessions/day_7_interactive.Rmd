@@ -1,0 +1,295 @@
+---
+title: "Day 7 Interactive Session Materials"
+subtitle: "Data wrangling continued: joins, easier dates, & working with strings"
+output: 
+  html_document:
+    css: comp_session_theme.css
+    toc: true
+    toc_float: true
+---
+
+```{r, warning = FALSE, message = FALSE}
+library(tidyverse)
+library(palmerpenguins)
+library(lubridate)
+```
+
+# Part 0: Setup
+
+- Create a new version-controlled R Project called `eds221-m2021-day7-interactive`
+- Create a new R Markdown document in the project
+- Attach the following packages in the setup chunk: 
+    - `tidyverse`
+    - `palmerpenguins`
+    - `lubridate`
+    
+# Part 1: Data wrangling refresher
+
+**Refresher 1:** Starting with the `penguins` dataset in the `palmerpenguins` package, write a single piped sequence in which you: 
+
+1. Only include penguins at Biscoe and Dream islands
+2. Remove the `year` and `sex` variables
+3. Add a new column called `body_mass_kg`, with penguin mass converted from grams to kilograms
+4. Rename the `island` variable to `location`
+
+**Refresher 2:** Staring with the `penguins` dataset in the `palmerpenguins` package, write a single piped sequence in which you:
+
+1. Limit to only Adelie penguins
+2. Group the data by `sex`
+3. Find the mean (`mean()`), standard deviation (`sd`) and sample size (`n`) for male and female Adelie penguins, returned in a nice summary table
+
+# Part 2: Wrangling continued - joins of different flavors
+
+## Mutating joins
+
+Let's create some data to practice and clarify different types of joins. 
+
+```{r}
+animals <- tribble(
+  ~location, ~species, ~maturity,
+  "lagoon", "bobcat", "adult",
+  "bluff", "coyote", "juvenile",
+  "creek", "fox", "adult",
+  "oaks", "squirrel", "juvenile",
+  "bluff", "bobcat", "adult"
+)
+
+sites <- tribble(
+  ~location, ~full_site_name, ~jurisdiction,
+  "beach", "Goleta Beach", "SB City",
+  "lagoon", "UCSB Lagoon", "UCSB",
+  "bluff", "Ellwood Mesa", "SB City",
+  "oaks", "Fremont Campground", "USFS"
+)
+```
+
+### dplyr::full_join()
+
+The `dplyr::full_join()` function adds columns from the second df to the first df. It is the safest join - nothing is excluded. When in doubt, **full join**. 
+
+```{r}
+full_join_example <- full_join(animals, sites)
+
+full_join_example
+```
+
+### dplyr::left_join()
+
+The `dplyr::left_join(x,y)` function keeps everything in x, and only joins from y (by matching key) if they have a match in x. Otherwise they're dropped.
+
+```{r}
+left_join_example <- left_join(animals, sites)
+
+left_join_example
+```
+
+### dplyr::right_join()
+
+Opposite of a `left_join()`.
+
+```{r}
+right_join_example <- right_join(animals, sites)
+
+right_join_example
+```
+
+### `dplyr::inner_join()`
+
+Rows are only kept if the key matches in both x and y (intersection). 
+
+```{r}
+inner_join_example <- inner_join(animals, sites)
+
+inner_join_example
+```
+
+## Filtering joins
+
+We'll just look at two filtering join functions (from dplyr documentation): 
+
+- `semi_join()` "return[s] all rows from x with a match in y"
+- `anti_join()` "return[s] all rows from x *without* a match in y"
+
+```{r}
+semi_join_example <- semi_join(animals, sites)
+
+semi_join_example
+```
+
+```{r}
+anti_join_example <- anti_join(animals, sites)
+
+anti_join_example
+```
+
+# Part 3: easier dates and times with {lubridate}
+
+## Witness some lubridate magic: 
+
+```{r}
+my_date <- "03-15-1998"
+lubridate::mdy(my_date)
+```
+
+```{r}
+my_date <- "11/7/2003"
+lubridate::mdy(my_date)
+```
+
+```{r}
+my_date <- "08-Jun-1974"
+lubridate::dmy(my_date)
+```
+
+```{r}
+my_date <- "19610518"
+lubridate::ymd(my_date)
+```
+
+ISO 8601 for everyone! 
+
+## Wait can it fail? 
+
+Yup. What happens if we give lubridate something that doesn't make sense? 
+```{r}
+lubridate::mdy("1942-08-30")
+# Nope.
+```
+
+```{r}
+lubridate::dmy("09/12/84")
+# Wait...but couldn't that be correct? 
+# Sure, you and your computer wouldn't know.
+# SO KNOW YOUR DATE FORMAT.
+```
+
+In other words, parsing dates can fail in multiple ways: 
+
+- The parsing can fail because the values don't make sense based on the order you gave it (e.g. "wait you're telling me that the month is 17? Nope.")
+- The parsing can *work*, but you messed up with the order - so the code runs, but the date stored is *wrong*. This is more dangerous. 
+
+KNOW YOUR DATA. 
+
+## It even makes it relatively easy to deal with times & time zones
+
+Use `ymd-hm` to convert this to a date time that R will understand.
+
+Question: Why am I using `ymd-hm` here? 
+```{r}
+time <- "2020-08-12 11:18"
+time <- ymd_hm(time)
+time # Note that the default is UTC
+class(time) # Class is POSIXct
+
+# Convert to PDT:
+with_tz(time, "America/Los_Angeles")
+
+# Convert to AEST:
+with_tz(time, "Australia/Sydney")
+
+```
+
+## Pulling pieces
+
+You can also get information about your dates using nice built-in lubridate functions. 
+
+```{r}
+teddy_bday <- lubridate::ymd("20170615")
+
+# Return the date 
+teddy_bday
+```
+
+
+```{r}
+# What day of the week? 
+wday(teddy_bday, label = TRUE)
+
+# What week of the year? 
+week(teddy_bday)
+
+# Pull the year
+year(teddy_bday)
+
+# Month
+month(teddy_bday)
+```
+
+## Date pieces as new columns
+
+This can be useful if you want to group your day in different ways for analyses or exploration. Use lubridate functions, in combination with mutate(), to add new columns containing separate pieces of the date, e.g. year, month, day in three separate columns). 
+
+For example, let's just make a little data frame to try this out: 
+```{r}
+urchin_counts <- tribble(
+  ~date, ~species, ~size_mm,
+  "10/3/2020", "purple", 55,
+  "10/4/2020", "red", 48,
+  "11/17/2020", "red", 67
+)
+
+urchin_counts_ymd <- urchin_counts %>% 
+  mutate(date = lubridate::mdy(date)) %>% 
+  mutate(year = year(date),
+         month = month(date),
+         day = day(date))
+
+urchin_counts_ymd
+
+# And then we could use group_by() to find different summary values by group, for example.
+```
+
+
+
+# Wrangling strings with `stringr`
+
+## Use `str_detect()` to detect a string pattern
+
+Returns TRUE or FALSE based on whether the pattern is or is not detected. 
+```{r}
+my_string <- "Teddy loves eating salmon and socks."
+
+# Does the pattern "love" exist within the string?
+my_string %>% str_detect("love")
+
+# Does the pattern "pup" exist within the string?
+my_string %>% str_detect("pup")
+```
+
+This also works on vectors (...think ahead - data frame columns!). It is case sensitive (by default):
+```{r}
+my_string <- c("burrito", "fish taco", "Taco salad")
+
+# Does the vector element contain the pattern "fish"?
+my_string %>% str_detect("fish")
+```
+
+It is most powerful when used in combination with other functions. 
+
+For example, let's look at the `starwars` dataset (in `dplyr`):
+```{r}
+head(starwars)
+```
+
+I want to only keep rows where the name column contains the pattern "Skywalker." Remember: what's the function to keep or exclude rows based on our conditions? It's `dplyr::filter()`! I can use that with `str_detect()` to get the Skywalker family characters for me: 
+
+```{r}
+skywalkers <- starwars %>% 
+  filter(str_detect(name, "Skywalker"))
+
+skywalkers
+```
+## Use `str_replace()` to replace a string pattern with something else
+
+```{r}
+firewalkers <- starwars %>% 
+  mutate(name = str_replace(name, pattern = "Sky", replacement = "Fire"))
+
+head(firewalkers)
+```
+
+You can imagine this may be really helpful if there is a repeated spelling error, annoying syntax, or otherwise that you want to update throughout your data frame. 
+
+Note: this is very different from text mining and analysis, which involves analyzing textual information to gain insights about patterns, trends, and sentiments - look forward to that in EDS 242! 
+
+## End {-}
