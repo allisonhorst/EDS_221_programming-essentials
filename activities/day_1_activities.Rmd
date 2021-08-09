@@ -1,0 +1,80 @@
+---
+title: "Day 1 Activities"
+subtitle: "Project organization, data import, file paths"
+output: 
+  html_document:
+    css: activity_theme.css
+    toc: true
+    toc_float: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(downloadthis)
+library(here)
+```
+
+## Setup
+
+### Get the data
+ 
+```{r, echo = FALSE, message = FALSE, warning = FALSE}
+stl_blood_lead <- read_csv(here::here("activities","stl_blood_lead.csv"))
+
+stl_blood_lead %>%
+  download_this(
+    output_name = "stl_blood_lead",
+    output_extension = ".csv",
+    button_label = "Click to download CSV",
+    button_type = "warning",
+    has_icon = TRUE,
+    icon = "fa fa-save"
+  )
+```
+
+Read more about the data [here](https://github.com/slu-soc1120/STL_HEALTH_Lead)
+  
+### Create your R Project
+
+- Create a new repository on GitHub named `stl_lead_yourname` (mine would be `stl_lead_allison`)
+- Clone to create version-controlled R Project
+- Add three subfolders to your R project: `data`, `docs` and `figs`
+- Copy the dataset you download above into the `data` folder of your project
+- Create and save a new .Rmd as `stl_lead_inequity.Rmd` in the `docs` folder
+
+### Read in & explore the data
+
+- Read in the `stl_blood_lead.csv` data as `stl_lead` in your R Markdown
+- Do some basic exploration of the dataset, and `janitor::clean_names()` if useful
+- In a new code chunk, from `stl_lead` create a new data frame called `stl_lead_prop` that has one additional column called `prop_white` that returns the percent of each census tract identifying as white (variable `white` in the dataset divided by variable `totalPop`, times 100). You may need to do some Googling. Hint: `dplyr::mutate(new_col = col_a / col_b)` will create a new column `new_col` that contains the value of `col_a / col_b`
+
+### Create a scatterplot
+
+- In a new code chunk, create a scatterplot graph of the percentage of children in each census tract with elevated blood lead levels (`pctElevated`) versus the percent of each census tract identifying as white. 
+- Customize by updating several aesthetics (e.g. size, opacity (see `alpha = `), color, etc.)
+- Store the scatterplot as `stl_lead_plot`
+- Have the scatterplot returned in the knitted html - customize the size that it appears when knitted
+- Also save a .png of the scatterplot to `figs`, with dimensions of (6 x 5) (width x height)
+- In text above or below the scatterplot, write 1 - 2 sentences describing the overall trend that you observe from your graph
+
+### Create a histogram
+
+- Create a histogram of only the `pctElevated` column in the data frame
+- Customize the fill, color, and size aesthetics - test some stuff! Feel free to make it awful. 
+- Once you've played around with customization, export the histogram as a .jpg to the `figs` folder
+- Make sure the histogram also shows up in your knitted html (customize the size)
+
+### Knit
+
+- Knit your document
+- Stage, commit, pull then push changes
+
+### Share & test
+
+- Share the link to your public GitHub repo with a neighbor
+- Fork the repo your neighbor shared, then clone to get set up locally in RStudio
+- Navigate to their .Rmd
+- Knit - does everything work? Cool, your neighbor made a reproducible project with file paths you can use too! 
+
+## End activity

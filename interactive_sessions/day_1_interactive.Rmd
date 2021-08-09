@@ -1,0 +1,45 @@
+---
+title: "Day 1 Interactive Session Materials"
+subtitle: "File paths, {here}, project structure, code style practice"
+output: 
+  html_document:
+    css: comp_session_theme.css
+    toc: true
+    toc_float: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+```
+
+## Setup
+
+- Fork and clone [this repo](https://github.com/allisonhorst/eds221-day1-comp)
+- Check out the project structure & files
+
+## File path practice
+
+- We'll run through each line in the `toolik_airtemp_summary.Rmd` to understand where it's pointing, what it's doing, and add a few more tools to our coding toolkit (`readr::read_csv()`, `janitor::clean_names()`, `%>%`)
+
+- Similarly, we'll create from scratch & work through one more example from scratch to read in another dataset while learning more wrangling skills 
+Our second example will be to: 
+
+- Read in the chlorophyll data
+- explore the imported data
+- clean up the dataset names
+- create a plot of chlorophyll concentration at varying measurement depth, do some customization
+- export the graph to /figs
+
+
+## Data sources: 
+
+All datasets are collected and provided by scientists with the [Toolik Station Long Term Ecological Research](https://www.uaf.edu/toolik/) (LTER) site, Alaska.
+
+**Toolik Station Meteorological Data: toolik_weather.csv** Shaver, G. 2019. A multi-year DAILY weather file for the Toolik Field Station at Toolik Lake, AK starting 1988 to present. ver 4. Environmental Data Initiative. https://doi.org/10.6073/pasta/ce0f300cdf87ec002909012abefd9c5c (Accessed 2021-08-08).
+
+**Toolik Lake Chlorophyll: toolik_chlorophyll.csv**  Miller, M. 2014. Chlorophyll A, and primary productivity of Toolik lake , Arctic LTER 1975 to 1988, Toolik Filed Station, Alaska. ver 5. Environmental Data Initiative. https://doi.org/10.6073/pasta/6738024bf0174f73b3f74486f43d1059 (Accessed 2021-08-08).
+
+**Toolik fish: toolik_fish.csv** Budy, P., C. Luecke, and M. McDonald. 2020. Fish captures in lakes of the Arctic LTER region Toolik Field Station Alaska from 1986 to present. ver 6. Environmental Data Initiative. https://doi.org/10.6073/pasta/d0a9358f783339821b82510eb8c61b45 (Accessed 2021-08-08).
+
+
