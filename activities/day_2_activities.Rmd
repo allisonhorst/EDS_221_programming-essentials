@@ -12,7 +12,7 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 library(tidyverse)
 library(here)
-library(reticulate)
+library(janitor)
 ```
 
 ## Part 1: Bits & bytes
@@ -44,10 +44,185 @@ Check your answer using this ascii to text converter: https://convert.town/ascii
 - Create a new repo on GitHub called `eds221-day2-activities`
 - Clone to create a version controlled R Project 
 - Create subfolders called `docs`, `data`, and `figs`
-- Create an R Markdown document, save in the `docs` subfolder as `data_types.Rmd`
+- Create an R Markdown document, save in the `docs` subfolder as `r_data_types.Rmd`
 
-### Create some data, check the classes
+### Create some data, check the classes, index!
+
+#### Vectors, lists & data frames
+
+In your R Markdown document: 
+
+1. Create a vector called `vec_1`containing the following: 
+
+```{r, eval = FALSE}
+2, 5, 9, 10, 8, 12, 1, 0
+```
+
+```{r, include = FALSE}
+vec_1 <- c(2, 5, 9, 10, 8, 12, 1, 0)
+
+vec_1_e5_up <- vec_1[5:7]
+
+vec_1_char <- as.character(vec_1)
+vec_1_char
+
+vec_1_logical <- as.logical(vec_1)
+vec_1_logical
+```
+
+Check the following for that vector: 
+
+- What is the class of the vector? `class()`
+- What type of variable does it store? `typeof()`
+- Access the 3rd element and store as `vec_1_e3`
+- Access the 1st element and store as `vec_1_e1`
+- Access the 5th through 7th elements and store as `vec_1_e5to7`
+- Reassign `vec_1` as a character using `as.character`, stored as `vec_1_char`. What does the output look like? 
+
+2. Create a vector called `vec_2`
+
+`vec_2` should contained *named* elements, where `town = "Santa Barbara`, `location = "Rincon"`, `swell = "south"`
+
+```{r}
+vec_2 <- c(town = "Santa Barbara", location = "Rincon", swell = "south")
+
+class(vec_2)
+typeof(vec_2)
+
+vec_2[2]
+
+vec_2["location"]
 
 
+```
+
+- Take a look at what you've made
+- What is the class of vector elements? `class()`
+- What is the length of vec_2?
+- Access the 2nd element by name and store as `vec_2_e2`
+
+3. Create a data frame in R, index
+
+Write code to create a data frame called `df_1` that looks like this: 
+```{r, echo = FALSE}
+df_1 <- data.frame(region = c("A", "B", "A", "D"),
+                   species = c("otter", "great white", "sea lion", "gray whale"),
+                   count = c(12, 2, 36, 6))
+
+df_1
+
+max_count <- max(df_1$count)
+```
+
+- Return the class of the entire data frame
+- Return the class of the species column
+- Find the maximum value of the `count()` column, store as `max_count`
 
 
+## Part 3. Wild data
+
+#### Set-up
+
+- Visit the EDI site to learn about Mack Creek salamander & cutthroat trout data you'll be using here: [data package](https://portal.edirepository.org/nis/mapbrowse?packageid=knb-lter-and.4027.14)
+
+- Download the *first CSV* listed (`AS00601.csv`), and take a look at it (outside of R is fine as a first step)
+
+- Explore the metadata (see View Full Metadata in the [Resources section](https://portal.edirepository.org/nis/mapbrowse?packageid=knb-lter-and.4027.14) of the data website)
+
+- What does each column contain? What are the units of each? What is the study overall about? 
+
+- Create a new R Markdown document and save it in your `docs` folder. Attach the `tidyverse`, `here` and `janitor` packages in the setup chunk
+
+- Save the `AS00601.csv` in your `data` folder of your project
+
+#### Read in the data
+
+- Read in the data using `read_csv()` with `here()`, store as `mack_verts`
+```{r, include = FALSE}
+mack_verts <- read_csv(here("activities","AS00601.csv"))
+```
+
+- Look at what you've read in
+
+#### A bit of wrangling & exploring
+
+- Update the names to lower_snake_case
+
+```{r, include = FALSE}
+mack_verts <- clean_names(mack_verts)
+
+# Or
+```
+
+- In a new code chunk, practice accessing individual pieces of the data frame (there is no real functionality to this, but just to reinforce stuff we learned in our interactive session): 
+
+  - Store the 5th value in column "WEIGHT" as `mc_wt_5`. Check by looking at your data frame to confirm.
+  - Store the 8th - 20th value in the "LENGTH1" column as `mc_length_8_20`. Check by looking at your data frame to confirm. 
+  - Store everything in column SAMPLEDATE as a vector called `mc_dates`
+    
+```{r, include = FALSE}
+mc_wt_5 <- mack_verts$weight[5]
+
+mc_length_8_20 <- mack_verts$length1[8:20]
+
+mc_dates <- mack_verts$sampledate
+```
+
+#### Make a salamander subset
+
+- Create a subset that only contains observations for Pacific Giant Salamanders (species *Dicamptodon tenebrosus*, stored in `species` as `DITE`). Store the subset as `mc_salamanders`. *Hint:* see `dplyr::filter()`!
+
+```{r, include = FALSE}
+mc_salamanders <- mack_verts %>% 
+  filter(species == "DITE")
+```
+
+#### Make a scatterplot
+
+- Create a scatterplot of length1 (snout-vent length in millimeters) versus weight (grams) for all salamanders in the dataset. Update axis labels, title, subtitle, and add a caption with the data source. Customize point color and size, possibly opacity, and theme. 
+
+```{r, include = FALSE}
+salamander_plot <- ggplot(data = mc_salamanders, aes(x = length1, y = weight)) + 
+  geom_point(alpha = 0.5, color = "purple") +
+  theme_minimal()
+
+salamander_plot
+```
+
+- Export your scatterplot as `salamander_size.png` to your figs folder.
+
+```{r, include = FALSE}
+ggsave(here::here("activities", "salamander_size.png"), plot = salamander_plot)
+```
+
+#### Make a cutthroat plot
+
+- Similar to above, make a subset called `mc_trout` that only contains observations for cutthroat trout
+- Create a scatterplot of length1 by weight for all trout in the dataset
+- Customize so that the point color depends on *reach* 
+- Customize your color scheme (e.g. `scale_color_manual()`)
+- Facet your plot by creek reach (`facet_wrap(~...)`)
+- Update graph axis labels and title
+- Export your graph as `cutthroat_size.png` to figs
+
+```{r, include = FALSE}
+mc_trout <- mack_verts %>% filter(species == "ONCL")
+
+ggplot(data = mc_trout, aes(x = length1, y = weight)) +
+  geom_point(aes(color = reach)) +
+  scale_color_manual(values = c("red", "orange", "purple")) +
+  facet_wrap(~reach) +
+  theme_minimal()
+
+ggsave(here("activities", "cutthroat_size.png"))
+```
+
+### Stage, commit, pull, push
+
+- Make sure your changes are safely stored by pushing to GitHub
+- Close your project completely
+- Reopen your project
+- Reopen your .Rmd for the salamander & cutthroat work
+- Knit. Does it work? Done. 
+
+## End Day 2 activities

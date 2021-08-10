@@ -279,12 +279,136 @@ div.tocify {
 <li>Create a new repo on GitHub called <code>eds221-day2-activities</code></li>
 <li>Clone to create a version controlled R Project</li>
 <li>Create subfolders called <code>docs</code>, <code>data</code>, and <code>figs</code></li>
-<li>Create an R Markdown document, save in the <code>docs</code> subfolder as <code>data_types.Rmd</code></li>
+<li>Create an R Markdown document, save in the <code>docs</code> subfolder as <code>r_data_types.Rmd</code></li>
 </ul>
 </div>
-<div id="create-some-data-check-the-classes" class="section level3">
-<h3>Create some data, check the classes</h3>
+<div id="create-some-data-check-the-classes-index" class="section level3">
+<h3>Create some data, check the classes, index!</h3>
+<div id="vectors-lists-data-frames" class="section level4">
+<h4>Vectors, lists &amp; data frames</h4>
+<p>In your R Markdown document:</p>
+<ol style="list-style-type: decimal">
+<li>Create a vector called <code>vec_1</code>containing the following:</li>
+</ol>
+<pre class="r"><code>2, 5, 9, 10, 8, 12, 1, 0</code></pre>
+<p>Check the following for that vector:</p>
+<ul>
+<li>What is the class of the vector? <code>class()</code></li>
+<li>What type of variable does it store? <code>typeof()</code></li>
+<li>Access the 3rd element and store as <code>vec_1_e3</code></li>
+<li>Access the 1st element and store as <code>vec_1_e1</code></li>
+<li>Access the 5th through 7th elements and store as <code>vec_1_e5to7</code></li>
+<li>Reassign <code>vec_1</code> as a character using <code>as.character</code>, stored as <code>vec_1_char</code>. What does the output look like?</li>
+</ul>
+<ol start="2" style="list-style-type: decimal">
+<li>Create a vector called <code>vec_2</code></li>
+</ol>
+<p><code>vec_2</code> should contained <em>named</em> elements, where <code>town = &quot;Santa Barbara</code>, <code>location = &quot;Rincon&quot;</code>, <code>swell = &quot;south&quot;</code></p>
+<pre class="r"><code>vec_2 &lt;- c(town = &quot;Santa Barbara&quot;, location = &quot;Rincon&quot;, swell = &quot;south&quot;)
+
+class(vec_2)</code></pre>
+<pre><code>## [1] &quot;character&quot;</code></pre>
+<pre class="r"><code>typeof(vec_2)</code></pre>
+<pre><code>## [1] &quot;character&quot;</code></pre>
+<pre class="r"><code>vec_2[2]</code></pre>
+<pre><code>## location 
+## &quot;Rincon&quot;</code></pre>
+<pre class="r"><code>vec_2[&quot;location&quot;]</code></pre>
+<pre><code>## location 
+## &quot;Rincon&quot;</code></pre>
+<ul>
+<li>Take a look at what you’ve made</li>
+<li>What is the class of vector elements? <code>class()</code></li>
+<li>What is the length of vec_2?</li>
+<li>Access the 2nd element by name and store as <code>vec_2_e2</code></li>
+</ul>
+<ol start="3" style="list-style-type: decimal">
+<li>Create a data frame in R, index</li>
+</ol>
+<p>Write code to create a data frame called <code>df_1</code> that looks like this:</p>
+<pre><code>##   region     species count
+## 1      A       otter    12
+## 2      B great white     2
+## 3      A    sea lion    36
+## 4      D  gray whale     6</code></pre>
+<ul>
+<li>Return the class of the entire data frame</li>
+<li>Return the class of the species column</li>
+<li>Find the maximum value of the <code>count()</code> column, store as <code>max_count</code></li>
+</ul>
 </div>
+</div>
+</div>
+<div id="part-3.-wild-data" class="section level2">
+<h2>Part 3. Wild data</h2>
+<div id="set-up" class="section level4">
+<h4>Set-up</h4>
+<ul>
+<li><p>Visit the EDI site to learn about Mack Creek salamander &amp; cutthroat trout data you’ll be using here: <a href="https://portal.edirepository.org/nis/mapbrowse?packageid=knb-lter-and.4027.14">data package</a></p></li>
+<li><p>Download the <em>first CSV</em> listed (<code>AS00601.csv</code>), and take a look at it (outside of R is fine as a first step)</p></li>
+<li><p>Explore the metadata (see View Full Metadata in the <a href="https://portal.edirepository.org/nis/mapbrowse?packageid=knb-lter-and.4027.14">Resources section</a> of the data website)</p></li>
+<li><p>What does each column contain? What are the units of each? What is the study overall about?</p></li>
+<li><p>Create a new R Markdown document and save it in your <code>docs</code> folder. Attach the <code>tidyverse</code>, <code>here</code> and <code>janitor</code> packages in the setup chunk</p></li>
+<li><p>Save the <code>AS00601.csv</code> in your <code>data</code> folder of your project</p></li>
+</ul>
+</div>
+<div id="read-in-the-data" class="section level4">
+<h4>Read in the data</h4>
+<ul>
+<li><p>Read in the data using <code>read_csv()</code> with <code>here()</code>, store as <code>mack_verts</code></p></li>
+<li><p>Look at what you’ve read in</p></li>
+</ul>
+</div>
+<div id="a-bit-of-wrangling-exploring" class="section level4">
+<h4>A bit of wrangling &amp; exploring</h4>
+<ul>
+<li><p>Update the names to lower_snake_case</p></li>
+<li><p>In a new code chunk, practice accessing individual pieces of the data frame (there is no real functionality to this, but just to reinforce stuff we learned in our interactive session):</p>
+<ul>
+<li>Store the 5th value in column “WEIGHT” as <code>mc_wt_5</code>. Check by looking at your data frame to confirm.</li>
+<li>Store the 8th - 20th value in the “LENGTH1” column as <code>mc_length_8_20</code>. Check by looking at your data frame to confirm.</li>
+<li>Store everything in column SAMPLEDATE as a vector called <code>mc_dates</code></li>
+</ul></li>
+</ul>
+</div>
+<div id="make-a-salamander-subset" class="section level4">
+<h4>Make a salamander subset</h4>
+<ul>
+<li>Create a subset that only contains observations for Pacific Giant Salamanders (species <em>Dicamptodon tenebrosus</em>, stored in <code>species</code> as <code>DITE</code>). Store the subset as <code>mc_salamanders</code>. <em>Hint:</em> see <code>dplyr::filter()</code>!</li>
+</ul>
+</div>
+<div id="make-a-scatterplot" class="section level4">
+<h4>Make a scatterplot</h4>
+<ul>
+<li><p>Create a scatterplot of length1 (snout-vent length in millimeters) versus weight (grams) for all salamanders in the dataset. Update axis labels, title, subtitle, and add a caption with the data source. Customize point color and size, possibly opacity, and theme.</p></li>
+<li><p>Export your scatterplot as <code>salamander_size.png</code> to your figs folder.</p></li>
+</ul>
+</div>
+<div id="make-a-cutthroat-plot" class="section level4">
+<h4>Make a cutthroat plot</h4>
+<ul>
+<li>Similar to above, make a subset called <code>mc_trout</code> that only contains observations for cutthroat trout</li>
+<li>Create a scatterplot of length1 by weight for all trout in the dataset</li>
+<li>Customize so that the point color depends on <em>reach</em></li>
+<li>Customize your color scheme (e.g. <code>scale_color_manual()</code>)</li>
+<li>Facet your plot by creek reach (<code>facet_wrap(~...)</code>)</li>
+<li>Update graph axis labels and title</li>
+<li>Export your graph as <code>cutthroat_size.png</code> to figs</li>
+</ul>
+</div>
+<div id="stage-commit-pull-push" class="section level3">
+<h3>Stage, commit, pull, push</h3>
+<ul>
+<li>Make sure your changes are safely stored by pushing to GitHub</li>
+<li>Close your project completely</li>
+<li>Reopen your project</li>
+<li>Reopen your .Rmd for the salamander &amp; cutthroat work</li>
+<li>Knit. Does it work? Done.</li>
+</ul>
+</div>
+</div>
+<div id="end-day-2-activities" class="section level2">
+<h2>End Day 2 activities</h2>
 </div>
 
 
