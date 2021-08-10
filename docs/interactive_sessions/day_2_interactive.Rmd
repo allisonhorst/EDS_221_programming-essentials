@@ -1,0 +1,345 @@
+---
+title: "Day 2 Interactive Session Materials"
+subtitle: "Data types & indexing"
+output: 
+  html_document:
+    css: comp_session_theme.css
+    toc: true
+    toc_float: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(reticulate)
+library(palmerpenguins)
+```
+
+# Part 1: Setup
+
+- Create a repo on GitHub called `eds221-day2-comp`
+- Clone to make a version-controlled R Project
+- Create a new R Markdown, saved in the root as `r-data-types`
+- Create a new Jupyter Notebook, saved in the root as `py-data-types`
+
+# Part 2: Making & indexing data in R
+
+## Vectors!
+
+### Making vectors
+
+#### A character vector
+
+```{r}
+dogs <- c("teddy", "khora", "waffle", "banjo")
+
+typeof(dogs)
+class(dogs)
+```
+
+#### A numeric vector
+
+```{r}
+weights <- c(50, 55, 25, 35)
+
+typeof(weights) # Hmmm what is different about this and the line below?
+class(weights)
+```
+
+#### An integer vector
+
+```{r}
+dog_age <- c(5L, 6L, 1L, 7L)
+
+typeof(dog_age)
+class(dog_age)
+
+# Check with a logical: 
+is.numeric(dog_age)
+```
+
+#### What if we combine classes? 
+
+There is a hierarchy of classes. The broadest of all in a vector wins (if there are characters, then character will be the class of the entire vector).
+
+```{r}
+dog_info <- c("teddy", 50, 5L)
+dog_info
+
+typeof(dog_info)
+class(dog_info)
+
+is.character(dog_info)
+```
+
+#### Named elements
+
+```{r}
+dog_food <- c(teddy = "purina", khora = "alpo", waffle = "fancy feast", banjo = "blue diamond")
+dog_food
+
+class(dog_food)
+typeof(dog_food)
+```
+
+### Accessing bits of vectors
+
+Use `[]` with the position or name to access elements of a vector. 
+
+```{r}
+dog_food[2]
+
+dog_food["khora"]
+```
+
+Or we can specify a range of values within a vector using `[:]`. The first element in **R vectors is assigned element = 1.** This is an important distinction. In Python, the first element is assigned 0 (zero-index). 
+
+```{r}
+# Create a vector of car colors observed
+cars <- c("red", "orange", "white", "blue", "green", "silver", "black")
+
+# Access just the 5th element
+cars[5]
+
+# Access elements 2 through 4
+cars[2:4]
+```
+
+### A warm-up for for loops:
+```{r}
+i <- 4
+cars[i]
+
+i <- seq(1:3)
+cars[i]
+```
+
+### And we can update elements of a vector directly (mutable):
+```{r}
+cars[3] <- "BURRITOS!"
+cars
+```
+
+
+## Matrices!
+
+### Creating matrices 
+
+(...we did some of this in EDS 212 too!)
+
+```{r}
+fish_size <- matrix(c(0.8, 1.2, 0.4, 0.9), ncol = 2, nrow = 2, byrow = FALSE)
+
+fish_size
+
+typeof(fish_size) # Returns the class of values
+class(fish_size) # Returns matrix / array
+```
+
+What happens if we try to combine multiple data types into a matrix?
+```{r}
+dog_walk <- matrix(c("teddy", 5, "khora", 10), ncol = 2, nrow = 2, byrow = FALSE)
+
+dog_walk
+class(dog_walk)
+typeof(dog_walk)
+
+# Hmmmmmm once again back to the broadest category of data type in the hierarchy
+```
+
+### Accessing pieces of matrices
+
+Index using `[row, column]`.
+
+```{r}
+whale_travel <- matrix(data = c(31.8, 1348, 46.9, 1587), nrow = 2, ncol = 2, byrow = TRUE)
+
+# Take a look
+whale_travel
+
+# Access the value 1348
+whale_travel[1,2] # Row 1, column 2
+
+# Access the value 46.9
+whale_travel[2,1]
+```
+
+If you leave any element blank (keeping the comma), it will return all values from the other element. For example, to get everything in row 2:
+```{r}
+whale_travel[2,]
+```
+
+Or, to access everything in column 1: 
+
+```{r}
+whale_travel[, 1]
+```
+
+What happens if I only give a matrix one element? That's the position in the matrix *as if populated by column.* Check out a few:
+```{r}
+whale_travel[3]
+```
+
+## Lists
+
+```{r}
+urchins <- list("blue", c(1, 2, 3), c("a cat", "a dog"), 5L)
+
+urchins
+```
+### Accessing pieces of a list
+
+Important: a single [] returns a list. [[]] returns the item STORED in the list. 
+```{r}
+urchins[[2]]
+
+# Compare that to: 
+urchins[2]
+```
+
+### Naming list items? Sure thing! 
+
+```{r}
+tacos <- list(topping = c("onion", "cilantro", "guacamole"), filling = c("beans", "meat", "veggie"), price = c(6.75, 8.25, 9.50))
+
+# The whole thing
+tacos
+
+# Just get one piece of it: 
+tacos[[2]]
+
+#...or, the same thing:
+tacos$filling
+
+```
+
+## Data frames 
+
+A data frame is a list containing vectors of the same length, where each column is a variable stored in a vector. Let's make one: 
+
+```{r}
+fruit <- data.frame(type = c("apple", "banana", "peach"), 
+                    mass = c(130, 195, 150))
+
+# Look at it
+fruit
+
+# Check the class
+class(fruit)
+```
+
+### Access elements from a data frame
+
+Use [row#, col#], or name the column (then element number).
+```{r}
+fruit[1,2]
+
+fruit[3,1]
+```
+
+
+```{r}
+fruit[2,1] <- "pineapple"
+fruit
+```
+
+# Part 3: Making & indexing data in Python
+
+```{python}
+import numpy as np
+import pandas as pd
+```
+
+## Vectors and matrices in Python
+
+```{python}
+teddy = [1,2,8]
+teddy_vec = np.array(teddy)
+
+teddy_vec
+type(teddy_vec)
+```
+
+A **list** is mutable - you can change it directly! 
+```{python}
+teddy[1] = 1000
+
+# See that element 1 is updated directly! 
+teddy
+```
+
+A **tuple** is immutable - you'll get yelled at if you try to change it! 
+```{python}
+khora = (1, 5, 12)
+type(khora)
+
+# khora[1] = 16 # Nope. 
+```
+
+A more involved list (note: you can also use list() to create lists in python).
+```{python}
+waffle = [["cat", "dog", "penguin"], 2, "a burrito", [1,2,5]]
+
+waffle
+
+# Access an element from the list waffle:
+waffle[0] # Default just returns that piece (not as a list)
+```
+
+We can reassign pieces of a list: 
+```{python}
+waffle[1] = "AN EXTRAVAGANZA"
+
+waffle
+```
+
+## Make a pandas DataFrame in python
+
+### First, a dictionary example:
+
+```{python}
+fox = {'sound': ["screech", "squeal", "bark"], 'age': [2, 6, 10]}
+
+fox['sound']
+
+fox['age']
+```
+
+
+
+```{python}
+cows = {'name': ["moo", "spots", "happy"], 'location': ["pasture", "prairie", "barn"], 'height': [5.7, 5.4, 4.9]}
+
+cows_df = pd.DataFrame(cows)
+
+# Take a look
+cows_df
+
+# Get a column
+cows_df['name']
+
+# Get an element using df.at[]
+cows_df.at[1, 'name']
+```
+
+### Side-by-side: R data frame & Pandas DataFrame
+
+```{r}
+home_sales <- data.frame(
+  state = c("CA", "NV", "OR"),
+  sales = c(38000, 4670, 2750)
+)
+
+home_sales
+```
+
+```{python}
+home_sales = {'state': ["CA", "NV", "OR"], 'sales': [38000, 4670, 2750]}
+
+home_sales = pd.DataFrame(home_sales)
+
+home_sales
+```
+
+
+## End (for now...)

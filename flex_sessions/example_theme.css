@@ -1,0 +1,15 @@
+/* Import fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Palette+Mosaic&family=WindSong&display=swap');
+
+/* Update the header fonts */
+
+h1 {
+  font-family: WindSong;
+  color: green;
+}
+
+h2 {
+  font-family: Palette Mosaic;
+  color: red;
+}
