@@ -1,0 +1,48 @@
+---
+title: "Day 2 Activities"
+subtitle: "Bits & bytes, indexing data, import & plot data"
+output: 
+  html_document:
+    css: activity_theme.css
+    toc: true
+    toc_float: true
+---
+
+
+
+## Part 1: Bits & bytes
+
+### Convert the following binary to decimal values: 
+
+- 0010 0111
+- 0101 0000
+- 0001 1110
+
+### Convert the following decimal values to binary: 
+
+- 243
+- 12
+- 840
+
+### What does the following (ASCII) spell?
+
+(Use the table from lecture 3) 
+
+110,99,101,97,115
+
+Check your answer using this ascii to text converter: https://convert.town/ascii-to-text
+
+## Part 2. Checking data types
+
+### Setup
+
+- Create a new repo on GitHub called `eds221-day2-activities`
+- Clone to create a version controlled R Project 
+- Create subfolders called `docs`, `data`, and `figs`
+- Create an R Markdown document, save in the `docs` subfolder as `data_types.Rmd`
+
+### Create some data, check the classes
+
+
+
+
