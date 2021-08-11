@@ -23,7 +23,7 @@ library(janitor)
 
 ## Part 1. Conditional statements & for loops
 
-*Create a new R Markdown document in your docs folder, saved as `conditional_practice.Rmd`. Complete all tasks for Part 1 in this .Rmd.*
+*Create a new R Markdown document in your docs folder, saved as `conditionals_loops.Rmd`. Complete all tasks for Part 1 in this .Rmd.*
 
 *Complete each of the following in a separate code chunk.*
 
@@ -125,7 +125,7 @@ for (i in seq_along(month.name)) {
   print(paste(month.name[i], "is month", i))
 }
 ```
-## Part 3. Real data
+## Part 2. Real data
 
 *You will complete Part 3 in a separate .Rmd.*
 
