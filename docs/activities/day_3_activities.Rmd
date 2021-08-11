@@ -1,0 +1,177 @@
+---
+title: "Day 3 Activities"
+subtitle: "Conditionals & for loops"
+output: 
+  html_document:
+    css: activity_theme.css
+    toc: true
+    toc_float: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(here)
+library(janitor)
+```
+
+## Part 0. Setup
+
+- Create a repo on GitHub named `eds212-day3-activities`
+- Clone to create a version-controlled R Project
+- Create some subfolder infrastructure (docs, data)
+
+## Part 1. Conditional statements & for loops
+
+*Create a new R Markdown document in your docs folder, saved as `conditional_practice.Rmd`. Complete all tasks for Part 1 in this .Rmd.*
+
+*Complete each of the following in a separate code chunk.*
+
+### Conditional statements
+
+#### Task 1
+
+Create an object called `pm2_5` with a value of 48 (representing Particulate Matter 2.5, an indicator for air quality, in $\frac{\mu g}{m^3}$ (see more about PM2.5 [here](https://www3.epa.gov/region1/airquality/pm-aq-standards.html)). 
+
+Write an `if - else if - else` statement that returns "Low to moderate risk" if `pm2_5` (for Particulate Matter 2.5) is less than 100, "Unhealthy for sensitive groups" if PM 2.5 is 100 <= pm2_5 < 150, and "Health risk present"  if PM 2.5 is >= 150. 
+
+Test by changing the value of your pm2_5 object and re-running your statement to check. 
+
+```{r, include = FALSE}
+pm2_5 <- 48
+
+if (pm2_5 < 100) {
+  print("Low to moderate health risk")
+} else if (pm2_5 >= 100 & pm2_5 < 150) {
+  print("Unhealthy for sensitive groups")
+} else if (pm2_5 >= 150) {
+  print("Health risk present")
+}
+```
+
+#### Task 2
+
+Store the string "blue whale" as an object called `species`. Write an if statement that returns "You found a whale!" if the string "whale" is detected in species (hint: `%in%`), otherwise return nothing. Test by changing the species string & re-running to see output. 
+
+```{r, include = FALSE}
+species <- "gray whale"
+
+if (str_detect(species, "whale")) {
+  print("You found a whale!")
+}
+```
+
+#### Task 3
+
+Create a vector stored as `max_airtemp_c` with a value of 24.1. Write an `if else` statement that will print "Temperature too high" if `max_airtemp_c` is greater than 27, or "Temperature OK" if temperature is less than or equal to 27. 
+```{r, include = FALSE}
+max_airtemp_c <- c(24.1)
+
+if (max_airtemp_c > 27) {
+  print("Temperature too high")
+} else {
+  print("Temperature OK")
+}
+```
+
+#### Task 4
+
+Store the base price of a burrito as `base_burrito` with a value of 6.50. Store `main_ingredent` with a starting string of "veggie." Write a statement that will return the price of a burrito based on what a user specifies as "main_ingredient" (either "veggie", "chicken" or "steak") given the following: 
+
+- A veggie burrito is the cost of a base burrito
+- A chicken burrito costs 3.00 more than a base burrito
+- A steak burrito costs 3.25 more than a base burrito
+
+```{r, include = FALSE}
+base_burrito <- 6.50
+main_ingredient <- "steak"
+
+if (main_ingredient == "veggie") {
+  price = base_burrito
+} else if (main_ingredient == "chicken") {
+  price = base_burrito + 3.00
+} else if (main_ingredient == "steak") {
+  price = base_burrito + 3.25
+}
+
+print(price)
+```
+
+### For loops
+
+*Complete each of the following in a separate code chunk.*
+
+#### Task 5
+
+Create a new vector called `fish` that contains the values `8, 10, 12, 23` representing counts of different fish types in a fish tank (goldfish, tetras, guppies, and mollies, respectively). Write a for loop that iterates through `fish`, and returns what proportion of total fish in the tank are that species. Assume that these counts represent all fish in the tank. 
+
+```{r, include = FALSE}
+fish <- c(8, 10, 12, 23)
+
+for (i in seq_along(fish)) {
+  fish_prop = fish[i] / sum(fish)
+  print(fish_prop)
+}
+```
+
+#### Task 6
+
+There is an existing vector in R called `month.name` that contains all month names (just ry running `month.name` in the Console to check it out). **Write a for loop** that iterates over all months in `month.name` and prints "January is month 1," "February is month 2", etc. 
+
+**Hint:** you can index values in the `month.name` vector just like you would any other vector (e.g., try running `month.name[5]`).
+
+```{r, include = FALSE}
+for (i in seq_along(month.name)) {
+  print(paste(month.name[i], "is month", i))
+}
+```
+## Part 3. Real data
+
+*You will complete Part 3 in a separate .Rmd.*
+
+Explore this [data package](https://portal.edirepository.org/nis/mapbrowse?packageid=knb-lter-arc.10341.5) from EDI, which contains a "Data file describing the biogeochemistry of samples collected at various sites near Toolik Lake, North Slope of Alaska". Familiarize yourself with the metadata (particularly, View full metadata > expand 'Data entities' to learn more about the variables in the dataset). 
+
+**Citation:** Kling, G. 2016. Biogeochemistry data set for soil waters, streams, and lakes near Toolik on the North Slope of Alaska, 2011. ver 5. Environmental Data Initiative. https://doi.org/10.6073/pasta/362c8eeac5cad9a45288cf1b0d617ba7 
+
+1. Download the CSV containing the Toolik biogeochemistry data
+2. Take a look at it - how are missing values stored? Keep that in mind. 
+3. Drop the CSV into your data folder of your project
+4. Create a new R Markdown document, save in docs as `toolik_chem.Rmd`
+5. Attach the `tidyverse`, `here`, and `janitor` packages in your setup code chunk
+6. Read in the data as `toolik_biochem`. Remember, you'll want to specify here how `NA` values are stored. Pipe directly into `janitor::clean_names()` following your import code to get all column names into lower snake case.
+
+```{r, include = FALSE}
+toolik_biochem <- read_csv(here("activities", "2011_Kling_Akchem.csv"), na = ".") %>% clean_names()
+```
+
+7. Create a subset of the data that contains only observations from the "Toolik Inlet" site, and that only contains the variables (columns) for pH, dissolved organic carbon (DOC), and total dissolved nitrogen (TDN) (**hint:** see `dplyr::select()`). Store this subset as `inlet_biochem`. Make sure to LOOK AT the subset you've created. 
+
+```{r, include = FALSE}
+inlet_biochem <- toolik_biochem %>% 
+  filter(site == "Toolik Inlet") %>% 
+  select(p_h, doc_u_m, tdn_u_m)
+```
+
+8. Find the mean value of each column 3 different ways: 
+
+a. Write a for loop by hand to calculate the mean for each
+b. Use the `apply()` function to find the mean
+d. Use the `purrr::map_df()` function to find the mean of each
+
+```{r, include = FALSE}
+# Strategy a:
+for (i in seq_along(inlet_biochem)) {
+  mean_val = mean(inlet_biochem[[i]], na.rm = TRUE)
+  print(mean_val)
+}
+
+# Strategy b: 
+apply(X = inlet_biochem, MARGIN = 2, FUN = mean, na.rm = TRUE)
+
+# Strategy c: 
+purrr::map_df(.x = inlet_biochem, .f = mean, na.rm = TRUE)
+```
+### Save, stage, commit, pull, push!
+
+## END Day 3 activities
+

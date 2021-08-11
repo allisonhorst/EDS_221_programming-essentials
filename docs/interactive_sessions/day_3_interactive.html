@@ -568,12 +568,17 @@ for (i in 1:ncol(mtcars)) {
   if (is.numeric(penguins[[i]])) {
     penguin_med &lt;- median(penguins[[i]], na.rm = TRUE)
     print(penguin_med)
+  } else {
+    print(&quot;non-numeric&quot;)
   }
 }</code></pre>
-<pre><code>## [1] 44.45
+<pre><code>## [1] &quot;non-numeric&quot;
+## [1] &quot;non-numeric&quot;
+## [1] 44.45
 ## [1] 17.3
 ## [1] 197
 ## [1] 4050
+## [1] &quot;non-numeric&quot;
 ## [1] 2008</code></pre>
 </div>
 </div>
@@ -608,7 +613,7 @@ for (i in 1:ncol(mtcars)) {
 <pre class="r"><code>penguins %&gt;% 
   group_by(species) %&gt;% 
   summarize(across(where(is.numeric), mean, na.rm = TRUE))</code></pre>
-<pre><code>## # A tibble: 3 x 6
+<pre><code>## # A tibble: 3 × 6
 ##   species   bill_length_mm bill_depth_mm flipper_length_mm body_mass_g  year
 ##   &lt;fct&gt;              &lt;dbl&gt;         &lt;dbl&gt;             &lt;dbl&gt;       &lt;dbl&gt; &lt;dbl&gt;
 ## 1 Adelie              38.8          18.3              190.       3701. 2008.
@@ -655,7 +660,7 @@ for (i in 1:ncol(mtcars)) {
 ## [1] 2.8125</code></pre>
 <pre class="r"><code># Or, to return the output in a data frame (instead of a list):
 map_df(.x = mtcars, .f = mean)</code></pre>
-<pre><code>## # A tibble: 1 x 11
+<pre><code>## # A tibble: 1 × 11
 ##     mpg   cyl  disp    hp  drat    wt  qsec    vs    am  gear  carb
 ##   &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
 ## 1  20.1  6.19  231.  147.  3.60  3.22  17.8 0.438 0.406  3.69  2.81</code></pre>

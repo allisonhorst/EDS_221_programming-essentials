@@ -383,6 +383,8 @@ for (i in seq_along(penguins)) {
   if (is.numeric(penguins[[i]])) {
     penguin_med <- median(penguins[[i]], na.rm = TRUE)
     print(penguin_med)
+  } else {
+    print("non-numeric")
   }
 }
 
