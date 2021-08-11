@@ -51,7 +51,7 @@ if (pm2_5 < 100) {
 
 #### Task 2
 
-Store the string "blue whale" as an object called `species`. Write an if statement that returns "You found a whale!" if the string "whale" is detected in species (hint: `%in%`), otherwise return nothing. Test by changing the species string & re-running to see output. 
+Store the string "blue whale" as an object called `species`. Write an if statement that returns "You found a whale!" if the string "whale" is detected in species, otherwise return nothing. Test by changing the species string & re-running to see output. 
 
 ```{r, include = FALSE}
 species <- "gray whale"
