@@ -451,7 +451,7 @@ pop_time_35 <- data.frame(time_vec, pop_35)
 # Alternatively with an inner for loop: 
 pop_35_vec <- vector(mode = "numeric", length = length(time_vec))
 
-for(i in 1:length(time_vec)) {
+for(i in seq_along(time_vec)) {
   population <- logistic_growth(N0 = 100, K = 6000, r = 0.27, time = time_vec[i])
   pop_35_vec[i] <- population
 }
@@ -488,8 +488,8 @@ Create a nested for loop!
 out_matrix <- matrix(nrow = length(time_vec), ncol = length(r_seq))
 
 # Now, a nested for loop:
-for (i in 1:length(r_seq)) { # Outer loop is the growth rates
-  for (j in 1:length(time_vec)) { # Inner loop is the time sequence values
+for (i in seq_along(r_seq)) { # Outer loop is the growth rates
+  for (j in seq_along(time_vec)) { # Inner loop is the time sequence values
   pop <- logistic_growth(N0 = 100, K = 6000, r = r_seq[i], time = time_vec[j])
   out_matrix[j, i] <- pop # Store the value in the appropriate row & column
   } 
@@ -505,7 +505,7 @@ Now some wrangling so we can visualize it:
 out_df <- data.frame(out_matrix, time = time_vec) # Make it a data frame and add time
 
 # Update the column names of out_df, keeping time column name the same
-colnames(out_df) <- c(paste("gr_", r_seq, sep = ""), "time")
+colnames(out_df) <- c(paste0("gr_", r_seq), "time")
 
 # pivot_longer to make it tidy (you'll learn more about this next week)
 out_df_long <- out_df %>% 
@@ -548,11 +548,11 @@ OK great. But we're doing some work on this code, and we don't want to have to t
 
 ## End.
 
-Extra: 
+Extra examples: 
 
 What's the output of this nested for loop? 
 ```{r}
-apples <- seq(from = 1, to = 3, by = 1)
+apples <- c(1, 2, 3, 4)
 price <- c(7, 10, 25)
 
 fruit_out <- matrix(nrow = length(price), ncol = length(apples))
@@ -567,5 +567,69 @@ for (i in seq_along(apples)) {
 fruit_out
 ```
 
+```{r}
+file_prefix <- c("temp", "ph", "salinity")
+file_suffix <- c(1, 2, 3, 4, 5)
 
+# First: printing names
+for (i in seq_along(file_prefix)) {
+  for (j in seq_along(file_suffix)) {
+    print(paste0(file_prefix[i], "_", file_suffix[j]))
+  }
+}
+
+# Second: storing them in a matrix (populated by COLUMN)
+filename_matrix <- matrix(nrow = length(file_suffix), ncol = length(file_prefix))
+
+for (i in seq_along(file_prefix)) {
+  for (j in seq_along(file_suffix)) {
+    file_name <- paste0(file_prefix[i], "_", file_suffix[j])
+    filename_matrix[j, i] <- file_name
+  }
+}
+
+filename_matrix
+```
+
+### Another for loop example: 
+```{r}
+quarter_splits <- c(1, 1.1, 1.2, 1.1, 1.4, 1.5, 1.6)
+
+half_splits <- vector(mode = "numeric", length = length(quarter_splits) - 1)
+
+for (i in seq_along(quarter_splits) - 1) {
+  half_mile <- quarter_splits[i] + quarter_splits[i + 1]
+  half_splits[i] <- half_mile
+}
+
+half_splits
+  
+  
+```
+
+```{r}
+dosage <- c(10, 100, 1000)
+
+dose_index <- vector(mode = "character", length = length(dosage))
+
+for (i in seq_along(dosage)) {
+  k <- paste0("zinc_", dosage[i])
+  dose_index[i] <- k
+}
+
+dose_index
+```
+
+```{r}
+odds <- c(1, 3, 5)
+evens <- c(2, 4, 6, 8)
+
+for (i in seq_along(odds)) {
+  for (j in seq_along(evens)) {
+    print(odds[i] * evens[j])
+  }
+}
+
+
+```
 

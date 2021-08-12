@@ -429,7 +429,7 @@ animal_age(animal = &quot;dog&quot;, age = 15)</code></pre>
 <div id="example-1" class="section level4">
 <h4>Example</h4>
 <p>Let’s say we have a table of the dogs’ favorite foods.</p>
-<pre><code>## # A tibble: 4 x 2
+<pre><code>## # A tibble: 4 × 2
 ##   dog_name food      
 ##   &lt;chr&gt;    &lt;chr&gt;     
 ## 1 Khora    everything
@@ -612,7 +612,7 @@ pop_time_35 &lt;- data.frame(time_vec, pop_35)
 # Alternatively with an inner for loop: 
 pop_35_vec &lt;- vector(mode = &quot;numeric&quot;, length = length(time_vec))
 
-for(i in 1:length(time_vec)) {
+for(i in seq_along(time_vec)) {
   population &lt;- logistic_growth(N0 = 100, K = 6000, r = 0.27, time = time_vec[i])
   pop_35_vec[i] &lt;- population
 }</code></pre>
@@ -633,8 +633,8 @@ r_seq &lt;- seq(from = 0.20, to = 0.40, by = 0.01)</code></pre>
 out_matrix &lt;- matrix(nrow = length(time_vec), ncol = length(r_seq))
 
 # Now, a nested for loop:
-for (i in 1:length(r_seq)) { # Outer loop is the growth rates
-  for (j in 1:length(time_vec)) { # Inner loop is the time sequence values
+for (i in seq_along(r_seq)) { # Outer loop is the growth rates
+  for (j in seq_along(time_vec)) { # Inner loop is the time sequence values
   pop &lt;- logistic_growth(N0 = 100, K = 6000, r = r_seq[i], time = time_vec[j])
   out_matrix[j, i] &lt;- pop # Store the value in the appropriate row &amp; column
   } 
@@ -644,7 +644,7 @@ for (i in 1:length(r_seq)) { # Outer loop is the growth rates
 out_df &lt;- data.frame(out_matrix, time = time_vec) # Make it a data frame and add time
 
 # Update the column names of out_df, keeping time column name the same
-colnames(out_df) &lt;- c(paste(&quot;gr_&quot;, r_seq, sep = &quot;&quot;), &quot;time&quot;)
+colnames(out_df) &lt;- c(paste0(&quot;gr_&quot;, r_seq), &quot;time&quot;)
 
 # pivot_longer to make it tidy (you&#39;ll learn more about this next week)
 out_df_long &lt;- out_df %&gt;% 
@@ -681,9 +681,9 @@ mean_range(df = mtcars)</code></pre>
 </div>
 <div id="end." class="section level2">
 <h2>End.</h2>
-<p>Extra:</p>
+<p>Extra examples:</p>
 <p>What’s the output of this nested for loop?</p>
-<pre class="r"><code>apples &lt;- seq(from = 1, to = 3, by = 1)
+<pre class="r"><code>apples &lt;- c(1, 2, 3, 4)
 price &lt;- c(7, 10, 25)
 
 fruit_out &lt;- matrix(nrow = length(price), ncol = length(apples))
@@ -696,10 +696,96 @@ for (i in seq_along(apples)) {
 }
 
 fruit_out</code></pre>
-<pre><code>##      [,1] [,2] [,3]
-## [1,]    7   14   21
-## [2,]   10   20   30
-## [3,]   25   50   75</code></pre>
+<pre><code>##      [,1] [,2] [,3] [,4]
+## [1,]    7   14   21   28
+## [2,]   10   20   30   40
+## [3,]   25   50   75  100</code></pre>
+<pre class="r"><code>file_prefix &lt;- c(&quot;temp&quot;, &quot;ph&quot;, &quot;salinity&quot;)
+file_suffix &lt;- c(1, 2, 3, 4, 5)
+
+# First: printing names
+for (i in seq_along(file_prefix)) {
+  for (j in seq_along(file_suffix)) {
+    print(paste0(file_prefix[i], &quot;_&quot;, file_suffix[j]))
+  }
+}</code></pre>
+<pre><code>## [1] &quot;temp_1&quot;
+## [1] &quot;temp_2&quot;
+## [1] &quot;temp_3&quot;
+## [1] &quot;temp_4&quot;
+## [1] &quot;temp_5&quot;
+## [1] &quot;ph_1&quot;
+## [1] &quot;ph_2&quot;
+## [1] &quot;ph_3&quot;
+## [1] &quot;ph_4&quot;
+## [1] &quot;ph_5&quot;
+## [1] &quot;salinity_1&quot;
+## [1] &quot;salinity_2&quot;
+## [1] &quot;salinity_3&quot;
+## [1] &quot;salinity_4&quot;
+## [1] &quot;salinity_5&quot;</code></pre>
+<pre class="r"><code># Second: storing them in a matrix (populated by COLUMN)
+filename_matrix &lt;- matrix(nrow = length(file_suffix), ncol = length(file_prefix))
+
+for (i in seq_along(file_prefix)) {
+  for (j in seq_along(file_suffix)) {
+    file_name &lt;- paste0(file_prefix[i], &quot;_&quot;, file_suffix[j])
+    filename_matrix[j, i] &lt;- file_name
+  }
+}
+
+filename_matrix</code></pre>
+<pre><code>##      [,1]     [,2]   [,3]        
+## [1,] &quot;temp_1&quot; &quot;ph_1&quot; &quot;salinity_1&quot;
+## [2,] &quot;temp_2&quot; &quot;ph_2&quot; &quot;salinity_2&quot;
+## [3,] &quot;temp_3&quot; &quot;ph_3&quot; &quot;salinity_3&quot;
+## [4,] &quot;temp_4&quot; &quot;ph_4&quot; &quot;salinity_4&quot;
+## [5,] &quot;temp_5&quot; &quot;ph_5&quot; &quot;salinity_5&quot;</code></pre>
+<div id="another-for-loop-example" class="section level3">
+<h3>Another for loop example:</h3>
+<pre class="r"><code>quarter_splits &lt;- c(1, 1.1, 1.2, 1.1, 1.4, 1.5, 1.6)
+
+half_splits &lt;- vector(mode = &quot;numeric&quot;, length = length(quarter_splits) - 1)
+
+for (i in seq_along(quarter_splits) - 1) {
+  half_mile &lt;- quarter_splits[i] + quarter_splits[i + 1]
+  half_splits[i] &lt;- half_mile
+}
+
+half_splits</code></pre>
+<pre><code>## [1] 2.1 2.3 2.3 2.5 2.9 3.1</code></pre>
+<pre class="r"><code>dosage &lt;- c(10, 100, 1000)
+
+dose_index &lt;- vector(mode = &quot;character&quot;, length = length(dosage))
+
+for (i in seq_along(dosage)) {
+  k &lt;- paste0(&quot;zinc_&quot;, dosage[i])
+  dose_index[i] &lt;- k
+}
+
+dose_index</code></pre>
+<pre><code>## [1] &quot;zinc_10&quot;   &quot;zinc_100&quot;  &quot;zinc_1000&quot;</code></pre>
+<pre class="r"><code>odds &lt;- c(1, 3, 5)
+evens &lt;- c(2, 4, 6, 8)
+
+for (i in seq_along(odds)) {
+  for (j in seq_along(evens)) {
+    print(odds[i] * evens[j])
+  }
+}</code></pre>
+<pre><code>## [1] 2
+## [1] 4
+## [1] 6
+## [1] 8
+## [1] 6
+## [1] 12
+## [1] 18
+## [1] 24
+## [1] 10
+## [1] 20
+## [1] 30
+## [1] 40</code></pre>
+</div>
 </div>
 
 

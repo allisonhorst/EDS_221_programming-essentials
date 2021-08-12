@@ -1,0 +1,181 @@
+---
+title: "Day 4 Activities"
+subtitle: "Intro to functions"
+output: 
+  html_document:
+    css: activity_theme.css
+    toc: true
+    toc_float: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(here)
+library(janitor)
+library(kableExtra)
+```
+
+## Part 0. Setup
+
+- Create a repo on GitHub named `eds212-day4-activities`
+- Clone to create a version-controlled R Project
+- Create some subfolder infrastructure (docs, data)
+- Add a new R Markdown file, save as `loops_and_functions.Rmd` in `docs`
+
+## Part 1. For loops revisited
+
+### Task 1
+
+Create two sequences, one called `weekdays` that contains days of the week ("Monday", "Tuesday", "Wednesday", etc.) and one called `transects` that contains the series of transect names "Transect A", "Transect B, "Transect C". Write a nested for loop that creates a matrix containing the following: 
+
+
+```{r, echo = FALSE}
+weekdays <- c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday")
+
+transects <- c("Transect A", "Transect B", "Transect C")
+
+study_matrix <- matrix(ncol = length(transects), nrow = length(weekdays))
+
+for (i in seq_along(weekdays)) {
+  for (j in seq_along(transects)) {
+    study <- paste0(weekdays[i], " - ", transects[j])
+    study_matrix[i, j] <- study
+  }
+}
+
+study_matrix %>% 
+  kable() %>% 
+  kable_styling()
+```
+
+## Part 2. Functions introduced
+
+### Task 2
+
+Write a function called `force` that calculates a force (in Newtons), given inputs of mass (in kg) and acceleration (in $\frac{m}{s^2}$ (recall: $F = ma$), and returns a statement "The resulting force is ___ Newtons."
+
+```{r, include = FALSE}
+force <- function(mass, acceleration) {
+  force_val <- mass * acceleration
+  print(paste("The resulting force is", force_val, "Newtons."))
+}
+
+force(100, 2.9)
+```
+
+
+### Task 3
+
+Write a function called `name_column` that, given a data frame name and a number, will return the column name associated with that column number. Add an error message if the column number is < 1, or if the number exceeds the number of columns in the data frame. Test the function using the `mtcars` data frame.
+
+```{r}
+name_column <- function(df, col_no) {
+  if (col_no < 1 | col_no >= length(df)) {
+    stop("Column does not exist in the data frame.")
+  }
+  names(df[col_no])
+}
+```
+
+### Task 3
+
+Write a function called `fishmass`, which returns the weight of a fish given two inputs: common name and length. As a reminder, the length:weight relationship for fish is: $W=aL^b$, where where L is total fish length (centimeters), W is the expected fish weight (grams), and a and b are species-dependent parameter values (shown below for several fish from Peyton et al. 2016).
+
+```{r, echo = FALSE}
+fish_parms <- tribble(
+  ~sci_name, ~common_name, ~a_est, ~b_est,
+  "Chanos chanos", "Milkfish", 0.0905, 2.52,
+  "Sphyraena barracuda", "Great barracuda", 0.0181, 3.27,
+  "Caranx ignobilis", "Giant trevally", 0.0353, 3.05
+)
+
+fish_parms %>% 
+  kable() %>% 
+  kable_styling(full_width = FALSE)
+```
+Recreate the table above as a data frame stored as `fish_parms`. Then, write a function called `fish_weight` that allows a user to only enter the *common name* (argument `fish_name`) and *total length* (argument `tot_length`) (in centimeters) of a fish, to return the expected fish weight in grams. Test it out for different species and lengths. 
+
+```{r, include = FALSE}
+
+fish_weight <- function(fish_name, tot_length) {
+  fish_sub <- filter(fish_parms, common_name == fish_name)
+  wt <- fish_sub$a_est * (tot_length ^ fish_sub$b_est)
+  return(wt)
+}
+
+fish_weight(fish_name = "Milkfish", tot_length = 57)
+
+```
+
+Now, try creating a vector of lengths (e.g. 0 to 100, by increments of 1) and ensuring that your function will calculate the fish weight over a *range* of lengths for the given species (try this for milkfish, storing the output weights as `milkfish_weights`.
+
+```{r, include = FALSE}
+# Create the vector of lengths
+lengths_vector <- seq(from = 0, to = 100, by = 1)
+
+# Send it to the function: 
+milkfish_weights <- fish_weight(fish_name = "Milkfish", tot_length = lengths_vector)
+```
+
+### Task 4
+
+Wave power (more accurately wave energy flux) in deep water is approximated by: 
+
+$$P_{deep}=0.5 H^2 T$$
+where $P$ is power in $\frac{kW}{m}$ (potential power per wave meter), $H$ is wave height in meters (more specifically, the *significant wave height*), and $T$ is the wave period in seconds. Learn more [here](https://en.wikipedia.org/wiki/Wave_power).
+
+Write a function called `wave_power` that calculates potential ocean wave power given inputs of wave height and period. 
+
+```{r, echo = FALSE}
+wave_power <- function(wave_height, wave_period) {
+  0.5 * (wave_height ^ 2) * wave_period
+}
+```
+
+Use your `wave_power` function to approximate wave power for a period of 8 seconds, over a range of wave heights from 0 to 3 meters by increments of 0.2 meters.
+
+```{r, include = FALSE}
+wave_heights <- seq(from = 0, to = 3, by = 0.2)
+
+wave_power(wave_height = wave_heights, wave_period = 8)
+
+```
+
+### Task 5
+
+The wave energy equation changes based on ocean depth. Along the coast of Brenville, which has a very sharp shelf as the wave approaches the coast, wave energy is approximated using the deep ocean equation (the one you used above) for depths > 12 meters, and a shallow equation for depths <= 12 meters. The Brenville team estimates shallow wave power by:
+
+$$$$P_{shallow}=0.81 H^2 T$$$$
+
+Create a function that requires inputs of water depth, wave height and period, then returns the approximated wave power using the correct equation for the depth entered. It should also include a message (hint: use `message()` just like you would use warning!) that lets the user know if the shallow or deep water equation was used. 
+
+```{r, include = FALSE}
+
+brenville_waves <- function(wave_height, wave_period, depth) {
+  
+  if (depth > 12) {
+    message("Using the deep wave equation.")
+  }
+  
+  if (depth <= 12) {
+    message("Using the shallow wave equation.")
+  }
+  
+  if (depth > 12) {
+    bren_wave_energy <- 0.5 * (wave_height ^ 2) * wave_period
+  } else if (depth <= 12) {
+    bren_wave_energy <- 0.81 * (wave_height ^ 2) * wave_period
+  }
+  return(bren_wave_energy)
+}
+
+brenville_waves(wave_height = 5, wave_period = 10, depth = 15)
+```
+
+## Part 3. Wild data
+
+
+
+
+Peyton, K. A., T. S. Sakihara, L. K. Nishiura, T. T. Shindo, T. E. Shimoda, S. Hau, A. Akiona, and K. Lorance. 2016. “Length–Weight Relationships for Common Juvenile Fishes and Prey Species in Hawaiian Estuaries.” Journal of Applied Ichthyology 32 (3): 499–502. https://doi.org/10.1111/jai.12957. 
