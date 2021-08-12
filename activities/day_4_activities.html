@@ -355,9 +355,9 @@ Sunday - Transect C
 <h3>Task 3</h3>
 <p>Write a function called <code>name_column</code> that, given a data frame name and a number, will return the column name associated with that column number. Add an error message if the column number is &lt; 1, or if the number exceeds the number of columns in the data frame. Test the function using the <code>mtcars</code> data frame.</p>
 </div>
-<div id="task-3-1" class="section level3">
-<h3>Task 3</h3>
-<p>Write a function called <code>fishmass</code>, which returns the weight of a fish given two inputs: common name and length. As a reminder, the length:weight relationship for fish is: <span class="math inline">\(W=aL^b\)</span>, where where L is total fish length (centimeters), W is the expected fish weight (grams), and a and b are species-dependent parameter values (shown below for several fish from Peyton et al. 2016).</p>
+<div id="task-4" class="section level3">
+<h3>Task 4</h3>
+<p>The length:weight relationship for fish is: <span class="math inline">\(W=aL^b\)</span>, where where L is total fish length (centimeters), W is the expected fish weight (grams), and a and b are species-dependent parameter values (shown below for several fish from Peyton et al. 2016).</p>
 <table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <thead>
 <tr>
@@ -423,14 +423,14 @@ Giant trevally
 <p>Recreate the table above as a data frame stored as <code>fish_parms</code>. Then, write a function called <code>fish_weight</code> that allows a user to only enter the <em>common name</em> (argument <code>fish_name</code>) and <em>total length</em> (argument <code>tot_length</code>) (in centimeters) of a fish, to return the expected fish weight in grams. Test it out for different species and lengths.</p>
 <p>Now, try creating a vector of lengths (e.g. 0 to 100, by increments of 1) and ensuring that your function will calculate the fish weight over a <em>range</em> of lengths for the given species (try this for milkfish, storing the output weights as <code>milkfish_weights</code>.</p>
 </div>
-<div id="task-4" class="section level3">
-<h3>Task 4</h3>
+<div id="task-5" class="section level3">
+<h3>Task 5</h3>
 <p>Wave power (more accurately wave energy flux) in deep water is approximated by:</p>
 <p><span class="math display">\[P_{deep}=0.5 H^2 T\]</span> where <span class="math inline">\(P\)</span> is power in <span class="math inline">\(\frac{kW}{m}\)</span> (potential power per wave meter), <span class="math inline">\(H\)</span> is wave height in meters (more specifically, the <em>significant wave height</em>), and <span class="math inline">\(T\)</span> is the wave period in seconds. Learn more <a href="https://en.wikipedia.org/wiki/Wave_power">here</a>.</p>
 <p>Write a function called <code>wave_power</code> that calculates potential ocean wave power given inputs of wave height and period.</p>
 <p>Use your <code>wave_power</code> function to approximate wave power for a period of 8 seconds, over a range of wave heights from 0 to 3 meters by increments of 0.2 meters.</p>
 </div>
-<div id="task-5" class="section level3">
+<div id="task-5-1" class="section level3">
 <h3>Task 5</h3>
 <p>The wave energy equation changes based on ocean depth. Along the coast of Brenville, which has a very sharp shelf as the wave approaches the coast, wave energy is approximated using the deep ocean equation (the one you used above) for depths &gt; 12 meters, and a shallow equation for depths &lt;= 12 meters. The Brenville team estimates shallow wave power by:</p>
 <p><span class="math display">\[P_{shallow}=0.81 H^2 T\]</span></p>

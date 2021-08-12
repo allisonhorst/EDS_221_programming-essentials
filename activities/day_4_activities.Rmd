@@ -78,9 +78,9 @@ name_column <- function(df, col_no) {
 }
 ```
 
-### Task 3
+### Task 4
 
-Write a function called `fishmass`, which returns the weight of a fish given two inputs: common name and length. As a reminder, the length:weight relationship for fish is: $W=aL^b$, where where L is total fish length (centimeters), W is the expected fish weight (grams), and a and b are species-dependent parameter values (shown below for several fish from Peyton et al. 2016).
+The length:weight relationship for fish is: $W=aL^b$, where where L is total fish length (centimeters), W is the expected fish weight (grams), and a and b are species-dependent parameter values (shown below for several fish from Peyton et al. 2016).
 
 ```{r, echo = FALSE}
 fish_parms <- tribble(
@@ -118,7 +118,7 @@ lengths_vector <- seq(from = 0, to = 100, by = 1)
 milkfish_weights <- fish_weight(fish_name = "Milkfish", tot_length = lengths_vector)
 ```
 
-### Task 4
+### Task 5
 
 Wave power (more accurately wave energy flux) in deep water is approximated by: 
 
