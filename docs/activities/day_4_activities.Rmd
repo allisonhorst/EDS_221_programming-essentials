@@ -18,7 +18,7 @@ library(kableExtra)
 
 ## Part 0. Setup
 
-- Create a repo on GitHub named `eds212-day4-activities`
+- Create a repo on GitHub named `eds221-day4-activities`
 - Clone to create a version-controlled R Project
 - Create some subfolder infrastructure (docs, data)
 - Add a new R Markdown file, save as `loops_and_functions.Rmd` in `docs`
