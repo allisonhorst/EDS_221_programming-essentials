@@ -254,16 +254,14 @@ div.tocify {
 <li>Create a repo on GitHub named <code>eds212-day4-activities</code></li>
 <li>Clone to create a version-controlled R Project</li>
 <li>Create some subfolder infrastructure (docs, data)</li>
+<li>Add a new R Markdown file, save as <code>loops_and_functions.Rmd</code> in <code>docs</code></li>
 </ul>
 </div>
 <div id="part-1.-for-loops-revisited" class="section level2">
 <h2>Part 1. For loops revisited</h2>
 <div id="task-1" class="section level3">
 <h3>Task 1</h3>
-<ul>
-<li>Create two sequences, one called <code>weekdays</code> that contains days of the week (“Monday”, “Tuesday”, “Wednesday”, etc.) and one called <code>transects</code> that contains the series of transect names “Transect A”, “Transect B,”Transect C&quot;.</li>
-<li>Write a nested for loop that creates a matrix containing the following:</li>
-</ul>
+<p>Create two sequences, one called <code>weekdays</code> that contains days of the week (“Monday”, “Tuesday”, “Wednesday”, etc.) and one called <code>transects</code> that contains the series of transect names “Transect A”, “Transect B,”Transect C&quot;. Write a nested for loop that creates a matrix containing the following:</p>
 <table class="table" style="margin-left: auto; margin-right: auto;">
 <tbody>
 <tr>
@@ -349,12 +347,319 @@ Sunday - Transect C
 </div>
 <div id="part-2.-functions-introduced" class="section level2">
 <h2>Part 2. Functions introduced</h2>
+<div id="task-2" class="section level3">
+<h3>Task 2</h3>
+<p>Write a function called <code>force</code> that calculates a force (in Newtons), given inputs of mass (in kg) and acceleration (in <span class="math inline">\(\frac{m}{s^2}\)</span> (recall: <span class="math inline">\(F = ma\)</span>), and returns a statement “The resulting force is ___ Newtons.”</p>
 </div>
-<div id="part-3.-functions-with-messages-warnings" class="section level2">
-<h2>Part 3. Functions with messages &amp; warnings</h2>
+<div id="task-3" class="section level3">
+<h3>Task 3</h3>
+<p>Write a function called <code>name_column</code> that, given a data frame name and a number, will return the column name associated with that column number. Add an error message if the column number is &lt; 1, or if the number exceeds the number of columns in the data frame. Test the function using the <code>mtcars</code> data frame.</p>
 </div>
-<div id="part-4.-wild-data" class="section level2">
-<h2>Part 4. Wild data</h2>
+<div id="task-3-1" class="section level3">
+<h3>Task 3</h3>
+<p>Write a function called <code>fishmass</code>, which returns the weight of a fish given two inputs: common name and length. As a reminder, the length:weight relationship for fish is: <span class="math inline">\(W=aL^b\)</span>, where where L is total fish length (centimeters), W is the expected fish weight (grams), and a and b are species-dependent parameter values (shown below for several fish from Peyton et al. 2016).</p>
+<table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+sci_name
+</th>
+<th style="text-align:left;">
+common_name
+</th>
+<th style="text-align:right;">
+a_est
+</th>
+<th style="text-align:right;">
+b_est
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Chanos chanos
+</td>
+<td style="text-align:left;">
+Milkfish
+</td>
+<td style="text-align:right;">
+0.0905
+</td>
+<td style="text-align:right;">
+2.52
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Sphyraena barracuda
+</td>
+<td style="text-align:left;">
+Great barracuda
+</td>
+<td style="text-align:right;">
+0.0181
+</td>
+<td style="text-align:right;">
+3.27
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Caranx ignobilis
+</td>
+<td style="text-align:left;">
+Giant trevally
+</td>
+<td style="text-align:right;">
+0.0353
+</td>
+<td style="text-align:right;">
+3.05
+</td>
+</tr>
+</tbody>
+</table>
+<p>Recreate the table above as a data frame stored as <code>fish_parms</code>. Then, write a function called <code>fish_weight</code> that allows a user to only enter the <em>common name</em> (argument <code>fish_name</code>) and <em>total length</em> (argument <code>tot_length</code>) (in centimeters) of a fish, to return the expected fish weight in grams. Test it out for different species and lengths.</p>
+<p>Now, try creating a vector of lengths (e.g. 0 to 100, by increments of 1) and ensuring that your function will calculate the fish weight over a <em>range</em> of lengths for the given species (try this for milkfish, storing the output weights as <code>milkfish_weights</code>.</p>
+</div>
+<div id="task-4" class="section level3">
+<h3>Task 4</h3>
+<p>Wave power (more accurately wave energy flux) in deep water is approximated by:</p>
+<p><span class="math display">\[P_{deep}=0.5 H^2 T\]</span> where <span class="math inline">\(P\)</span> is power in <span class="math inline">\(\frac{kW}{m}\)</span> (potential power per wave meter), <span class="math inline">\(H\)</span> is wave height in meters (more specifically, the <em>significant wave height</em>), and <span class="math inline">\(T\)</span> is the wave period in seconds. Learn more <a href="https://en.wikipedia.org/wiki/Wave_power">here</a>.</p>
+<p>Write a function called <code>wave_power</code> that calculates potential ocean wave power given inputs of wave height and period.</p>
+<p>Use your <code>wave_power</code> function to approximate wave power for a period of 8 seconds, over a range of wave heights from 0 to 3 meters by increments of 0.2 meters.</p>
+</div>
+<div id="task-5" class="section level3">
+<h3>Task 5</h3>
+<p>The wave energy equation changes based on ocean depth. Along the coast of Brenville, which has a very sharp shelf as the wave approaches the coast, wave energy is approximated using the deep ocean equation (the one you used above) for depths &gt; 12 meters, and a shallow equation for depths &lt;= 12 meters. The Brenville team estimates shallow wave power by:</p>
+<p><span class="math display">\[P_{shallow}=0.81 H^2 T\]</span></p>
+<p>Create a function that requires inputs of water depth, wave height and period, then returns the approximated wave power using the correct equation for the depth entered. It should also include a message (hint: use <code>message()</code> just like you would use warning!) that lets the user know if the shallow or deep water equation was used.</p>
+<!---
+### Task 6
+
+Bacterial growth is modeled by $$C_t = C_0e^{rt}$$
+
+where $C_t$ is the estimated population size at any time $t$, $C_0$ is the original population (cells / mL), $r$ is the intrinsic growth rate (usually in 1 / hr), and $t$ is time duration in hours. 
+
+Write a function that has arguments for a starting population size `pop_0` and a maximum time duration over which to model growth `t_max` (in hours). Create a function that accepts those arguments, then estimates the population from time = 0 to time = t_max (by increments of 1 hour), for growth rates from 0.10 to 0.50 (by increments of 0.05). 
+
+
+```r
+bacteria_fun <- function(pop_0, t_max) {
+  
+  rate_sequence <- seq(from = 0.10, to = 0.50, by = 0.05)
+  time_sequence <- seq(from = 0, to = t_max, by = 1)
+  
+  for (i in seq_along(rate_sequence)) {
+    for (j in seq_along(time_sequence)) {
+      pop_t <- pop_0 * exp(rate_sequence[i] * time_sequence[j])
+      print(pop_t)
+    }
+  }
+}
+
+my_test <- bacteria_fun(pop_0 = 5000, t_max = 20)
+```
+
+```
+## [1] 5000
+## [1] 5525.855
+## [1] 6107.014
+## [1] 6749.294
+## [1] 7459.123
+## [1] 8243.606
+## [1] 9110.594
+## [1] 10068.76
+## [1] 11127.7
+## [1] 12298.02
+## [1] 13591.41
+## [1] 15020.83
+## [1] 16600.58
+## [1] 18346.48
+## [1] 20276
+## [1] 22408.45
+## [1] 24765.16
+## [1] 27369.74
+## [1] 30248.24
+## [1] 33429.47
+## [1] 36945.28
+## [1] 5000
+## [1] 5809.171
+## [1] 6749.294
+## [1] 7841.561
+## [1] 9110.594
+## [1] 10585
+## [1] 12298.02
+## [1] 14288.26
+## [1] 16600.58
+## [1] 19287.13
+## [1] 22408.45
+## [1] 26034.9
+## [1] 30248.24
+## [1] 35143.44
+## [1] 40830.85
+## [1] 47438.68
+## [1] 55115.88
+## [1] 64035.52
+## [1] 74398.66
+## [1] 86438.91
+## [1] 100427.7
+## [1] 5000
+## [1] 6107.014
+## [1] 7459.123
+## [1] 9110.594
+## [1] 11127.7
+## [1] 13591.41
+## [1] 16600.58
+## [1] 20276
+## [1] 24765.16
+## [1] 30248.24
+## [1] 36945.28
+## [1] 45125.07
+## [1] 55115.88
+## [1] 67318.69
+## [1] 82223.23
+## [1] 100427.7
+## [1] 122662.7
+## [1] 149820.5
+## [1] 182991.2
+## [1] 223505.9
+## [1] 272990.8
+## [1] 5000
+## [1] 6420.127
+## [1] 8243.606
+## [1] 10585
+## [1] 13591.41
+## [1] 17451.71
+## [1] 22408.45
+## [1] 28773.01
+## [1] 36945.28
+## [1] 47438.68
+## [1] 60912.47
+## [1] 78213.16
+## [1] 100427.7
+## [1] 128951.7
+## [1] 165577.3
+## [1] 212605.4
+## [1] 272990.8
+## [1] 350527.1
+## [1] 450085.7
+## [1] 577921.4
+## [1] 742065.8
+## [1] 5000
+## [1] 6749.294
+## [1] 9110.594
+## [1] 12298.02
+## [1] 16600.58
+## [1] 22408.45
+## [1] 30248.24
+## [1] 40830.85
+## [1] 55115.88
+## [1] 74398.66
+## [1] 100427.7
+## [1] 135563.2
+## [1] 182991.2
+## [1] 247012.2
+## [1] 333431.7
+## [1] 450085.7
+## [1] 607552.1
+## [1] 820109.5
+## [1] 1107032
+## [1] 1494337
+## [1] 2017144
+## [1] 5000
+## [1] 7095.338
+## [1] 10068.76
+## [1] 14288.26
+## [1] 20276
+## [1] 28773.01
+## [1] 40830.85
+## [1] 57941.73
+## [1] 82223.23
+## [1] 116680.3
+## [1] 165577.3
+## [1] 234965.3
+## [1] 333431.7
+## [1] 473162
+## [1] 671448.9
+## [1] 952831.3
+## [1] 1352132
+## [1] 1918767
+## [1] 2722860
+## [1] 3863922
+## [1] 5483166
+## [1] 5000
+## [1] 7459.123
+## [1] 11127.7
+## [1] 16600.58
+## [1] 24765.16
+## [1] 36945.28
+## [1] 55115.88
+## [1] 82223.23
+## [1] 122662.7
+## [1] 182991.2
+## [1] 272990.8
+## [1] 407254.3
+## [1] 607552.1
+## [1] 906361.2
+## [1] 1352132
+## [1] 2017144
+## [1] 3009225
+## [1] 4489236
+## [1] 6697154
+## [1] 9990979
+## [1] 14904790
+## [1] 5000
+## [1] 7841.561
+## [1] 12298.02
+## [1] 19287.13
+## [1] 30248.24
+## [1] 47438.68
+## [1] 74398.66
+## [1] 116680.3
+## [1] 182991.2
+## [1] 286987.3
+## [1] 450085.7
+## [1] 705874.8
+## [1] 1107032
+## [1] 1736172
+## [1] 2722860
+## [1] 4270294
+## [1] 6697154
+## [1] 10503228
+## [1] 16472340
+## [1] 25833772
+## [1] 40515420
+## [1] 5000
+## [1] 8243.606
+## [1] 13591.41
+## [1] 22408.45
+## [1] 36945.28
+## [1] 60912.47
+## [1] 100427.7
+## [1] 165577.3
+## [1] 272990.8
+## [1] 450085.7
+## [1] 742065.8
+## [1] 1223460
+## [1] 2017144
+## [1] 3325708
+## [1] 5483166
+## [1] 9040212
+## [1] 14904790
+## [1] 24573844
+## [1] 40515420
+## [1] 66798634
+## [1] 110132329
+```
+
+--->
+</div>
+<div id="citations" class="section level3">
+<h3>Citations</h3>
+<p>Peyton, K. A., T. S. Sakihara, L. K. Nishiura, T. T. Shindo, T. E. Shimoda, S. Hau, A. Akiona, and K. Lorance. 2016. “Length–Weight Relationships for Common Juvenile Fishes and Prey Species in Hawaiian Estuaries.” Journal of Applied Ichthyology 32 (3): 499–502. <a href="https://doi.org/10.1111/jai.12957" class="uri">https://doi.org/10.1111/jai.12957</a>.</p>
+</div>
 </div>
 
 

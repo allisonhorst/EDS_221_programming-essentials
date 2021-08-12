@@ -69,7 +69,7 @@ force(100, 2.9)
 
 Write a function called `name_column` that, given a data frame name and a number, will return the column name associated with that column number. Add an error message if the column number is < 1, or if the number exceeds the number of columns in the data frame. Test the function using the `mtcars` data frame.
 
-```{r}
+```{r, include = FALSE}
 name_column <- function(df, col_no) {
   if (col_no < 1 | col_no >= length(df)) {
     stop("Column does not exist in the data frame.")
@@ -146,7 +146,7 @@ wave_power(wave_height = wave_heights, wave_period = 8)
 
 The wave energy equation changes based on ocean depth. Along the coast of Brenville, which has a very sharp shelf as the wave approaches the coast, wave energy is approximated using the deep ocean equation (the one you used above) for depths > 12 meters, and a shallow equation for depths <= 12 meters. The Brenville team estimates shallow wave power by:
 
-$$$$P_{shallow}=0.81 H^2 T$$$$
+$$P_{shallow}=0.81 H^2 T$$
 
 Create a function that requires inputs of water depth, wave height and period, then returns the approximated wave power using the correct equation for the depth entered. It should also include a message (hint: use `message()` just like you would use warning!) that lets the user know if the shallow or deep water equation was used. 
 
@@ -173,9 +173,38 @@ brenville_waves <- function(wave_height, wave_period, depth) {
 brenville_waves(wave_height = 5, wave_period = 10, depth = 15)
 ```
 
-## Part 3. Wild data
+<!---
+### Task 6
+
+Bacterial growth is modeled by $$C_t = C_0e^{rt}$$
+
+where $C_t$ is the estimated population size at any time $t$, $C_0$ is the original population (cells / mL), $r$ is the intrinsic growth rate (usually in 1 / hr), and $t$ is time duration in hours. 
+
+Write a function that has arguments for a starting population size `pop_0` and a maximum time duration over which to model growth `t_max` (in hours). Create a function that accepts those arguments, then estimates the population from time = 0 to time = t_max (by increments of 1 hour), for growth rates from 0.10 to 0.50 (by increments of 0.05). 
+
+```{r}
+
+
+bacteria_fun <- function(pop_0, t_max) {
+  
+  rate_sequence <- seq(from = 0.10, to = 0.50, by = 0.05)
+  time_sequence <- seq(from = 0, to = t_max, by = 1)
+  
+  for (i in seq_along(rate_sequence)) {
+    for (j in seq_along(time_sequence)) {
+      pop_t <- pop_0 * exp(rate_sequence[i] * time_sequence[j])
+      print(pop_t)
+    }
+  }
+}
+
+my_test <- bacteria_fun(pop_0 = 5000, t_max = 20)
+```
+
+--->
 
 
 
+### Citations
 
 Peyton, K. A., T. S. Sakihara, L. K. Nishiura, T. T. Shindo, T. E. Shimoda, S. Hau, A. Akiona, and K. Lorance. 2016. “Length–Weight Relationships for Common Juvenile Fishes and Prey Species in Hawaiian Estuaries.” Journal of Applied Ichthyology 32 (3): 499–502. https://doi.org/10.1111/jai.12957. 

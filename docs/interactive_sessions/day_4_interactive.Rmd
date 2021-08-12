@@ -405,6 +405,63 @@ Now test your function with different inputs. Are your messages working?
 
 ## Part 7: A few more interesting functions
 
+### Pulling values from a data frame example
+
+```{r}
+# Let's create a data frame:
+
+
+# Now let's write a function that automatically switches depth based on
+gw_rate <- function(site) {
+  
+  # Stored parameters for 4 different sites
+  gw_depths <- data.frame(sitename = c("mountain", "prairie", "desert", "beach"),
+                 depth = c(32, 41, 63, 2),
+                 slope = c(11.2, 0.4, 0.8, 2.6))
+  
+  # Subset for just that site information (creates a 1-row data frame)
+  site_select <- filter(gw_depths, sitename == site)
+  
+  # Calculate using values from that 1-row data frame
+  transport_rate <- 1.4 * site_select$slope + 3.6 * site_select$depth
+ 
+  # Return the output
+  return(transport_rate)
+  
+}
+
+gw_rate(site = "beach")
+
+
+
+# Alternatively, with switch()
+
+gw_rate_switch <- function(site) {
+  
+  # Stored parameters for 4 different sites
+  gw_depths <- switch(site, 
+                      "mountain" = c(32, 11.2),
+                      "prairie" = c(41, 0.4),
+                      "desert" = c(63, 0.8),
+                      "beach" = c(2, 2.6))
+  
+  # Calculate using values from that 1-row data frame
+  transport_rate <- 1.4 * gw_depths[2] + 3.6 * gw_depths[1]
+ 
+  # Return the output
+  return(transport_rate)
+  
+}
+
+
+gw_rate_switch("beach")
+
+
+
+```
+
+### Logistic growth example
+
 - Logistic growth equation (within a for loop where growth rate changes)
 
 - Sinusoidal function with varying parameters
@@ -593,11 +650,12 @@ filename_matrix
 
 ### Another for loop example: 
 ```{r}
-quarter_splits <- c(1, 1.1, 1.2, 1.1, 1.4, 1.5, 1.6)
+quarter_splits <- c(1, 1.1, 1.2, 1.1, 1.4, 1.5, 1.6, 1.4)
 
 half_splits <- vector(mode = "numeric", length = length(quarter_splits) - 1)
 
-for (i in seq_along(quarter_splits) - 1) {
+# NOTE FOR CLASS OF 2023: check seq_along here, use 1:(length(quarter_splits) - 1) instead
+for (i in 1:(length(quarter_splits) - 1)) {
   half_mile <- quarter_splits[i] + quarter_splits[i + 1]
   half_splits[i] <- half_mile
 }
