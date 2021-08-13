@@ -379,6 +379,8 @@ For example, if my package is in a repo called `tacopika`, then someone could in
 
     `remotes::install_github("allisonhorst/tacopika")`
 
+**Note:** you can check all functions in a package by running `lsf.str("package:packagename")` in the console. For example, after installing the package `tacopika` above, running `lsf.str("package:tacopika")` in the Console will return all functions in it. 
+
 ## Part 5. Finding, vetting and using other packages
 
 Now that you've made your own package, let's dive into packages that *other* developers have made so that we do more data science and less reinventing the wheel with code to do common useful things.

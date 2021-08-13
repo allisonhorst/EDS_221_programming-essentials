@@ -28,7 +28,7 @@ One established way to calculate the volume of stormwater expected for a watersh
 
 Where $R_v$ is the runoff coefficient (unitless), and $I_A$ is the fraction of the watershed that is considered "impervious" (unitless). 
 The volume of stormwater that needs to be handled, $V$ in cubic feet, is then calculated by: $$V=3630 * R_D * R_v * A$$
-where $R_D$ is the "*design storm rainfall depth*" in inches, usually set to 1.0 or 1.5, $R_v$ is the runoff coefficient calculated above, and $A$ is the watershed area. 
+where $R_D$ is the "*design storm rainfall depth*" in inches, usually set to 1.0 or 1.5, $R_v$ is the runoff coefficient calculated above, and $A$ is the watershed area in acres. 
 
 **YOUR TASK:**
 
