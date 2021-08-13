@@ -1,0 +1,146 @@
+---
+title: "Day 5 Activities"
+subtitle: "Loops revisited, functions continued, testing, sourcing scripts, working on your R package"
+output: 
+  html_document:
+    css: activity_theme.css
+    toc: true
+    toc_float: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(here)
+```
+
+## Setup
+
+- Create a new repo on GitHub called `eds221-day5-activities`
+- Clone to create a version-controlled R Project
+- Create subfolders: `docs`, `src`, `data`, `figs`
+
+## Task 1: Make a function, source in an R Markdown doc
+
+**Citation:** [NCDENR Stormwater BMP Manual](https://files.nc.gov/ncdeq/Water%20Quality/Surface%20Water%20Protection/SPU/SPU%20-%20BMP%20Manual%20Documents/BMPMan-Ch03-SWCalcs-20090616-DWQ-SPU.pdf)
+
+One established way to calculate the volume of stormwater expected for a watershed (necessary to design best management practices & systems) is the *Simple Method*, which involves two steps. First, the runoff coefficient $R_v$ (storm runoff / storm rainfall) is calculated from: $$R_v = 0.05 + 0.9 * I_A$$ 
+
+Where $R_v$ is the runoff coefficient (unitless), and $I_A$ is the fraction of the watershed that is considered "impervious" (unitless). 
+The volume of stormwater that needs to be handled, $V$ in cubic feet, is then calculated by: $$V=3630 * R_D * R_v * A$$
+where $R_D$ is the "*design storm rainfall depth*" in inches, usually set to 1.0 or 1.5, $R_v$ is the runoff coefficient calculated above, and $A$ is the watershed area. 
+
+**YOUR TASK:**
+
+- Create a new R script in `src`, saved as `storm_runoff.R`
+
+- In the script, create a function called `predict_runoff` that estimates the storm runoff volume using inputs for the impervious fraction and watershed area (you can use a constant value of 1 for $R_D$ here). In other words, your function should only require two arguments
+
+- Add documentation to your function using `Roxygen` comments for practice
+
+- Try out your function in the Console to ensure that it works
+
+```{r, include = FALSE}
+#' Simple Method for calculating runoff volumte
+#'
+#' @param frac_impervious a number indicating the fraction of the watershed that is impervious
+#' @param watershed_area a number indicating the total watershed area in acres
+#'
+#' @return
+#' @export
+#'
+#' @examples
+predict_runoff <- function(frac_impervious, watershed_area) {
+  
+  runoff_coef <- 0.05 + 0.9 * frac_impervious
+  runoff_volume <- 3630 * 1.0 * runoff_coef * watershed_area
+
+}
+
+predict_runoff(frac_impervious = 0.9, watershed_area = 5.2)
+```
+
+- Create a new R Markdown document in `docs`, saved as `runoff_volumes.Rmd`
+
+- Attach the `tidyverse` and `here` packages
+
+- Source your `storm_runoff.R` script so you are able to use the `predict_runoff` function in your .Rmd
+
+- In a code chunk in your `runoff_volumes.Rmd`, use your `predict_runoff` function to estimate stormwater volume for a watershed of 182 acres, over a range of estimates for the impervious fraction (from 0.6 to 0.8, by increments of 0.01). *Note: you do not need to write a for loop here.* 
+
+```{r, include = FALSE}
+
+# Make the sequence of impervious fractions
+impervious_sequence <- seq(from = 0.6, to = 0.8, by = 0.01)
+
+# Make predictions for volume at all values of impervious fraction, for watershed area = 182
+val <-predict_runoff(frac_impervious = impervious_sequence, watershed_area = 182)
+val
+```
+
+- Bind your sequence of impervious fractions together with the resulting runoff volume calculated into a data frame
+
+- Create a ggplot graph that has both dots and lines. Update axis labels. Export a png of your graph to the `figs` folder using `ggsave`. 
+
+```{r, include = FALSE}
+
+runoff_df <- data.frame(impervious_sequence, val)
+
+ggplot(data = runoff_df, aes(x = impervious_sequence, y = val)) +
+  geom_point() +
+  geom_line() +
+  theme_minimal() +
+  labs(x = "Fraction impervious surface in the watershed",
+       y = "Expected runoff volume (cubic feet)")
+
+```
+
+*Done with Task 1
+
+## Task 2: Wild data
+
+For Task 2, you will work with the `us_tilapia_imports.csv`. It exists in your `eds221-day5-comp` project - copy that file into your `data` folder for your day 5 activities. The data are from the USDA Economic Research Service, and contain annual total volumes (in thousands of pounds) of tilapia imports to the United States from different countries. 
+
+**You can decide if you want to do this all in separate steps, or piped together in sequence, or some combination.** Make sure if you pipe things together, you check the output at every step.  
+
+- Create a new .Rmd in your `docs` folder
+
+- Attach the `tidyverse`, `here` and `janitor` packages
+
+- Read in the data as `us_tilapia_imports` 
+
+- Explore the data. What re the classes of the columns? Remember some tools we've used: `summary`, `names`, `dim`, `skim`, etc.
+
+- Use `pivot_longer()` to reshape the data into long format (currently, the variable "year" is spread across multiple columns). Remember to store the output so you will be able to use the reshaped data this creates.
+
+- Check the class of the `year` column. What is it, and why do you think that's the case? Then, coerce the year column to `numeric` (e.g. using `mutate()` and `as.numeric()` in combination)
+
+- Create a subset that only retains imports from Ecuador, Honduras, Costa Rica, and Mexico.
+
+- Create a ggplot graph of total US tilapia imports over time, for those four countries, separated by country. Update axis labels, add a title, customize your color scheme, update the theme. Export a .jpg of your graph to `figs`
+
+```{r, include = FALSE}
+us_tilapia_imports <- read_csv(here::here("activities", "us_tilapia_imports.csv")) %>% 
+  pivot_longer(cols = '1992':'2018', names_to = 'year', values_to = 'tilapia_volume_kpounds') %>% 
+  mutate(year = as.numeric(year)) %>% 
+  filter(country %in% c("Ecuador", "Honduras", "Costa Rica", "Mexico"))
+
+ggplot(data = us_tilapia_imports, aes(x = year, y = tilapia_volume_kpounds)) +
+  geom_point(aes(color = country))
+```
+**Done with Task 2.**
+
+## Task 3: Add to your R package and share
+
+For Task 3, add two new functions to your existing R package. They can do whatever you want as long as: 
+
+- They have at least two required arguments
+- You add documentation for each function with a Roxygen skeleton
+
+Once you've added your functions, make sure to `devtools::document()`, Install and Restart, and check to make sure your functions are working. Then: 
+
+- Push your changes back to your repo on GitHub
+- Share the link with someone (they'll need to REINSTALL your package from GitHub using `install_github("username/reponame")`)
+
+## END Day 5 activities
+

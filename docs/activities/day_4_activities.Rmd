@@ -171,7 +171,29 @@ brenville_waves <- function(wave_height, wave_period, depth) {
 }
 
 brenville_waves(wave_height = 5, wave_period = 10, depth = 15)
+
+
 ```
+
+```{r, include = FALSE}
+brenville_waves <- function(wave_height, wave_period, depth) {
+  
+  if (depth > 12) {
+    message("Using the deep wave equation.")
+    bren_wave_energy <- 0.5 * (wave_height ^ 2) * wave_period
+  }
+  
+  else if (depth <= 12) {
+    message("Using the shallow wave equation.")
+    bren_wave_energy <- 0.81 * (wave_height ^ 2) * wave_period
+  }
+  
+  return(bren_wave_energy)
+}
+
+brenville_waves(wave_height = 5, wave_period = 10, depth = 4)
+```
+
 
 <!---
 ### Task 6

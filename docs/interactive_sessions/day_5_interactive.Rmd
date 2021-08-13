@@ -21,13 +21,66 @@ source("food_cart_functions.R")
 
 ## Setup
 
--   Create a new version-controlled R Project for Day 5
+-   Fork then clone [this repo](https://github.com/allisonhorst/eds221-day5-comp) to create a version-controlled R Project for Day 5
+
+## Part 0: Warm up - For loops revisited (Leslie Matrix)
+
+Open the `leslie_projection.Rmd` file in docs/. All code shown below for Part 0 is in that file. You should be able to run it out-of-the-box. In EDS 212, we learned about Leslie matrices for projecting populations based on mortality and reproduction for different organism life stages. Let's return to one example we checked out. 
+
+A population of fish we're interested in has four life stages: eggs (E), fry (F), juvenile (J), breeding adult (A). You are told that annually:
+
+- Each breeding adult will produce, on average, 200 eggs
+- 5% of eggs will survive to become fry
+- 10% of fry will survive to become juveniles
+- 16% of juveniles will survive to become adults
+- Adult survival rate year to year is 90%
+
+### Create the matrix
+
+```{r}
+# Make the Leslie Matrix:
+fish_leslie <- matrix(c(0, 0, 0, 200, 0.05, 0, 0, 0, 0, 0.10, 0, 0, 0, 0, 0.16, 0.9), nrow = 4, ncol = 4, byrow = TRUE)
+
+# Check it out: 
+fish_leslie
+```
+
+Recall, we are able to use the dot product (`%*%`) to estimate the population at the next year (we'll draw this on the board to remember what it looks like). 
+
+The initial population structure is given by: 
+```{r}
+# Initial population structure (Roe, Fry, Juvenile, Adult): 
+fish_year0 <- c(5000, 8000, 600, 400)
+
+
+# ------ WHAT HAPPENS HERE? ------ #
+time_yr <- seq(from = 0, to = 8, by = 1)
+proj_year <- matrix(ncol = length(fish_year0), nrow = length(time_yr))
+proj_year[1, ] <- fish_year0
+
+
+for (i in 2:length(time_yr)) {
+  proj_year[i,] <- fish_leslie %*% proj_year[i-1,]
+}
+# -------------------------------- #
+
+# The rest is wrangling & visualization:
+colnames(proj_year) <- c("eggs", "fry", "juvenile", "adult")
+proj_df <- data.frame(time_yr, proj_year) %>% 
+  pivot_longer(cols = -time_yr, names_to = "lifestage", values_to = "stage_population")
+
+ggplot(data = proj_df, aes(x = time_yr, y = stage_population)) +
+  geom_line(aes(color = lifestage)) +
+  scale_y_log10()
+
+```
+
+## Part 1: Testing functions with `{testthat}`
+
+-   Create a new R Markdown file in your existing project (in docs/) saved as `fun_testing.Rmd`
 -   Install the `testthat` package (`install.packages("testthat")`)
 -   Install the `devtools` package (`install.packages("devtools")`)
 -   Install the `remotes` packages (`install.packages("remotes")`)
--   In a new R Markdown document, attach the `tidyverse`, `testthat` and `usethis` packages in a code chunk
-
-## Part 1: Testing functions with `{testthat}`
 
 As we develop algorithms, we'll change our code. We want a way to automatically check our work to make sure it's behaving as expected. The [`testthat`](https://testthat.r-lib.org/index.html) package "tries to make testing as fun as possible."
 
@@ -44,7 +97,7 @@ Let's write the function first, then create some accompanying tests to make sure
 
 ```{r}
 mean_range <- function(df) {
-  col_means <- apply(X = df, MARGIN = 2, FUN = mean) # Returns column means as a vector
+  col_means <- apply(X = df, MARGIN = 2, FUN = mean, na.rm = TRUE) # Returns column means as a vector
   col_mean_max <- max(col_means) # Looks for the maximum value in the vector
   col_mean_min <- min(col_means) # Looks for the minimum value in the vector
   return(c(col_mean_min, col_mean_max)) # Prints the vector with minimum & maximum
@@ -95,7 +148,7 @@ expect_true(mean_range(mtcars)[1] > mean_range(mtcars)[2])
 
 ```
 
-That test fails. Now you have an idea of what little unit tests do.
+That test fails. This is just a little flavor of what unit tests do.
 
 ## Part 2: Sourcing functions
 
@@ -130,6 +183,14 @@ name_cart(food = "strawberry", animal = "marmot")
 ```
 
 This gives us a valuable tool for organizing things within a project. Often, you'll have a separate folder called `R` where you have your scripts / functions, and those are sourced as needed for use in your notebook or by another script you're working on.
+
+### A real sourcing example: cork oak growth
+
+**Citation:** Mariola Sánchez-González, Margarida Tomé, Gregorio Montero. Modelling height and diameter growth of dominant cork oak trees in Spain. Annals of Forest Science, Springer Nature (since 2011)/EDP Science (until 2010), 2005, 62 (7), pp.633-643.
+
+In the `src/` folder there is a script `cork_oak_growth.R` that contains one function `height_t2` that estimates the height of a cork oak tree at some age (time 2), given a prior height of the tree, the age when that height was recorded (years), and the age you're trying to estimate the new height for (these ages are t1 and t2, respectively, in the model). 
+
+Create a new .Rmd. Source the script by running `source(here::here("path", "to", "script.R"))` in your setup chunk. Ensure that you can use the function in your .Rmd whenever you want to. 
 
 ## Part 3: Function documentation
 
@@ -263,18 +324,18 @@ Step-by-step:
 
 6.  OK but let's *really* make it your own...
 
-    -   Create a new R script in your project
+  -   Create a new R script in your project
 
-    -   Create a function within the script of your choosing (you'll share this with a classmate). Some requirements:
+  -   Create a function within the script of your choosing (you'll share this with a classmate). Some requirements:
 
-        -   It must have at least 3 parameters
-        -   Of those 3 parameters, at least one must be a character, and one numeric
+      -   It must have at least 3 parameters
+      -   Of those 3 parameters, at least one must be a character, and one numeric
 
-    -   Save the script **in the R subfolder with the same name as your function.** For example, if your function is called `jurassic_park()`, then the script should be saved in the R folder as **jurassic_park.R**.
+  -   Save the script **in the R subfolder with the same name as your function.** For example, if your function is called `jurassic_park()`, then the script should be saved in the R folder as **jurassic_park.R**.
 
-    -   Click 'Install and restart' in the Build tab again
+  -   Click 'Install and restart' in the Build tab again
 
-    -   Try your new function!
+  -   Try your new function!
 
 7.  Documenting your function
 
