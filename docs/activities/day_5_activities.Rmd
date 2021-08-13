@@ -80,7 +80,7 @@ val
 
 - Bind your sequence of impervious fractions together with the resulting runoff volume calculated into a data frame
 
-- Create a ggplot graph that has both dots and lines. Update axis labels. Export a png of your graph to the `figs` folder using `ggsave`. 
+- Create a ggplot graph that has both dots and connecting lines (i.e., you'll layer `geom_point()` and `geom_line()`. Update axis labels. Export a png of your graph to the `figs` folder using `ggsave`. 
 
 ```{r, include = FALSE}
 
@@ -95,52 +95,70 @@ ggplot(data = runoff_df, aes(x = impervious_sequence, y = val)) +
 
 ```
 
-*Done with Task 1
+*Done with Task 1*
 
 ## Task 2: Wild data
 
-For Task 2, you will work with the `us_tilapia_imports.csv`. It exists in your `eds221-day5-comp` project - copy that file into your `data` folder for your day 5 activities. The data are from the USDA Economic Research Service, and contain annual total volumes (in thousands of pounds) of tilapia imports to the United States from different countries. 
+For Task 2, you will work with the `us_tilapia_imports.csv`. It exists in your `eds221-day5-comp` project - copy that file into your `data` folder for your day 5 activities project. The data are from the USDA Economic Research Service, and contain annual total volumes (in thousands of pounds) of tilapia imports to the United States from different countries. 
 
 **You can decide if you want to do this all in separate steps, or piped together in sequence, or some combination.** Make sure if you pipe things together, you check the output at every step.  
 
-- Create a new .Rmd in your `docs` folder
+- Create a new .Rmd in your `docs` folder called `us_tilapia_imports.Rmd`
 
 - Attach the `tidyverse`, `here` and `janitor` packages
 
 - Read in the data as `us_tilapia_imports` 
 
-- Explore the data. What re the classes of the columns? Remember some tools we've used: `summary`, `names`, `dim`, `skim`, etc.
+- Explore the data. What are the classes of the columns? Remember some tools we've used: `summary`, `names`, `dim`, `skim`, etc.
 
 - Use `pivot_longer()` to reshape the data into long format (currently, the variable "year" is spread across multiple columns). Remember to store the output so you will be able to use the reshaped data this creates.
 
 - Check the class of the `year` column. What is it, and why do you think that's the case? Then, coerce the year column to `numeric` (e.g. using `mutate()` and `as.numeric()` in combination)
 
-- Create a subset that only retains imports from Ecuador, Honduras, Costa Rica, and Mexico.
-
-- Create a ggplot graph of total US tilapia imports over time, for those four countries, separated by country. Update axis labels, add a title, customize your color scheme, update the theme. Export a .jpg of your graph to `figs`
+- Use `dplyr::group_by() %>% summarize()` to find the *total* US tilapia imports by *year*, store as `yearly_tilapia_tot`
 
 ```{r, include = FALSE}
 us_tilapia_imports <- read_csv(here::here("activities", "us_tilapia_imports.csv")) %>% 
   pivot_longer(cols = '1992':'2018', names_to = 'year', values_to = 'tilapia_volume_kpounds') %>% 
-  mutate(year = as.numeric(year)) %>% 
+  mutate(year = as.numeric(year))
+
+yearly_tilapia_tot <- us_tilapia_imports %>% 
+  group_by(year) %>% 
+  summarize(annual_total = sum(tilapia_volume_kpounds, na.rm = TRUE))
+```
+
+- Create a ggplot line graph of total US tilapia imports for all years in `yearly_tilapia_tot`. Update axis labels (include units as necessary), then export your graph as a .png to `figs`.
+
+```{r, include = FALSE}
+ggplot(data = yearly_tilapia_tot, aes(x = year, y = annual_total)) +
+  geom_line()
+```
+
+- Create a subset that only retains imports from Ecuador, Honduras, Costa Rica, and Mexico (you decide what to name this)
+
+- Create a ggplot graph of total US tilapia imports over time, for those four countries in the subset you created above, separated by country. Update axis labels, add a title, customize your color scheme, update the theme. Export a .jpg of your graph to `figs`.
+
+```{r, include = FALSE}
+ limited_us_tilapia <- us_tilapia_imports %>% 
   filter(country %in% c("Ecuador", "Honduras", "Costa Rica", "Mexico"))
 
-ggplot(data = us_tilapia_imports, aes(x = year, y = tilapia_volume_kpounds)) +
+ggplot(data = limited_us_tilapia, aes(x = year, y = tilapia_volume_kpounds)) +
   geom_point(aes(color = country))
 ```
+
 **Done with Task 2.**
 
-## Task 3: Add to your R package and share
+## Task 3: Add to your R package
 
-For Task 3, add two new functions to your existing R package. They can do whatever you want as long as: 
+For Task 3, reopen your R package you started today, and add two new functions. They can do whatever you want as long as: 
 
 - They have at least two required arguments
 - You add documentation for each function with a Roxygen skeleton
 
-Once you've added your functions, make sure to `devtools::document()`, Install and Restart, and check to make sure your functions are working. Then: 
+Once you've added your functions, make sure to `devtools::document()`, Install and Restart, and check to make sure your functions are working, and that you can see your documentation. Then: 
 
 - Push your changes back to your repo on GitHub
-- Share the link with someone (they'll need to REINSTALL your package from GitHub using `install_github("username/reponame")`)
+- Share the link with someone (they'll need to reinstall your package from GitHub using `install_github("username/reponame")`)
 
 ## END Day 5 activities
 

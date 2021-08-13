@@ -270,37 +270,39 @@ div.tocify {
 <li><p>Source your <code>storm_runoff.R</code> script so you are able to use the <code>predict_runoff</code> function in your .Rmd</p></li>
 <li><p>In a code chunk in your <code>runoff_volumes.Rmd</code>, use your <code>predict_runoff</code> function to estimate stormwater volume for a watershed of 182 acres, over a range of estimates for the impervious fraction (from 0.6 to 0.8, by increments of 0.01). <em>Note: you do not need to write a for loop here.</em></p></li>
 <li><p>Bind your sequence of impervious fractions together with the resulting runoff volume calculated into a data frame</p></li>
-<li><p>Create a ggplot graph that has both dots and lines. Update axis labels. Export a png of your graph to the <code>figs</code> folder using <code>ggsave</code>.</p></li>
+<li><p>Create a ggplot graph that has both dots and connecting lines (i.e., you’ll layer <code>geom_point()</code> and <code>geom_line()</code>. Update axis labels. Export a png of your graph to the <code>figs</code> folder using <code>ggsave</code>.</p></li>
 </ul>
-<p>*Done with Task 1</p>
+<p><em>Done with Task 1</em></p>
 </div>
 <div id="task-2-wild-data" class="section level2">
 <h2>Task 2: Wild data</h2>
-<p>For Task 2, you will work with the <code>us_tilapia_imports.csv</code>. It exists in your <code>eds221-day5-comp</code> project - copy that file into your <code>data</code> folder for your day 5 activities. The data are from the USDA Economic Research Service, and contain annual total volumes (in thousands of pounds) of tilapia imports to the United States from different countries.</p>
+<p>For Task 2, you will work with the <code>us_tilapia_imports.csv</code>. It exists in your <code>eds221-day5-comp</code> project - copy that file into your <code>data</code> folder for your day 5 activities project. The data are from the USDA Economic Research Service, and contain annual total volumes (in thousands of pounds) of tilapia imports to the United States from different countries.</p>
 <p><strong>You can decide if you want to do this all in separate steps, or piped together in sequence, or some combination.</strong> Make sure if you pipe things together, you check the output at every step.</p>
 <ul>
-<li><p>Create a new .Rmd in your <code>docs</code> folder</p></li>
+<li><p>Create a new .Rmd in your <code>docs</code> folder called <code>us_tilapia_imports.Rmd</code></p></li>
 <li><p>Attach the <code>tidyverse</code>, <code>here</code> and <code>janitor</code> packages</p></li>
 <li><p>Read in the data as <code>us_tilapia_imports</code></p></li>
-<li><p>Explore the data. What re the classes of the columns? Remember some tools we’ve used: <code>summary</code>, <code>names</code>, <code>dim</code>, <code>skim</code>, etc.</p></li>
+<li><p>Explore the data. What are the classes of the columns? Remember some tools we’ve used: <code>summary</code>, <code>names</code>, <code>dim</code>, <code>skim</code>, etc.</p></li>
 <li><p>Use <code>pivot_longer()</code> to reshape the data into long format (currently, the variable “year” is spread across multiple columns). Remember to store the output so you will be able to use the reshaped data this creates.</p></li>
 <li><p>Check the class of the <code>year</code> column. What is it, and why do you think that’s the case? Then, coerce the year column to <code>numeric</code> (e.g. using <code>mutate()</code> and <code>as.numeric()</code> in combination)</p></li>
-<li><p>Create a subset that only retains imports from Ecuador, Honduras, Costa Rica, and Mexico.</p></li>
-<li><p>Create a ggplot graph of total US tilapia imports over time, for those four countries, separated by country. Update axis labels, add a title, customize your color scheme, update the theme. Export a .jpg of your graph to <code>figs</code></p></li>
+<li><p>Use <code>dplyr::group_by() %&gt;% summarize()</code> to find the <em>total</em> US tilapia imports by <em>year</em>, store as <code>yearly_tilapia_tot</code></p></li>
+<li><p>Create a ggplot line graph of total US tilapia imports for all years in <code>yearly_tilapia_tot</code>. Update axis labels (include units as necessary), then export your graph as a .png to <code>figs</code>.</p></li>
+<li><p>Create a subset that only retains imports from Ecuador, Honduras, Costa Rica, and Mexico (you decide what to name this)</p></li>
+<li><p>Create a ggplot graph of total US tilapia imports over time, for those four countries in the subset you created above, separated by country. Update axis labels, add a title, customize your color scheme, update the theme. Export a .jpg of your graph to <code>figs</code>.</p></li>
 </ul>
 <p><strong>Done with Task 2.</strong></p>
 </div>
-<div id="task-3-add-to-your-r-package-and-share" class="section level2">
-<h2>Task 3: Add to your R package and share</h2>
-<p>For Task 3, add two new functions to your existing R package. They can do whatever you want as long as:</p>
+<div id="task-3-add-to-your-r-package" class="section level2">
+<h2>Task 3: Add to your R package</h2>
+<p>For Task 3, reopen your R package you started today, and add two new functions. They can do whatever you want as long as:</p>
 <ul>
 <li>They have at least two required arguments</li>
 <li>You add documentation for each function with a Roxygen skeleton</li>
 </ul>
-<p>Once you’ve added your functions, make sure to <code>devtools::document()</code>, Install and Restart, and check to make sure your functions are working. Then:</p>
+<p>Once you’ve added your functions, make sure to <code>devtools::document()</code>, Install and Restart, and check to make sure your functions are working, and that you can see your documentation. Then:</p>
 <ul>
 <li>Push your changes back to your repo on GitHub</li>
-<li>Share the link with someone (they’ll need to REINSTALL your package from GitHub using <code>install_github(&quot;username/reponame&quot;)</code>)</li>
+<li>Share the link with someone (they’ll need to reinstall your package from GitHub using <code>install_github(&quot;username/reponame&quot;)</code>)</li>
 </ul>
 </div>
 <div id="end-day-5-activities" class="section level2">
