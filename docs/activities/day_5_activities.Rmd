@@ -28,7 +28,7 @@ One established way to calculate the volume of stormwater expected for a watersh
 
 Where $R_v$ is the runoff coefficient (unitless), and $I_A$ is the fraction of the watershed that is considered "impervious" (unitless). 
 The volume of stormwater that needs to be handled, $V$ in cubic feet, is then calculated by: $$V=3630 * R_D * R_v * A$$
-where $R_D$ is the "*design storm rainfall depth*" in inches, usually set to 1.0 or 1.5, $R_v$ is the runoff coefficient calculated above, and $A$ is the watershed area. 
+where $R_D$ is the "*design storm rainfall depth*" in inches, usually set to 1.0 or 1.5, $R_v$ is the runoff coefficient calculated above, and $A$ is the watershed area in acres. 
 
 **YOUR TASK:**
 
@@ -41,23 +41,22 @@ where $R_D$ is the "*design storm rainfall depth*" in inches, usually set to 1.0
 - Try out your function in the Console to ensure that it works
 
 ```{r, include = FALSE}
-#' Simple Method for calculating runoff volumte
-#'
-#' @param frac_impervious a number indicating the fraction of the watershed that is impervious
-#' @param watershed_area a number indicating the total watershed area in acres
-#'
-#' @return
-#' @export
-#'
-#' @examples
 predict_runoff <- function(frac_impervious, watershed_area) {
+
+  # if (frac_impervious <= 0 | frac_impervious >= 1) {
+  #   stop("Must be between 0 and 1")
+  # }
+  
+  ifelse(frac_impervious <= 1, TRUE, stop("NOPE"))
   
   runoff_coef <- 0.05 + 0.9 * frac_impervious
-  runoff_volume <- 3630 * 1.0 * runoff_coef * watershed_area
-
+  runoff_volume <- 3630 * 1.0 * {runoff_coef} * watershed_area
+  print(runoff_volume)
 }
 
 predict_runoff(frac_impervious = 0.9, watershed_area = 5.2)
+
+predict_runoff(frac_impervious = c(0.3, 0.8, 0.6), watershed_area = 5.2)
 ```
 
 - Create a new R Markdown document in `docs`, saved as `runoff_volumes.Rmd`

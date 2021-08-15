@@ -1,0 +1,182 @@
+---
+title: "Day 7 Activities"
+subtitle: "Wrangling continued: joins, strings, dates"
+output: 
+  html_document:
+    css: activity_theme.css
+    toc: true
+    toc_float: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(here)
+library(janitor)
+library(kableExtra)
+```
+
+## Setup
+
+- Create a new repo on GitHub called `eds221-day7-activities`
+- Clone to make a version controlled R Project
+- Add subfolders `data`, `R` and `figs`
+- Familiarize yourself with the contents, data files, and variables from [this data package](https://portal.edirepository.org/nis/mapbrowse?packageid=knb-lter-cap.256.9) on EDI
+- Download the entire Zip Archive for the package
+- Copy all 4 files to your `data` folder
+
+## Task 1: Joins on birds
+
+In this section, you'll test and explore a number of different joins. 
+
+- Create a new .Rmd in your `R` folder saved as `bird_joins.Rmd`
+- Read in the data sets and store the data frames as `bird_observations`, `sites`, `surveys`, and `taxalist` (it should be clear from the raw file names which is which)
+- Create a subset of `bird_observations` called `birds_subset` that only contains observations for birds with species id "BHCO" and "RWBL", and from sites with site ID "LI-W" and "NU-C"
+
+```{r, include = FALSE}
+bird_observations <- read_csv(here("activities", "knb-lter-cap_256_9", "52_pp52_birds_1.csv"))
+sites <- read_csv(here("activities", "knb-lter-cap_256_9", "52_pp52_sites_1.csv"))
+surveys <- read_csv(here("activities", "knb-lter-cap_256_9", "52_pp52_surveys_1.csv"))
+taxalist <- read_csv(here("activities", "knb-lter-cap_256_9", "52_pp52_taxalist_1.csv"))
+
+birds_subset <- bird_observations %>% 
+  filter(species_id %in% c("BHCO", "RWBL"),
+         site_id %in% c("LI-W", "NU-C"))
+```
+
+### Left join practice
+
+- Use left join(s) to update `birds_subset` so that it also includes `sites` and `taxalist` information. For each join, include an explicit argument saying which variable you are joining by (even if it will just assume the correct one for you). Store the updated data frame as `birds_left`. Make sure to look at the output - is what it contains consistent with what you expected it to contain?  
+```{r, include = FALSE}
+birds_left <- birds_subset %>% 
+  left_join(sites, by = "site_id") %>% 
+  left_join(taxalist, by = "species_id")
+```
+
+### Full join practice
+
+- First, answer: what do you expect a `full_join()` between `birds_subset` and `sites` to contain? 
+
+- Write code to `full_join` the `birds_subset` and `sites` data into a new object called `birds_full`. Explicitly include the variable you're joining by. Look at the output. Is it what you expected? 
+
+```{r, include = FALSE}
+birds_full <- birds_subset %>% 
+  full_join(sites, by = "site_id")
+```
+
+### Inner join practice
+
+- First, answer: what do you expect an `inner_join()` between `birds_subset` and `taxalist` to contain? 
+
+- Write code to `inner_join()` the `birds_subset` and `taxalist`, called `birds_inner`. Include an argument for what variable you'll be joining by. 
+
+```{r, include = FALSE}
+birds_inner <- birds_subset %>% 
+  inner_join(taxalist, join_by = "species_id")
+```
+
+- What would you get if instead of `inner_join()` you'd used `left_join()` for this example? Try it out & check. Why does that make sense for this scenario? It what case would you expect the outcome to differ from an `inner_join()`?
+
+```{r, include = FALSE}
+birds_left_example <- birds_subset %>% 
+  left_join(taxalist, join_by = "species_id")
+```
+
+## Task 2: Data wrangling and visualization with birds
+
+Continue in your same .Rmd that you created for Task 1
+
+- Starting with your `birds` object, rename the `notes` column to `bird_obs_notes` (so this doesn't conflict with `notes` in the `surveys` dataset
+- Then, create a subset that contains *all observations* in the `birds` dataset, joins the taxonomic, site and survey information to it, and is finally limited to only columns `survey_date`, `common_name`, `park_name`, and `bird_count`. You can decide the order that you want to create this in (e.g. limit the columns first, then join, or the other way around).
+
+```{r, include = FALSE}
+birds_df <- bird_observations %>% 
+  select(-notes) %>% 
+  left_join(surveys) %>% 
+  left_join(sites) %>% 
+  left_join(taxalist) %>% 
+  select(survey_date, park_name, common_name, bird_count)
+```
+
+- Use `lubridate::month()` to add a new column called `survey_month`, containing only the month number. Then, convert the month number to a factor (again within `mutate()`)
+
+- Learn a new function on your own! Use `dplyr::relocate()` to move the new `survey_month` column to immediately after the `survey_date` column. You can do this in a separate code chunk, or pipe straight into it from your existing code. 
+
+```{r, include = FALSE}
+birds_df <- birds_df %>% 
+  mutate(survey_month = lubridate::month(survey_date)) %>% 
+  mutate(survey_month = as.factor(survey_month)) %>% 
+  relocate(survey_month, .after = survey_date)
+```
+
+- Find the total number of birds observed by *park* and *month* (i.e., you'll `group_by(park_name, survey_month)`)
+
+- Filter to only include parks "Lindo", "Orme", "Palomino" and "Sonrisa"
+
+```{r, include = FALSE}
+birds_park_month <- birds_df %>% 
+  group_by(park_name, survey_month) %>% 
+  summarize(total_birds = sum(bird_count, na.rm = TRUE)) %>% 
+  ungroup() %>% 
+  filter(park_name %in% c("Lindo", "Orme", "Palomino", "Sonrisa"))
+```
+
+## Task 3: Practice with strings
+
+- Install the `datapasta` package (if you don't have it already)
+- Restart R
+- Create a new .Rmd in your `R` folder called `string_practice.Rmd`
+- Copy all contents of the html table below to your clipboard: 
+
+```{r, echo = FALSE}
+character_table <- tribble(
+  ~date, ~building, ~alarm_message,
+  "2020-03-14", "  Engineering-North ", "10:02am -- HVAC system  down, facilities management alerted ",
+  "2020-03-15", "Bren  Hall", "8:24am -- Elevator North out of service",
+  "2020-04-10", "Engineering-South ", "12:41am -- Fire   alarm, UCSB fire responded and cleared",
+  "2020-04-18", "Engr-North", "   9:58pm -- Campus point emergency siren, UCPD responded"
+)
+
+character_table %>% 
+  kable() %>% 
+  kable_styling()
+```
+
+- Back in your `string_practice.Rmd`, create a new code chunk
+- With your cursor in your code chunk, go up to Addins in the top bar of RStudio. From the drop-down menu, choose 'Paste as data frame'. Make sure to add code to store the data frame as `alarm_report`
+
+```{r, include = FALSE}
+alarm_report <- data.frame(
+  stringsAsFactors = FALSE,
+                              date = c("2020-03-14","2020-03-15","2020-04-10",
+                                       "2020-04-18"),
+                          building = c("Engineering-North","Bren Hall",
+                                       "Engineering-South","Engr-North"),
+                     alarm_message = c("10:02am -- HVAC system down, facilities management alerted",
+                                       "8:24am -- Elevator North out of service",
+                                       "12:41am -- Fire alarm, UCSB fire responded and cleared",
+                                       "9:58pm -- Campus point emergency siren, UCPD responded")
+                )
+
+```
+
+- Practice working with strings by writing code to update `alarm_report` as follows (these can be separate, or all as part of a piped sequence): 
+
+  - Replace the "Engr" with "Engineering" in the `building` column
+  - Separate the `building` column into two separate columns, `building` and `wing`, separated at the dash
+  - Only keep observations with the word "responded" in the `alarm_message` column
+  - Separate the message *time* from the rest of the message by separating at `--`
+  - Convert the date column to a Date class using `lubridate`
+  
+
+```{r, include = FALSE}
+alarm_report_update <- alarm_report %>% 
+  mutate(building = str_replace(building, pattern = "Engr", replacement = "Engineering")) %>% 
+  separate(col = building, into = c("building", "wing"), sep = "-") %>% 
+  filter(str_detect(alarm_message, pattern = "responded")) %>% 
+  separate(col = alarm_message, into = c("time", "message"), sep = "--") %>% 
+  mutate(date = lubridate::ymd(date))
+  
+```
+
+## End

@@ -1,0 +1,631 @@
+﻿Country Name	Country Code	Series Name	Series Code	2003 [YR2003]	2004 [YR2004]	2005 [YR2005]	2006 [YR2006]	2007 [YR2007]	2008 [YR2008]	2009 [YR2009]	2010 [YR2010]	2011 [YR2011]	2012 [YR2012]
+Africa	AFR	"Fiscal balance, cash surplus/deficit (current US$)"	GC.BAL.CASH.CD	..	..	..	..	..	..	..	..	..	..
+Africa	AFR	10th pillar: Market size	GCI.10THPILLAR.XQ	..	..	..	..	..	..	..	..	..	..
+Africa	AFR	11th pillar: Business sophistication	GCI.11THPILLAR.XQ	..	..	..	..	..	..	..	..	..	..
+Africa	AFR	12th pillar: Innovation	GCI.12THPILLAR.XQ	..	..	..	..	..	..	..	..	..	..
+Africa	AFR	1st pillar: Institutions	GCI.1STPILLAR.XQ	..	..	..	..	..	..	..	..	..	..
+Africa	AFR	2nd pillar: Infrastructure	GCI.2NDPILLAR.XQ	..	..	..	..	..	..	..	..	..	..
+Africa	AFR	3rd pillar: Macroeconomic stability	GCI.3RDPILLAR.XQ	..	..	..	..	..	..	..	..	..	..
+Africa	AFR	4th pllar: Health and primary education	GCI.4THPILLAR.XQ	..	..	..	..	..	..	..	..	..	..
+Africa	AFR	5th pillar: Higher education and training	GCI.5THPILLAR.XQ	..	..	..	..	..	..	..	..	..	..
+Africa	AFR	6th pillar: Goods market efficiency	GCI.6THPILLAR.XQ	..	..	..	..	..	..	..	..	..	..
+Africa	AFR	7th pillar: Labor market efficiency	GCI.7THPILLAR.XQ	..	..	..	..	..	..	..	..	..	..
+Africa	AFR	8th pillar: Financial market sophistication	GCI.8THPILLAR.XQ	..	..	..	..	..	..	..	..	..	..
+Africa	AFR	9th pillar: Techonological readiness	GCI.9THPILLAR.XQ	..	..	..	..	..	..	..	..	..	..
+Africa	AFR	Access to finance (% of firms identifying this as a major constraint)	IC.FRM.FINA.ZS	..	..	..	..	..	..	..	..	..	..
+Africa	AFR	Access to land (% of managers surveyed ranking this as a major constraint)	IC.CNS.LAND.ZS	..	..	..	..	..	..	..	..	..	..
+Africa	AFR	Adjustment to Arrears	DT.DTA.OADJ.CD	..	..	..	..	..	..	..	..	..	..
+Africa	AFR	Adjustments to foreign scheduled debt service (current LCU)	GB.TDS.ABRD.CN	..	..	..	..	..	..	..	..	..	..
+Africa	AFR	Adjustments to foreign scheduled principal repayments (current LCU)	GB.AMA.ABRD.CN	..	..	..	..	..	..	..	..	..	..
+Africa	AFR	Adjustments to scheduled debt service (current US$)	DT.TDA.DECT.CD	3482429014.50202	4044397874.01572	4944899517.9044	1550192381.40893	1493553210.91077	2091255567.39129	..	..	..	..
+Africa	AFR	Adjustments to scheduled interest (current US$)	DT.INA.DECT.CD	2747700265.49753	3749985095.78222	3534277143.08105	3518292756.96624	2913709388.57529	4043846124.18385	3048406350.62583	367848354.591319	1235772766.17501	..
+Africa	AFR	Age dependency ratio (% of working-age population)	SP.POP.DPND	82.9109460049284	82.3607077412489	81.8349432213853	81.3307916185812	80.8464691609558	80.3802318537275	79.9312576575714	79.4897807280698	79.0689935893904	..
+Africa	AFR	Age dependency ratio, old (% of working-age population)	SP.POP.DPND.OL	6.11246447136485	6.13057542262349	6.14791339075254	6.16422921352863	6.1806266669662	6.19955326859986	6.22392477892935	6.25571256161111	6.29516636502159	..
+Africa	AFR	Age dependency ratio, young (% of working-age population)	SP.POP.DPND.YG	75.5280409402381	74.8976789798717	74.3014770884683	73.7371360483307	73.2014286759444	72.6903299655806	72.2007201230626	71.7208131501269	71.2635467342824	..
+Africa	AFR	Age of firm (years)	IC.FRM.AGE.YR	13.28	13.34	..	12.2452631578947	15.1172727272727	23.58	13.9094117647059	13.3825	..	..
+Africa	AFR	Agricultural area irrigated (ha)	AG.LND.IRIG.HA.AG	1465140	2753780	2824000	2702700	2709010	1953600	2073700	3583860	3664050	..
+Algeria	DZA	"Fiscal balance, cash surplus/deficit (current US$)"	GC.BAL.CASH.CD	..	..	..	15424724366.3823	6715060919.43608	15867333508.8181	-6163244482.22225	656440875.17384	-565728170.523183	..
+Algeria	DZA	10th pillar: Market size	GCI.10THPILLAR.XQ	..	..	..	..	4.23	4.2	4.27	4.26	4.35	..
+Algeria	DZA	11th pillar: Business sophistication	GCI.11THPILLAR.XQ	..	..	..	3.36	3.26	3	3.13	3.33	2.93	..
+Algeria	DZA	12th pillar: Innovation	GCI.12THPILLAR.XQ	..	..	..	3.09	2.95	2.7	2.64	2.75	2.37	..
+Algeria	DZA	1st pillar: Institutions	GCI.1STPILLAR.XQ	..	..	..	3.87	3.88	3.4	3.2	3.46	3.11	..
+Algeria	DZA	2nd pillar: Infrastructure	GCI.2NDPILLAR.XQ	..	..	..	2.91	3	3	2.91	3.49	3.43	..
+Algeria	DZA	3rd pillar: Macroeconomic stability	GCI.3RDPILLAR.XQ	..	..	..	6.19	6.41	6.1	6.39	4.75	5.72	..
+Algeria	DZA	4th pllar: Health and primary education	GCI.4THPILLAR.XQ	..	..	..	6.56	5.44	5.3	5.28	5.56	5.5	..
+Algeria	DZA	5th pillar: Higher education and training	GCI.5THPILLAR.XQ	..	..	..	3.46	3.39	3.3	3.3	3.59	3.51	..
+Algeria	DZA	6th pillar: Goods market efficiency	GCI.6THPILLAR.XQ	..	..	..	3.67	3.86	3.5	3.36	3.57	3.38	..
+Algeria	DZA	7th pillar: Labor market efficiency	GCI.7THPILLAR.XQ	..	..	..	..	3.62	3.3	3.45	3.74	3.41	..
+Algeria	DZA	8th pillar: Financial market sophistication	GCI.8THPILLAR.XQ	..	..	..	..	3.06	2.9	2.79	2.82	2.64	..
+Algeria	DZA	9th pillar: Techonological readiness	GCI.9THPILLAR.XQ	..	..	..	2.58	2.54	2.5	2.56	2.98	2.83	..
+Algeria	DZA	Access to finance (% of firms identifying this as a major constraint)	IC.FRM.FINA.ZS	..	..	..	..	50.1	..	..	..	..	..
+Algeria	DZA	Access to land (% of managers surveyed ranking this as a major constraint)	IC.CNS.LAND.ZS	..	..	..	..	..	..	..	..	..	..
+Algeria	DZA	Adjustment to Arrears	DT.DTA.OADJ.CD	..	..	..	..	..	..	..	..	..	..
+Algeria	DZA	Adjustments to foreign scheduled debt service (current LCU)	GB.TDS.ABRD.CN	..	..	..	..	..	..	..	..	..	..
+Algeria	DZA	Adjustments to foreign scheduled principal repayments (current LCU)	GB.AMA.ABRD.CN	..	..	..	..	..	..	..	..	..	..
+Algeria	DZA	Adjustments to scheduled debt service (current US$)	DT.TDA.DECT.CD	1	1	0	0	0	0	0	0	0	..
+Algeria	DZA	Adjustments to scheduled interest (current US$)	DT.INA.DECT.CD	91746000	252738000	103070000	126264000	-10526000	27271000	-28611000	..	..	..
+Algeria	DZA	Age dependency ratio (% of working-age population)	SP.POP.DPND	55.5326936081875	53.6929446761743	52.0108086676962	50.4720937906787	49.0913727071607	47.9066401688234	46.9641352066831	46.2831218403652	45.8609349715559	..
+Algeria	DZA	Age dependency ratio, old (% of working-age population)	SP.POP.DPND.OL	6.79806901101292	6.80998763522299	6.80473880108427	6.78210927906994	6.74882595819931	6.7174429819001	6.70342420143988	6.71783603873172	6.76191033315257	..
+Algeria	DZA	Age dependency ratio, young (% of working-age population)	SP.POP.DPND.YG	48.7346245971745	46.8829570409513	45.206069866612	43.6899845116087	42.3425467489614	41.1891971869233	40.2607110052433	39.5652858016334	39.0990246384033	..
+Algeria	DZA	Age of firm (years)	IC.FRM.AGE.YR	..	..	..	..	15.41	..	..	..	..	..
+Algeria	DZA	Agricultural area irrigated (ha)	AG.LND.IRIG.HA.AG	..	..	..	..	..	..	..	..	..	..
+Angola	AGO	"Fiscal balance, cash surplus/deficit (current US$)"	GC.BAL.CASH.CD	..	..	..	..	..	..	..	..	..	..
+Angola	AGO	10th pillar: Market size	GCI.10THPILLAR.XQ	..	..	..	..	..	..	..	3.76	3.83	..
+Angola	AGO	11th pillar: Business sophistication	GCI.11THPILLAR.XQ	..	..	..	..	..	..	..	2.64	2.42	..
+Angola	AGO	12th pillar: Innovation	GCI.12THPILLAR.XQ	..	..	..	..	..	..	..	2.36	2.05	..
+Angola	AGO	1st pillar: Institutions	GCI.1STPILLAR.XQ	..	..	..	..	..	..	..	3.22	2.91	..
+Angola	AGO	2nd pillar: Infrastructure	GCI.2NDPILLAR.XQ	..	..	..	..	..	..	..	1.88	1.89	..
+Angola	AGO	3rd pillar: Macroeconomic stability	GCI.3RDPILLAR.XQ	..	..	..	..	..	..	..	3.61	4.23	..
+Angola	AGO	4th pllar: Health and primary education	GCI.4THPILLAR.XQ	..	..	..	..	..	..	..	2.66	2.89	..
+Angola	AGO	5th pillar: Higher education and training	GCI.5THPILLAR.XQ	..	..	..	..	..	..	..	2.13	1.91	..
+Angola	AGO	6th pillar: Goods market efficiency	GCI.6THPILLAR.XQ	..	..	..	..	..	..	..	3.33	3.21	..
+Angola	AGO	7th pillar: Labor market efficiency	GCI.7THPILLAR.XQ	..	..	..	..	..	..	..	4.22	3.96	..
+Angola	AGO	8th pillar: Financial market sophistication	GCI.8THPILLAR.XQ	..	..	..	..	..	..	..	2.88	2.67	..
+Angola	AGO	9th pillar: Techonological readiness	GCI.9THPILLAR.XQ	..	..	..	..	..	..	..	2.59	2.65	..
+Angola	AGO	Access to finance (% of firms identifying this as a major constraint)	IC.FRM.FINA.ZS	..	..	..	55.3	..	..	..	38.5	..	..
+Angola	AGO	Access to land (% of managers surveyed ranking this as a major constraint)	IC.CNS.LAND.ZS	..	..	..	3.2	..	..	..	16.3	..	..
+Angola	AGO	Adjustment to Arrears	DT.DTA.OADJ.CD	..	..	..	..	..	..	..	..	..	..
+Angola	AGO	Adjustments to foreign scheduled debt service (current LCU)	GB.TDS.ABRD.CN	..	..	..	..	..	..	..	..	..	..
+Angola	AGO	Adjustments to foreign scheduled principal repayments (current LCU)	GB.AMA.ABRD.CN	..	..	..	..	..	..	..	..	..	..
+Angola	AGO	Adjustments to scheduled debt service (current US$)	DT.TDA.DECT.CD	371800000	371800000	371800000	-1573130000	-221732736.09	-1306361712.4	409178077.73	-69000000	130317729.19	..
+Angola	AGO	Adjustments to scheduled interest (current US$)	DT.INA.DECT.CD	71379117.83	215113151.19	227573978.86	-116403249.1	-132489655.93	6776566.31999999	79980925.39	262290857.67	542554000	..
+Angola	AGO	Age dependency ratio (% of working-age population)	SP.POP.DPND	100.703297286864	100.606478583674	100.320763076687	99.8389809441596	99.1798620806286	98.3546363207	97.3821365752523	96.2801035530956	95.0695366121688	..
+Angola	AGO	Age dependency ratio, old (% of working-age population)	SP.POP.DPND.OL	4.92754543728173	4.9236109530965	4.91864659679281	4.91343081725688	4.90805299471608	4.90039636917261	4.88791944773767	4.86971722039265	4.84556854487972	..
+Angola	AGO	Age dependency ratio, young (% of working-age population)	SP.POP.DPND.YG	95.7757518495818	95.6828676305774	95.402116479894	94.9255501269027	94.2718090859126	93.4542399515274	92.4942171275146	91.410386332703	90.2239680672891	..
+Angola	AGO	Age of firm (years)	IC.FRM.AGE.YR	..	..	..	7.89	..	..	..	9.95	..	..
+Angola	AGO	Agricultural area irrigated (ha)	AG.LND.IRIG.HA.AG	..	..	..	..	..	..	..	..	..	..
+Benin	BEN	"Fiscal balance, cash surplus/deficit (current US$)"	GC.BAL.CASH.CD	-65229605.4835444	37235515.1874703	-26898996.029612	11820311.4314209	..	-21778248.1087771	-297619847.956164	-67610954.6609911	-104214859.006851	..
+Benin	BEN	10th pillar: Market size	GCI.10THPILLAR.XQ	..	..	..	..	2.11	2.3	2.4	2.32	2.41	..
+Benin	BEN	11th pillar: Business sophistication	GCI.11THPILLAR.XQ	..	..	..	3.58	3.51	3.5	3.32	3.49	3.49	..
+Benin	BEN	12th pillar: Innovation	GCI.12THPILLAR.XQ	..	..	..	2.87	2.97	2.9	2.92	3.2	3.16	..
+Benin	BEN	1st pillar: Institutions	GCI.1STPILLAR.XQ	..	..	..	3.32	3.57	3.7	3.72	3.64	3.58	..
+Benin	BEN	2nd pillar: Infrastructure	GCI.2NDPILLAR.XQ	..	..	..	2.06	2.36	2.6	2.58	2.71	2.69	..
+Benin	BEN	3rd pillar: Macroeconomic stability	GCI.3RDPILLAR.XQ	..	..	..	4.03	4.69	4.6	4.77	4.47	4.92	..
+Benin	BEN	4th pllar: Health and primary education	GCI.4THPILLAR.XQ	..	..	..	5.29	4.25	4.4	4.06	4.83	4.89	..
+Benin	BEN	5th pillar: Higher education and training	GCI.5THPILLAR.XQ	..	..	..	2.96	2.84	3	2.97	3.18	3.24	..
+Benin	BEN	6th pillar: Goods market efficiency	GCI.6THPILLAR.XQ	..	..	..	3.67	3.76	3.8	3.82	3.84	3.93	..
+Benin	BEN	7th pillar: Labor market efficiency	GCI.7THPILLAR.XQ	..	..	..	..	3.86	3.9	4.18	4.23	4.42	..
+Benin	BEN	8th pillar: Financial market sophistication	GCI.8THPILLAR.XQ	..	..	..	..	3.76	3.7	3.53	3.84	3.71	..
+Benin	BEN	9th pillar: Techonological readiness	GCI.9THPILLAR.XQ	..	..	..	2.42	2.46	2.5	2.63	2.71	2.85	..
+Benin	BEN	Access to finance (% of firms identifying this as a major constraint)	IC.FRM.FINA.ZS	..	73.2	..	..	..	..	70.3	..	..	..
+Benin	BEN	Access to land (% of managers surveyed ranking this as a major constraint)	IC.CNS.LAND.ZS	..	..	..	..	..	..	0.7	..	..	..
+Benin	BEN	Adjustment to Arrears	DT.DTA.OADJ.CD	..	..	..	..	..	..	..	..	..	..
+Benin	BEN	Adjustments to foreign scheduled debt service (current LCU)	GB.TDS.ABRD.CN	..	..	..	..	..	..	..	..	..	..
+Benin	BEN	Adjustments to foreign scheduled principal repayments (current LCU)	GB.AMA.ABRD.CN	41.810001373	45.178001404	..	..	..	..	..	..	..	..
+Benin	BEN	Adjustments to scheduled debt service (current US$)	DT.TDA.DECT.CD	29300000	0	0	..	0	0	0	0	0	..
+Benin	BEN	Adjustments to scheduled interest (current US$)	DT.INA.DECT.CD	5942000	-4313000	-6278000	..	..	..	..	..	..	..
+Benin	BEN	Age dependency ratio (% of working-age population)	SP.POP.DPND	92.3432081518392	91.4921197638517	90.7302497711364	90.0648784645511	89.4614811003779	88.8938671957035	88.3258496510011	87.7341694146547	87.1149512263328	..
+Benin	BEN	Age dependency ratio, old (% of working-age population)	SP.POP.DPND.OL	5.71823882217327	5.68586320216517	5.66887135267381	5.66864416806106	5.68064119034702	5.69662474565612	5.7062156417098	5.70362458647597	5.68764290766725	..
+Benin	BEN	Age dependency ratio, young (% of working-age population)	SP.POP.DPND.YG	86.6249693296659	85.8062565616866	85.0613784184626	84.39623429649	83.7808399100309	83.1972424500473	82.6196340092913	82.0305448281787	81.4273083186656	..
+Benin	BEN	Age of firm (years)	IC.FRM.AGE.YR	..	13.34	..	..	..	..	10.35	..	..	..
+Benin	BEN	Agricultural area irrigated (ha)	AG.LND.IRIG.HA.AG	..	..	..	..	..	..	..	..	..	..
+Botswana	BWA	"Fiscal balance, cash surplus/deficit (current US$)"	GC.BAL.CASH.CD	..	..	..	1265929902.29726	570599961.135515	-716651929.121113	-1244842570.25348	-964398786.682069	-297003210.988994	..
+Botswana	BWA	10th pillar: Market size	GCI.10THPILLAR.XQ	..	..	..	..	2.66	2.7	2.93	2.86	2.95	..
+Botswana	BWA	11th pillar: Business sophistication	GCI.11THPILLAR.XQ	..	..	..	3.43	3.41	3.5	3.41	3.44	3.49	..
+Botswana	BWA	12th pillar: Innovation	GCI.12THPILLAR.XQ	..	..	..	2.87	2.85	3	3.1	3.04	3.04	..
+Botswana	BWA	1st pillar: Institutions	GCI.1STPILLAR.XQ	..	..	..	4.46	4.46	4.7	4.89	4.84	4.87	..
+Botswana	BWA	2nd pillar: Infrastructure	GCI.2NDPILLAR.XQ	..	..	..	3.37	3.85	4	3.93	3.54	3.48	..
+Botswana	BWA	3rd pillar: Macroeconomic stability	GCI.3RDPILLAR.XQ	..	..	..	4.85	4.75	5.7	5.06	4.52	4.6	..
+Botswana	BWA	4th pllar: Health and primary education	GCI.4THPILLAR.XQ	..	..	..	4.42	3.8	4.2	3.85	4.58	4.46	..
+Botswana	BWA	5th pillar: Higher education and training	GCI.5THPILLAR.XQ	..	..	..	3.41	3.49	3.7	3.51	3.64	3.72	..
+Botswana	BWA	6th pillar: Goods market efficiency	GCI.6THPILLAR.XQ	..	..	..	4.2	3.69	3.9	4.05	4.23	4.22	..
+Botswana	BWA	7th pillar: Labor market efficiency	GCI.7THPILLAR.XQ	..	..	..	..	4.41	4.5	4.47	4.47	4.55	..
+Botswana	BWA	8th pillar: Financial market sophistication	GCI.8THPILLAR.XQ	..	..	..	..	4.77	4.8	4.53	4.49	4.44	..
+Botswana	BWA	9th pillar: Techonological readiness	GCI.9THPILLAR.XQ	..	..	..	2.95	3.06	3	3.16	3.13	3.12	..
+Botswana	BWA	Access to finance (% of firms identifying this as a major constraint)	IC.FRM.FINA.ZS	..	..	..	41.4	..	..	..	25.5	..	..
+Botswana	BWA	Access to land (% of managers surveyed ranking this as a major constraint)	IC.CNS.LAND.ZS	..	..	..	9	..	..	..	12.8	..	..
+Botswana	BWA	Adjustment to Arrears	DT.DTA.OADJ.CD	..	..	..	..	..	..	..	..	..	..
+Botswana	BWA	Adjustments to foreign scheduled debt service (current LCU)	GB.TDS.ABRD.CN	..	..	..	..	..	..	..	..	..	..
+Botswana	BWA	Adjustments to foreign scheduled principal repayments (current LCU)	GB.AMA.ABRD.CN	..	..	..	..	..	..	..	..	..	..
+Botswana	BWA	Adjustments to scheduled debt service (current US$)	DT.TDA.DECT.CD	0	0	0	0	0	0	0	0	0	..
+Botswana	BWA	Adjustments to scheduled interest (current US$)	DT.INA.DECT.CD	-1096000	-143000	-189000	-267000	-236000	-55000	-207000	-283000	-10057000	..
+Botswana	BWA	Age dependency ratio (% of working-age population)	SP.POP.DPND	64.9764812147196	63.675188373883	62.4409360169051	61.2742739965673	60.1900799728742	59.2060469631618	58.3413906020018	57.6058489313999	56.9860495462972	..
+Botswana	BWA	Age dependency ratio, old (% of working-age population)	SP.POP.DPND.OL	5.48855791714969	5.60875670144452	5.72556898881075	5.83890949104888	5.95096914026044	6.06203007518797	6.17359911399344	6.28791537582604	6.40154671770855	..
+Botswana	BWA	Age dependency ratio, young (% of working-age population)	SP.POP.DPND.YG	59.4879232975699	58.0664316724384	56.7153670280944	55.4353645055185	54.2391108326138	53.1440168879738	52.1677914880084	51.3179335555739	50.5845028285886	..
+Botswana	BWA	Age of firm (years)	IC.FRM.AGE.YR	..	..	..	10.14	..	..	..	15.67	..	..
+Botswana	BWA	Agricultural area irrigated (ha)	AG.LND.IRIG.HA.AG	140	300	..	300	210	1500	660	750	..	..
+Burkina Faso	BFA	"Fiscal balance, cash surplus/deficit (current US$)"	GC.BAL.CASH.CD	-85348774.1955157	-214619995.56685	-294803747.24198	-342310574.020039	-366994165.398831	-330402707.790855	-391622995.378122	-408044449.163763	-246046412.664962	..
+Burkina Faso	BFA	10th pillar: Market size	GCI.10THPILLAR.XQ	..	..	..	..	2.39	2.4	2.5	2.47	2.55	..
+Burkina Faso	BFA	11th pillar: Business sophistication	GCI.11THPILLAR.XQ	..	..	..	3.4	3.44	3.6	3.23	2.8	2.86	..
+Burkina Faso	BFA	12th pillar: Innovation	GCI.12THPILLAR.XQ	..	..	..	3.14	2.94	3	3	2.93	2.86	..
+Burkina Faso	BFA	1st pillar: Institutions	GCI.1STPILLAR.XQ	..	..	..	3.78	3.76	3.8	3.82	3.6	3.58	..
+Burkina Faso	BFA	2nd pillar: Infrastructure	GCI.2NDPILLAR.XQ	..	..	..	2.14	2.37	2.6	2.6	2.13	2.12	..
+Burkina Faso	BFA	3rd pillar: Macroeconomic stability	GCI.3RDPILLAR.XQ	..	..	..	3.37	4.87	3.9	3.6	4.25	4.3	..
+Burkina Faso	BFA	4th pllar: Health and primary education	GCI.4THPILLAR.XQ	..	..	..	3.24	3.32	3.4	2.97	3.2	3.46	..
+Burkina Faso	BFA	5th pillar: Higher education and training	GCI.5THPILLAR.XQ	..	..	..	2.51	2.5	2.7	2.62	2.45	2.52	..
+Burkina Faso	BFA	6th pillar: Goods market efficiency	GCI.6THPILLAR.XQ	..	..	..	3.78	3.9	4	3.88	3.59	3.61	..
+Burkina Faso	BFA	7th pillar: Labor market efficiency	GCI.7THPILLAR.XQ	..	..	..	..	4.14	4.3	4.45	4.19	4.27	..
+Burkina Faso	BFA	8th pillar: Financial market sophistication	GCI.8THPILLAR.XQ	..	..	..	..	3.83	3.7	3.31	3.11	3.15	..
+Burkina Faso	BFA	9th pillar: Techonological readiness	GCI.9THPILLAR.XQ	..	..	..	2.56	2.4	2.5	2.56	2.66	2.59	..
+Burkina Faso	BFA	Access to finance (% of firms identifying this as a major constraint)	IC.FRM.FINA.ZS	..	..	..	..	..	..	75	..	..	..
+Burkina Faso	BFA	Access to land (% of managers surveyed ranking this as a major constraint)	IC.CNS.LAND.ZS	..	..	..	1.4	..	..	2.7	..	..	..
+Burkina Faso	BFA	Adjustment to Arrears	DT.DTA.OADJ.CD	..	..	..	..	..	..	..	..	..	..
+Burkina Faso	BFA	Adjustments to foreign scheduled debt service (current LCU)	GB.TDS.ABRD.CN	..	..	..	..	..	..	..	..	..	..
+Burkina Faso	BFA	Adjustments to foreign scheduled principal repayments (current LCU)	GB.AMA.ABRD.CN	..	..	..	..	..	..	..	..	..	..
+Burkina Faso	BFA	Adjustments to scheduled debt service (current US$)	DT.TDA.DECT.CD	-42439624.363	-46941341.279	-45689973.981	-1383626365.4	0.0019036740996	0.0019036740996	0.0019036740996	0.0019036740996	0.0019036740996	..
+Burkina Faso	BFA	Adjustments to scheduled interest (current US$)	DT.INA.DECT.CD	17532871.295	27409747.388	8514964.056	8972134.563	5042140.506	8438646.636	11583742.438	7457670.484	836377.563000001	..
+Burkina Faso	BFA	Age dependency ratio (% of working-age population)	SP.POP.DPND	93.6551049362709	93.1602860451839	92.6880669476236	92.2338805828675	91.7985267766238	91.3882291118637	91.0107073458896	90.6676691297558	90.3561323382101	..
+Burkina Faso	BFA	Age dependency ratio, old (% of working-age population)	SP.POP.DPND.OL	4.24573594751437	4.2045033682532	4.17855377651139	4.16695644217293	4.16779103216689	4.17948374769249	4.20025794757806	4.22803549960451	4.26364385666752	..
+Burkina Faso	BFA	Age dependency ratio, young (% of working-age population)	SP.POP.DPND.YG	89.4093689887565	88.9557826769307	88.5095131711122	88.0669241406946	87.6307357444569	87.2087453641712	86.8104493983115	86.4396336301513	86.0924884815426	..
+Burkina Faso	BFA	Age of firm (years)	IC.FRM.AGE.YR	..	..	..	13.09	..	..	12.73	..	..	..
+Burkina Faso	BFA	Agricultural area irrigated (ha)	AG.LND.IRIG.HA.AG	..	..	..	..	..	..	..	..	..	..
+Burundi	BDI	"Fiscal balance, cash surplus/deficit (current US$)"	GC.BAL.CASH.CD	..	..	..	..	..	..	..	..	..	..
+Burundi	BDI	10th pillar: Market size	GCI.10THPILLAR.XQ	..	..	..	..	1.55	1.4	1.32	1.29	1.32	..
+Burundi	BDI	11th pillar: Business sophistication	GCI.11THPILLAR.XQ	..	..	..	3.01	2.82	3.2	3.27	2.78	2.68	..
+Burundi	BDI	12th pillar: Innovation	GCI.12THPILLAR.XQ	..	..	..	2.32	2.29	2.5	2.61	2.35	2.19	..
+Burundi	BDI	1st pillar: Institutions	GCI.1STPILLAR.XQ	..	..	..	2.97	3.1	3	2.75	2.77	2.7	..
+Burundi	BDI	2nd pillar: Infrastructure	GCI.2NDPILLAR.XQ	..	..	..	1.71	1.9	2.1	2.41	2.19	2.17	..
+Burundi	BDI	3rd pillar: Macroeconomic stability	GCI.3RDPILLAR.XQ	..	..	..	2.51	3.78	3.8	1.05	3.63	3.93	..
+Burundi	BDI	4th pllar: Health and primary education	GCI.4THPILLAR.XQ	..	..	..	3.5	3.23	3.7	3.74	4.37	4.2	..
+Burundi	BDI	5th pillar: Higher education and training	GCI.5THPILLAR.XQ	..	..	..	2.16	2.16	2.5	2.51	2.03	1.99	..
+Burundi	BDI	6th pillar: Goods market efficiency	GCI.6THPILLAR.XQ	..	..	..	3.28	3.13	3.4	3.21	2.98	3.02	..
+Burundi	BDI	7th pillar: Labor market efficiency	GCI.7THPILLAR.XQ	..	..	..	..	4.09	4.1	4.05	4.25	4.28	..
+Burundi	BDI	8th pillar: Financial market sophistication	GCI.8THPILLAR.XQ	..	..	..	..	2.51	2.8	2.68	2.34	2.29	..
+Burundi	BDI	9th pillar: Techonological readiness	GCI.9THPILLAR.XQ	..	..	..	1.96	2.1	2.2	2.31	2.31	2.16	..
+Burundi	BDI	Access to finance (% of firms identifying this as a major constraint)	IC.FRM.FINA.ZS	..	..	..	50.9	..	..	..	..	..	..
+Burundi	BDI	Access to land (% of managers surveyed ranking this as a major constraint)	IC.CNS.LAND.ZS	..	..	..	3.4	..	..	..	..	..	..
+Burundi	BDI	Adjustment to Arrears	DT.DTA.OADJ.CD	..	..	..	..	..	..	..	..	..	..
+Burundi	BDI	Adjustments to foreign scheduled debt service (current LCU)	GB.TDS.ABRD.CN	0	0	..	..	..	..	..	..	..	..
+Burundi	BDI	Adjustments to foreign scheduled principal repayments (current LCU)	GB.AMA.ABRD.CN	0	0	..	..	..	..	..	..	..	..
+Burundi	BDI	Adjustments to scheduled debt service (current US$)	DT.TDA.DECT.CD	0	0	0	..	..	..	..	..	..	..
+Burundi	BDI	Adjustments to scheduled interest (current US$)	DT.INA.DECT.CD	2931392.8168	-7154752.85766125	434908.952146901	..	..	..	..	..	..	..
+Burundi	BDI	Age dependency ratio (% of working-age population)	SP.POP.DPND	87.4341326670727	83.899183109409	80.5892478602509	77.5190858187332	74.6902491605202	72.2232484725492	70.2251967437669	68.728371412797	67.7165348170587	..
+Burundi	BDI	Age dependency ratio, old (% of working-age population)	SP.POP.DPND.OL	5.42503443765893	5.29745841747367	5.18099707527773	5.077264790322	4.98676867344053	4.91273258662781	4.85814136384706	4.82439393661874	4.80946610296787	..
+Burundi	BDI	Age dependency ratio, young (% of working-age population)	SP.POP.DPND.YG	82.0090982294137	78.6017246919353	75.4082507849732	72.4418210284112	69.7034804870796	67.3105158859214	65.3670553799199	63.9039774761782	62.9070687140908	..
+Burundi	BDI	Age of firm (years)	IC.FRM.AGE.YR	..	..	..	9.02	..	..	..	..	..	..
+Burundi	BDI	Agricultural area irrigated (ha)	AG.LND.IRIG.HA.AG	..	..	..	..	..	..	..	..	..	..
+Cameroon	CMR	"Fiscal balance, cash surplus/deficit (current US$)"	GC.BAL.CASH.CD	..	..	..	..	..	..	..	..	..	..
+Cameroon	CMR	10th pillar: Market size	GCI.10THPILLAR.XQ	..	..	..	..	3	3.1	3.19	3.11	3.14	..
+Cameroon	CMR	11th pillar: Business sophistication	GCI.11THPILLAR.XQ	..	..	..	3.37	3.29	3.4	3.42	3.27	3.37	..
+Cameroon	CMR	12th pillar: Innovation	GCI.12THPILLAR.XQ	..	..	..	2.73	2.68	2.7	2.8	2.9	3.02	..
+Cameroon	CMR	1st pillar: Institutions	GCI.1STPILLAR.XQ	..	..	..	2.91	3.1	3.2	3.24	3.39	3.43	..
+Cameroon	CMR	2nd pillar: Infrastructure	GCI.2NDPILLAR.XQ	..	..	..	1.93	2.06	2.3	2.49	2.42	2.47	..
+Cameroon	CMR	3rd pillar: Macroeconomic stability	GCI.3RDPILLAR.XQ	..	..	..	4.83	5.03	5.5	5.24	4.81	4.68	..
+Cameroon	CMR	4th pllar: Health and primary education	GCI.4THPILLAR.XQ	..	..	..	4.96	3.85	3.7	3.74	4.49	4.54	..
+Cameroon	CMR	5th pillar: Higher education and training	GCI.5THPILLAR.XQ	..	..	..	2.85	2.84	2.8	2.82	3	3.16	..
+Cameroon	CMR	6th pillar: Goods market efficiency	GCI.6THPILLAR.XQ	..	..	..	3.45	3.63	3.8	3.63	3.65	3.95	..
+Cameroon	CMR	7th pillar: Labor market efficiency	GCI.7THPILLAR.XQ	..	..	..	..	3.87	3.9	4.03	4.1	4.08	..
+Cameroon	CMR	8th pillar: Financial market sophistication	GCI.8THPILLAR.XQ	..	..	..	..	3.16	3.2	3.24	3.25	3.17	..
+Cameroon	CMR	9th pillar: Techonological readiness	GCI.9THPILLAR.XQ	..	..	..	2.41	2.56	2.6	2.68	2.75	2.73	..
+Cameroon	CMR	Access to finance (% of firms identifying this as a major constraint)	IC.FRM.FINA.ZS	..	..	..	..	..	..	55.1	..	..	..
+Cameroon	CMR	Access to land (% of managers surveyed ranking this as a major constraint)	IC.CNS.LAND.ZS	..	..	..	0	..	..	1.2	..	..	..
+Cameroon	CMR	Adjustment to Arrears	DT.DTA.OADJ.CD	..	..	..	..	..	..	..	..	..	..
+Cameroon	CMR	Adjustments to foreign scheduled debt service (current LCU)	GB.TDS.ABRD.CN	0	0	..	..	..	..	..	..	..	..
+Cameroon	CMR	Adjustments to foreign scheduled principal repayments (current LCU)	GB.AMA.ABRD.CN	0	0	..	..	..	..	..	..	..	..
+Cameroon	CMR	Adjustments to scheduled debt service (current US$)	DT.TDA.DECT.CD	538540672	419463996.63	21253277.766	376000000	0	0	0	0	0	..
+Cameroon	CMR	Adjustments to scheduled interest (current US$)	DT.INA.DECT.CD	..	..	..	..	..	..	..	..	..	..
+Cameroon	CMR	Age dependency ratio (% of working-age population)	SP.POP.DPND	83.6598185940497	82.8878851373337	82.1351567058933	81.3908108995818	80.6658420042998	79.9852912886145	79.3808912621286	78.8665496849625	78.4441781737194	..
+Cameroon	CMR	Age dependency ratio, old (% of working-age population)	SP.POP.DPND.OL	6.45027750818561	6.4199411060128	6.3902776521135	6.36114150001895	6.33339910153547	6.30893379112958	6.28998761408327	6.27792381477538	6.27272160356347	..
+Cameroon	CMR	Age dependency ratio, young (% of working-age population)	SP.POP.DPND.YG	77.2095410858641	76.4679440313209	75.7448790537798	75.0296693995629	74.3324429027643	73.676357497485	73.0909036480453	72.5886258701872	72.1714565701559	..
+Cameroon	CMR	Age of firm (years)	IC.FRM.AGE.YR	..	..	..	15.77	..	..	16.44	..	..	..
+Cameroon	CMR	Agricultural area irrigated (ha)	AG.LND.IRIG.HA.AG	..	..	..	..	..	..	..	..	..	..
+Cape Verde	CPV	"Fiscal balance, cash surplus/deficit (current US$)"	GC.BAL.CASH.CD	..	..	-28651990.5776265	-21188548.1203469	27984144.1632027	38985120.740621	-58909193.605555	..	..	..
+Cape Verde	CPV	10th pillar: Market size	GCI.10THPILLAR.XQ	..	..	..	..	..	..	..	1.08	1.19	..
+Cape Verde	CPV	11th pillar: Business sophistication	GCI.11THPILLAR.XQ	..	..	..	..	..	..	..	3.05	3.14	..
+Cape Verde	CPV	12th pillar: Innovation	GCI.12THPILLAR.XQ	..	..	..	..	..	..	..	2.63	2.61	..
+Cape Verde	CPV	1st pillar: Institutions	GCI.1STPILLAR.XQ	..	..	..	..	..	..	..	4.06	4.11	..
+Cape Verde	CPV	2nd pillar: Infrastructure	GCI.2NDPILLAR.XQ	..	..	..	..	..	..	..	2.81	2.91	..
+Cape Verde	CPV	3rd pillar: Macroeconomic stability	GCI.3RDPILLAR.XQ	..	..	..	..	..	..	..	4.2	4.4	..
+Cape Verde	CPV	4th pllar: Health and primary education	GCI.4THPILLAR.XQ	..	..	..	..	..	..	..	5.44	5.36	..
+Cape Verde	CPV	5th pillar: Higher education and training	GCI.5THPILLAR.XQ	..	..	..	..	..	..	..	3.25	3.48	..
+Cape Verde	CPV	6th pillar: Goods market efficiency	GCI.6THPILLAR.XQ	..	..	..	..	..	..	..	3.76	3.89	..
+Cape Verde	CPV	7th pillar: Labor market efficiency	GCI.7THPILLAR.XQ	..	..	..	..	..	..	..	3.75	3.77	..
+Cape Verde	CPV	8th pillar: Financial market sophistication	GCI.8THPILLAR.XQ	..	..	..	..	..	..	..	3.67	3.53	..
+Cape Verde	CPV	9th pillar: Techonological readiness	GCI.9THPILLAR.XQ	..	..	..	..	..	..	..	3.44	3.49	..
+Cape Verde	CPV	Access to finance (% of firms identifying this as a major constraint)	IC.FRM.FINA.ZS	..	..	..	..	..	..	36.7	..	..	..
+Cape Verde	CPV	Access to land (% of managers surveyed ranking this as a major constraint)	IC.CNS.LAND.ZS	..	..	..	1	..	..	7.2	..	..	..
+Cape Verde	CPV	Adjustment to Arrears	DT.DTA.OADJ.CD	..	..	..	..	..	..	..	..	..	..
+Cape Verde	CPV	Adjustments to foreign scheduled debt service (current LCU)	GB.TDS.ABRD.CN	..	..	..	..	..	..	..	..	..	..
+Cape Verde	CPV	Adjustments to foreign scheduled principal repayments (current LCU)	GB.AMA.ABRD.CN	..	..	..	..	..	..	..	..	..	..
+Cape Verde	CPV	Adjustments to scheduled debt service (current US$)	DT.TDA.DECT.CD	0	0	0	0	0	0	0	0	..	..
+Cape Verde	CPV	Adjustments to scheduled interest (current US$)	DT.INA.DECT.CD	..	..	..	..	..	..	..	..	..	..
+Cape Verde	CPV	Age dependency ratio (% of working-age population)	SP.POP.DPND	80.6221607975092	77.6638057358174	74.6895998876981	71.7203741270667	68.7811644996384	65.9054005752898	63.1408310021338	60.5231901459275	58.0615215565421	..
+Cape Verde	CPV	Age dependency ratio, old (% of working-age population)	SP.POP.DPND.OL	10.1557561456342	10.1619502540583	10.1326565668879	10.0745022709728	9.99465377048951	9.87660204585298	9.70542265229121	9.47541821877154	9.18213336196172	..
+Cape Verde	CPV	Age dependency ratio, young (% of working-age population)	SP.POP.DPND.YG	70.466404651875	67.5018554817592	64.5569433208102	61.6458718560939	58.7865107291488	56.0287985294368	53.4354083498425	51.047771927156	48.8793881945804	..
+Cape Verde	CPV	Age of firm (years)	IC.FRM.AGE.YR	..	..	..	19.79	..	..	19	..	..	..
+Cape Verde	CPV	Agricultural area irrigated (ha)	AG.LND.IRIG.HA.AG	..	3480	..	..	..	..	..	..	..	..
+Central African Republic	CAF	"Fiscal balance, cash surplus/deficit (current US$)"	GC.BAL.CASH.CD	..	-6006637.76837469	..	..	..	..	..	..	..	..
+Central African Republic	CAF	10th pillar: Market size	GCI.10THPILLAR.XQ	..	..	..	..	..	..	..	..	..	..
+Central African Republic	CAF	11th pillar: Business sophistication	GCI.11THPILLAR.XQ	..	..	..	..	..	..	..	..	..	..
+Central African Republic	CAF	12th pillar: Innovation	GCI.12THPILLAR.XQ	..	..	..	..	..	..	..	..	..	..
+Central African Republic	CAF	1st pillar: Institutions	GCI.1STPILLAR.XQ	..	..	..	..	..	..	..	..	..	..
+Central African Republic	CAF	2nd pillar: Infrastructure	GCI.2NDPILLAR.XQ	..	..	..	..	..	..	..	..	..	..
+Central African Republic	CAF	3rd pillar: Macroeconomic stability	GCI.3RDPILLAR.XQ	..	..	..	..	..	..	..	..	..	..
+Central African Republic	CAF	4th pllar: Health and primary education	GCI.4THPILLAR.XQ	..	..	..	..	..	..	..	..	..	..
+Central African Republic	CAF	5th pillar: Higher education and training	GCI.5THPILLAR.XQ	..	..	..	..	..	..	..	..	..	..
+Central African Republic	CAF	6th pillar: Goods market efficiency	GCI.6THPILLAR.XQ	..	..	..	..	..	..	..	..	..	..
+Central African Republic	CAF	7th pillar: Labor market efficiency	GCI.7THPILLAR.XQ	..	..	..	..	..	..	..	..	..	..
+Central African Republic	CAF	8th pillar: Financial market sophistication	GCI.8THPILLAR.XQ	..	..	..	..	..	..	..	..	..	..
+Central African Republic	CAF	9th pillar: Techonological readiness	GCI.9THPILLAR.XQ	..	..	..	..	..	..	..	..	..	..
+Central African Republic	CAF	Access to finance (% of firms identifying this as a major constraint)	IC.FRM.FINA.ZS	..	..	..	..	..	..	..	..	46	..
+Central African Republic	CAF	Access to land (% of managers surveyed ranking this as a major constraint)	IC.CNS.LAND.ZS	..	..	..	..	..	..	..	..	0.8	..
+Central African Republic	CAF	Adjustment to Arrears	DT.DTA.OADJ.CD	..	..	..	..	..	..	..	..	..	..
+Central African Republic	CAF	Adjustments to foreign scheduled debt service (current LCU)	GB.TDS.ABRD.CN	..	..	..	..	..	..	..	..	..	..
+Central African Republic	CAF	Adjustments to foreign scheduled principal repayments (current LCU)	GB.AMA.ABRD.CN	..	..	..	..	..	..	..	..	..	..
+Central African Republic	CAF	Adjustments to scheduled debt service (current US$)	DT.TDA.DECT.CD	-41730207.73	-35018989.14	-33163704.251	77543503.499	-52788970.401	-68779898.444	-16518903.985	-60572162.029	-13351244.796	..
+Central African Republic	CAF	Adjustments to scheduled interest (current US$)	DT.INA.DECT.CD	..	..	..	..	..	..	..	..	..	..
+Central African Republic	CAF	Age dependency ratio (% of working-age population)	SP.POP.DPND	84.4206361396981	84.0948132911511	83.6338000489034	83.0313956122982	82.3100208864312	81.4965674665205	80.6263675725464	79.7273859953111	78.8063009748435	..
+Central African Republic	CAF	Age dependency ratio, old (% of working-age population)	SP.POP.DPND.OL	7.30026529524763	7.29708152139485	7.28775562903768	7.2724765162038	7.2515831318956	7.22395193168338	7.18786300410643	7.1431517553743	7.08943357698442	..
+Central African Republic	CAF	Age dependency ratio, young (% of working-age population)	SP.POP.DPND.YG	77.1203708444505	76.7977317697562	76.3460444198658	75.7589190960944	75.0584377545356	74.2726155348371	73.43850456844	72.5842342399368	71.716867397859	..
+Central African Republic	CAF	Age of firm (years)	IC.FRM.AGE.YR	..	..	..	..	..	..	..	..	..	..
+Central African Republic	CAF	Agricultural area irrigated (ha)	AG.LND.IRIG.HA.AG	..	..	..	..	..	..	..	..	..	..
+Chad	TCD	"Fiscal balance, cash surplus/deficit (current US$)"	GC.BAL.CASH.CD	..	..	..	..	..	..	..	..	..	..
+Chad	TCD	10th pillar: Market size	GCI.10THPILLAR.XQ	..	..	..	..	2.26	2.4	2.54	2.46	2.68	..
+Chad	TCD	11th pillar: Business sophistication	GCI.11THPILLAR.XQ	..	..	..	2.81	2.96	3.1	3.06	2.94	2.93	..
+Chad	TCD	12th pillar: Innovation	GCI.12THPILLAR.XQ	..	..	..	2.26	2.28	2.3	2.55	2.64	2.69	..
+Chad	TCD	1st pillar: Institutions	GCI.1STPILLAR.XQ	..	..	..	2.44	2.56	2.5	2.71	2.89	2.83	..
+Chad	TCD	2nd pillar: Infrastructure	GCI.2NDPILLAR.XQ	..	..	..	1.43	1.63	1.7	1.9	1.83	2	..
+Chad	TCD	3rd pillar: Macroeconomic stability	GCI.3RDPILLAR.XQ	..	..	..	3.76	4.1	4.5	4.5	3.1	3.71	..
+Chad	TCD	4th pllar: Health and primary education	GCI.4THPILLAR.XQ	..	..	..	3.74	3.23	3.1	2.55	2.9	2.96	..
+Chad	TCD	5th pillar: Higher education and training	GCI.5THPILLAR.XQ	..	..	..	1.99	2	2.1	2.23	2.33	2.38	..
+Chad	TCD	6th pillar: Goods market efficiency	GCI.6THPILLAR.XQ	..	..	..	3.07	2.84	2.9	2.88	2.88	3.07	..
+Chad	TCD	7th pillar: Labor market efficiency	GCI.7THPILLAR.XQ	..	..	..	..	3.74	3.8	4.05	4.16	4.04	..
+Chad	TCD	8th pillar: Financial market sophistication	GCI.8THPILLAR.XQ	..	..	..	..	2.86	2.8	2.79	2.75	2.77	..
+Chad	TCD	9th pillar: Techonological readiness	GCI.9THPILLAR.XQ	..	..	..	1.99	2.13	2.1	2.39	2.28	2.28	..
+Chad	TCD	Access to finance (% of firms identifying this as a major constraint)	IC.FRM.FINA.ZS	..	..	..	..	..	..	46.5	..	..	..
+Chad	TCD	Access to land (% of managers surveyed ranking this as a major constraint)	IC.CNS.LAND.ZS	..	..	..	..	..	..	0	..	..	..
+Chad	TCD	Adjustment to Arrears	DT.DTA.OADJ.CD	..	..	..	..	..	..	..	..	..	..
+Chad	TCD	Adjustments to foreign scheduled debt service (current LCU)	GB.TDS.ABRD.CN	0	..	..	..	..	..	..	..	..	..
+Chad	TCD	Adjustments to foreign scheduled principal repayments (current LCU)	GB.AMA.ABRD.CN	0	..	..	..	..	..	..	..	..	..
+Chad	TCD	Adjustments to scheduled debt service (current US$)	DT.TDA.DECT.CD	700000	680000	2720000	..	2200000	..	..	..	..	..
+Chad	TCD	Adjustments to scheduled interest (current US$)	DT.INA.DECT.CD	-2540355.2428	912213.388	-294523.113000002	..	..	..	..	..	..	..
+Chad	TCD	Age dependency ratio (% of working-age population)	SP.POP.DPND	95.7723676345255	95.6000292322569	95.3837774335666	95.1216336052126	94.8113304118693	94.4411481225901	93.9989077119475	93.4790813127865	92.8822086930648	..
+Chad	TCD	Age dependency ratio, old (% of working-age population)	SP.POP.DPND.OL	5.96030399173615	5.89539889231216	5.83477786203363	5.77956747379067	5.72889813249066	5.67963657275891	5.62783770068221	5.57184270633394	5.51048656601969	..
+Chad	TCD	Age dependency ratio, young (% of working-age population)	SP.POP.DPND.YG	89.8120636427894	89.7046303399447	89.548999571533	89.3420661314219	89.0824322793787	88.7615115498312	88.3710700112652	87.9072386064525	87.3717221270451	..
+Chad	TCD	Age of firm (years)	IC.FRM.AGE.YR	..	..	..	..	..	..	14.71	..	..	..
+Chad	TCD	Agricultural area irrigated (ha)	AG.LND.IRIG.HA.AG	..	..	..	..	..	..	..	..	..	..
+Comoros	COM	"Fiscal balance, cash surplus/deficit (current US$)"	GC.BAL.CASH.CD	..	..	..	..	..	..	..	..	..	..
+Comoros	COM	10th pillar: Market size	GCI.10THPILLAR.XQ	..	..	..	..	..	..	..	..	..	..
+Comoros	COM	11th pillar: Business sophistication	GCI.11THPILLAR.XQ	..	..	..	..	..	..	..	..	..	..
+Comoros	COM	12th pillar: Innovation	GCI.12THPILLAR.XQ	..	..	..	..	..	..	..	..	..	..
+Comoros	COM	1st pillar: Institutions	GCI.1STPILLAR.XQ	..	..	..	..	..	..	..	..	..	..
+Comoros	COM	2nd pillar: Infrastructure	GCI.2NDPILLAR.XQ	..	..	..	..	..	..	..	..	..	..
+Comoros	COM	3rd pillar: Macroeconomic stability	GCI.3RDPILLAR.XQ	..	..	..	..	..	..	..	..	..	..
+Comoros	COM	4th pllar: Health and primary education	GCI.4THPILLAR.XQ	..	..	..	..	..	..	..	..	..	..
+Comoros	COM	5th pillar: Higher education and training	GCI.5THPILLAR.XQ	..	..	..	..	..	..	..	..	..	..
+Comoros	COM	6th pillar: Goods market efficiency	GCI.6THPILLAR.XQ	..	..	..	..	..	..	..	..	..	..
+Comoros	COM	7th pillar: Labor market efficiency	GCI.7THPILLAR.XQ	..	..	..	..	..	..	..	..	..	..
+Comoros	COM	8th pillar: Financial market sophistication	GCI.8THPILLAR.XQ	..	..	..	..	..	..	..	..	..	..
+Comoros	COM	9th pillar: Techonological readiness	GCI.9THPILLAR.XQ	..	..	..	..	..	..	..	..	..	..
+Comoros	COM	Access to finance (% of firms identifying this as a major constraint)	IC.FRM.FINA.ZS	..	..	..	..	..	..	..	..	..	..
+Comoros	COM	Access to land (% of managers surveyed ranking this as a major constraint)	IC.CNS.LAND.ZS	..	..	..	..	..	..	..	..	..	..
+Comoros	COM	Adjustment to Arrears	DT.DTA.OADJ.CD	..	..	..	..	..	..	..	..	..	..
+Comoros	COM	Adjustments to foreign scheduled debt service (current LCU)	GB.TDS.ABRD.CN	2829100000000	753300000000	844600000000	696227419849.002	169259184844.59	17768308979.6416	..	..	..	..
+Comoros	COM	Adjustments to foreign scheduled principal repayments (current LCU)	GB.AMA.ABRD.CN	-311731691.020358	-898448428.316035	-1984040702.31514	-2386843214.53463	-2783925672.22449	-3180355400.06086	..	..	..	..
+Comoros	COM	Adjustments to scheduled debt service (current US$)	DT.TDA.DECT.CD	4157120.85359415	3950025.20944993	12902408.4897109	178650973.769735	0	0	0	0	..	..
+Comoros	COM	Adjustments to scheduled interest (current US$)	DT.INA.DECT.CD	-16000	-95000	680000	167000	-11812000	-2709000	-1447000	..	..	..
+Comoros	COM	Age dependency ratio (% of working-age population)	SP.POP.DPND	79.1334311410872	79.6403610740374	80.2249118459926	80.8658319209465	81.5489200953494	82.1799800841067	82.6599670292093	82.9206053620198	82.9407311427199	..
+Comoros	COM	Age dependency ratio, old (% of working-age population)	SP.POP.DPND.OL	5.11609035554785	5.09751582210358	5.07985715967508	5.06433091196837	5.05293178127416	5.03908690072633	5.01605156917486	4.98136562461879	4.93300527513697	..
+Comoros	COM	Age dependency ratio, young (% of working-age population)	SP.POP.DPND.YG	74.0173407855393	74.5428452519338	75.1450546863175	75.8015010089781	76.4959883140753	77.1408931833804	77.6439154600344	77.939239737401	78.0077258675829	..
+Comoros	COM	Age of firm (years)	IC.FRM.AGE.YR	..	..	..	..	..	..	..	..	..	..
+Comoros	COM	Agricultural area irrigated (ha)	AG.LND.IRIG.HA.AG	..	..	..	..	..	..	..	..	..	..
+"Congo, Dem. Rep."	COD	"Fiscal balance, cash surplus/deficit (current US$)"	GC.BAL.CASH.CD	-30093477.2710988	-65742609.5589168	-72250315.9224045	-124427658.820576	-106951627.839516	-12431037.9567927	48332196.4760161	500935942.530938	..	..
+"Congo, Dem. Rep."	COD	10th pillar: Market size	GCI.10THPILLAR.XQ	..	..	..	..	..	..	..	..	..	..
+"Congo, Dem. Rep."	COD	11th pillar: Business sophistication	GCI.11THPILLAR.XQ	..	..	..	..	..	..	..	..	..	..
+"Congo, Dem. Rep."	COD	12th pillar: Innovation	GCI.12THPILLAR.XQ	..	..	..	..	..	..	..	..	..	..
+"Congo, Dem. Rep."	COD	1st pillar: Institutions	GCI.1STPILLAR.XQ	..	..	..	..	..	..	..	..	..	..
+"Congo, Dem. Rep."	COD	2nd pillar: Infrastructure	GCI.2NDPILLAR.XQ	..	..	..	..	..	..	..	..	..	..
+"Congo, Dem. Rep."	COD	3rd pillar: Macroeconomic stability	GCI.3RDPILLAR.XQ	..	..	..	..	..	..	..	..	..	..
+"Congo, Dem. Rep."	COD	4th pllar: Health and primary education	GCI.4THPILLAR.XQ	..	..	..	..	..	..	..	..	..	..
+"Congo, Dem. Rep."	COD	5th pillar: Higher education and training	GCI.5THPILLAR.XQ	..	..	..	..	..	..	..	..	..	..
+"Congo, Dem. Rep."	COD	6th pillar: Goods market efficiency	GCI.6THPILLAR.XQ	..	..	..	..	..	..	..	..	..	..
+"Congo, Dem. Rep."	COD	7th pillar: Labor market efficiency	GCI.7THPILLAR.XQ	..	..	..	..	..	..	..	..	..	..
+"Congo, Dem. Rep."	COD	8th pillar: Financial market sophistication	GCI.8THPILLAR.XQ	..	..	..	..	..	..	..	..	..	..
+"Congo, Dem. Rep."	COD	9th pillar: Techonological readiness	GCI.9THPILLAR.XQ	..	..	..	..	..	..	..	..	..	..
+"Congo, Dem. Rep."	COD	Access to finance (% of firms identifying this as a major constraint)	IC.FRM.FINA.ZS	..	..	..	60.4	..	..	..	73.3	..	..
+"Congo, Dem. Rep."	COD	Access to land (% of managers surveyed ranking this as a major constraint)	IC.CNS.LAND.ZS	..	..	..	1.1	..	..	..	0.6	..	..
+"Congo, Dem. Rep."	COD	Adjustment to Arrears	DT.DTA.OADJ.CD	..	..	..	..	..	..	..	..	..	..
+"Congo, Dem. Rep."	COD	Adjustments to foreign scheduled debt service (current LCU)	GB.TDS.ABRD.CN	..	..	..	..	..	..	..	..	..	..
+"Congo, Dem. Rep."	COD	Adjustments to foreign scheduled principal repayments (current LCU)	GB.AMA.ABRD.CN	..	..	..	..	..	..	..	..	..	..
+"Congo, Dem. Rep."	COD	Adjustments to scheduled debt service (current US$)	DT.TDA.DECT.CD	313000000	335000000	380000000	461000000	504000000	0	0	0	0	..
+"Congo, Dem. Rep."	COD	Adjustments to scheduled interest (current US$)	DT.INA.DECT.CD	181578098.16	156846525.45	300269716.36	215485627.12	207337553.32	207402658.13	305241205.05	-99278786.784	-99900577.739	..
+"Congo, Dem. Rep."	COD	Age dependency ratio (% of working-age population)	SP.POP.DPND	101.7286017826	101.219401812527	100.578563642088	99.8072682420562	98.9240776187889	97.954297912264	96.928432328167	95.8675663193678	94.7838323750418	..
+"Congo, Dem. Rep."	COD	Age dependency ratio, old (% of working-age population)	SP.POP.DPND.OL	5.36958197082865	5.35064253198224	5.33051724801027	5.30915193833449	5.28702403546555	5.26434426326902	5.24141392122526	5.21838770021735	5.19576001140917	..
+"Congo, Dem. Rep."	COD	Age dependency ratio, young (% of working-age population)	SP.POP.DPND.YG	96.3590198117718	95.8687592805443	95.2480463940777	94.4981163037217	93.6370535833234	92.689953648995	91.6870184069417	90.6491786191505	89.5880723636326	..
+"Congo, Dem. Rep."	COD	Age of firm (years)	IC.FRM.AGE.YR	..	..	..	10.29	..	..	..	16.08	..	..
+"Congo, Dem. Rep."	COD	Agricultural area irrigated (ha)	AG.LND.IRIG.HA.AG	..	..	..	..	..	..	..	..	..	..
+"Congo, Rep."	COG	"Fiscal balance, cash surplus/deficit (current US$)"	GC.BAL.CASH.CD	229035124.267174	348155512.690149	1184009011.15547	..	..	..	..	..	..	..
+"Congo, Rep."	COG	10th pillar: Market size	GCI.10THPILLAR.XQ	..	..	..	..	..	..	..	..	..	..
+"Congo, Rep."	COG	11th pillar: Business sophistication	GCI.11THPILLAR.XQ	..	..	..	..	..	..	..	..	..	..
+"Congo, Rep."	COG	12th pillar: Innovation	GCI.12THPILLAR.XQ	..	..	..	..	..	..	..	..	..	..
+"Congo, Rep."	COG	1st pillar: Institutions	GCI.1STPILLAR.XQ	..	..	..	..	..	..	..	..	..	..
+"Congo, Rep."	COG	2nd pillar: Infrastructure	GCI.2NDPILLAR.XQ	..	..	..	..	..	..	..	..	..	..
+"Congo, Rep."	COG	3rd pillar: Macroeconomic stability	GCI.3RDPILLAR.XQ	..	..	..	..	..	..	..	..	..	..
+"Congo, Rep."	COG	4th pllar: Health and primary education	GCI.4THPILLAR.XQ	..	..	..	..	..	..	..	..	..	..
+"Congo, Rep."	COG	5th pillar: Higher education and training	GCI.5THPILLAR.XQ	..	..	..	..	..	..	..	..	..	..
+"Congo, Rep."	COG	6th pillar: Goods market efficiency	GCI.6THPILLAR.XQ	..	..	..	..	..	..	..	..	..	..
+"Congo, Rep."	COG	7th pillar: Labor market efficiency	GCI.7THPILLAR.XQ	..	..	..	..	..	..	..	..	..	..
+"Congo, Rep."	COG	8th pillar: Financial market sophistication	GCI.8THPILLAR.XQ	..	..	..	..	..	..	..	..	..	..
+"Congo, Rep."	COG	9th pillar: Techonological readiness	GCI.9THPILLAR.XQ	..	..	..	..	..	..	..	..	..	..
+"Congo, Rep."	COG	Access to finance (% of firms identifying this as a major constraint)	IC.FRM.FINA.ZS	..	..	..	..	..	..	44.8	..	..	..
+"Congo, Rep."	COG	Access to land (% of managers surveyed ranking this as a major constraint)	IC.CNS.LAND.ZS	..	..	..	..	..	..	2.9	..	..	..
+"Congo, Rep."	COG	Adjustment to Arrears	DT.DTA.OADJ.CD	..	..	..	..	..	..	..	..	..	..
+"Congo, Rep."	COG	Adjustments to foreign scheduled debt service (current LCU)	GB.TDS.ABRD.CN	0	0	0	0	0	0	0	0	0	..
+"Congo, Rep."	COG	Adjustments to foreign scheduled principal repayments (current LCU)	GB.AMA.ABRD.CN	0	0	0	0	0	0	0	0	0	..
+"Congo, Rep."	COG	Adjustments to scheduled debt service (current US$)	DT.TDA.DECT.CD	..	..	..	..	..	..	..	..	..	..
+"Congo, Rep."	COG	Adjustments to scheduled interest (current US$)	DT.INA.DECT.CD	133580548.71	116499216.47	125037985.61	252336246.86	142103068.31	105145377.47	-3881949.04000001	7861163.601	-3555385.608	..
+"Congo, Rep."	COG	Age dependency ratio (% of working-age population)	SP.POP.DPND	82.3094000832134	82.2070120092411	81.9532342330975	81.5224732085417	80.96315889808	80.3600770082438	79.8179946010631	79.3964885687902	79.1020212504072	..
+"Congo, Rep."	COG	Age dependency ratio, old (% of working-age population)	SP.POP.DPND.OL	6.76591240053395	6.75798082307534	6.7395541776852	6.70959569935937	6.67213509972453	6.6333810521169	6.60080942993632	6.57908574283672	6.56898811148784	..
+"Congo, Rep."	COG	Age dependency ratio, young (% of working-age population)	SP.POP.DPND.YG	75.5434876826795	75.4490311861657	75.2136800554124	74.8128775091823	74.2910237983555	73.7266959561269	73.2171851711268	72.8174028259535	72.5330331389194	..
+"Congo, Rep."	COG	Age of firm (years)	IC.FRM.AGE.YR	..	..	..	..	..	..	13.24	..	..	..
+"Congo, Rep."	COG	Agricultural area irrigated (ha)	AG.LND.IRIG.HA.AG	..	..	..	..	..	..	..	..	..	..
+Cote d'Ivoire	CIV	"Fiscal balance, cash surplus/deficit (current US$)"	GC.BAL.CASH.CD	..	..	..	..	..	..	..	..	..	..
+Cote d'Ivoire	CIV	10th pillar: Market size	GCI.10THPILLAR.XQ	..	..	..	..	..	3	3.07	3.07	3.06	..
+Cote d'Ivoire	CIV	11th pillar: Business sophistication	GCI.11THPILLAR.XQ	..	..	..	..	..	3.8	3.63	3.29	3.23	..
+Cote d'Ivoire	CIV	12th pillar: Innovation	GCI.12THPILLAR.XQ	..	..	..	..	..	2.8	2.77	2.74	2.6	..
+Cote d'Ivoire	CIV	1st pillar: Institutions	GCI.1STPILLAR.XQ	..	..	..	..	..	2.8	2.91	2.97	2.87	..
+Cote d'Ivoire	CIV	2nd pillar: Infrastructure	GCI.2NDPILLAR.XQ	..	..	..	..	..	3.3	3.54	3.05	2.97	..
+Cote d'Ivoire	CIV	3rd pillar: Macroeconomic stability	GCI.3RDPILLAR.XQ	..	..	..	..	..	4.9	4.43	4.27	4.43	..
+Cote d'Ivoire	CIV	4th pllar: Health and primary education	GCI.4THPILLAR.XQ	..	..	..	..	..	3.5	3.08	3.14	3.35	..
+Cote d'Ivoire	CIV	5th pillar: Higher education and training	GCI.5THPILLAR.XQ	..	..	..	..	..	3.1	3.13	3.02	2.96	..
+Cote d'Ivoire	CIV	6th pillar: Goods market efficiency	GCI.6THPILLAR.XQ	..	..	..	..	..	3.7	3.67	3.65	3.7	..
+Cote d'Ivoire	CIV	7th pillar: Labor market efficiency	GCI.7THPILLAR.XQ	..	..	..	..	..	3.9	4	4	4.16	..
+Cote d'Ivoire	CIV	8th pillar: Financial market sophistication	GCI.8THPILLAR.XQ	..	..	..	..	..	3.6	3.43	3.5	3.33	..
+Cote d'Ivoire	CIV	9th pillar: Techonological readiness	GCI.9THPILLAR.XQ	..	..	..	..	..	2.8	2.95	3.05	3.06	..
+Cote d'Ivoire	CIV	Access to finance (% of firms identifying this as a major constraint)	IC.FRM.FINA.ZS	..	..	..	..	..	..	66.6	..	..	..
+Cote d'Ivoire	CIV	Access to land (% of managers surveyed ranking this as a major constraint)	IC.CNS.LAND.ZS	..	..	..	..	..	..	3.9	..	..	..
+Cote d'Ivoire	CIV	Adjustment to Arrears	DT.DTA.OADJ.CD	..	..	..	..	..	..	..	..	..	..
+Cote d'Ivoire	CIV	Adjustments to foreign scheduled debt service (current LCU)	GB.TDS.ABRD.CN	0	0	0	..	..	..	..	..	..	..
+Cote d'Ivoire	CIV	Adjustments to foreign scheduled principal repayments (current LCU)	GB.AMA.ABRD.CN	0	0	0	..	..	..	..	..	..	..
+Cote d'Ivoire	CIV	Adjustments to scheduled debt service (current US$)	DT.TDA.DECT.CD	169635244.38	-1.0774129938E-07	-1.0795368182E-07	0	0	0	5523573300.3	727808412.8	739619032.44	..
+Cote d'Ivoire	CIV	Adjustments to scheduled interest (current US$)	DT.INA.DECT.CD	675032990.99	768320491.75	779857869.55	837649585.67	921788043.6	891718623.6	761426052.1673	989818723.46864	1030139584.6019	..
+Cote d'Ivoire	CIV	Age dependency ratio (% of working-age population)	SP.POP.DPND	82.1297118645624	82.4283729107662	82.5725697999486	82.5356809536568	82.341268269691	81.9928262999755	81.5080171557199	80.9054050734682	80.1865373753818	..
+Cote d'Ivoire	CIV	Age dependency ratio, old (% of working-age population)	SP.POP.DPND.OL	6.02956729184074	6.17582028440443	6.3152001617739	6.44570986894988	6.56720738058114	6.67669206948718	6.77145902506787	6.85027831741787	6.91138357047336	..
+Cote d'Ivoire	CIV	Age dependency ratio, young (% of working-age population)	SP.POP.DPND.YG	76.1001445727217	76.2525526263617	76.2573696381747	76.089971084707	75.7740608891099	75.3161342304883	74.736558130652	74.0551267560504	73.2751538049084	..
+Cote d'Ivoire	CIV	Age of firm (years)	IC.FRM.AGE.YR	..	..	..	..	..	..	7.25	..	..	..
+Cote d'Ivoire	CIV	Agricultural area irrigated (ha)	AG.LND.IRIG.HA.AG	..	..	..	..	..	..	..	..	..	..
+Djibouti	DJI	"Fiscal balance, cash surplus/deficit (current US$)"	GC.BAL.CASH.CD	..	..	..	..	..	..	..	..	..	..
+Djibouti	DJI	10th pillar: Market size	GCI.10THPILLAR.XQ	..	..	..	..	..	..	..	..	..	..
+Djibouti	DJI	11th pillar: Business sophistication	GCI.11THPILLAR.XQ	..	..	..	..	..	..	..	..	..	..
+Djibouti	DJI	12th pillar: Innovation	GCI.12THPILLAR.XQ	..	..	..	..	..	..	..	..	..	..
+Djibouti	DJI	1st pillar: Institutions	GCI.1STPILLAR.XQ	..	..	..	..	..	..	..	..	..	..
+Djibouti	DJI	2nd pillar: Infrastructure	GCI.2NDPILLAR.XQ	..	..	..	..	..	..	..	..	..	..
+Djibouti	DJI	3rd pillar: Macroeconomic stability	GCI.3RDPILLAR.XQ	..	..	..	..	..	..	..	..	..	..
+Djibouti	DJI	4th pllar: Health and primary education	GCI.4THPILLAR.XQ	..	..	..	..	..	..	..	..	..	..
+Djibouti	DJI	5th pillar: Higher education and training	GCI.5THPILLAR.XQ	..	..	..	..	..	..	..	..	..	..
+Djibouti	DJI	6th pillar: Goods market efficiency	GCI.6THPILLAR.XQ	..	..	..	..	..	..	..	..	..	..
+Djibouti	DJI	7th pillar: Labor market efficiency	GCI.7THPILLAR.XQ	..	..	..	..	..	..	..	..	..	..
+Djibouti	DJI	8th pillar: Financial market sophistication	GCI.8THPILLAR.XQ	..	..	..	..	..	..	..	..	..	..
+Djibouti	DJI	9th pillar: Techonological readiness	GCI.9THPILLAR.XQ	..	..	..	..	..	..	..	..	..	..
+Djibouti	DJI	Access to finance (% of firms identifying this as a major constraint)	IC.FRM.FINA.ZS	..	..	..	..	..	..	..	..	..	..
+Djibouti	DJI	Access to land (% of managers surveyed ranking this as a major constraint)	IC.CNS.LAND.ZS	..	..	..	..	..	..	..	..	..	..
+Djibouti	DJI	Adjustment to Arrears	DT.DTA.OADJ.CD	..	..	..	..	..	..	..	..	..	..
+Djibouti	DJI	Adjustments to foreign scheduled debt service (current LCU)	GB.TDS.ABRD.CN	..	..	..	..	..	..	..	..	..	..
+Djibouti	DJI	Adjustments to foreign scheduled principal repayments (current LCU)	GB.AMA.ABRD.CN	..	..	..	..	..	..	..	..	..	..
+Djibouti	DJI	Adjustments to scheduled debt service (current US$)	DT.TDA.DECT.CD	29000000	10000000	0	17000000	..	..	..	..	..	..
+Djibouti	DJI	Adjustments to scheduled interest (current US$)	DT.INA.DECT.CD	-3274000	-897025	..	..	..	..	..	..	..	..
+Djibouti	DJI	Age dependency ratio (% of working-age population)	SP.POP.DPND	74.1081836737428	72.5030480450133	70.9270485546518	69.3868066152005	67.898859145239	66.5138989436647	65.2859511963989	64.2415584463587	63.3881773025716	..
+Djibouti	DJI	Age dependency ratio, old (% of working-age population)	SP.POP.DPND.OL	5.00386338360943	5.05095288081003	5.10307000386949	5.15964250607682	5.21985055282653	5.28498478161027	5.357403458896	5.43667287004507	5.52487284366492	..
+Djibouti	DJI	Age dependency ratio, young (% of working-age population)	SP.POP.DPND.YG	69.1043202901334	67.4520951642032	65.8239785507823	64.2271641091237	62.6790085924124	61.2289141620545	59.9285477375029	58.8048855763136	57.8633044589067	..
+Djibouti	DJI	Age of firm (years)	IC.FRM.AGE.YR	..	..	..	..	..	..	..	..	..	..
+Djibouti	DJI	Agricultural area irrigated (ha)	AG.LND.IRIG.HA.AG	..	..	..	..	..	..	..	..	..	..
+"Egypt, Arab Rep."	EGY	"Fiscal balance, cash surplus/deficit (current US$)"	GC.BAL.CASH.CD	-4823079611.41951	-4423648681.58113	-5783705011.40849	-7704988776.5578	-5947129155.17015	-10356523636.3636	-12402955709.6877	-16929094289.9905	-23230590844.9284	..
+"Egypt, Arab Rep."	EGY	10th pillar: Market size	GCI.10THPILLAR.XQ	..	..	..	..	4.52	4.7	4.81	4.8	4.77	..
+"Egypt, Arab Rep."	EGY	11th pillar: Business sophistication	GCI.11THPILLAR.XQ	..	..	..	4.22	4.08	3.9	3.98	3.98	3.82	..
+"Egypt, Arab Rep."	EGY	12th pillar: Innovation	GCI.12THPILLAR.XQ	..	..	..	3.04	3.17	3.2	3.03	2.97	2.84	..
+"Egypt, Arab Rep."	EGY	1st pillar: Institutions	GCI.1STPILLAR.XQ	..	..	..	4.12	4.19	4.2	4.13	4.03	3.78	..
+"Egypt, Arab Rep."	EGY	2nd pillar: Infrastructure	GCI.2NDPILLAR.XQ	..	..	..	3.72	3.54	3.7	4.07	3.97	3.81	..
+"Egypt, Arab Rep."	EGY	3rd pillar: Macroeconomic stability	GCI.3RDPILLAR.XQ	..	..	..	3.75	3.74	3.6	3.46	3.35	3.74	..
+"Egypt, Arab Rep."	EGY	4th pllar: Health and primary education	GCI.4THPILLAR.XQ	..	..	..	6.51	5.23	5.2	5.2	5.42	5.36	..
+"Egypt, Arab Rep."	EGY	5th pillar: Higher education and training	GCI.5THPILLAR.XQ	..	..	..	3.73	3.68	3.6	3.62	3.59	3.44	..
+"Egypt, Arab Rep."	EGY	6th pillar: Goods market efficiency	GCI.6THPILLAR.XQ	..	..	..	4.14	4.03	4	3.99	3.94	3.75	..
+"Egypt, Arab Rep."	EGY	7th pillar: Labor market efficiency	GCI.7THPILLAR.XQ	..	..	..	..	3.21	3.3	3.46	3.43	3.19	..
+"Egypt, Arab Rep."	EGY	8th pillar: Financial market sophistication	GCI.8THPILLAR.XQ	..	..	..	..	3.5	3.7	4.01	4	3.78	..
+"Egypt, Arab Rep."	EGY	9th pillar: Techonological readiness	GCI.9THPILLAR.XQ	..	..	..	2.97	2.84	3	3.35	3.32	3.31	..
+"Egypt, Arab Rep."	EGY	Access to finance (% of firms identifying this as a major constraint)	IC.FRM.FINA.ZS	..	37.13	..	..	25	31	..	..	..	..
+"Egypt, Arab Rep."	EGY	Access to land (% of managers surveyed ranking this as a major constraint)	IC.CNS.LAND.ZS	..	..	..	..	3.1	7.5	..	..	..	..
+"Egypt, Arab Rep."	EGY	Adjustment to Arrears	DT.DTA.OADJ.CD	..	..	..	..	..	..	..	..	..	..
+"Egypt, Arab Rep."	EGY	Adjustments to foreign scheduled debt service (current LCU)	GB.TDS.ABRD.CN	6416000000	0	0	0	0	0	..	0	0	..
+"Egypt, Arab Rep."	EGY	Adjustments to foreign scheduled principal repayments (current LCU)	GB.AMA.ABRD.CN	..	0	0	0	0	0	..	0	0	..
+"Egypt, Arab Rep."	EGY	Adjustments to scheduled debt service (current US$)	DT.TDA.DECT.CD	0	0	0	0	0	0	0	0	0	..
+"Egypt, Arab Rep."	EGY	Adjustments to scheduled interest (current US$)	DT.INA.DECT.CD	7932000	-106820000	-74026000	-218829000	-286928000	-241419000	-271346000	-310808000	221625312.5	..
+"Egypt, Arab Rep."	EGY	Age dependency ratio (% of working-age population)	SP.POP.DPND	63.2242808363001	61.8687734295306	60.7273585577134	59.8029424727681	59.0646046906644	58.4831502905115	58.0191459661372	57.6404097430274	57.3421525656763	..
+"Egypt, Arab Rep."	EGY	Age dependency ratio, old (% of working-age population)	SP.POP.DPND.OL	7.51646729429568	7.55313560121613	7.58835062189479	7.61962426149633	7.65217643340404	7.70257171176748	7.79113520319669	7.9298330708943	8.12375179602306	..
+"Egypt, Arab Rep."	EGY	Age dependency ratio, young (% of working-age population)	SP.POP.DPND.YG	55.7078135420044	54.3156378283145	53.1390079358186	52.1833182112718	51.4124282572604	50.7805785787441	50.2280107629406	49.7105766721331	49.2184007696532	..
+"Egypt, Arab Rep."	EGY	Age of firm (years)	IC.FRM.AGE.YR	..	..	..	..	23.79	23.58	..	..	..	..
+"Egypt, Arab Rep."	EGY	Agricultural area irrigated (ha)	AG.LND.IRIG.HA.AG	..	..	..	..	..	..	..	..	..	..
+Equatorial Guinea	GNQ	"Fiscal balance, cash surplus/deficit (current US$)"	GC.BAL.CASH.CD	..	..	..	..	..	..	..	..	..	..
+Equatorial Guinea	GNQ	10th pillar: Market size	GCI.10THPILLAR.XQ	..	..	..	..	..	..	..	..	..	..
+Equatorial Guinea	GNQ	11th pillar: Business sophistication	GCI.11THPILLAR.XQ	..	..	..	..	..	..	..	..	..	..
+Equatorial Guinea	GNQ	12th pillar: Innovation	GCI.12THPILLAR.XQ	..	..	..	..	..	..	..	..	..	..
+Equatorial Guinea	GNQ	1st pillar: Institutions	GCI.1STPILLAR.XQ	..	..	..	..	..	..	..	..	..	..
+Equatorial Guinea	GNQ	2nd pillar: Infrastructure	GCI.2NDPILLAR.XQ	..	..	..	..	..	..	..	..	..	..
+Equatorial Guinea	GNQ	3rd pillar: Macroeconomic stability	GCI.3RDPILLAR.XQ	..	..	..	..	..	..	..	..	..	..
+Equatorial Guinea	GNQ	4th pllar: Health and primary education	GCI.4THPILLAR.XQ	..	..	..	..	..	..	..	..	..	..
+Equatorial Guinea	GNQ	5th pillar: Higher education and training	GCI.5THPILLAR.XQ	..	..	..	..	..	..	..	..	..	..
+Equatorial Guinea	GNQ	6th pillar: Goods market efficiency	GCI.6THPILLAR.XQ	..	..	..	..	..	..	..	..	..	..
+Equatorial Guinea	GNQ	7th pillar: Labor market efficiency	GCI.7THPILLAR.XQ	..	..	..	..	..	..	..	..	..	..
+Equatorial Guinea	GNQ	8th pillar: Financial market sophistication	GCI.8THPILLAR.XQ	..	..	..	..	..	..	..	..	..	..
+Equatorial Guinea	GNQ	9th pillar: Techonological readiness	GCI.9THPILLAR.XQ	..	..	..	..	..	..	..	..	..	..
+Equatorial Guinea	GNQ	Access to finance (% of firms identifying this as a major constraint)	IC.FRM.FINA.ZS	..	..	..	..	..	..	..	..	..	..
+Equatorial Guinea	GNQ	Access to land (% of managers surveyed ranking this as a major constraint)	IC.CNS.LAND.ZS	..	..	..	..	..	..	..	..	..	..
+Equatorial Guinea	GNQ	Adjustment to Arrears	DT.DTA.OADJ.CD	..	..	..	..	..	..	..	..	..	..
+Equatorial Guinea	GNQ	Adjustments to foreign scheduled debt service (current LCU)	GB.TDS.ABRD.CN	..	..	..	..	..	..	..	..	..	..
+Equatorial Guinea	GNQ	Adjustments to foreign scheduled principal repayments (current LCU)	GB.AMA.ABRD.CN	..	..	..	..	..	..	..	..	..	..
+Equatorial Guinea	GNQ	Adjustments to scheduled debt service (current US$)	DT.TDA.DECT.CD	..	..	..	..	..	..	..	..	..	..
+Equatorial Guinea	GNQ	Adjustments to scheduled interest (current US$)	DT.INA.DECT.CD	..	..	..	..	..	..	..	..	..	..
+Equatorial Guinea	GNQ	Age dependency ratio (% of working-age population)	SP.POP.DPND	81.157639368353	79.4123552029592	77.8668469512588	76.5540668263547	75.4361827335934	74.4789979057178	73.6302478593042	72.8569983045033	72.1557838072996	..
+Equatorial Guinea	GNQ	Age dependency ratio, old (% of working-age population)	SP.POP.DPND.OL	6.15051338734299	5.93972062688601	5.74364467545847	5.56764031249207	5.41019158257231	5.26837106992795	5.13537558727334	5.0109701350721	4.8947170902763	..
+Equatorial Guinea	GNQ	Age dependency ratio, young (% of working-age population)	SP.POP.DPND.YG	75.0071259810101	73.4726345760732	72.1232022758003	70.9864265138627	70.0259911510211	69.2106268357898	68.4948722720309	67.8460281694312	67.2610667170234	..
+Equatorial Guinea	GNQ	Age of firm (years)	IC.FRM.AGE.YR	..	..	..	..	..	..	..	..	..	..
+Equatorial Guinea	GNQ	Agricultural area irrigated (ha)	AG.LND.IRIG.HA.AG	..	..	..	..	..	..	..	..	..	..
+Eritrea	ERI	"Fiscal balance, cash surplus/deficit (current US$)"	GC.BAL.CASH.CD	..	..	..	..	..	..	..	..	..	..
+Eritrea	ERI	10th pillar: Market size	GCI.10THPILLAR.XQ	..	..	..	..	..	..	..	..	..	..
+Eritrea	ERI	11th pillar: Business sophistication	GCI.11THPILLAR.XQ	..	..	..	..	..	..	..	..	..	..
+Eritrea	ERI	12th pillar: Innovation	GCI.12THPILLAR.XQ	..	..	..	..	..	..	..	..	..	..
+Eritrea	ERI	1st pillar: Institutions	GCI.1STPILLAR.XQ	..	..	..	..	..	..	..	..	..	..
+Eritrea	ERI	2nd pillar: Infrastructure	GCI.2NDPILLAR.XQ	..	..	..	..	..	..	..	..	..	..
+Eritrea	ERI	3rd pillar: Macroeconomic stability	GCI.3RDPILLAR.XQ	..	..	..	..	..	..	..	..	..	..
+Eritrea	ERI	4th pllar: Health and primary education	GCI.4THPILLAR.XQ	..	..	..	..	..	..	..	..	..	..
+Eritrea	ERI	5th pillar: Higher education and training	GCI.5THPILLAR.XQ	..	..	..	..	..	..	..	..	..	..
+Eritrea	ERI	6th pillar: Goods market efficiency	GCI.6THPILLAR.XQ	..	..	..	..	..	..	..	..	..	..
+Eritrea	ERI	7th pillar: Labor market efficiency	GCI.7THPILLAR.XQ	..	..	..	..	..	..	..	..	..	..
+Eritrea	ERI	8th pillar: Financial market sophistication	GCI.8THPILLAR.XQ	..	..	..	..	..	..	..	..	..	..
+Eritrea	ERI	9th pillar: Techonological readiness	GCI.9THPILLAR.XQ	..	..	..	..	..	..	..	..	..	..
+Eritrea	ERI	Access to finance (% of firms identifying this as a major constraint)	IC.FRM.FINA.ZS	..	..	..	..	..	..	0.9	..	..	..
+Eritrea	ERI	Access to land (% of managers surveyed ranking this as a major constraint)	IC.CNS.LAND.ZS	..	..	..	..	..	..	17	..	..	..
+Eritrea	ERI	Adjustment to Arrears	DT.DTA.OADJ.CD	..	..	..	..	..	..	..	..	..	..
+Eritrea	ERI	Adjustments to foreign scheduled debt service (current LCU)	GB.TDS.ABRD.CN	..	..	..	..	..	..	..	..	..	..
+Eritrea	ERI	Adjustments to foreign scheduled principal repayments (current LCU)	GB.AMA.ABRD.CN	..	..	..	..	..	..	..	..	..	..
+Eritrea	ERI	Adjustments to scheduled debt service (current US$)	DT.TDA.DECT.CD	0	0	..	..	..	..	..	..	..	..
+Eritrea	ERI	Adjustments to scheduled interest (current US$)	DT.INA.DECT.CD	..	..	..	..	..	..	..	..	..	..
+Eritrea	ERI	Age dependency ratio (% of working-age population)	SP.POP.DPND	82.6579624179846	80.8959210320724	79.6829502552564	78.9959768799668	78.7128296192126	78.6938552316546	78.7686974353795	78.8143949359799	78.806263277701	..
+Eritrea	ERI	Age dependency ratio, old (% of working-age population)	SP.POP.DPND.OL	4.31884304461295	4.26847888967689	4.24847779434183	4.25787267029295	4.29005894822776	4.33735818772115	4.38954907340392	4.43918625242975	4.48481694685353	..
+Eritrea	ERI	Age dependency ratio, young (% of working-age population)	SP.POP.DPND.YG	78.3391193733716	76.6274421423955	75.4344724609145	74.7381042096738	74.4227706709849	74.3564970439334	74.3791483619756	74.3752086835501	74.3214463308474	..
+Eritrea	ERI	Age of firm (years)	IC.FRM.AGE.YR	..	..	..	..	..	..	16.03	..	..	..
+Eritrea	ERI	Agricultural area irrigated (ha)	AG.LND.IRIG.HA.AG	..	..	..	..	..	..	..	..	..	..
+Ethiopia	ETH	"Fiscal balance, cash surplus/deficit (current US$)"	GC.BAL.CASH.CD	-474912835.937758	-335924035.241781	-554229773.27296	-641918220.897022	-533081259.654582	-500841598.341622	-637778512.504454	-732130417.351514	-411423286.42365	..
+Ethiopia	ETH	10th pillar: Market size	GCI.10THPILLAR.XQ	..	..	..	..	3.44	3.3	3.44	3.44	3.53	..
+Ethiopia	ETH	11th pillar: Business sophistication	GCI.11THPILLAR.XQ	..	..	..	2.94	3.18	3.3	3.28	3.17	3.09	..
+Ethiopia	ETH	12th pillar: Innovation	GCI.12THPILLAR.XQ	..	..	..	2.5	2.61	2.7	2.69	2.76	2.76	..
+Ethiopia	ETH	1st pillar: Institutions	GCI.1STPILLAR.XQ	..	..	..	3.45	3.71	3.8	3.78	4.03	4	..
+Ethiopia	ETH	2nd pillar: Infrastructure	GCI.2NDPILLAR.XQ	..	..	..	2.34	2.54	2.7	2.94	2.65	2.64	..
+Ethiopia	ETH	3rd pillar: Macroeconomic stability	GCI.3RDPILLAR.XQ	..	..	..	3.98	3.46	4	3.76	3.48	5.13	..
+Ethiopia	ETH	4th pllar: Health and primary education	GCI.4THPILLAR.XQ	..	..	..	3.39	3.58	3.8	3.78	4.37	4.5	..
+Ethiopia	ETH	5th pillar: Higher education and training	GCI.5THPILLAR.XQ	..	..	..	2.39	2.55	2.7	2.67	2.72	2.68	..
+Ethiopia	ETH	6th pillar: Goods market efficiency	GCI.6THPILLAR.XQ	..	..	..	3.4	3.65	3.7	3.77	3.93	3.94	..
+Ethiopia	ETH	7th pillar: Labor market efficiency	GCI.7THPILLAR.XQ	..	..	..	..	4.26	4.3	4.34	4.38	4.36	..
+Ethiopia	ETH	8th pillar: Financial market sophistication	GCI.8THPILLAR.XQ	..	..	..	..	3.32	3.1	3.05	3.27	3.27	..
+Ethiopia	ETH	9th pillar: Techonological readiness	GCI.9THPILLAR.XQ	..	..	..	2.26	2.36	2.2	2.29	2.51	2.43	..
+Ethiopia	ETH	Access to finance (% of firms identifying this as a major constraint)	IC.FRM.FINA.ZS	..	..	..	44.2	..	..	..	..	31.1	..
+Ethiopia	ETH	Access to land (% of managers surveyed ranking this as a major constraint)	IC.CNS.LAND.ZS	..	..	..	16.6	..	..	..	..	22.9	..
+Ethiopia	ETH	Adjustment to Arrears	DT.DTA.OADJ.CD	..	..	..	..	..	..	..	..	..	..
+Ethiopia	ETH	Adjustments to foreign scheduled debt service (current LCU)	GB.TDS.ABRD.CN	..	..	..	..	..	..	..	..	..	..
+Ethiopia	ETH	Adjustments to foreign scheduled principal repayments (current LCU)	GB.AMA.ABRD.CN	..	..	..	..	..	..	..	..	..	..
+Ethiopia	ETH	Adjustments to scheduled debt service (current US$)	DT.TDA.DECT.CD	69199999.9999962	81500000	84300000	104500000	88000000	-3.41060513164848E-07	425.032911179195	1.99999965893949	3.99999965893949	..
+Ethiopia	ETH	Adjustments to scheduled interest (current US$)	DT.INA.DECT.CD	26438000	11758000	-2831000	11578000	-10928000	-20046000	..	176213935.351583	135863923.712594	..
+Ethiopia	ETH	Age dependency ratio (% of working-age population)	SP.POP.DPND	93.4116251724601	92.1959815097423	90.7404144569094	89.0608524543734	87.1995783059065	85.2191462800432	83.1901575761044	81.164451603216	79.1646416596582	..
+Ethiopia	ETH	Age dependency ratio, old (% of working-age population)	SP.POP.DPND.OL	5.84832354712668	5.8717957850277	5.89603549220771	5.9208551905206	5.94612228805947	5.97248761977394	6.0007280425374	6.03116286053591	6.06449327954929	..
+Ethiopia	ETH	Age dependency ratio, young (% of working-age population)	SP.POP.DPND.YG	87.5633016253334	86.3241857247146	84.8443789647017	83.1399972638529	81.253456017847	79.2466586602692	77.189429533567	75.1332887426801	73.1001483801089	..
+Ethiopia	ETH	Age of firm (years)	IC.FRM.AGE.YR	..	..	..	17.71	..	..	..	..	..	..
+Ethiopia	ETH	Agricultural area irrigated (ha)	AG.LND.IRIG.HA.AG	121000	121000	147000	135000	135000	180000	164000	154000	182000	..
+Gabon	GAB	"Fiscal balance, cash surplus/deficit (current US$)"	GC.BAL.CASH.CD	..	..	..	..	..	..	..	..	..	..
+Gabon	GAB	10th pillar: Market size	GCI.10THPILLAR.XQ	..	..	..	..	..	..	..	..	..	..
+Gabon	GAB	11th pillar: Business sophistication	GCI.11THPILLAR.XQ	..	..	..	..	..	..	..	..	..	..
+Gabon	GAB	12th pillar: Innovation	GCI.12THPILLAR.XQ	..	..	..	..	..	..	..	..	..	..
+Gabon	GAB	1st pillar: Institutions	GCI.1STPILLAR.XQ	..	..	..	..	..	..	..	..	..	..
+Gabon	GAB	2nd pillar: Infrastructure	GCI.2NDPILLAR.XQ	..	..	..	..	..	..	..	..	..	..
+Gabon	GAB	3rd pillar: Macroeconomic stability	GCI.3RDPILLAR.XQ	..	..	..	..	..	..	..	..	..	..
+Gabon	GAB	4th pllar: Health and primary education	GCI.4THPILLAR.XQ	..	..	..	..	..	..	..	..	..	..
+Gabon	GAB	5th pillar: Higher education and training	GCI.5THPILLAR.XQ	..	..	..	..	..	..	..	..	..	..
+Gabon	GAB	6th pillar: Goods market efficiency	GCI.6THPILLAR.XQ	..	..	..	..	..	..	..	..	..	..
+Gabon	GAB	7th pillar: Labor market efficiency	GCI.7THPILLAR.XQ	..	..	..	..	..	..	..	..	..	..
+Gabon	GAB	8th pillar: Financial market sophistication	GCI.8THPILLAR.XQ	..	..	..	..	..	..	..	..	..	..
+Gabon	GAB	9th pillar: Techonological readiness	GCI.9THPILLAR.XQ	..	..	..	..	..	..	..	..	..	..
+Gabon	GAB	Access to finance (% of firms identifying this as a major constraint)	IC.FRM.FINA.ZS	..	..	..	..	..	..	30.4	..	..	..
+Gabon	GAB	Access to land (% of managers surveyed ranking this as a major constraint)	IC.CNS.LAND.ZS	..	..	..	..	..	..	1.8	..	..	..
+Gabon	GAB	Adjustment to Arrears	DT.DTA.OADJ.CD	..	..	..	..	..	..	..	..	..	..
+Gabon	GAB	Adjustments to foreign scheduled debt service (current LCU)	GB.TDS.ABRD.CN	..	..	..	..	..	..	..	..	..	..
+Gabon	GAB	Adjustments to foreign scheduled principal repayments (current LCU)	GB.AMA.ABRD.CN	..	..	..	..	..	..	..	..	..	..
+Gabon	GAB	Adjustments to scheduled debt service (current US$)	DT.TDA.DECT.CD	..	..	..	..	..	..	..	..	..	..
+Gabon	GAB	Adjustments to scheduled interest (current US$)	DT.INA.DECT.CD	63653654.87	172700228.14	136774159.17	132339615.01	-196605063.59	-46443784.85	-146144000	-135844000	-134879000	..
+Gabon	GAB	Age dependency ratio (% of working-age population)	SP.POP.DPND	79.2526942653408	77.3814472442711	75.4295097241206	73.4073118877439	71.3644308130829	69.4023008107385	67.6325531738675	66.1231714139741	64.8830268894685	..
+Gabon	GAB	Age dependency ratio, old (% of working-age population)	SP.POP.DPND.OL	8.14381750969745	7.94750489914686	7.76880192895428	7.60987875576031	7.47131556013501	7.35563282807695	7.26400355797191	7.1967143107788	7.15282860099752	..
+Gabon	GAB	Age dependency ratio, young (% of working-age population)	SP.POP.DPND.YG	71.1088767556433	69.4339423451243	67.6607077951664	65.7974331319836	63.8931152529479	62.0466679826616	60.3685496158956	58.9264571031953	57.730198288471	..
+Gabon	GAB	Age of firm (years)	IC.FRM.AGE.YR	..	..	..	..	..	..	13.79	..	..	..
+Gabon	GAB	Agricultural area irrigated (ha)	AG.LND.IRIG.HA.AG	..	..	..	..	..	..	..	..	..	..
+"Gambia, The"	GMB	"Fiscal balance, cash surplus/deficit (current US$)"	GC.BAL.CASH.CD	..	..	..	..	..	..	..	..	..	..
+"Gambia, The"	GMB	10th pillar: Market size	GCI.10THPILLAR.XQ	..	..	..	..	1.43	1.3	1.41	1.29	1.44	..
+"Gambia, The"	GMB	11th pillar: Business sophistication	GCI.11THPILLAR.XQ	..	..	..	3.3	3.69	4	4.03	3.93	3.9	..
+"Gambia, The"	GMB	12th pillar: Innovation	GCI.12THPILLAR.XQ	..	..	..	2.48	2.74	3	3.06	3.14	3.2	..
+"Gambia, The"	GMB	1st pillar: Institutions	GCI.1STPILLAR.XQ	..	..	..	4.02	4.28	4.7	4.91	4.76	4.69	..
+"Gambia, The"	GMB	2nd pillar: Infrastructure	GCI.2NDPILLAR.XQ	..	..	..	2.62	3.14	3.7	3.95	3.83	3.73	..
+"Gambia, The"	GMB	3rd pillar: Macroeconomic stability	GCI.3RDPILLAR.XQ	..	..	..	3.77	3.74	4.5	4.32	3.78	3.67	..
+"Gambia, The"	GMB	4th pllar: Health and primary education	GCI.4THPILLAR.XQ	..	..	..	4.85	4.14	4	3.86	4.25	4.21	..
+"Gambia, The"	GMB	5th pillar: Higher education and training	GCI.5THPILLAR.XQ	..	..	..	2.81	2.96	3.2	3.36	3.5	3.62	..
+"Gambia, The"	GMB	6th pillar: Goods market efficiency	GCI.6THPILLAR.XQ	..	..	..	3.77	3.95	4.2	4.25	4.17	4.03	..
+"Gambia, The"	GMB	7th pillar: Labor market efficiency	GCI.7THPILLAR.XQ	..	..	..	..	4.45	4.7	4.82	4.94	4.79	..
+"Gambia, The"	GMB	8th pillar: Financial market sophistication	GCI.8THPILLAR.XQ	..	..	..	..	3.98	4	3.92	4.02	3.95	..
+"Gambia, The"	GMB	9th pillar: Techonological readiness	GCI.9THPILLAR.XQ	..	..	..	2.69	2.67	2.9	3.18	3.16	3.07	..
+"Gambia, The"	GMB	Access to finance (% of firms identifying this as a major constraint)	IC.FRM.FINA.ZS	..	..	..	40.3	..	..	..	..	..	..
+"Gambia, The"	GMB	Access to land (% of managers surveyed ranking this as a major constraint)	IC.CNS.LAND.ZS	..	..	..	6.5	..	..	..	..	..	..
+"Gambia, The"	GMB	Adjustment to Arrears	DT.DTA.OADJ.CD	..	..	..	..	..	..	..	..	..	..
+"Gambia, The"	GMB	Adjustments to foreign scheduled debt service (current LCU)	GB.TDS.ABRD.CN	..	..	..	..	..	..	..	..	..	..
+"Gambia, The"	GMB	Adjustments to foreign scheduled principal repayments (current LCU)	GB.AMA.ABRD.CN	..	..	..	..	..	..	..	..	..	..
+"Gambia, The"	GMB	Adjustments to scheduled debt service (current US$)	DT.TDA.DECT.CD	..	..	..	..	..	..	..	..	..	..
+"Gambia, The"	GMB	Adjustments to scheduled interest (current US$)	DT.INA.DECT.CD	..	..	..	..	..	..	..	..	..	..
+"Gambia, The"	GMB	Age dependency ratio (% of working-age population)	SP.POP.DPND	90.3747695538509	89.8797010272151	89.3355091433126	88.7443215364422	88.1135521392982	87.4152621004231	86.6176708841656	85.7082380649487	84.6867578123375	..
+"Gambia, The"	GMB	Age dependency ratio, old (% of working-age population)	SP.POP.DPND.OL	4.20073286239293	4.13291261845607	4.08593945758367	4.06275464645923	4.05813548001962	4.06077531598445	4.05463588284512	4.03178669050525	3.99029202939843	..
+"Gambia, The"	GMB	Age dependency ratio, young (% of working-age population)	SP.POP.DPND.YG	86.174036691458	85.7467884087591	85.2495696857289	84.681566889983	84.0554166592786	83.3544867844387	82.5630350013205	81.6764513744434	80.6964657829391	..
+"Gambia, The"	GMB	Age of firm (years)	IC.FRM.AGE.YR	..	..	..	9.41	..	..	..	..	..	..
+"Gambia, The"	GMB	Agricultural area irrigated (ha)	AG.LND.IRIG.HA.AG	..	..	..	..	..	..	..	..	..	..
+Ghana	GHA	"Fiscal balance, cash surplus/deficit (current US$)"	GC.BAL.CASH.CD	-276489857.351905	-120776459.715902	-151199907.015333	-858240466.570508	-1160480278.18607	-1675686775.06206	-1466862398.49517	-2316508873.0106	-1550107155.47177	..
+Ghana	GHA	10th pillar: Market size	GCI.10THPILLAR.XQ	..	..	..	..	..	3.1	3.25	3.25	3.42	..
+Ghana	GHA	11th pillar: Business sophistication	GCI.11THPILLAR.XQ	..	..	..	..	..	3.6	3.52	3.5	3.51	..
+Ghana	GHA	12th pillar: Innovation	GCI.12THPILLAR.XQ	..	..	..	..	..	2.6	2.63	2.84	2.89	..
+Ghana	GHA	1st pillar: Institutions	GCI.1STPILLAR.XQ	..	..	..	..	..	4	3.87	3.93	3.96	..
+Ghana	GHA	2nd pillar: Infrastructure	GCI.2NDPILLAR.XQ	..	..	..	..	..	3	3.14	2.87	2.84	..
+Ghana	GHA	3rd pillar: Macroeconomic stability	GCI.3RDPILLAR.XQ	..	..	..	..	..	3.9	2.68	3	3.49	..
+Ghana	GHA	4th pllar: Health and primary education	GCI.4THPILLAR.XQ	..	..	..	..	..	4	3.93	4.34	4.29	..
+Ghana	GHA	5th pillar: Higher education and training	GCI.5THPILLAR.XQ	..	..	..	..	..	3.1	3.2	3.27	3.35	..
+Ghana	GHA	6th pillar: Goods market efficiency	GCI.6THPILLAR.XQ	..	..	..	..	..	3.9	3.94	4.09	4.2	..
+Ghana	GHA	7th pillar: Labor market efficiency	GCI.7THPILLAR.XQ	..	..	..	..	..	4	4.06	4.17	4.25	..
+Ghana	GHA	8th pillar: Financial market sophistication	GCI.8THPILLAR.XQ	..	..	..	..	..	4.3	4.35	4.24	4.16	..
+Ghana	GHA	9th pillar: Techonological readiness	GCI.9THPILLAR.XQ	..	..	..	..	..	2.5	2.68	2.85	2.97	..
+Ghana	GHA	Access to finance (% of firms identifying this as a major constraint)	IC.FRM.FINA.ZS	..	..	..	..	66.2	..	..	..	..	..
+Ghana	GHA	Access to land (% of managers surveyed ranking this as a major constraint)	IC.CNS.LAND.ZS	..	..	..	..	3.8	..	..	..	..	..
+Ghana	GHA	Adjustment to Arrears	DT.DTA.OADJ.CD	..	..	..	..	..	..	..	..	..	..
+Ghana	GHA	Adjustments to foreign scheduled debt service (current LCU)	GB.TDS.ABRD.CN	0	0	0	0	0	0	0	0	..	..
+Ghana	GHA	Adjustments to foreign scheduled principal repayments (current LCU)	GB.AMA.ABRD.CN	0	0	0	0	0	0	0	0	..	..
+Ghana	GHA	Adjustments to scheduled debt service (current US$)	DT.TDA.DECT.CD	-34920000	-34920000	-35000000	-35000000	0	0	0	0	0	..
+Ghana	GHA	Adjustments to scheduled interest (current US$)	DT.INA.DECT.CD	45278499.25	40431408	46191615	6275421.75	-10946187.883	3203000	13914000	-26175000	94459000	..
+Ghana	GHA	Age dependency ratio (% of working-age population)	SP.POP.DPND	77.4835854219396	76.7845075865726	76.1412287637624	75.5469810396587	74.9969180376776	74.4911506631762	74.0304054246543	73.6096783115724	73.22942129394	..
+Ghana	GHA	Age dependency ratio, old (% of working-age population)	SP.POP.DPND.OL	6.15395982105337	6.20433309653152	6.2605174919413	6.32133050670443	6.38627281653756	6.45675432236264	6.53474405823784	6.62054693139535	6.71604358507707	..
+Ghana	GHA	Age dependency ratio, young (% of working-age population)	SP.POP.DPND.YG	71.3296256008862	70.5801744900411	69.8807112718211	69.2256505329543	68.61064522114	68.0343963408135	67.4956613664165	66.9891313801771	66.5133777088629	..
+Ghana	GHA	Age of firm (years)	IC.FRM.AGE.YR	..	..	..	..	15.29	..	..	..	..	..
+Ghana	GHA	Agricultural area irrigated (ha)	AG.LND.IRIG.HA.AG	..	..	11000	18000	11000	..	..	30000	..	..
+Guinea	GIN	"Fiscal balance, cash surplus/deficit (current US$)"	GC.BAL.CASH.CD	..	..	..	..	..	..	..	..	..	..
+Guinea	GIN	10th pillar: Market size	GCI.10THPILLAR.XQ	..	..	..	..	..	..	..	..	..	..
+Guinea	GIN	11th pillar: Business sophistication	GCI.11THPILLAR.XQ	..	..	..	..	..	..	..	..	..	..
+Guinea	GIN	12th pillar: Innovation	GCI.12THPILLAR.XQ	..	..	..	..	..	..	..	..	..	..
+Guinea	GIN	1st pillar: Institutions	GCI.1STPILLAR.XQ	..	..	..	..	..	..	..	..	..	..
+Guinea	GIN	2nd pillar: Infrastructure	GCI.2NDPILLAR.XQ	..	..	..	..	..	..	..	..	..	..
+Guinea	GIN	3rd pillar: Macroeconomic stability	GCI.3RDPILLAR.XQ	..	..	..	..	..	..	..	..	..	..
+Guinea	GIN	4th pllar: Health and primary education	GCI.4THPILLAR.XQ	..	..	..	..	..	..	..	..	..	..
+Guinea	GIN	5th pillar: Higher education and training	GCI.5THPILLAR.XQ	..	..	..	..	..	..	..	..	..	..
+Guinea	GIN	6th pillar: Goods market efficiency	GCI.6THPILLAR.XQ	..	..	..	..	..	..	..	..	..	..
+Guinea	GIN	7th pillar: Labor market efficiency	GCI.7THPILLAR.XQ	..	..	..	..	..	..	..	..	..	..
+Guinea	GIN	8th pillar: Financial market sophistication	GCI.8THPILLAR.XQ	..	..	..	..	..	..	..	..	..	..
+Guinea	GIN	9th pillar: Techonological readiness	GCI.9THPILLAR.XQ	..	..	..	..	..	..	..	..	..	..
+Guinea	GIN	Access to finance (% of firms identifying this as a major constraint)	IC.FRM.FINA.ZS	..	..	..	58.3	..	..	..	..	..	..
+Guinea	GIN	Access to land (% of managers surveyed ranking this as a major constraint)	IC.CNS.LAND.ZS	..	..	..	1.9	..	..	..	..	..	..
+Guinea	GIN	Adjustment to Arrears	DT.DTA.OADJ.CD	..	..	..	..	..	..	..	..	..	..
+Guinea	GIN	Adjustments to foreign scheduled debt service (current LCU)	GB.TDS.ABRD.CN	..	..	..	..	..	..	..	..	..	..
+Guinea	GIN	Adjustments to foreign scheduled principal repayments (current LCU)	GB.AMA.ABRD.CN	..	..	..	..	..	..	..	..	..	..
+Guinea	GIN	Adjustments to scheduled debt service (current US$)	DT.TDA.DECT.CD	..	..	..	..	..	..	..	..	..	..
+Guinea	GIN	Adjustments to scheduled interest (current US$)	DT.INA.DECT.CD	8988498.31070974	12818638.1838406	768115.409878999	4554433.73022205	5236482.20879687	30729618.4674159	4063628.71115097	17295741.0836397	13456486.7287736	..
+Guinea	GIN	Age dependency ratio (% of working-age population)	SP.POP.DPND	89.4624021237921	89.004194768754	88.5364822224391	88.0662204987364	87.5902992621161	87.0946117601098	86.5603290697381	85.9780018225922	85.3457965751894	..
+Guinea	GIN	Age dependency ratio, old (% of working-age population)	SP.POP.DPND.OL	6.29361053107587	6.28611473922546	6.27707171329695	6.26829426809234	6.25973486933887	6.24699808464589	6.22458527993174	6.19016184030016	6.14205898069462	..
+Guinea	GIN	Age dependency ratio, young (% of working-age population)	SP.POP.DPND.YG	83.1687915927163	82.7180800295286	82.2594105091421	81.797926230644	81.3305643927773	80.8476136754639	80.3357437898063	79.7878399822921	79.2037375944947	..
+Guinea	GIN	Age of firm (years)	IC.FRM.AGE.YR	..	..	..	8.41	..	..	..	..	..	..
+Guinea	GIN	Agricultural area irrigated (ha)	AG.LND.IRIG.HA.AG	..	..	..	..	..	..	..	..	..	..
+Guinea-Bissau	GNB	"Fiscal balance, cash surplus/deficit (current US$)"	GC.BAL.CASH.CD	..	..	..	..	..	..	..	..	..	..
+Guinea-Bissau	GNB	10th pillar: Market size	GCI.10THPILLAR.XQ	..	..	..	..	..	..	..	..	..	..
+Guinea-Bissau	GNB	11th pillar: Business sophistication	GCI.11THPILLAR.XQ	..	..	..	..	..	..	..	..	..	..
+Guinea-Bissau	GNB	12th pillar: Innovation	GCI.12THPILLAR.XQ	..	..	..	..	..	..	..	..	..	..
+Guinea-Bissau	GNB	1st pillar: Institutions	GCI.1STPILLAR.XQ	..	..	..	..	..	..	..	..	..	..
+Guinea-Bissau	GNB	2nd pillar: Infrastructure	GCI.2NDPILLAR.XQ	..	..	..	..	..	..	..	..	..	..
+Guinea-Bissau	GNB	3rd pillar: Macroeconomic stability	GCI.3RDPILLAR.XQ	..	..	..	..	..	..	..	..	..	..
+Guinea-Bissau	GNB	4th pllar: Health and primary education	GCI.4THPILLAR.XQ	..	..	..	..	..	..	..	..	..	..
+Guinea-Bissau	GNB	5th pillar: Higher education and training	GCI.5THPILLAR.XQ	..	..	..	..	..	..	..	..	..	..
+Guinea-Bissau	GNB	6th pillar: Goods market efficiency	GCI.6THPILLAR.XQ	..	..	..	..	..	..	..	..	..	..
+Guinea-Bissau	GNB	7th pillar: Labor market efficiency	GCI.7THPILLAR.XQ	..	..	..	..	..	..	..	..	..	..
+Guinea-Bissau	GNB	8th pillar: Financial market sophistication	GCI.8THPILLAR.XQ	..	..	..	..	..	..	..	..	..	..
+Guinea-Bissau	GNB	9th pillar: Techonological readiness	GCI.9THPILLAR.XQ	..	..	..	..	..	..	..	..	..	..
+Guinea-Bissau	GNB	Access to finance (% of firms identifying this as a major constraint)	IC.FRM.FINA.ZS	..	..	..	71.6	..	..	..	..	..	..
+Guinea-Bissau	GNB	Access to land (% of managers surveyed ranking this as a major constraint)	IC.CNS.LAND.ZS	..	..	..	0	..	..	..	..	..	..
+Guinea-Bissau	GNB	Adjustment to Arrears	DT.DTA.OADJ.CD	..	..	..	..	..	..	..	..	..	..
+Guinea-Bissau	GNB	Adjustments to foreign scheduled debt service (current LCU)	GB.TDS.ABRD.CN	..	..	..	..	..	..	..	..	..	..
+Guinea-Bissau	GNB	Adjustments to foreign scheduled principal repayments (current LCU)	GB.AMA.ABRD.CN	..	..	..	..	..	..	..	..	..	..
+Guinea-Bissau	GNB	Adjustments to scheduled debt service (current US$)	DT.TDA.DECT.CD	-28505046.338	-10908179.022	6455959.9989	-12478652.943	-21522061.663	-12891667.246	1031987.6181	921338062.53	0	..
+Guinea-Bissau	GNB	Adjustments to scheduled interest (current US$)	DT.INA.DECT.CD	4686777.4156	2911395.2241	3786872.746	-22814.0803	-1697448.8157	2395312.2376	6289834.618	-2564917.47573	-137087.56279	..
+Guinea-Bissau	GNB	Age dependency ratio (% of working-age population)	SP.POP.DPND	84.9409927840997	84.4120405900912	83.8381272287615	83.2229348703776	82.5877592778489	81.9379505406488	81.2837131354193	80.6332554479996	79.9770122163318	..
+Guinea-Bissau	GNB	Age dependency ratio, old (% of working-age population)	SP.POP.DPND.OL	6.00213804453322	5.96610523825635	5.94730680258667	5.95009420522954	5.97190010807651	6.00020024028835	6.01999335509215	6.02296027847981	6.00090508581447	..
+Guinea-Bissau	GNB	Age dependency ratio, young (% of working-age population)	SP.POP.DPND.YG	78.9388547395665	78.4459353518349	77.8908204261748	77.272840665148	76.6158591697724	75.9377503003604	75.2637197803272	74.6102951695198	73.9761071305173	..
+Guinea-Bissau	GNB	Age of firm (years)	IC.FRM.AGE.YR	..	..	..	10.42	..	..	..	..	..	..
+Guinea-Bissau	GNB	Agricultural area irrigated (ha)	AG.LND.IRIG.HA.AG	..	..	..	..	..	..	..	..	..	..
+													
+													
+													
+Data from database: Africa Development Indicators													
+Last Updated: 02/22/2013													

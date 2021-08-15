@@ -1,0 +1,824 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eml:eml packageId="knb-lter-cap.256.9" scope="system"
+  system="https://pasta.lternet.edu"
+  xmlns:eml="eml://ecoinformatics.org/eml-2.1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="eml://ecoinformatics.org/eml-2.1.0 http://data.gios.asu.edu/eml2_1_0/eml.xsd">
+  <access authSystem="https://pasta.lternet.edu/authentication"
+    order="allowFirst" scope="document" system="https://pasta.lternet.edu">
+    <allow>
+      <principal>uid=CAP,o=LTER,dc=ecoinformatics,dc=org</principal>
+      <permission>all</permission>
+    </allow>
+    <allow>
+      <principal>public</principal>
+      <permission>read</permission>
+    </allow>
+  </access>
+  <dataset id="256_1" system="gios_dataset">
+    <alternateIdentifier system="gios_dataset">256</alternateIdentifier>
+    <title>Ecological and social Interactions in urban parks: bird surveys in local parks in the central Arizona-Phoenix metropolitan area</title>
+    <creator>
+      <individualName>
+        <givenName>Paige</givenName>
+        <givenName>S.</givenName>
+        <surName>Warren</surName>
+      </individualName>
+      <positionName>Research Assistant Professor</positionName>
+      <organizationName>University of Massachusetts-Amherst</organizationName>
+      <address>
+        <deliveryPoint>Holdsworth Hall</deliveryPoint>
+        <deliveryPoint>Natural Resources Conservation</deliveryPoint>
+        <city>Amherst</city>
+        <administrativeArea>MA</administrativeArea>
+        <postalCode>01003</postalCode>
+      </address>
+      <phone phonetype="voice"> 413 545 0061</phone>
+      <electronicMailAddress>pswarren@forwild.umass.edu</electronicMailAddress>
+    </creator>
+    <creator>
+      <individualName>
+        <givenName>Ann</givenName>
+        <surName>Kinzig</surName>
+      </individualName>
+      <positionName>Assistant Professor</positionName>
+      <organizationName>Arizona State University</organizationName>
+      <address>
+        <deliveryPoint>PO BOX 874501</deliveryPoint>
+        <deliveryPoint>School of Life Sciences</deliveryPoint>
+        <city>Tempe</city>
+        <administrativeArea>AZ</administrativeArea>
+        <postalCode>85287-4501</postalCode>
+      </address>
+      <phone phonetype="voice">(480) 965-6838</phone>
+      <phone phonetype="fax">(480) 965-2519</phone>
+      <electronicMailAddress>akinzig@asu.edu</electronicMailAddress>
+    </creator>
+    <creator>
+      <individualName>
+        <givenName>Chris</givenName>
+        <givenName>A</givenName>
+        <surName>Martin</surName>
+      </individualName>
+      <positionName>Associate Professor</positionName>
+      <organizationName>Arizona State University</organizationName>
+      <address>
+        <deliveryPoint>7001 E Williams Field Rd., Bldg. 130</deliveryPoint>
+        <deliveryPoint>Urban Horticulture Program</deliveryPoint>
+        <city>Mesa</city>
+        <administrativeArea>AZ</administrativeArea>
+        <postalCode>85212</postalCode>
+      </address>
+      <phone phonetype="voice">(480) 727-1247</phone>
+      <electronicMailAddress>chris.martin@asu.edu</electronicMailAddress>
+    </creator>
+    <creator>
+      <individualName>
+        <givenName>Louis</givenName>
+        <surName>Machabee</surName>
+      </individualName>
+      <organizationName>Global Institute of Sustainability, Arizona State
+                University</organizationName>
+    </creator>
+    <pubDate>2005</pubDate>
+    <language>english</language>
+    <abstract>
+      <para>Our central objective is to use small, neighborhood parks in Phoenix to study: (1)
+                the ways in which ecological processes are influenced by human values, use, and
+                management; and (2) the ways in which human attitudes and activities, and the
+                services valued by humans, are influenced by ecological characteristics and
+                processes. Elucidating this coupling in Phoenix parks will itself be a significant
+                step towards understanding the complexities of human-nature interactions. The
+                information gathered in addressing the central objective, though, can and should be
+                used to assess potential trajectories for ecological processes. Our second objective
+                is to develop trajectories for potential changes in ecosystem services in the
+                Phoenix metropolitan area, given economic and demographic trends, and given the
+                signal of human-nature interactions among different social groups.</para>
+    </abstract>
+    <keywordSet>
+      <keyword keywordType="theme">human decisions and biodiversity</keyword>
+      <keyword keywordType="theme">population studies</keyword>
+      <keywordThesaurus>IPA and Core Area CAP Data Portal Controler</keywordThesaurus>
+    </keywordSet>
+    <keywordSet>
+      <keyword keywordType="place">sonoran desert</keyword>
+      <keyword keywordType="place">phoenix</keyword>
+      <keyword keywordType="theme">urban</keyword>
+      <keyword keywordType="theme">metropolitan area</keyword>
+      <keyword keywordType="theme">populations</keyword>
+      <keyword keywordType="theme">human decisions and biodiversity</keyword>
+      <keyword keywordType="theme">vegetation</keyword>
+      <keyword keywordType="theme">birds</keyword>
+      <keyword keywordType="theme">social class</keyword>
+      <keyword keywordType="theme">economic class</keyword>
+      <keywordThesaurus>Creator Defined Keyword Set</keywordThesaurus>
+    </keywordSet>
+    <keywordSet>
+      <keyword keywordType="theme">urban</keyword>
+      <keyword keywordType="theme">deserts</keyword>
+      <keyword keywordType="theme">surveys</keyword>
+      <keyword keywordType="theme">humans</keyword>
+      <keyword keywordType="theme">processes</keyword>
+      <keyword keywordType="theme">species</keyword>
+      <keyword keywordType="theme">birds</keyword>
+      <keyword keywordType="theme">wind</keyword>
+      <keyword keywordType="theme">air temperature</keyword>
+      <keyword keywordType="theme">wind direction</keyword>
+      <keywordThesaurus>LTER Controlled Vocabulary Keyword Set</keywordThesaurus>
+    </keywordSet>
+    <keywordSet>
+      <keyword keywordType="theme">caplter</keyword>
+      <keyword keywordType="theme">central arizona phoenix longterm ecological research</keyword>
+      <keyword keywordType="place">arizona</keyword>
+      <keyword keywordType="theme">caplter created</keyword>
+      <keyword keywordType="place">az</keyword>
+      <keyword keywordType="theme">cap</keyword>
+      <keyword keywordType="theme">arid land</keyword>
+      <keywordThesaurus>CAPLTER Keyword Set List</keywordThesaurus>
+    </keywordSet>
+    <intellectualRights>
+      <section>
+        <para>Copyright Board of Regents, Arizona State University. This dataset is released
+                    to the public and may be used for academic, educational, or commercial purposes
+                    subject to the following restrictions:</para>
+        <para>
+          <itemizedlist>
+            <listitem>
+              <para>While CAP LTER will make every effort possible to control and
+                                document the quality of the data it publishes, the data are made
+                                available "as is".</para>
+            </listitem>
+            <listitem>
+              <para>CAP LTER cannot assume responsibility for damages resulting from
+                                mis-use or mis-interpretation of datasets or from errors or
+                                omissions that may exist in the data.</para>
+            </listitem>
+            <listitem>
+              <para>It is considered a matter of professional ethics to acknowledge
+                                the work of other scientists that has resulted in data used in
+                                subsequent research.</para>
+            </listitem>
+            <listitem>
+              <para>CAP LTER expects that any use of data from this server will be
+                                accompanied with the appropriate citations and
+                                acknowledgments.</para>
+            </listitem>
+            <listitem>
+              <para>CAP LTER encourages users to contact the original investigator
+                                responsible for the data that they are accessing. Where appropriate,
+                                researchers whose projects are integrally dependent on CAP LTER data
+                                are encouraged to consider collaboration and/or co-authorship with
+                                original investigators.</para>
+            </listitem>
+            <listitem>
+              <para>CAP LTER requests that users submit to the Global Institute of
+                                Sustainability, ASU, one copy of any publication resulting from the
+                                use of data obtained from this site.</para>
+            </listitem>
+            <listitem>
+              <para>CAP LTER requests that users not redistribute data obtained from
+                                this site. However, links or references to this site may be freely
+                                posted.</para>
+            </listitem>
+          </itemizedlist>
+        </para>
+      </section>
+    </intellectualRights>
+    <distribution>
+      <online>
+        <url>http://data.gios.asu.edu/cap/HarvestListFileShow.php?id=256</url>
+      </online>
+    </distribution>
+    <coverage>
+      <geographicCoverage>
+        <geographicDescription>Phoenix metropolitan area, Arizona, USA, located at the
+                    northern edge of the Sonoran Desert</geographicDescription>
+        <boundingCoordinates>
+          <westBoundingCoordinate>-112.163232</westBoundingCoordinate>
+          <eastBoundingCoordinate>-111.965822</eastBoundingCoordinate>
+          <northBoundingCoordinate>33.689813</northBoundingCoordinate>
+          <southBoundingCoordinate>33.350666</southBoundingCoordinate>
+        </boundingCoordinates>
+      </geographicCoverage>
+      <temporalCoverage>
+        <rangeOfDates>
+          <beginDate>
+            <calendarDate>2000-12-01</calendarDate>
+          </beginDate>
+          <endDate>
+            <calendarDate>2002-11-14</calendarDate>
+          </endDate>
+        </rangeOfDates>
+      </temporalCoverage>
+    </coverage>
+    <maintenance>
+      <description>
+        <para>This research has been concluded</para>
+      </description>
+      <maintenanceUpdateFrequency>asNeeded</maintenanceUpdateFrequency>
+    </maintenance>
+    <contact>
+      <positionName>Information Manager</positionName>
+      <organizationName>LTER Network Office</organizationName>
+      <address>
+        <deliveryPoint>UNM Biology Department, MSC03-2020</deliveryPoint>
+        <deliveryPoint>1 University of New Mexico</deliveryPoint>
+        <city>Albuquerque</city>
+        <administrativeArea>NM</administrativeArea>
+        <postalCode>87131-0001</postalCode>
+        <country>USA</country>
+      </address>
+      <phone phonetype="voice">505 277-2535</phone>
+      <phone phonetype="fax">505 277-2541</phone>
+      <electronicMailAddress>tech-support@lternet.edu</electronicMailAddress>
+      <onlineUrl>http://www.lternet.edu</onlineUrl>
+    </contact>
+    <contact>
+      <positionName>Information Manager</positionName>
+      <organizationName>Global Institute of Sustainability, Arizona State
+                University</organizationName>
+      <address>
+        <deliveryPoint>Global Institute of Sustainability, Arizona State University, POB 875402</deliveryPoint>
+        <city>TEMPE</city>
+        <administrativeArea>AZ</administrativeArea>
+        <postalCode>85287-5402</postalCode>
+      </address>
+      <phone phonetype="voice">(480) 965 2975</phone>
+      <phone phonetype="fax">(480) 965-8087</phone>
+      <electronicMailAddress>caplter.data@asu.edu</electronicMailAddress>
+    </contact>
+    <dataTable id="pp52_birds">
+      <entityName>52_pp52_birds_1.csv</entityName>
+      <entityDescription>bird observations</entityDescription>
+      <physical>
+        <objectName>52_pp52_birds_1.csv</objectName>
+        <size unit="bytes">1687552</size>
+        <dataFormat>
+          <textFormat>
+            <numHeaderLines>1</numHeaderLines>
+            <recordDelimiter>#x0D#x0A</recordDelimiter>
+            <attributeOrientation>column</attributeOrientation>
+            <simpleDelimited>
+              <fieldDelimiter>,</fieldDelimiter>
+              <quoteCharacter>"</quoteCharacter>
+            </simpleDelimited>
+          </textFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url>https://pasta.lternet.edu/package/data/eml/knb-lter-cap/256/9/53edaa7a0e083013d9bf20322db1780e</url>
+          </online>
+        </distribution>
+      </physical>
+      <attributeList id="pp52_birds.attributeList">
+        <attribute id="pp52_birds.survey_id">
+          <attributeName>survey_id</attributeName>
+          <attributeDefinition>survey id number</attributeDefinition>
+          <storageType typeSystem="http://www.w3.org/2001/XMLSchema-datatypes">integer</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>survey ID</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute id="pp52_birds.site_id">
+          <attributeName>site_id</attributeName>
+          <attributeDefinition>site id number</attributeDefinition>
+          <storageType typeSystem="http://www.w3.org/2001/XMLSchema-datatypes">string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>site ID</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute id="pp52_birds.species_id">
+          <attributeName>species_id</attributeName>
+          <attributeDefinition>species id code</attributeDefinition>
+          <storageType typeSystem="http://www.w3.org/2001/XMLSchema-datatypes">string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>taxon ID</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute id="pp52_birds.distance">
+          <attributeName>distance</attributeName>
+          <attributeDefinition>approximate distance of birds in
+                        meter</attributeDefinition>
+          <storageType typeSystem="http://www.w3.org/2001/XMLSchema-datatypes">string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>approximate distance of birds in feet</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute id="pp52_birds.bird_count">
+          <attributeName>bird_count</attributeName>
+          <attributeDefinition>brid count</attributeDefinition>
+          <storageType typeSystem="http://www.w3.org/2001/XMLSchema-datatypes">integer</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>number</standardUnit>
+              </unit>
+              <precision>1</precision>
+              <numericDomain>
+                <numberType>integer</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute id="pp52_birds.notes">
+          <attributeName>notes</attributeName>
+          <attributeDefinition>Extra Observations</attributeDefinition>
+          <storageType typeSystem="http://www.w3.org/2001/XMLSchema-datatypes">ntext</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>addtional notes</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute id="pp52_birds.seen">
+          <attributeName>seen</attributeName>
+          <attributeDefinition>if bird was seen</attributeDefinition>
+          <storageType typeSystem="http://www.w3.org/2001/XMLSchema-datatypes">bit</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <enumeratedDomain>
+                  <codeDefinition>
+                    <code>0</code>
+                    <definition>false</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>1</code>
+                    <definition>true</definition>
+                  </codeDefinition>
+                </enumeratedDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute id="pp52_birds.heard">
+          <attributeName>heard</attributeName>
+          <attributeDefinition>if bird was heard</attributeDefinition>
+          <storageType typeSystem="http://www.w3.org/2001/XMLSchema-datatypes">bit</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <enumeratedDomain>
+                  <codeDefinition>
+                    <code>0</code>
+                    <definition>false</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>1</code>
+                    <definition>true</definition>
+                  </codeDefinition>
+                </enumeratedDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute id="pp52_birds.direction">
+          <attributeName>direction</attributeName>
+          <attributeDefinition>direction bird was located</attributeDefinition>
+          <storageType typeSystem="http://www.w3.org/2001/XMLSchema-datatypes">string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>direction bird was located</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+      </attributeList>
+    </dataTable>
+    <dataTable id="pp52_surveys">
+      <entityName>52_pp52_surveys_1.csv</entityName>
+      <entityDescription>date and other information for each survey event</entityDescription>
+      <physical>
+        <objectName>52_pp52_surveys_1.csv</objectName>
+        <size unit="bytes">290816</size>
+        <dataFormat>
+          <textFormat>
+            <numHeaderLines>1</numHeaderLines>
+            <recordDelimiter>#x0A</recordDelimiter>
+            <attributeOrientation>column</attributeOrientation>
+            <simpleDelimited>
+              <fieldDelimiter>,</fieldDelimiter>
+            </simpleDelimited>
+          </textFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url>https://pasta.lternet.edu/package/data/eml/knb-lter-cap/256/9/b2466fa5cb5ed7ee1ea91398fc291c59</url>
+          </online>
+        </distribution>
+      </physical>
+      <attributeList id="pp52_surveys.attributeList">
+        <attribute id="pp52_surveys.site_id">
+          <attributeName>site_id</attributeName>
+          <attributeDefinition>site id number</attributeDefinition>
+          <storageType typeSystem="http://www.w3.org/2001/XMLSchema-datatypes">string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>site id</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute id="pp52_surveys.survey_id">
+          <attributeName>survey_id</attributeName>
+          <attributeDefinition>survey id number</attributeDefinition>
+          <storageType typeSystem="http://www.w3.org/2001/XMLSchema-datatypes">integer</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>survey id</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute id="pp52_surveys.survey_date">
+          <attributeName>survey_date</attributeName>
+          <attributeDefinition>Date the survey was taken</attributeDefinition>
+          <storageType typeSystem="http://www.w3.org/2001/XMLSchema-datatypes">datetime</storageType>
+          <measurementScale>
+            <dateTime>
+              <formatString>MM/DD/YYYY</formatString>
+              <dateTimePrecision>1</dateTimePrecision>
+              <dateTimeDomain>
+                <bounds>
+                  <minimum exclusive="false">12/1/2000</minimum>
+                  <maximum exclusive="false">11/14/2002</maximum>
+                </bounds>
+              </dateTimeDomain>
+            </dateTime>
+          </measurementScale>
+        </attribute>
+        <attribute id="pp52_surveys.time_start">
+          <attributeName>time_start</attributeName>
+          <attributeDefinition>Time the survey started</attributeDefinition>
+          <storageType typeSystem="http://www.w3.org/2001/XMLSchema-datatypes">datetime</storageType>
+          <measurementScale>
+            <dateTime>
+              <formatString>hh:mm:ss A/P</formatString>
+              <dateTimePrecision>1</dateTimePrecision>
+              <dateTimeDomain>
+                <bounds>
+                  <minimum exclusive="false">4:50:00 AM</minimum>
+                  <maximum exclusive="false">11:45:00 AM</maximum>
+                </bounds>
+              </dateTimeDomain>
+            </dateTime>
+          </measurementScale>
+        </attribute>
+        <attribute id="pp52_surveys.time_end">
+          <attributeName>time_end</attributeName>
+          <attributeDefinition>Time the survey ended</attributeDefinition>
+          <storageType typeSystem="http://www.w3.org/2001/XMLSchema-datatypes">datetime</storageType>
+          <measurementScale>
+            <dateTime>
+              <formatString>hh:mm:ss A/P</formatString>
+              <dateTimePrecision>1</dateTimePrecision>
+              <dateTimeDomain>
+                <bounds>
+                  <minimum exclusive="false">4:43:00 AM</minimum>
+                  <maximum exclusive="false">7:14:00 PM</maximum>
+                </bounds>
+              </dateTimeDomain>
+            </dateTime>
+          </measurementScale>
+        </attribute>
+        <attribute id="pp52_surveys.observer">
+          <attributeName>observer</attributeName>
+          <attributeDefinition>observer's name</attributeDefinition>
+          <storageType typeSystem="http://www.w3.org/2001/XMLSchema-datatypes">string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>observer's name</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute id="pp52_surveys.wind_speed">
+          <attributeName>wind_speed</attributeName>
+          <attributeDefinition>wind speed</attributeDefinition>
+          <storageType typeSystem="http://www.w3.org/2001/XMLSchema-datatypes">integer</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>milesPerHour</standardUnit>
+              </unit>
+              <precision>1</precision>
+              <numericDomain>
+                <numberType>integer</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute id="pp52_surveys.wind_dir">
+          <attributeName>wind_dir</attributeName>
+          <attributeDefinition>wind direction</attributeDefinition>
+          <storageType typeSystem="http://www.w3.org/2001/XMLSchema-datatypes">string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>wind direction</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute id="pp52_surveys.air_temp">
+          <attributeName>air_temp</attributeName>
+          <attributeDefinition>air temperature in Fahrenheit</attributeDefinition>
+          <storageType typeSystem="http://www.w3.org/2001/XMLSchema-datatypes">integer</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>fahrenheit</standardUnit>
+              </unit>
+              <precision>1</precision>
+              <numericDomain>
+                <numberType>integer</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute id="pp52_surveys.temp_units">
+          <attributeName>temp_units</attributeName>
+          <attributeDefinition>air temperature units</attributeDefinition>
+          <storageType typeSystem="http://www.w3.org/2001/XMLSchema-datatypes">string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <enumeratedDomain>
+                  <codeDefinition>
+                    <code>F</code>
+                    <definition>fahrenheit</definition>
+                  </codeDefinition>
+                </enumeratedDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute id="pp52_surveys.cloud_cover">
+          <attributeName>cloud_cover</attributeName>
+          <attributeDefinition>cloud cover percentage</attributeDefinition>
+          <storageType typeSystem="http://www.w3.org/2001/XMLSchema-datatypes">integer</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>dimensionless</standardUnit>
+              </unit>
+              <precision>1</precision>
+              <numericDomain>
+                <numberType>integer</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute id="pp52_surveys.notes">
+          <attributeName>notes</attributeName>
+          <attributeDefinition>addtional notes</attributeDefinition>
+          <storageType typeSystem="http://www.w3.org/2001/XMLSchema-datatypes">ntext</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>additional notes</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+      </attributeList>
+    </dataTable>
+    <dataTable id="pp52_sites">
+      <entityName>52_pp52_sites_1.csv</entityName>
+      <entityDescription>sites at which the bird surveys were conducted</entityDescription>
+      <physical>
+        <objectName>52_pp52_sites_1.csv</objectName>
+        <size unit="bytes">12288</size>
+        <dataFormat>
+          <textFormat>
+            <numHeaderLines>1</numHeaderLines>
+            <recordDelimiter>#x0A</recordDelimiter>
+            <attributeOrientation>column</attributeOrientation>
+            <simpleDelimited>
+              <fieldDelimiter>,</fieldDelimiter>
+            </simpleDelimited>
+          </textFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url>https://pasta.lternet.edu/package/data/eml/knb-lter-cap/256/9/81bf72420e69077097fb0790dcdc63a6</url>
+          </online>
+        </distribution>
+      </physical>
+      <attributeList id="pp52_sites.attributeList">
+        <attribute id="pp52_sites.site_id">
+          <attributeName>site_id</attributeName>
+          <attributeDefinition>site id number</attributeDefinition>
+          <storageType typeSystem="http://www.w3.org/2001/XMLSchema-datatypes">string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>site ID</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute id="pp52_sites.park_code">
+          <attributeName>park_code</attributeName>
+          <attributeDefinition>park code</attributeDefinition>
+          <storageType typeSystem="http://www.w3.org/2001/XMLSchema-datatypes">string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>park code</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute id="pp52_sites.park_district">
+          <attributeName>park_district</attributeName>
+          <attributeDefinition>park district</attributeDefinition>
+          <storageType typeSystem="http://www.w3.org/2001/XMLSchema-datatypes">string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>park district</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute id="pp52_sites.park_name">
+          <attributeName>park_name</attributeName>
+          <attributeDefinition>park name</attributeDefinition>
+          <storageType typeSystem="http://www.w3.org/2001/XMLSchema-datatypes">string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>park name</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute id="pp52_sites.point_code">
+          <attributeName>point_code</attributeName>
+          <attributeDefinition>point code</attributeDefinition>
+          <storageType typeSystem="http://www.w3.org/2001/XMLSchema-datatypes">string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>point code</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute id="pp52_sites.point_location">
+          <attributeName>point_location</attributeName>
+          <attributeDefinition>point location</attributeDefinition>
+          <storageType typeSystem="http://www.w3.org/2001/XMLSchema-datatypes">string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>point location</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute id="pp52_sites.park_acreage">
+          <attributeName>park_acreage</attributeName>
+          <attributeDefinition>park acreage</attributeDefinition>
+          <storageType typeSystem="http://www.w3.org/2001/XMLSchema-datatypes">float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>acre</standardUnit>
+              </unit>
+              <precision>0.1</precision>
+              <numericDomain>
+                <numberType>real</numberType>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+      </attributeList>
+    </dataTable>
+    <dataTable id="pp52_taxalist">
+      <entityName>52_pp52_taxalist_1.csv</entityName>
+      <entityDescription>lookup table for bird taxon names</entityDescription>
+      <physical>
+        <objectName>52_pp52_taxalist_1.csv</objectName>
+        <size unit="bytes">12288</size>
+        <dataFormat>
+          <textFormat>
+            <numHeaderLines>1</numHeaderLines>
+            <recordDelimiter>#x0A</recordDelimiter>
+            <attributeOrientation>column</attributeOrientation>
+            <simpleDelimited>
+              <fieldDelimiter>,</fieldDelimiter>
+            </simpleDelimited>
+          </textFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url>https://pasta.lternet.edu/package/data/eml/knb-lter-cap/256/9/58f863b7e3066e68536a9cacdc7bd58e</url>
+          </online>
+        </distribution>
+      </physical>
+      <attributeList id="pp52_taxalist.attributeList">
+        <attribute id="pp52_taxalist.species_id">
+          <attributeName>species_id</attributeName>
+          <attributeDefinition>species id code</attributeDefinition>
+          <storageType typeSystem="http://www.w3.org/2001/XMLSchema-datatypes">string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>taxon ID</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute id="pp52_taxalist.common_name">
+          <attributeName>common_name</attributeName>
+          <attributeDefinition>bird common name</attributeDefinition>
+          <storageType typeSystem="http://www.w3.org/2001/XMLSchema-datatypes">string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>bird common name</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute id="pp52_taxalist.asu_itis">
+          <attributeName>asu_itis</attributeName>
+          <attributeDefinition>Arizona State University Integrated Taxonomic Information
+                        System Code</attributeDefinition>
+          <storageType typeSystem="http://www.w3.org/2001/XMLSchema-datatypes">integer</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Arizona State University Integrated Taxonomic
+                                        Information System Code</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+      </attributeList>
+    </dataTable>
+  </dataset>
+</eml:eml>

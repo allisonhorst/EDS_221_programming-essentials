@@ -1,0 +1,212 @@
+---
+title: "Day 9 Activities"
+subtitle: "Troubleshooting, reprex, and working with data continued"
+output: 
+  html_document:
+    css: activity_theme.css
+    toc: true
+    toc_float: true
+---
+
+## Setup
+
+- Fork and clone [this repo]
+- Explore the contents a bit to familiarize yourself with the structure
+
+## Task 1: SOS - Save our script! 
+
+- Open the `busted_birds.Rmd` file
+- Try to knit it. Not happening! 
+- Work through the code from the top line down, fixing errors where indicated and using the hints for what the code is actually trying to do. 
+
+**Note:** It's not enough to just get the code to run. You need to actually make sure it's doing what you expect it to do by checking and understanding the outputs of *each line*. 
+
+## Task 2: Help a friend by making a `reprex`
+
+- Open the `make_a_reprex.Rmd` file
+- There are three separate code chunks in the .Rmd. None of them will run.
+- First, try to figure out what the code in each chunk is trying to do.
+- Then, determine where the code breaks (there is only one breaking point for each chunk)
+- Then, for each **create a reprex** that provides a minimal out-of-the-box reproducible example of the thing in the code that isn't working. Create your reprex in a separate code chunk below each example. Use `{reprex}` to send your examples to your neighbor on Slack. 
+
+<!--
+## Task 1
+
+Your job is to fix all errors in the code below to make a fully functioning script that can be run straight through with "Run all" without problems. 
+
+Before each code chunk, you're given a description of what is supposed to happen in each code chunk so you don't go too astray. **You should LOOK AT THE OUTPUT of each line after you've corrected any errors to ensure that it's working as expected, and to confirm you understand what the code is doing.** 
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(here)
+library(skimr)
+library(tidytext)
+```
+
+## Read in the data
+
+The code below should read in four files, all from the data package "Ecological and social Interactions in urban parks: bird surveys in local parks in the central Arizona-Phoenix metropolitan area." Learn more, and see metadata, [here](https://portal.edirepository.org/nis/mapbrowse?packageid=knb-lter-cap.256.9).
+
+The code will store each file as an object with the file prefix. 
+
+**Data source:** Warren, P.S., A. Kinzig, C.A. Martin, and L. Machabee. 2013. Ecological and social Interactions in urban parks: bird surveys in local parks in the central Arizona-Phoenix metropolitan area ver 9. Environmental Data Initiative. https://doi.org/10.6073/pasta/bff8e94e254c9317fa42c86f413a46ce
+
+
+```{r, include = FALSE}
+
+# Create a list of file names you want to read in
+knb_files <- list.files(here("activities", "knb-lter-cap_256_9"), pattern = "*.csv")
+
+# Loop over the files, reading in and creating a stored object with 'assign()'. See ?assign for more information.
+# stringr::str_remove() simplifies the file names
+# by removing both the 55_pp52_ and the .csv that start / end all file names
+# See ?assign for more information
+
+for (i in seq_along(knb_files)) {
+  assign(knb_files[i] %>% 
+           str_remove("52_pp52_") %>% 
+           str_remove(".csv"), 
+         read_csv(here("activities", 
+                       "knb-lter-cap_256_9", 
+                       knb_files[i])))
+}
+
+```
+
+## Initial exploration
+
+Basic exploration of the bird observation dataset. 
+```{r, include = FALSE}
+# Return the dimensions 
+dim(birds_1)
+
+# Return the names of birds_1
+names(birds_1)
+
+# Overview
+skim(birds_1)
+
+# See the different species (species_id)
+unique(birds_1$species_id)
+
+# Check out the taxa information
+head(taxalist_1)
+```
+## Data wrangling
+
+The code below should join the information in `taxalist_1` to the `birds_1` data frame, by the `species_id` key. 
+
+```{r, include = FALSE}
+birds_df <- birds_1 %>% 
+  left_join(taxalist_1, by = "species_id")
+```
+
+## Find total counts by park and plot top 15
+
+The code below joins the site information to `birds_df`, then groups by and `park_name`, then finds the sum of the `bird_count` column & returns it in a table. 
+
+```{r}
+bird_totals_by_park <- birds_df %>% 
+  left_join(sites_1) %>% 
+  group_by(park_name) %>% 
+  summarize(total_count = sum(bird_count, na.rm = TRUE)) %>% 
+  slice_max(total_count, n = 15) %>% 
+  mutate(park_name = fct_reorder(park_name, total_count))
+```
+
+```{r}
+ggplot(data = bird_totals_by_park, aes(x = total_count, y = park_name)) +
+  geom_col() +
+  labs(x = "Total bird count",
+       y = "Park name") +
+  theme_minimal()
+```
+
+
+## Find top 5 bird species by park, and make a graph
+
+The code below joins the site information to the bird count data, then finds the top five most observed birds (by frequency) at each park. 
+
+```{r}
+common_birds <- birds_df %>% 
+  left_join(sites_1) %>% 
+  group_by(park_name, common_name) %>% 
+  summarize(total_count = sum(bird_count, na.rm = TRUE)) %>% 
+  slice_max(total_count, n = 5)
+```
+
+The code below should limit the observations to the following parks: Cholla Cove, Desert Willow, Nueve, Orme, Palomino, and Sonrisa. 
+
+```{r}
+selected_parks <- common_birds %>% 
+  filter(park_name %in% c("Cholla Cove", "Desert Willow", "Nueve", "Orme", "Palomino", "Sonrisa"))
+```
+
+The code below creates a faceted ggplot graph with the top 5 most frequently observed birds at each location. 
+
+```{r}
+ggplot(data = selected_parks, aes(y = common_name, x = total_count)) +
+  geom_col() +
+  scale_x_continuous(limits = c(0, 3000)) +
+  facet_wrap(~park_name, scales = "free_y") +
+  theme_linedraw() +
+  labs(x = "\nTotal bird counts", y = "Common name")
+
+ggsave(here("activities", "bird_counts.jpg"), height = 6, width = 12)
+```
+
+--->
+
+## Task 2: Reprex! 
+
+```{r, include = FALSE}
+library(tidyverse)
+library(reprex)
+library(janitor)
+```
+
+
+Data package title: Aquatic Vertebrate Population Study in Mack Creek, Andrews Experimental Forest, 1987 to present
+
+**Citation:** Gregory, S.V. and I. Arismendi. 2020. Aquatic Vertebrate Population Study in Mack Creek, Andrews Experimental Forest, 1987 to present ver 14. Environmental Data Initiative. https://doi.org/10.6073/pasta/7c78d662e847cdbe33584add8f809165
+
+```{r}
+mack_creek_vertebrates <- read_csv(here("activities", "AS00601.csv"))
+```
+
+```{r}
+# Example 1: 
+mack_creek_lengths <- mack_creek_vertebrates %>% 
+  clean_names() %>% 
+  select(year:sampledate) %>% 
+  filter(section == "CC") %>% 
+  mutate(across(where(is.character, tolower))) %>% 
+  drop_na(species) %>% 
+  group_by(species) %>% 
+  summarize(mean_length_cm = mean(length1, na.rm = TRUE),
+            sd_length_cm = sd(length1, na.rm = TRUE)) %>% 
+  ungroup()
+```
+
+```{r}
+# Example 2:
+mack_creek_vertebrates %>% 
+  clean_names() %>% 
+  filter(species == "ONCL") %>% 
+  ggplot(aes(x = length1, y = weight)) +
+         geom_point(aes(pch = 12), color = "purple") +
+         theme_minimal() +
+         labs(x = "Cutthroat trout length (cm)",
+              y = "Weight (g)")
+```
+
+
+```{r}
+# Example 3: 
+mack_factors <- mack_creek_vertebrates %>% 
+  drop_na(SPECIES) %>% 
+  fct_relevel(SPECIES, levels = c("DITE", "ONCL", "RHOL"))
+```
+
+

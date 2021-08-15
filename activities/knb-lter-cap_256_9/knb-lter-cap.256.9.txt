@@ -1,0 +1,467 @@
+Dataset title:  Ecological and social Interactions in urban parks: bird surveys in local parks in the central Arizona-Phoenix metropolitan area
+
+Dataset ID:  256
+Dataset Creator
+
+	Name:		Paige Warren
+	Position:	Research Assistant Professor
+	Organization:	University of Massachusetts-Amherst
+	
+	Address:
+			Holdsworth Hall
+			Natural Resources Conservation
+			Amherst, MA 01003  
+	
+	Phone:		 413 545 0061
+	Email:		pswarren@forwild.umass.edu
+
+	Name:		Ann Kinzig
+	Position:	Assistant Professor
+	Organization:	Arizona State University
+	
+	Address:
+			PO BOX 874501
+			School of Life Sciences
+			Tempe, AZ 85287-4501  
+	
+	Phone:		(480) 965-6838
+	Fax:		(480) 965-2519
+	Email:		akinzig@asu.edu
+
+	Name:		Chris Martin
+	Position:	Associate Professor
+	Organization:	Arizona State University
+	
+	Address:
+			7001 E Williams Field Rd., Bldg. 130
+			Urban Horticulture Program
+			Mesa, AZ 85212  
+	
+	Phone:		(480) 727-1247
+	Email:		chris.martin@asu.edu
+
+	Name:		Louis Machabee
+	Organization:	Global Institute of Sustainability, Arizona State
+                University
+
+
+Dataset Abstract
+
+	Our central objective is to use small, neighborhood parks in Phoenix to study: (1)
+                the ways in which ecological processes are influenced by human values, use, and
+                management; and (2) the ways in which human attitudes and activities, and the
+                services valued by humans, are influenced by ecological characteristics and
+                processes. Elucidating this coupling in Phoenix parks will itself be a significant
+                step towards understanding the complexities of human-nature interactions. The
+                information gathered in addressing the central objective, though, can and should be
+                used to assess potential trajectories for ecological processes. Our second objective
+                is to develop trajectories for potential changes in ecosystem services in the
+                Phoenix metropolitan area, given economic and demographic trends, and given the
+                signal of human-nature interactions among different social groups.
+
+
+Dataset Keywords
+
+	human decisions and biodiversity
+	population studies
+	sonoran desert
+	phoenix
+	urban
+	metropolitan area
+	populations
+	human decisions and biodiversity
+	vegetation
+	birds
+	social class
+	economic class
+	urban
+	deserts
+	surveys
+	humans
+	processes
+	species
+	birds
+	wind
+	air temperature
+	wind direction
+	caplter
+	central arizona phoenix longterm ecological research
+	arizona
+	caplter created
+	az
+	cap
+	arid land
+
+
+Intellectual Rights
+
+
+
+Distribution
+
+	Online distribution:  http://data.gios.asu.edu/cap/HarvestListFileShow.php?id=256
+
+
+Geographic Coverage
+
+
+	Bounding Coordinates
+
+		Geographic description:	Phoenix metropolitan area, Arizona, USA, located at the
+                    northern edge of the Sonoran Desert
+		West bounding coordinate:	-112.163232
+		East bounding coordinate:	-111.965822
+		North bounding coordinate:	33.689813
+		South bounding coordinate:	33.350666
+	
+
+
+
+Temporal Coverage
+
+	Start Date:  2000-12-01
+	End Date:  2002-11-14
+
+Maintenance
+
+	This research has been concluded
+
+
+Dataset Contact
+
+	Position:	Information Manager
+	Organization:	LTER Network Office
+	
+	Address:
+			UNM Biology Department, MSC03-2020
+			1 University of New Mexico
+			Albuquerque, NM 87131-0001  USA
+	
+	Phone:		505 277-2535
+	Fax:		505 277-2541
+	Email:		tech-support@lternet.edu
+	URL:		http://www.lternet.edu
+	Position:	Information Manager
+	Organization:	Global Institute of Sustainability, Arizona State
+                University
+	
+	Address:
+			Global Institute of Sustainability, Arizona State University, POB 875402
+			TEMPE, AZ 85287-5402  
+	
+	Phone:		(480) 965 2975
+	Fax:		(480) 965-8087
+	Email:		caplter.data@asu.edu
+
+
+
+
+Data Table
+
+	Entity Name:  52_pp52_birds_1.csv
+	Entity Description:  bird observations
+	Object Name:  52_pp52_birds_1.csv
+
+
+
+Data Format
+
+	Number of Header Lines:  1
+	Attribute Orientation:  column
+	Field Delimiter:  ,
+
+
+
+Attributes
+
+	Attribute Name:  survey_id
+	Attribute Label:  
+	Attribute Definition:  survey id number
+	Storage Type:  integer
+	Measurement Scale: 
+		survey ID
+	Missing Value Code: 
+
+
+	Attribute Name:  site_id
+	Attribute Label:  
+	Attribute Definition:  site id number
+	Storage Type:  string
+	Measurement Scale: 
+		site ID
+	Missing Value Code: 
+
+
+	Attribute Name:  species_id
+	Attribute Label:  
+	Attribute Definition:  species id code
+	Storage Type:  string
+	Measurement Scale: 
+		taxon ID
+	Missing Value Code: 
+
+
+	Attribute Name:  distance
+	Attribute Label:  
+	Attribute Definition:  approximate distance of birds in
+                        meter
+	Storage Type:  string
+	Measurement Scale: 
+		approximate distance of birds in feet
+	Missing Value Code: 
+
+
+	Attribute Name:  bird_count
+	Attribute Label:  
+	Attribute Definition:  brid count
+	Storage Type:  integer
+	Measurement Scale: 
+		Units:  number
+		Precision:  1
+		Number Type:  integer
+	Missing Value Code: 
+
+
+	Attribute Name:  notes
+	Attribute Label:  
+	Attribute Definition:  Extra Observations
+	Storage Type:  ntext
+	Measurement Scale: 
+		addtional notes
+	Missing Value Code: 
+
+
+	Attribute Name:  seen
+	Attribute Label:  
+	Attribute Definition:  if bird was seen
+	Storage Type:  bit
+	Measurement Scale: 
+		0= false
+		1= true
+	Missing Value Code: 
+
+
+	Attribute Name:  heard
+	Attribute Label:  
+	Attribute Definition:  if bird was heard
+	Storage Type:  bit
+	Measurement Scale: 
+		0= false
+		1= true
+	Missing Value Code: 
+
+
+	Attribute Name:  direction
+	Attribute Label:  
+	Attribute Definition:  direction bird was located
+	Storage Type:  string
+	Measurement Scale: 
+		direction bird was located
+	Missing Value Code: 
+
+
+	Attribute Name:  site_id
+	Attribute Label:  
+	Attribute Definition:  site id number
+	Storage Type:  string
+	Measurement Scale: 
+		site id
+	Missing Value Code: 
+
+
+	Attribute Name:  survey_id
+	Attribute Label:  
+	Attribute Definition:  survey id number
+	Storage Type:  integer
+	Measurement Scale: 
+		survey id
+	Missing Value Code: 
+
+
+	Attribute Name:  survey_date
+	Attribute Label:  
+	Attribute Definition:  Date the survey was taken
+	Storage Type:  datetime
+	Measurement Scale: 
+	Missing Value Code: 
+
+
+	Attribute Name:  time_start
+	Attribute Label:  
+	Attribute Definition:  Time the survey started
+	Storage Type:  datetime
+	Measurement Scale: 
+	Missing Value Code: 
+
+
+	Attribute Name:  time_end
+	Attribute Label:  
+	Attribute Definition:  Time the survey ended
+	Storage Type:  datetime
+	Measurement Scale: 
+	Missing Value Code: 
+
+
+	Attribute Name:  observer
+	Attribute Label:  
+	Attribute Definition:  observer's name
+	Storage Type:  string
+	Measurement Scale: 
+		observer's name
+	Missing Value Code: 
+
+
+	Attribute Name:  wind_speed
+	Attribute Label:  
+	Attribute Definition:  wind speed
+	Storage Type:  integer
+	Measurement Scale: 
+		Units:  milesPerHour
+		Precision:  1
+		Number Type:  integer
+	Missing Value Code: 
+
+
+	Attribute Name:  wind_dir
+	Attribute Label:  
+	Attribute Definition:  wind direction
+	Storage Type:  string
+	Measurement Scale: 
+		wind direction
+	Missing Value Code: 
+
+
+	Attribute Name:  air_temp
+	Attribute Label:  
+	Attribute Definition:  air temperature in Fahrenheit
+	Storage Type:  integer
+	Measurement Scale: 
+		Units:  fahrenheit
+		Precision:  1
+		Number Type:  integer
+	Missing Value Code: 
+
+
+	Attribute Name:  temp_units
+	Attribute Label:  
+	Attribute Definition:  air temperature units
+	Storage Type:  string
+	Measurement Scale: 
+		F= fahrenheit
+	Missing Value Code: 
+
+
+	Attribute Name:  cloud_cover
+	Attribute Label:  
+	Attribute Definition:  cloud cover percentage
+	Storage Type:  integer
+	Measurement Scale: 
+		Units:  dimensionless
+		Precision:  1
+		Number Type:  integer
+	Missing Value Code: 
+
+
+	Attribute Name:  notes
+	Attribute Label:  
+	Attribute Definition:  addtional notes
+	Storage Type:  ntext
+	Measurement Scale: 
+		additional notes
+	Missing Value Code: 
+
+
+	Attribute Name:  site_id
+	Attribute Label:  
+	Attribute Definition:  site id number
+	Storage Type:  string
+	Measurement Scale: 
+		site ID
+	Missing Value Code: 
+
+
+	Attribute Name:  park_code
+	Attribute Label:  
+	Attribute Definition:  park code
+	Storage Type:  string
+	Measurement Scale: 
+		park code
+	Missing Value Code: 
+
+
+	Attribute Name:  park_district
+	Attribute Label:  
+	Attribute Definition:  park district
+	Storage Type:  string
+	Measurement Scale: 
+		park district
+	Missing Value Code: 
+
+
+	Attribute Name:  park_name
+	Attribute Label:  
+	Attribute Definition:  park name
+	Storage Type:  string
+	Measurement Scale: 
+		park name
+	Missing Value Code: 
+
+
+	Attribute Name:  point_code
+	Attribute Label:  
+	Attribute Definition:  point code
+	Storage Type:  string
+	Measurement Scale: 
+		point code
+	Missing Value Code: 
+
+
+	Attribute Name:  point_location
+	Attribute Label:  
+	Attribute Definition:  point location
+	Storage Type:  string
+	Measurement Scale: 
+		point location
+	Missing Value Code: 
+
+
+	Attribute Name:  park_acreage
+	Attribute Label:  
+	Attribute Definition:  park acreage
+	Storage Type:  float
+	Measurement Scale: 
+		Units:  acre
+		Precision:  0.1
+		Number Type:  real
+	Missing Value Code: 
+
+
+	Attribute Name:  species_id
+	Attribute Label:  
+	Attribute Definition:  species id code
+	Storage Type:  string
+	Measurement Scale: 
+		taxon ID
+	Missing Value Code: 
+
+
+	Attribute Name:  common_name
+	Attribute Label:  
+	Attribute Definition:  bird common name
+	Storage Type:  string
+	Measurement Scale: 
+		bird common name
+	Missing Value Code: 
+
+
+	Attribute Name:  asu_itis
+	Attribute Label:  
+	Attribute Definition:  Arizona State University Integrated Taxonomic Information
+                        System Code
+	Storage Type:  integer
+	Measurement Scale: 
+		Arizona State University Integrated Taxonomic
+                                        Information System Code
+	Missing Value Code: 
+
+

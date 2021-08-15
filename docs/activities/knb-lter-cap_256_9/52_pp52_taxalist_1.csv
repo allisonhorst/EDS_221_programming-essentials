@@ -1,0 +1,260 @@
+"species_id","common_name","asu_itis"
+"ABTO","Abert's Towhee",208475
+"AMCO","American Coot",142696
+"AMGO","American Goldfinch",207867
+"AMKE","American Kestrel",122194
+"AMPI","American Pipit",
+"AMRO","American Robin",212184
+"AMWI","American Wigeon",118948
+"ANHU","Anna's Hummingbird",183554
+"ATFL","Ash-throated Flycatcher",185497
+"AUWA","Audubon's Warbler",
+"BARS","Barn Swallow",186511
+"BBLH","Broad-billed Hummingbird",183635
+"BCFL","Brown-crested Flycatcher",185488
+"BCHU","Black-chinned Hummingbird",183551
+"BCNH","Black-crowned Night Heron",
+"BCSP","Black-chinned Sparrow",209379
+"BEKI","Belted Kingfisher",184220
+"BETH","Bendire's Thrasher",188326
+"BEVI","Bell's Vireo",206638
+"BEWR","Bewick's Wren",187415
+"BGGN","Blue-gray Gnatcatcher",213239
+"BHCO","Brown-headed Cowbird",207257
+"BHGR","Black-headed Grosbeak",207301
+"BLGR","Blue Grosbeak",207306
+"BLPH","Black Phoebe",185542
+"BNST","Black-necked Stilt",145654
+"BRBL","Brewer's Blackbird",206781
+"BROC","Bronzed Cowbird",207261
+"BRSP","Brewer's Sparrow",209356
+"BTGN","Black-tailed Gnatcatcher",
+"BTLH","Broad-tailed Hummingbird",183556
+"BTSP","Black-throated Sparrow",208732
+"BTYW","Black-throated Gray Warbler",190817
+"BUFF","Bufflehead",119394
+"BUOR","Bullock's Oriole",
+"BUSH","Bushtit",189583
+"BWTE","Blue-winged Teal",118913
+"CACW","Cactus Wren",187513
+"CAGO","Canada Goose",266734
+"CAKI","Cassin's Kingbird",184940
+"CANT","Canyon Towhee",
+"CANW","Canyon Wren",188228
+"CBHA","Common Black Hawk",
+"CBTH","Curve-billed Thrasher",188330
+"CEDW","Cedar Waxwing",187267
+"CHSP","Chipping Sparrow",209333
+"CITE","Cinnamon Teal",118917
+"CLSW","Cliff Swallow",186547
+"COCA","Common Canary",210117
+"COFL","Cordilleran Flycatcher",
+"COGD","Common Ground-Dove",162611
+"COHA","Cooper's Hawk",120218
+"COHU","Costa's Hummingbird",183553
+"CONI","Common Nighthawk",169224
+"COPO","Common Poorwill",
+"CORA","Common Raven",212045
+"COSN","Common Snipe",145554
+"COTE","Cockatiel",
+"COYE","Common Yellowthroat",191782
+"DCCO","Double-crested Cormorant",265053
+"DCFL","Dusky-capped Flycatcher",185501
+"DODU","Domesticated Duck",
+"DOGO","Domesticated Goose",
+"DUFL","Dusky Flycatcher",185603
+"EAGR","Eared Grebe",263181
+"EMPI","Empidonax species",
+"EUST","European Starling",211002
+"EUWI","Eurasian Wigeon",118944
+"GAQU","Gambel's Quail",123655
+"GBHE","Great Blue Heron",265400
+"GHJU","Gray-headed Junco",
+"GHOW","Great Horned Owl",168282
+"GIFL","Gilded Flicker",
+"GIWO","Gila Woodpecker",184368
+"GREG","Great Egret",265663
+"GRFL","Gray Flycatcher",185605
+"GRHE","Green Heron",
+"GRRO","Greater Roadrunner",168085
+"GRVI","Gray Vireo",206643
+"GRYE","Greater Yellowlegs",144865
+"GTGR","Great-tailed Grackle",207250
+"GTTO","Green-tailed Towhee",208487
+"GWCS","Gambel's White-crowned Sparrow",
+"HAFL","Hammond's Flycatcher",175101
+"HERG","Herring Gull",146385
+"HETH","Hermit Thrush",212264
+"HEWA","Hermit Warbler",191581
+"HOFI","House Finch",207403
+"HOGR","Horned Grebe",263174
+"HOLA","Horned Lark",175107
+"HOOR","Hooded Oriole",206706
+"HOSP","House Sparrow",210964
+"HOWR","House Wren",187312
+"HRSH","Harris Hawk",
+"HUVI","Hutton's Vireo",191990
+"INDO","Inca Dove",162627
+"KILL","Killdeer",144233
+"LABU","Lazuli Bunting",207316
+"LARB","Lark Bunting",208489
+"LASP","Lark Sparrow",208664
+"LAZB","Lazuli Bunting",207316
+"LBWO","Ladder-backed Woodpecker",184885
+"LCTH","Le Conte's Thrasher",188371
+"LEGO","Lesser Goldfinch",207863
+"LENI","Lesser Nighthawk",169249
+"LESA","Least Sandpiper",145047
+"LESC","Lesser Scaup",119366
+"LETE","Least Tern",147071
+"LISP","Lincoln's Sparrow",209490
+"LOSH","Loggerhead Shrike",187201
+"LSGO","Lesser Snow Goose",
+"LUWA","Lucy's Warbler",190711
+"MALL","Mallard",118837
+"MAWA","Magnolia Warbler",190797
+"MERL","Merlin",122151
+"MGWA","MacGillivray's Warbler",191765
+"MODO","Mourning Dove",162560
+"MOUP","Mountain Piover",
+"MYWA","Myrtle Warbler",
+"NAWA","Nashville Warbler",190695
+"NOCA","Northern Cardinal",207272
+"NOFL","Northern Flicker",184270
+"NOHA","Northern Harrier",120994
+"NOMO","Northern Mockingbird",188267
+"NOOR","Northern Oriole (Probably Bullock's unless indicated as Baltimore)",
+"NOPI","Northern Pintail",118874
+"NRWS","Northern Rough-winged Swallow",186496
+"NSHO","Northern Shoveler",118951
+"OCWA","Orange-crowned Warbler",190663
+"OFPA","Orange-Fronted Parakeet",166408
+"ORJU","Oregon Junco",
+"OSFL","Olive-sided Flycatcher",185681
+"OSPR","Osprey",121892
+"PBGR","Pied-billed Grebe",
+"PEFA","Peregrine Falcon",122109
+"PFLB","Peach-faced Lovebird",
+"PHAI","Phainopepla",213321
+"PHPA","Plum-headed Parakeet",
+"PLTI","Plain Titmouse",189483
+"PLVI","Plumbeous Vireo",
+"PRFA","Prairie Falcon",122106
+"PROW","Prothonotary Warbler",190614
+"PUMA","Purple Martin",186598
+"PYRR","Pyrrhuloxia",207288
+"RBGU","Ring-billed Gull",146420
+"RCKI","Ruby-crowned Kinglet",213308
+"RCSP","Rufous-crowned Sparrow",208677
+"REDH","Redhead",119331
+"RITD","Ringed Turtle-Dove",162580
+"RLHA","Rough-Legged Hawk",120505
+"RNDU","Ring-necked Duck",119336
+"RNSA","Red-naped Sapsucker",184790
+"RODO","Rock Dove",162052
+"ROWR","Rock Wren",188237
+"RTHA","Red-tailed Hawk",120403
+"RUDU","Ruddy Duck",119481
+"RUHU","Rufous Hummingbird",183565
+"RWBL","Red-winged Blackbird",206680
+"SAGS","Sage Sparrow",209250
+"SAPH","Say's Phoebe",185552
+"SASP","Savannah Sparrow",208493
+"SCJU","Slate-colored Junco",
+"SNEG","Snowy Egret",265669
+"SOSP","Song Sparrow",209506
+"SOVI","Solitary Vireo",206645
+"SPSA","Spotted Sandpiper",144852
+"SPTO","Spotted Towhee",
+"SSHA","Sharp-shinned Hawk",120208
+"SUTA","Summer Tanager",213356
+"SWTH","Swainson's Thrush",212295
+"TEWA","Tennessee Warbler",190661
+"TOSO","Townsend's Solitaire",213115
+"TOWA","Townsend's Warbler",190819
+"TRES","Tree Swallow",186441
+"TUVU","Turkey Vulture",119949
+"UDEJ","Unidentified Dark-eyed Junco",
+"UNBL","Unidentified Blackbird",
+"UNCO","Unidentified Cowbird",
+"UNDO","Unidentified Doves",
+"UNDU","Unidentified  Duck",
+"UNEG","Unidentified Egret",
+"UNFA","Unidentified Falcon",
+"UNFI","Unidentified House Sparrow or Finch",
+"UNFL","Unidentified Flycatcher",
+"UNGN","Unidentified Gnatcatcher",
+"UNHA","Unindentified Hawk",
+"unhu","Unidentified Hummingbird",
+"UNMA","Unidentified Macaw",
+"UNME","Unidentified Meadowlark",
+"UNOW","Unidentified Owl",
+"UNPA","Unidentified Parrot",
+"UNPK","Unidentified Parakeet",
+"UNRA","Unidentified Raptor",
+"UNSA","Unidentified Sandpiper",
+"UNSP","Unidentified Sparrow",
+"UNSW","Unidentified Swallow",
+"UNTA","Unidentified Tanager",
+"UNTH","Unidentified Thrasher",
+"UNVI","Unidentified Vireo",
+"unwa","Unidentified Warbler",
+"UNWO","Unidentified Woodpecker",
+"UNWR","Unidentified Wren",
+"uspa","Unidentified Sparrow",
+"UYRW","Unknown Yellow-rumped Warbler",
+"VASW","Vaux's Swift",183490
+"VEFL","Vermilion Flycatcher",185706
+"VERD","Verdin",189546
+"VGSW","Violet-green Swallow",186409
+"VIWA","Virginia's Warbler",190707
+"WAVI","Warbling Vireo",206658
+"WCSP","White-crowned Sparrow",209402
+"WEFL","Western Flycatcher",185608
+"WEKI","Western Kingbird",184939
+"WEME","Western Meadowlark",206674
+"WESJ","Western Scrub Jay",
+"WETA","Western Tanager",213344
+"WEWP","Western Wood-Pewee",185663
+"WFIB","White-faced Ibis",
+"WIWA","Wilson's Warbler",191927
+"WTSW","White-throated Swift",183512
+"WWDO","White-winged Dove",162556
+"YBCH","Yellow-Breasted Chat",191880
+"YBSA","Yellow-bellied Sapsucker",184772
+"YHBL","Yellow-headed Blackbird",206678
+"YTWA","Yellow-throated Warbler",191588
+"YWAR","Yellow Warbler",190765
+"UNTO","Unidentified Towhee",
+"STJA","Steller's Jay",
+"BUOW","Burrowing Owl",
+"WBNU","White-breasted Nuthatch",
+"BLVA","Black Vulture",
+"BAEA","Bald Eagle",
+"CCLO","Chestnut-collared Longspur",
+"LEWO","Lewis' Woodpecker",
+"FEHA","Ferruginous Hawk",
+"COMO","Common Moorhen",142673
+"RSFL","Red-shafted Flicker",
+"MOBL","Mountain Bluebird",213081
+"MAWR","Marsh Wren",188205
+"BRCR","Brown Creeper",
+"COLO","Common Loon",263086
+"AGWT","American Green-winged Teal",
+"AMAV","American Avocet",145644
+"LBDO","Long-billed Dowitcher",145139
+"WESA","Western Sandpiper",145098
+"GADW","Gadwall",118871
+"WEBL","Western Bluebird",213057
+"CAEG","Cattle Egret",265623
+"WEGR","Western Grebe",
+"URST","unknown Rufous-sided Towhee",
+"BRTH","Brown Thrasher",188281
+"SWHA","Swainson's Hawk",120474
+"BLJA","Blue Jay",
+"LBHE","Little Blue Heron",
+"HAHA","Harris' Hawk",
+"ECDO","Eurasian Collared- Dove",
+"WIPH","Wilson's Phalarope",
+"LBCU","Long -billed Curlew",
+"NECO","Neotropic Cormorant",

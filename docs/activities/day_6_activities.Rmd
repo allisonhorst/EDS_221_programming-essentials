@@ -1,0 +1,103 @@
+---
+title: "Day 6 Activities"
+subtitle: "Tidying & subsetting with `tidyr` and `dplyr`"
+output: 
+  html_document:
+    css: activity_theme.css
+    toc: true
+    toc_float: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(here)
+library(janitor)
+```
+
+## Task 1: Read Broman & Woo's *Data organization in spreadsheets*
+
+Take ~15 minutes to read Broman & Woo's evergreen paper [Data organization in spreadsheets](https://www.tandfonline.com/doi/full/10.1080/00031305.2017.1375989). As you read, think about data that you have created or had to work with that did *not* follow these guidelines. Make notes of examples to share from several - how did you input data previously? How would you change the way you input data? 
+
+Questions: 
+
+- What are major / most common ways you have seen these guidelines ignored?
+
+- What is your experience working with or creating data in spreadsheets that don't follow these guidelines?
+
+## Task 2: SBC Lobsters
+
+**Data source:** Santa Barbara Coastal LTER, D. Reed, and R. Miller. 2021. SBC LTER: Reef: Abundance, size and fishing effort for California Spiny Lobster (Panulirus interruptus), ongoing since 2012 ver 6. Environmental Data Initiative. https://doi.org/10.6073/pasta/0bcdc7e8b22b8f2c1801085e8ca24d59
+
+### Getting started
+
+- Create a new GitHub repo called `eds221-day6-activities`
+- Clone to create a version controlled R project
+- Add subfolders `data` and `docs`
+- Download the California Spiny lobster abundance data from this [SBC LTER data package](https://portal.edirepository.org/nis/mapbrowse?packageid=knb-lter-sbc.77.6). Familiarize yourself with the metadata. Save the CSV containing lobster abundance data in your `data` subfolder.
+- In `docs`, create a new .Rmd saved as `lobster_exploration.Rmd`
+- Within your .Rmd, write organized and well-annotated code to do the following: 
+  - Read in and take a look at the data in the `data/Lobster_Abundance_All_Years_20210412.csv` file. Take note of values that can be considered `NA` (see metadata) and update your import line to convert those to `NA` values
+  - Convert column names to lower snake case
+  - Convert the data from *frequency* to *case* format using `dplyr::uncount()` on the existing `count` column. **What did this do?** Add annotation in your code explaining `dplyr::uncount()`
+
+### Find counts and mean sizes by site & year 
+
+  - Create a summary table that finds the total counts (see: `n()`), and mean carapace lengths of lobsters observed in the dataset by **site** and **year**. 
+  - Create a ggplot graph of the number of total lobsters observed (y-axis) by year (x-axis) in the study, grouped (either aesthetically or by faceting) by site
+  
+```{r, include = FALSE}
+lobsters <- read_csv(here("activities","Lobster_Abundance_All_Years_20210412.csv"), na = c("-99999", "")) %>% 
+  clean_names() %>% 
+  uncount(count)
+
+lobster_summary <- lobsters %>% 
+  group_by(site, year) %>% 
+  summarize(mean_size_mm = mean(size_mm, na.rm = TRUE),
+            sample_size = n())
+
+ggplot(data = lobster_summary, aes(x = year, y = sample_size)) +
+  geom_line(aes(color = site)) +
+  theme_minimal()
+```
+
+### Find the proportion of legal lobsters at each site for 2020
+
+The legal lobster size (carapace length) in California is 79.76 mm. 
+
+- Create a subset that only contains lobster data from 2020 (note: this should be from the original data you read in, not the summary table you created above)
+
+- Write code (you can decide how to do this - there are a number of ways) to find the counts of lobsters observed at each site (only using site as the grouping factor) that are above and below the legal limit. **Hint:** You may want to add a new column `legal` that contains "yes" or "no" based on the size of the observed lobster (see `dplyr::case_when()` for a really nice way to do this), then use `group_by() %>% summarize(n())` or `dplyr::count()` to get counts by group within variables
+
+- Create a stacked column graph that shows the *proportion* of legal and non-legal lobsters at each site. **Hint: create a stacked column graph with `geom_col()`, then add the argument `position = "fill"` to convert from a graph of absolute counts to proportions. 
+
+```{r, include = FALSE}
+lobsters_legal <- lobsters %>% 
+  filter(year == 2020) %>% 
+  mutate(legal = case_when(
+    size_mm > 79.76 ~ "yes",
+    size_mm <= 79.76 ~ "no"
+   ))
+
+lobsters_n_legal <- lobsters_legal %>% 
+  count(site, legal) %>% 
+  drop_na(legal)
+
+ggplot(data = lobsters_n_legal, aes(x = site, y = n)) +
+  geom_col(aes(fill = legal), position = "fill")
+```
+Which two sites had the largest proportion of legal lobsters in 2020? Explore the metadata to come up with a hypothesis about why that might be. 
+
+## Task 3: Clean up your personal website, and add a blog post
+
+We've been playing around a bit with your personal website to try out different things. For this task, you should:
+
+- Spend some time updating your theme, fonts, pages, etc. to make it professional and containing real content
+- Then, add one professional blog post to your website that describes:
+  - One function we've learned (with an example of how to use it)
+  - One concept we've learned (e.g. tidy data, version control, reproducibility, etc.)
+  - One thing you've learned about learning or doing data science (mindset, strategies, approaches, collaborating, helping, etc.)
+  - Add a preview image to your post
+  - Remember you need to KNIT MANUALLY for your blog post to exist in your listings
+- Delete any "toy" blog posts that existed from our setup last week
+  - Build & push your site - confirm your updated post is on your revamped page live, then show it to Allison, Jamie or Sam to get checked off before you leave
