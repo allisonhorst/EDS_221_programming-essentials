@@ -40,17 +40,30 @@ Questions:
   - Read in and take a look at the data in the `data/Lobster_Abundance_All_Years_20210412.csv` file. Take note of values that can be considered `NA` (see metadata) and update your import line to convert those to `NA` values
   - Convert column names to lower snake case
   - Convert the data from *frequency* to *case* format using `dplyr::uncount()` on the existing `count` column. **What did this do?** Add annotation in your code explaining `dplyr::uncount()`
+  
+  
+Here's code to read in your data, just to get your started: 
+
+```{r, include = FALSE}
+lobsters <- read_csv(here("activities","Lobster_Abundance_All_Years_20210412.csv"), na = c("-99999", "")) %>% 
+  clean_names() %>% 
+  uncount(count)
+```
+
+
+```{r, echo = TRUE, eval = FALSE}
+lobsters <- read_csv(here("data","Lobster_Abundance_All_Years_20210412.csv"), na = c("-99999", "")) %>% 
+  clean_names() %>% 
+  uncount(count)
+```
 
 ### Find counts and mean sizes by site & year 
 
   - Create a summary table that finds the total counts (see: `n()`), and mean carapace lengths of lobsters observed in the dataset by **site** and **year**. 
   - Create a ggplot graph of the number of total lobsters observed (y-axis) by year (x-axis) in the study, grouped (either aesthetically or by faceting) by site
   
-```{r, include = FALSE}
-lobsters <- read_csv(here("activities","Lobster_Abundance_All_Years_20210412.csv"), na = c("-99999", "")) %>% 
-  clean_names() %>% 
-  uncount(count)
 
+```{r, include = FALSE}
 lobster_summary <- lobsters %>% 
   group_by(site, year) %>% 
   summarize(mean_size_mm = mean(size_mm, na.rm = TRUE),
@@ -88,7 +101,99 @@ ggplot(data = lobsters_n_legal, aes(x = site, y = n)) +
 ```
 Which two sites had the largest proportion of legal lobsters in 2020? Explore the metadata to come up with a hypothesis about why that might be. 
 
-## Task 3: Clean up your personal website, and add a blog post
+## Task 3: Random lobster wrangling
+
+Starting with the original lobsters data that you read in as `lobsters`, complete the following (separately - these are not expected to be done in sequence or anything). You can store each of the outputs as `ex_a`, `ex_b`, etc. for the purposes of this task. 
+
+### filter() practice
+
+a. Create and store a subset that only contains lobsters from sites "IVEE", "CARP" and "NAPL". Check your output data frame to ensure that only those three sites exist. 
+```{r, include = FALSE}
+lobster_3sites <- lobsters %>% filter(
+  site %in% c("IVEE", "CARP", "NAPL")
+)
+
+unique(lobster_3sites$site)
+```
+
+b. Create a subset that only contains lobsters observed in August.
+
+```{r, include = FALSE}
+lobsters_august <- lobsters %>% 
+  filter(month == 8)
+```
+
+
+c. Create a subset with lobsters at Arroyo Quemado (AQUE) **OR** with a carapace length greater than 70 mm.
+
+```{r, include = FALSE}
+lobsters_aque_large <- lobsters %>% 
+  filter(site == "AQUE" | size_mm > 70)
+```
+
+d. Create a subset that does NOT include observations from Naples Reef (NAPL)
+```{r, include = FALSE}
+no_naples <- lobsters %>% 
+  filter(!site == "NAPL")
+```
+
+### group_by() %>% summarize() practice
+
+e. Find the mean and standard deviation of lobster carapace length, grouped by site.
+```{r, include = FALSE}
+ex_e <- lobsters %>% 
+  group_by(site) %>% 
+  summarize(mean_size = mean(size_mm, na.rm = TRUE),
+            sd_size = sd(size_mm, na.rm = TRUE))
+```
+
+f. Find the maximum carapace length by site and month. 
+```{r, include = FALSE}
+ex_f <- lobsters %>% 
+  group_by(site, month) %>% 
+  summarize(max_size = max(size_mm, na.rm = TRUE))
+
+ex_f
+```
+
+### mutate() practice
+
+g. Add a new column that contains lobster carapace length converted to centimeters. Check output. 
+```{r, include = FALSE}
+ex_g <- lobsters %>% 
+  mutate(size_cm = size_mm / 10)
+```
+
+h. Update the site column to all lowercase. Check output.
+```{r, include = FALSE}
+ex_h <- lobsters %>% 
+  mutate(site = tolower(site))
+```
+
+i. Convert the area column to a character (not sure why you'd want to do this, but try it anyway). Check output. 
+```{r, include = FALSE}
+ex_i <- lobsters %>% 
+  mutate(area = as.character(area))
+```
+
+### case_when() practice
+
+j. Use `case_when()` to add a new column called `size_bin` that contains "small" if carapace size is <= 70 mm, or "large" if it is greater than 70 mm. Check output. 
+```{r, include = FALSE}
+ex_j <- lobsters %>% 
+  mutate(size_bin = case_when(size_mm <= 70 ~ "small",
+                              size_mm > 70 ~ "large"))
+```
+
+k. Use `case_when()` to add a new column called `designation` that contains "MPA" if the site is "IVEE" or "NAPL", and "not MPA" for all other outcomes. 
+```{r, include = FALSE}
+ex_k <- lobsters %>% 
+  mutate(designation = case_when(site %in% c("IVEE", "NAPL") ~ "MPA",
+                                 TRUE ~ "not MPA"))
+```
+
+
+## Task 4: Clean up your personal website, and add a blog post
 
 We've been playing around a bit with your personal website to try out different things. For this task, you should:
 

@@ -1,4 +1,4 @@
-﻿Country Name	Country Code	Series Name	Series Code	2003 [YR2003]	2004 [YR2004]	2005 [YR2005]	2006 [YR2006]	2007 [YR2007]	2008 [YR2008]	2009 [YR2009]	2010 [YR2010]	2011 [YR2011]	2012 [YR2012]
+Country Name	Country Code	Series Name	Series Code	2003 [YR2003]	2004 [YR2004]	2005 [YR2005]	2006 [YR2006]	2007 [YR2007]	2008 [YR2008]	2009 [YR2009]	2010 [YR2010]	2011 [YR2011]	2012 [YR2012]
 Africa	AFR	"Fiscal balance, cash surplus/deficit (current US$)"	GC.BAL.CASH.CD	..	..	..	..	..	..	..	..	..	..
 Africa	AFR	10th pillar: Market size	GCI.10THPILLAR.XQ	..	..	..	..	..	..	..	..	..	..
 Africa	AFR	11th pillar: Business sophistication	GCI.11THPILLAR.XQ	..	..	..	..	..	..	..	..	..	..

@@ -273,6 +273,10 @@ div.tocify {
 <li>Convert the data from <em>frequency</em> to <em>case</em> format using <code>dplyr::uncount()</code> on the existing <code>count</code> column. <strong>What did this do?</strong> Add annotation in your code explaining <code>dplyr::uncount()</code></li>
 </ul></li>
 </ul>
+<p>Here’s code to read in your data, just to get your started:</p>
+<pre class="r"><code>lobsters &lt;- read_csv(here(&quot;data&quot;,&quot;Lobster_Abundance_All_Years_20210412.csv&quot;), na = c(&quot;-99999&quot;, &quot;&quot;)) %&gt;% 
+  clean_names() %&gt;% 
+  uncount(count)</code></pre>
 </div>
 <div id="find-counts-and-mean-sizes-by-site-year" class="section level3">
 <h3>Find counts and mean sizes by site &amp; year</h3>
@@ -292,8 +296,43 @@ div.tocify {
 <p>Which two sites had the largest proportion of legal lobsters in 2020? Explore the metadata to come up with a hypothesis about why that might be.</p>
 </div>
 </div>
-<div id="task-3-clean-up-your-personal-website-and-add-a-blog-post" class="section level2">
-<h2>Task 3: Clean up your personal website, and add a blog post</h2>
+<div id="task-3-random-lobster-wrangling" class="section level2">
+<h2>Task 3: Random lobster wrangling</h2>
+<p>Starting with the original lobsters data that you read in as <code>lobsters</code>, complete the following (separately - these are not expected to be done in sequence or anything). You can store each of the outputs as <code>ex_a</code>, <code>ex_b</code>, etc. for the purposes of this task.</p>
+<div id="filter-practice" class="section level3">
+<h3>filter() practice</h3>
+<ol style="list-style-type: lower-alpha">
+<li><p>Create and store a subset that only contains lobsters from sites “IVEE”, “CARP” and “NAPL”. Check your output data frame to ensure that only those three sites exist.</p></li>
+<li><p>Create a subset that only contains lobsters observed in August.</p></li>
+<li><p>Create a subset with lobsters at Arroyo Quemado (AQUE) <strong>OR</strong> with a carapace length greater than 70 mm.</p></li>
+<li><p>Create a subset that does NOT include observations from Naples Reef (NAPL)</p></li>
+</ol>
+</div>
+<div id="group_by-summarize-practice" class="section level3">
+<h3>group_by() %&gt;% summarize() practice</h3>
+<ol start="5" style="list-style-type: lower-alpha">
+<li><p>Find the mean and standard deviation of lobster carapace length, grouped by site.</p></li>
+<li><p>Find the maximum carapace length by site and month.</p></li>
+</ol>
+</div>
+<div id="mutate-practice" class="section level3">
+<h3>mutate() practice</h3>
+<ol start="7" style="list-style-type: lower-alpha">
+<li><p>Add a new column that contains lobster carapace length converted to centimeters. Check output.</p></li>
+<li><p>Update the site column to all lowercase. Check output.</p></li>
+<li><p>Convert the area column to a character (not sure why you’d want to do this, but try it anyway). Check output.</p></li>
+</ol>
+</div>
+<div id="case_when-practice" class="section level3">
+<h3>case_when() practice</h3>
+<ol start="10" style="list-style-type: lower-alpha">
+<li><p>Use <code>case_when()</code> to add a new column called <code>size_bin</code> that contains “small” if carapace size is &lt;= 70 mm, or “large” if it is greater than 70 mm. Check output.</p></li>
+<li><p>Use <code>case_when()</code> to add a new column called <code>designation</code> that contains “MPA” if the site is “IVEE” or “NAPL”, and “not MPA” for all other outcomes.</p></li>
+</ol>
+</div>
+</div>
+<div id="task-4-clean-up-your-personal-website-and-add-a-blog-post" class="section level2">
+<h2>Task 4: Clean up your personal website, and add a blog post</h2>
 <p>We’ve been playing around a bit with your personal website to try out different things. For this task, you should:</p>
 <ul>
 <li>Spend some time updating your theme, fonts, pages, etc. to make it professional and containing real content</li>
