@@ -12,6 +12,8 @@ output:
 library(tidyverse)
 library(palmerpenguins)
 library(lubridate)
+library(kableExtra)
+
 ```
 
 # Part 0: Setup
@@ -35,8 +37,9 @@ library(lubridate)
 **Refresher 2:** Staring with the `penguins` dataset in the `palmerpenguins` package, write a single piped sequence in which you:
 
 1. Limit to only Adelie penguins
-2. Group the data by `sex`
-3. Find the mean (`mean()`), standard deviation (`sd`) and sample size (`n`) for male and female Adelie penguins, returned in a nice summary table
+2. Remove any observations where `flipper_length_mm` is `NA` (hint: `!is.na()`)
+3. Group the data by `sex`
+4. Find the mean (`mean()`), standard deviation (`sd`) and sample size (`n`) of flipper_length_mm for male and female Adelie penguins, returned in a nice summary table
 
 # Part 2: Wrangling continued - joins of different flavors
 
@@ -44,7 +47,18 @@ library(lubridate)
 
 Let's create some data to practice and clarify different types of joins. 
 
-```{r}
+- Install the `datapasta` package in R. 
+- Quit & restart RStudio. 
+- Copy the content of the first table below. 
+- With your cursor in a code chunk, go up to Addins > Datapasta > as tribble
+- Assign the code to object name `animals`
+- Similarly, copy and datapasta the second table, storing as `sites`
+
+
+
+
+
+```{r, include = FALSE}
 animals <- tribble(
   ~location, ~species, ~maturity,
   "lagoon", "bobcat", "adult",
@@ -53,7 +67,15 @@ animals <- tribble(
   "oaks", "squirrel", "juvenile",
   "bluff", "bobcat", "adult"
 )
+```
 
+```{r, echo = FALSE}
+animals %>% 
+  kable() %>% 
+  kable_styling()
+```
+
+```{r, include = FALSE}
 sites <- tribble(
   ~location, ~full_site_name, ~jurisdiction,
   "beach", "Goleta Beach", "SB City",
@@ -61,6 +83,12 @@ sites <- tribble(
   "bluff", "Ellwood Mesa", "SB City",
   "oaks", "Fremont Campground", "USFS"
 )
+```
+
+```{r, echo = FALSE}
+sites %>% 
+  kable() %>% 
+  kable_styling()
 ```
 
 ### dplyr::full_join()
@@ -172,9 +200,11 @@ KNOW YOUR DATA.
 
 ## It even makes it relatively easy to deal with times & time zones
 
+See the Olson Names: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones 
+
 Use `ymd-hm` to convert this to a date time that R will understand.
 
-Question: Why am I using `ymd-hm` here? 
+Question: Why am I using `ymd_hm` here? 
 ```{r}
 time <- "2020-08-12 11:18"
 time <- ymd_hm(time)
@@ -187,6 +217,18 @@ with_tz(time, "America/Los_Angeles")
 # Convert to AEST:
 with_tz(time, "Australia/Sydney")
 
+```
+
+### More time examples:
+
+```{r}
+# Get your system time
+comp_time <- Sys.time()
+```
+
+```{r}
+# Convert comp_time to Europe/Belgrade time: 
+with_tz(comp_time, "Europe/Belgrade")
 ```
 
 ## Pulling pieces
@@ -237,6 +279,22 @@ urchin_counts_ymd <- urchin_counts %>%
 urchin_counts_ymd
 
 # And then we could use group_by() to find different summary values by group, for example.
+```
+### Find durations of times
+
+```{r}
+day_1 <- lubridate::ymd("2020-01-06")
+day_2 <- lubridate::ymd("2020-05-18")
+day_3 <- lubridate::ymd("2020-05-19")
+
+# Create a time interval
+time_interval <- interval(day_1, day_2)
+
+# Check the length in weeks
+time_length(time_interval, "week")
+
+# Check the length in years
+time_length(time_interval, "year")
 ```
 
 
@@ -291,5 +349,34 @@ head(firewalkers)
 You can imagine this may be really helpful if there is a repeated spelling error, annoying syntax, or otherwise that you want to update throughout your data frame. 
 
 Note: this is very different from text mining and analysis, which involves analyzing textual information to gain insights about patterns, trends, and sentiments - look forward to that in EDS 242! 
+
+## Use  `str_trim()` or `str_squish()` to remove excess white space
+
+```{r}
+feedback <- c(" I ate     some   nachos", "Wednesday morning   ")
+
+# Removes leading, trailing & duplicate interior whitespaces
+str_squish(feedback)
+
+# Removes leading & trailing whitespaces
+str_trim(feedback)
+```
+
+## Convert cases
+
+```{r}
+str_to_lower(feedback)
+
+str_to_upper(feedback)
+
+str_to_title(feedback)
+```
+
+## Count matches in a string
+
+```{r}
+str_count(feedback, pattern = "nachos")
+```
+
 
 ## End {-}
