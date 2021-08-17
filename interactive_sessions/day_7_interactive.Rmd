@@ -217,6 +217,13 @@ with_tz(time, "America/Los_Angeles")
 # Convert to AEST:
 with_tz(time, "Australia/Sydney")
 
+# pull just the time
+my_time <- lubridate::ymd_hms(time)
+week(my_time)
+day(my_time)
+hour(my_time)
+minute(my_time)
+second(my_time)
 ```
 
 ### More time examples:

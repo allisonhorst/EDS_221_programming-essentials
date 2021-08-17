@@ -569,13 +569,25 @@ with_tz(time, &quot;America/Los_Angeles&quot;)</code></pre>
 <pre class="r"><code># Convert to AEST:
 with_tz(time, &quot;Australia/Sydney&quot;)</code></pre>
 <pre><code>## [1] &quot;2020-08-12 21:18:00 AEST&quot;</code></pre>
+<pre class="r"><code># pull just the time
+my_time &lt;- lubridate::ymd_hms(time)
+week(my_time)</code></pre>
+<pre><code>## [1] 33</code></pre>
+<pre class="r"><code>day(my_time)</code></pre>
+<pre><code>## [1] 12</code></pre>
+<pre class="r"><code>hour(my_time)</code></pre>
+<pre><code>## [1] 11</code></pre>
+<pre class="r"><code>minute(my_time)</code></pre>
+<pre><code>## [1] 18</code></pre>
+<pre class="r"><code>second(my_time)</code></pre>
+<pre><code>## [1] 0</code></pre>
 <div id="more-time-examples" class="section level3">
 <h3>More time examples:</h3>
 <pre class="r"><code># Get your system time
 comp_time &lt;- Sys.time()</code></pre>
 <pre class="r"><code># Convert comp_time to Europe/Belgrade time: 
 with_tz(comp_time, &quot;Europe/Belgrade&quot;)</code></pre>
-<pre><code>## [1] &quot;2021-08-17 15:59:07 CEST&quot;</code></pre>
+<pre><code>## [1] &quot;2021-08-17 17:14:28 CEST&quot;</code></pre>
 </div>
 </div>
 <div id="pulling-pieces" class="section level2">
