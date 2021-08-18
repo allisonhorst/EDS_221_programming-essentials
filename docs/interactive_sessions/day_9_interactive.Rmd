@@ -1,0 +1,29 @@
+---
+title: "Day 9 Interactive Session Materials"
+subtitle: "Troubleshooting, tables, more wrangling"
+output: 
+  html_document:
+    css: comp_session_theme.css
+    toc: true
+    toc_float: true
+---
+
+```{r, warning = FALSE, message = FALSE}
+library(tidyverse)
+library(palmerpenguins)
+library(lubridate)
+library(kableExtra)
+
+```
+
+# Part 0: Setup
+
+- Create a new version-controlled R Project called `eds221-m2021-day9-interactive`
+- Install the `kableExtra` package
+- Create a new R Markdown document in the project
+- Attach the following packages in the setup chunk: 
+    - `tidyverse`
+    - `kableExtra`
+    
+# Part 1: Data wrangling refresher
+
