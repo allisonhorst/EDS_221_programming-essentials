@@ -40,8 +40,8 @@ surveys <- read_csv(here("activities", "knb-lter-cap_256_9", "52_pp52_surveys_1.
 taxalist <- read_csv(here("activities", "knb-lter-cap_256_9", "52_pp52_taxalist_1.csv"))
 
 birds_subset <- bird_observations %>% 
-  filter(species_id %in% c("BHCO", "RWBL"),
-         site_id %in% c("LI-W", "NU-C"))
+  filter(species_id %in% c("BHCO", "RWBL")) %>% 
+  filter(site_id %in% c("LI-W", "NU-C"))
 ```
 
 ### Left join practice

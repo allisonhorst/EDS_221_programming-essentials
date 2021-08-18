@@ -1,0 +1,686 @@
+Calendar_Year,Sector_General,Sector_Detail1,Sector_Detail2,Sector_GPC,Sector_GPC_Detail,Commodity_Type,Emissions_mtCO2e,Biogenic_Emissions_mtCO2e,Quantity,Quantity_Units
+1990,Buildings,Commercial & Industrial,PG&E District,Stationary,Commercial & Institutional Buildings and Facilities,Electricity,0,0,0,kWh
+1990,Buildings,Commercial & Industrial,CleanPowerSF Commercial Green Product,Stationary,Commercial & Institutional Buildings and Facilities,Electricity,0,0,0,kWh
+1990,Transportation,Public Transportation,Rail - BART,Transportation,Railways - Bay Area Rapid Transit Other Power Contracts,Electricity,0,0,0,kWh
+1990,Buildings,Residential,CleanPowerSF Residential Green Product,Stationary,Residential Buildings,Electricity,0,0,0,kWh
+1990,Buildings,Commercial & Industrial,CleanPowerSF Commercial Green Product Electric Power Transmission & Distribution Loss,Stationary,Commercial & Institutional Buildings and Facilities,Electricity,0,0,0,kWh
+1990,Transportation,Public Transportation,MUNI,Transportation,On-road Transportation - MUNI Buses,B5,0,0,0,gallons
+1990,Municipal,Municipal Buildings,PG&E Municipal Buildings Electric Power Transmission & Distribution Loss,Stationary,Commercial & Institutional Buildings and Facilities,Electricity,0,0,0,kWh
+1990,Municipal,Municipal Fleet,Municipal Fleet,Transportation,On-road Transportation - Municipal Fleet,Renewable CNG,0,0,0,gallons
+1990,Transportation,Public Transportation,Bus - Caltrain,Transportation,On-Road Transportation - Caltrain Buses,CNG,0,0,0,gallons
+1990,Transportation,Public Transportation,Rail - BART,Transportation,Railways - Bay Area Rapid Transit PG&E,Electricity,0,0,0,kWh
+1990,Transportation,Public Transportation,MUNI,Transportation,On-road Transportation - MUNI Buses,B20,0,0,0,gallons
+1990,Buildings,Residential,CleanPowerSF Residential SuperGreen Product,Stationary,Residential Buildings,Electricity,0,0,0,kWh
+1990,Municipal,Municipal Fleet,Municipal Fleet,Transportation,On-road Transportation - Municipal Fleet,B5,0,0,0,gallons
+1990,Transportation,Public Transportation,MUNI,Transportation,On-road Transportation - MUNI Buses,B100,0,0,0,gallons
+1990,Municipal,Municipal Fleet,Municipal Fleet,Transportation,On-road Transportation - Municipal Fleet,B20,0,0,0,gallons
+1990,Buildings,Commercial & Industrial,CleanPowerSF Commercial SuperGreen Product,Stationary,Commercial & Institutional Buildings and Facilities,Electricity,0,0,0,kWh
+1990,Buildings,Commercial & Industrial,PG&E District Natural Gas Distribution Fugitive Emissions Downstream Leaks,Stationary,Fugitive Emissions from Oil and Natural Gas Systems,Natural Gas,0,0,0,Therm
+1990,Buildings,Commercial & Industrial,PG&E District Natural Gas Distribution Fugitive Emissions Upstream Leaks,Stationary,Fugitive Emissions from Oil and Natural Gas Systems,Natural Gas,0,0,0,Therm
+1990,Buildings,Commercial & Industrial,PG&E District Electric Power Transmission & Distribution Loss,Stationary,Commercial & Institutional Buildings and Facilities,Electricity,0,0,0,kWh
+1990,Buildings,Commercial & Industrial,PG&E District,Stationary,Commercial & Institutional Buildings and Facilities,Natural Gas,0,0,0,Therm
+1990,Municipal,Municipal Buildings,PG&E Municipal Buildings,Stationary,Commercial & Institutional Buildings and Facilities,Electricity,0,0,0,kWh
+1990,Buildings,Residential,CleanPowerSF Residential Green Product Electric Power Transmission & Distribution Loss,Stationary,Residential Buildings,Electricity,0,0,0,kWh
+1990,Transportation,Public Transportation,Bus - Golden Gate Transit,Transportation,On-Road Transportation - Golden Gate Transit Buses,Renewable Diesel,0,0,0,gallons
+1990,Transportation,Public Transportation,MUNI,Transportation,On-road Transportation - MUNI Buses,Renewable Diesel,0,0,0,gallons
+1990,Municipal,Municipal Fleet,Municipal Fleet,Transportation,On-road Transportation - Municipal Fleet,Renewable Diesel,0,0,0,gallons
+1990,Transportation,Off-Road Equipment,Off-Road Equipment,Stationary,Non-specified Sources,Other Unspecified Fuels,128415.62,0,0,mtCO2e
+1990,Buildings,Residential,Other Residential Fuel Usage,Stationary,Commercial & Institutional Buildings and Facilities,"LPGas, Liquid fuel, solid fuel",23655,0,0,mtCO2e
+1990,Agriculture,Agriculture/Farming,Agriculture/Farming,"Agriculture, Forestry and Other Land Use",Land,Other Unspecified Fuels,5346.9,0,0,mtCO2e
+1990,Agriculture,Agriculture/Farming,Agriculture/Farming,"Agriculture, Forestry and Other Land Use",Land,Animal Waste,72192.34,0,0,mtCO2e
+1990,Buildings,Commercial & Industrial,Additional Stationary Sources,Stationary,Energy Industries,Gas Oil,70.5,0,0,mtCO2e
+1990,Agriculture,Agriculture/Farming,Agriculture/Farming,Stationary,"Agriculture, Forestry and Fishing Activities",Other Unspecified Fuels,109,0,0,mtCO2e
+1990,Transportation,Diesel - Ships and Boats (non-Ferry),Diesel - Ships and Boats (non-Ferry),Transportation,Waterborne Navigation - non-Ferry,Diesel,244300.69,0,0,mtCO2e
+1990,Wastewater,Wastewater (Process),Wastewater (Process),Waste,Wastewater Treatment and Discharge,Process Emissions,765.87,0,723959,people
+1990,Buildings,Commercial & Industrial,Steam - NRG,Stationary,Commercial & Institutional Buildings and Facilities,Steam,64223.61,0,12101591.25,Therm
+1990,Landfilled Organics,Landfilled Organics,Landfilled Organics,Waste,Solid Waste Disposal,Solid Waste,472645.88,0,667000,tons
+1990,Wastewater,Wastewater (Fugitive),Wastewater (Fugitive),Waste,Wastewater Treatment and Discharge,Fugitive Emissions,3452.54,0,9086.25,Avg kgN/day
+1990,Transportation,Cars & Trucks,Cars & Trucks,Transportation,On-road Transportation - Cars and Trucks,Gasoline,2037736.32,0,3648000000,miles
+1990,Transportation,Public Transportation,Rail - Caltrain,Transportation,Railways - Caltrain,Diesel,7976.26,0,785835,gallons
+1990,Municipal,Municipal Fleet,Municipal Fleet,Transportation,On-road Transportation - Municipal Fleet,Gasoline,21646.72,0,2404846.72,gallons
+1990,Transportation,Public Transportation,MUNI,Transportation,On-road Transportation - MUNI Buses,Diesel,53265.82,0,5216832.5,gallons
+1990,Transportation,Public Transportation,Bus - Golden Gate Transit,Transportation,On-Road Transportation - Golden Gate Transit Buses,Diesel,3320.19,0,325054.5,gallons
+1990,Municipal,Municipal Fleet,Municipal Fleet,Transportation,On-road Transportation - Municipal Fleet,Diesel,10893.1,0,297989.96,gallons
+1990,Transportation,Public Transportation,Ferry,Transportation,Waterborne Navigation - Ferry,Diesel,39991.19,0,3940000,gallons
+1990,Transportation,Public Transportation,Bus - Caltrain,Transportation,On-Road Transportation - Caltrain Buses,Diesel,58.44,0,5721.52,gallons
+1990,Transportation,Public Transportation,Bus - Caltrain,Transportation,On-Road Transportation - Caltrain Buses,Gasoline,242.77,0,27607.58,gallons
+1990,Municipal,Municipal Fleet,Municipal Fleet,Transportation,On-road Transportation - Municipal Fleet,CNG,2411.71,0,386548.98,gallons
+1990,Municipal,Municipal Fleet,Municipal Fleet,Transportation,On-road Transportation - Municipal Fleet,Propane,84.04,0,14202.93,gallons
+1990,Municipal,Municipal Buildings,PG&E Municipal Buildings,Stationary,Commercial & Institutional Buildings and Facilities,Natural Gas,98658.82,0,24710537.48,Therm
+1990,Buildings,Residential,PG&E Residential,Stationary,Residential Buildings,Natural Gas,951800.25,0,194935767.4,Therm
+1990,Buildings,Commercial & Industrial,PG&E Commercial & Industrial,Stationary,Commercial & Institutional Buildings and Facilities,Natural Gas,430629.57,0,86521277.78,Therm
+1990,Municipal,Municipal Buildings,PG&E Municipal Buildings Natural Gas Distribution Fugitive Emissions Upstream Leaks,Stationary,Fugitive Emissions from Oil and Natural Gas Systems,Natural Gas,27845.87,0,669655.57,Therm
+1990,Municipal,Municipal Buildings,PG&E Municipal Buildings Natural Gas Distribution Fugitive Emissions Downstream Leaks,Stationary,Fugitive Emissions from Oil and Natural Gas Systems,Natural Gas,18598.17,0,447260.73,Therm
+1990,Buildings,Commercial & Industrial,PG&E Commercial & Industrial Natural Gas Distribution Fugitive Emissions Downstream Leaks,Stationary,Fugitive Emissions from Oil and Natural Gas Systems,Natural Gas,90691.48,0,1566035.13,Therm
+1990,Buildings,Commercial & Industrial,PG&E Commercial & Industrial Natural Gas Distribution Fugitive Emissions Upstream Leaks,Stationary,Fugitive Emissions from Oil and Natural Gas Systems,Natural Gas,135786.68,0,2344726.63,Therm
+1990,Buildings,Residential,PG&E Residential Natural Gas Distribution Fugitive Emissions Downstream Leaks,Stationary,Fugitive Emissions from Oil and Natural Gas Systems,Natural Gas,179423.77,0,3528337.39,Therm
+1990,Buildings,Residential,PG&E Residential Natural Gas Distribution Fugitive Emissions Upstream Leaks,Stationary,Fugitive Emissions from Oil and Natural Gas Systems,Natural Gas,268640.01,0,5282759.3,Therm
+1990,Buildings,Residential,PG&E Residential Electric Power Transmission & Distribution Loss,Stationary,Residential Buildings,Electricity,52538.19,0,125639149.1,kWh
+1990,Buildings,Residential,PG&E Residential,Stationary,Residential Buildings,Electricity,516752.01,0,1235754011,kWh
+1990,Transportation,Public Transportation,Rail - BART,Transportation,Railways - Bay Area Rapid Transit Traction,Electricity,89569.84,0,206253870,kWh
+1990,Transportation,Public Transportation,MUNI,Transportation,On-road Transportation - MUNI Buses,Electricity,3500.71,0,53156171,kWh
+1990,Buildings,Direct Access,PG&E Direct Access Electric Power Transmission & Distribution Loss,Stationary,Commercial & Institutional Buildings and Facilities,Electricity,12253.92,0,15733743.85,kWh
+1990,Buildings,Direct Access,PG&E Direct Access,Stationary,Commercial & Institutional Buildings and Facilities,Electricity,221389.73,0,284259148.2,kWh
+1990,Buildings,Commercial & Industrial,PG&E Commercial & Industrial Electric Power Transmission & Distribution Loss,Stationary,Commercial & Institutional Buildings and Facilities,Electricity,141270.31,0,358212305.5,kWh
+1990,Municipal,Municipal Buildings,SFPUC Municipal Buildings,Stationary,Commercial & Institutional Buildings and Facilities,Electricity,50402.31,0,765327829,kWh
+1990,Buildings,Commercial & Industrial,PG&E Commercial & Industrial,Stationary,Commercial & Institutional Buildings and Facilities,Electricity,1389498.07,0,3523283120,kWh
+1990,Wastewater,Wastewater (Digester Gas),Wastewater (Digester Gas),Stationary,Commercial & Institutional Buildings and Facilities,Sludge gas,90.24,15734.91,288967.06,MMBTU
+2000,Buildings,Residential,CleanPowerSF Residential Green Product Electric Power Transmission & Distribution Loss,Stationary,Residential Buildings,Electricity,0,0,0,kWh
+2000,Municipal,Municipal Fleet,Municipal Fleet,Transportation,On-road Transportation - Municipal Fleet,Renewable CNG,0,0,0,gallons
+2000,Municipal,Municipal Buildings,PG&E Municipal Buildings,Stationary,Commercial & Institutional Buildings and Facilities,Electricity,0,0,0,kWh
+2000,Municipal,Municipal Buildings,PG&E Municipal Buildings Electric Power Transmission & Distribution Loss,Stationary,Commercial & Institutional Buildings and Facilities,Electricity,0,0,0,kWh
+2000,Municipal,Municipal Fleet,Municipal Fleet,Transportation,On-road Transportation - Municipal Fleet,B20,0,0,0,gallons
+2000,Buildings,Commercial & Industrial,CleanPowerSF Commercial Green Product,Stationary,Commercial & Institutional Buildings and Facilities,Electricity,0,0,0,kWh
+2000,Transportation,Public Transportation,Rail - BART,Transportation,Railways - Bay Area Rapid Transit Other Power Contracts,Electricity,0,0,0,kWh
+2000,Transportation,Public Transportation,Rail - BART,Transportation,Railways - Bay Area Rapid Transit PG&E,Electricity,0,0,0,kWh
+2000,Buildings,Commercial & Industrial,PG&E District,Stationary,Commercial & Institutional Buildings and Facilities,Electricity,0,0,0,kWh
+2000,Transportation,Public Transportation,MUNI,Transportation,On-road Transportation - MUNI Buses,B20,0,0,0,gallons
+2000,Transportation,Public Transportation,Bus - Caltrain,Transportation,On-Road Transportation - Caltrain Buses,CNG,0,0,0,gallons
+2000,Buildings,Commercial & Industrial,PG&E District Natural Gas Distribution Fugitive Emissions Downstream Leaks,Stationary,Fugitive Emissions from Oil and Natural Gas Systems,Natural Gas,0,0,0,Therm
+2000,Transportation,Public Transportation,MUNI,Transportation,On-road Transportation - MUNI Buses,B100,0,0,0,gallons
+2000,Buildings,Residential,CleanPowerSF Residential Green Product,Stationary,Residential Buildings,Electricity,0,0,0,kWh
+2000,Buildings,Residential,CleanPowerSF Residential SuperGreen Product,Stationary,Residential Buildings,Electricity,0,0,0,kWh
+2000,Municipal,Municipal Fleet,Municipal Fleet,Transportation,On-road Transportation - Municipal Fleet,B5,0,0,0,gallons
+2000,Buildings,Commercial & Industrial,CleanPowerSF Commercial Green Product Electric Power Transmission & Distribution Loss,Stationary,Commercial & Institutional Buildings and Facilities,Electricity,0,0,0,kWh
+2000,Buildings,Commercial & Industrial,PG&E District,Stationary,Commercial & Institutional Buildings and Facilities,Natural Gas,0,0,0,Therm
+2000,Buildings,Commercial & Industrial,PG&E District Natural Gas Distribution Fugitive Emissions Upstream Leaks,Stationary,Fugitive Emissions from Oil and Natural Gas Systems,Natural Gas,0,0,0,Therm
+2000,Buildings,Commercial & Industrial,CleanPowerSF Commercial SuperGreen Product,Stationary,Commercial & Institutional Buildings and Facilities,Electricity,0,0,0,kWh
+2000,Buildings,Commercial & Industrial,PG&E District Electric Power Transmission & Distribution Loss,Stationary,Commercial & Institutional Buildings and Facilities,Electricity,0,0,0,kWh
+2000,Transportation,Public Transportation,MUNI,Transportation,On-road Transportation - MUNI Buses,B5,0,0,0,gallons
+2000,Transportation,Public Transportation,Bus - Golden Gate Transit,Transportation,On-Road Transportation - Golden Gate Transit Buses,Renewable Diesel,0,0,0,gallons
+2000,Transportation,Public Transportation,MUNI,Transportation,On-road Transportation - MUNI Buses,Renewable Diesel,0,0,0,gallons
+2000,Municipal,Municipal Fleet,Municipal Fleet,Transportation,On-road Transportation - Municipal Fleet,Renewable Diesel,0,0,0,gallons
+2000,Transportation,Diesel - Ships and Boats (non-Ferry),Diesel - Ships and Boats (non-Ferry),Transportation,Waterborne Navigation - non-Ferry,Diesel,242457.18,0,0,mtCO2e
+2000,Agriculture,Agriculture/Farming,Agriculture/Farming,"Agriculture, Forestry and Other Land Use",Land,Animal Waste,68745.37,0,0,mtCO2e
+2000,Buildings,Commercial & Industrial,Additional Stationary Sources,Stationary,Energy Industries,Gas Oil,70.5,0,0,mtCO2e
+2000,Buildings,Residential,Other Residential Fuel Usage,Stationary,Commercial & Institutional Buildings and Facilities,"LPGas, Liquid fuel, solid fuel",23655,0,0,mtCO2e
+2000,Agriculture,Agriculture/Farming,Agriculture/Farming,Stationary,"Agriculture, Forestry and Fishing Activities",Other Unspecified Fuels,109,0,0,mtCO2e
+2000,Transportation,Off-Road Equipment,Off-Road Equipment,Stationary,Non-specified Sources,Other Unspecified Fuels,177572.23,0,0,mtCO2e
+2000,Agriculture,Agriculture/Farming,Agriculture/Farming,"Agriculture, Forestry and Other Land Use",Land,Other Unspecified Fuels,5346.9,0,0,mtCO2e
+2000,Buildings,Commercial & Industrial,Steam - NRG,Stationary,Commercial & Institutional Buildings and Facilities,Steam,64223.61,0,12101591.25,Therm
+2000,Wastewater,Wastewater (Fugitive),Wastewater (Fugitive),Waste,Wastewater Treatment and Discharge,Fugitive Emissions,3712.09,0,9769.31,Avg kgN/day
+2000,Landfilled Organics,Landfilled Organics,Landfilled Organics,Waste,Solid Waste Disposal,Solid Waste,480406.86,0,872731,tons
+2000,Transportation,Cars & Trucks,Cars & Trucks,Transportation,On-road Transportation - Cars and Trucks,Gasoline,2205904.16,0,3880000000,miles
+2000,Wastewater,Wastewater (Process),Wastewater (Process),Waste,Wastewater Treatment and Discharge,Process Emissions,823.45,0,773312,people
+2000,Municipal,Municipal Fleet,Municipal Fleet,Transportation,On-road Transportation - Municipal Fleet,Diesel,10570.82,0,289173.69,gallons
+2000,Transportation,Public Transportation,MUNI,Transportation,On-road Transportation - MUNI Buses,Diesel,53781.75,0,5267362,gallons
+2000,Municipal,Municipal Fleet,Municipal Fleet,Transportation,On-road Transportation - Municipal Fleet,Propane,81.56,0,13782.73,gallons
+2000,Transportation,Public Transportation,Bus - Caltrain,Transportation,On-Road Transportation - Caltrain Buses,Diesel,58.44,0,5721.52,gallons
+2000,Transportation,Public Transportation,Rail - Caltrain,Transportation,Railways - Caltrain,Diesel,8536.91,0,841071,gallons
+2000,Transportation,Public Transportation,Ferry,Transportation,Waterborne Navigation - Ferry,Diesel,99967.83,0,9849000,gallons
+2000,Municipal,Municipal Fleet,Municipal Fleet,Transportation,On-road Transportation - Municipal Fleet,CNG,2340.36,0,375112.62,gallons
+2000,Transportation,Public Transportation,Bus - Caltrain,Transportation,On-Road Transportation - Caltrain Buses,Gasoline,242.77,0,27607.58,gallons
+2000,Municipal,Municipal Fleet,Municipal Fleet,Transportation,On-road Transportation - Municipal Fleet,Gasoline,21006.28,0,2333697.4,gallons
+2000,Transportation,Public Transportation,Bus - Golden Gate Transit,Transportation,On-Road Transportation - Golden Gate Transit Buses,Diesel,3320.19,0,325054.5,gallons
+2000,Buildings,Residential,PG&E Residential,Stationary,Residential Buildings,Natural Gas,835614.78,0,159290054.7,Therm
+2000,Municipal,Municipal Buildings,PG&E Municipal Buildings,Stationary,Commercial & Institutional Buildings and Facilities,Natural Gas,131379.36,0,28621672.74,Therm
+2000,Buildings,Commercial & Industrial,PG&E Commercial & Industrial,Stationary,Commercial & Institutional Buildings and Facilities,Natural Gas,527726.83,0,101493370.3,Therm
+2000,Buildings,Commercial & Industrial,PG&E Commercial & Industrial Natural Gas Distribution Fugitive Emissions Upstream Leaks,Stationary,Fugitive Emissions from Oil and Natural Gas Systems,Natural Gas,166403.52,0,2750470.34,Therm
+2000,Buildings,Residential,PG&E Residential Natural Gas Distribution Fugitive Emissions Upstream Leaks,Stationary,Fugitive Emissions from Oil and Natural Gas Systems,Natural Gas,235847.35,0,4316760.48,Therm
+2000,Municipal,Municipal Buildings,PG&E Municipal Buildings Natural Gas Distribution Fugitive Emissions Upstream Leaks,Stationary,Fugitive Emissions from Oil and Natural Gas Systems,Natural Gas,37081.05,0,775647.33,Therm
+2000,Buildings,Commercial & Industrial,PG&E Commercial & Industrial Natural Gas Distribution Fugitive Emissions Downstream Leaks,Stationary,Fugitive Emissions from Oil and Natural Gas Systems,Natural Gas,111140.36,0,1837030,Therm
+2000,Municipal,Municipal Buildings,PG&E Municipal Buildings Natural Gas Distribution Fugitive Emissions Downstream Leaks,Stationary,Fugitive Emissions from Oil and Natural Gas Systems,Natural Gas,24766.31,0,518052.28,Therm
+2000,Buildings,Residential,PG&E Residential Natural Gas Distribution Fugitive Emissions Downstream Leaks,Stationary,Fugitive Emissions from Oil and Natural Gas Systems,Natural Gas,157521.66,0,2883149.99,Therm
+2000,Transportation,Public Transportation,Rail - BART,Transportation,Railways - Bay Area Rapid Transit Traction,Electricity,91033.98,0,268130030,kWh
+2000,Buildings,Residential,PG&E Residential Electric Power Transmission & Distribution Loss,Stationary,Residential Buildings,Electricity,59620.46,0,149259251.2,kWh
+2000,Buildings,Residential,PG&E Residential,Stationary,Residential Buildings,Electricity,586411.3,0,1468075195,kWh
+2000,Transportation,Public Transportation,MUNI,Transportation,On-road Transportation - MUNI Buses,Electricity,6448.38,0,95047340,kWh
+2000,Buildings,Commercial & Industrial,PG&E Commercial & Industrial Electric Power Transmission & Distribution Loss,Stationary,Commercial & Institutional Buildings and Facilities,Electricity,120516.23,0,322769519.6,kWh
+2000,Buildings,Direct Access,PG&E Direct Access Electric Power Transmission & Distribution Loss,Stationary,Commercial & Institutional Buildings and Facilities,Electricity,8947.5,0,17020244.23,kWh
+2000,Buildings,Commercial & Industrial,PG&E Commercial & Industrial,Stationary,Commercial & Institutional Buildings and Facilities,Electricity,1185366.33,0,3174677091,kWh
+2000,Buildings,Direct Access,PG&E Direct Access,Stationary,Commercial & Institutional Buildings and Facilities,Electricity,161653.12,0,307502154.1,kWh
+2000,Municipal,Municipal Buildings,SFPUC Municipal Buildings,Stationary,Commercial & Institutional Buildings and Facilities,Electricity,63646.59,0,938133000,kWh
+2000,Wastewater,Wastewater (Digester Gas),Wastewater (Digester Gas),Stationary,Commercial & Institutional Buildings and Facilities,Sludge gas,97.02,16917.79,310690.25,MMBTU
+2005,Buildings,Commercial & Industrial,CleanPowerSF Commercial Green Product,Stationary,Commercial & Institutional Buildings and Facilities,Electricity,0,0,0,kWh
+2005,Buildings,Commercial & Industrial,PG&E District,Stationary,Commercial & Institutional Buildings and Facilities,Natural Gas,0,0,0,Therm
+2005,Buildings,Commercial & Industrial,PG&E District Electric Power Transmission & Distribution Loss,Stationary,Commercial & Institutional Buildings and Facilities,Electricity,0,0,0,kWh
+2005,Buildings,Residential,CleanPowerSF Residential Green Product Electric Power Transmission & Distribution Loss,Stationary,Residential Buildings,Electricity,0,0,0,kWh
+2005,Buildings,Residential,CleanPowerSF Residential Green Product,Stationary,Residential Buildings,Electricity,0,0,0,kWh
+2005,Municipal,Municipal Buildings,PG&E Municipal Buildings,Stationary,Commercial & Institutional Buildings and Facilities,Electricity,0,0,0,kWh
+2005,Buildings,Commercial & Industrial,PG&E District Natural Gas Distribution Fugitive Emissions Upstream Leaks,Stationary,Fugitive Emissions from Oil and Natural Gas Systems,Natural Gas,0,0,0,Therm
+2005,Buildings,Commercial & Industrial,PG&E District,Stationary,Commercial & Institutional Buildings and Facilities,Electricity,0,0,0,kWh
+2005,Buildings,Commercial & Industrial,CleanPowerSF Commercial Green Product Electric Power Transmission & Distribution Loss,Stationary,Commercial & Institutional Buildings and Facilities,Electricity,0,0,0,kWh
+2005,Buildings,Commercial & Industrial,PG&E District Natural Gas Distribution Fugitive Emissions Downstream Leaks,Stationary,Fugitive Emissions from Oil and Natural Gas Systems,Natural Gas,0,0,0,Therm
+2005,Municipal,Municipal Buildings,PG&E Municipal Buildings Electric Power Transmission & Distribution Loss,Stationary,Commercial & Institutional Buildings and Facilities,Electricity,0,0,0,kWh
+2005,Municipal,Municipal Fleet,Municipal Fleet,Transportation,On-road Transportation - Municipal Fleet,Renewable CNG,0,0,0,gallons
+2005,Buildings,Residential,CleanPowerSF Residential SuperGreen Product,Stationary,Residential Buildings,Electricity,0,0,0,kWh
+2005,Municipal,Municipal Fleet,Municipal Fleet,Transportation,On-road Transportation - Municipal Fleet,B5,0,0,0,gallons
+2005,Buildings,Commercial & Industrial,CleanPowerSF Commercial SuperGreen Product,Stationary,Commercial & Institutional Buildings and Facilities,Electricity,0,0,0,kWh
+2005,Municipal,Municipal Fleet,Municipal Fleet,Transportation,On-road Transportation - Municipal Fleet,B20,0,0,0,gallons
+2005,Transportation,Public Transportation,Rail - BART,Transportation,Railways - Bay Area Rapid Transit PG&E,Electricity,0,0,0,kWh
+2005,Transportation,Public Transportation,Rail - BART,Transportation,Railways - Bay Area Rapid Transit Other Power Contracts,Electricity,0,0,0,kWh
+2005,Transportation,Public Transportation,MUNI,Transportation,On-road Transportation - MUNI Buses,B5,0,0,0,gallons
+2005,Transportation,Public Transportation,Bus - Caltrain,Transportation,On-Road Transportation - Caltrain Buses,CNG,0,0,0,gallons
+2005,Transportation,Public Transportation,MUNI,Transportation,On-road Transportation - MUNI Buses,B20,0,0,0,gallons
+2005,Transportation,Public Transportation,MUNI,Transportation,On-road Transportation - MUNI Buses,B100,0,0,0,gallons
+2005,Municipal,Municipal Fleet,Municipal Fleet,Transportation,On-road Transportation - Municipal Fleet,Renewable Diesel,0,0,0,gallons
+2005,Transportation,Public Transportation,MUNI,Transportation,On-road Transportation - MUNI Buses,Renewable Diesel,0,0,0,gallons
+2005,Transportation,Public Transportation,Bus - Golden Gate Transit,Transportation,On-Road Transportation - Golden Gate Transit Buses,Renewable Diesel,0,0,0,gallons
+2005,Buildings,Commercial & Industrial,Additional Stationary Sources,Stationary,Energy Industries,Gas Oil,70.5,0,0,mtCO2e
+2005,Transportation,Diesel - Ships and Boats (non-Ferry),Diesel - Ships and Boats (non-Ferry),Transportation,Waterborne Navigation - non-Ferry,Diesel,273327.12,0,0,mtCO2e
+2005,Agriculture,Agriculture/Farming,Agriculture/Farming,Stationary,"Agriculture, Forestry and Fishing Activities",Other Unspecified Fuels,109,0,0,mtCO2e
+2005,Agriculture,Agriculture/Farming,Agriculture/Farming,"Agriculture, Forestry and Other Land Use",Land,Animal Waste,75903.37,0,0,mtCO2e
+2005,Agriculture,Agriculture/Farming,Agriculture/Farming,"Agriculture, Forestry and Other Land Use",Land,Other Unspecified Fuels,5346.9,0,0,mtCO2e
+2005,Transportation,Off-Road Equipment,Off-Road Equipment,Stationary,Non-specified Sources,Other Unspecified Fuels,150950.47,0,0,mtCO2e
+2005,Buildings,Residential,Other Residential Fuel Usage,Stationary,Commercial & Institutional Buildings and Facilities,"LPGas, Liquid fuel, solid fuel",23655,0,0,mtCO2e
+2005,Wastewater,Wastewater (Fugitive),Wastewater (Fugitive),Waste,Wastewater Treatment and Discharge,Fugitive Emissions,3641.13,0,9582.57,Avg kgN/day
+2005,Wastewater,Wastewater (Process),Wastewater (Process),Waste,Wastewater Treatment and Discharge,Process Emissions,807.71,0,780187,people
+2005,Buildings,Commercial & Industrial,Steam - NRG,Stationary,Commercial & Institutional Buildings and Facilities,Steam,64223.61,0,12101591.25,Therm
+2005,Transportation,Cars & Trucks,Cars & Trucks,Transportation,On-road Transportation - Cars and Trucks,Gasoline,2053822.63,0,3777853741,miles
+2005,Landfilled Organics,Landfilled Organics,Landfilled Organics,Waste,Solid Waste Disposal,Solid Waste,365526.16,0,664033,tons
+2005,Transportation,Public Transportation,Rail - Caltrain,Transportation,Railways - Caltrain,Diesel,13729.48,0,1352652,gallons
+2005,Transportation,Public Transportation,Bus - Caltrain,Transportation,On-Road Transportation - Caltrain Buses,Gasoline,242.77,0,27607.58,gallons
+2005,Transportation,Public Transportation,Bus - Golden Gate Transit,Transportation,On-Road Transportation - Golden Gate Transit Buses,Diesel,3320.19,0,325054.5,gallons
+2005,Municipal,Municipal Fleet,Municipal Fleet,Transportation,On-road Transportation - Municipal Fleet,Diesel,10615.79,0,290403.9,gallons
+2005,Municipal,Municipal Fleet,Municipal Fleet,Transportation,On-road Transportation - Municipal Fleet,CNG,2515.97,0,403258.91,gallons
+2005,Transportation,Public Transportation,Bus - Caltrain,Transportation,On-Road Transportation - Caltrain Buses,Diesel,58.44,0,5721.52,gallons
+2005,Municipal,Municipal Fleet,Municipal Fleet,Transportation,On-road Transportation - Municipal Fleet,Gasoline,20488.34,0,2276156.86,gallons
+2005,Municipal,Municipal Fleet,Municipal Fleet,Transportation,On-road Transportation - Municipal Fleet,Propane,87.68,0,14816.91,gallons
+2005,Transportation,Public Transportation,MUNI,Transportation,On-road Transportation - MUNI Buses,Diesel,52188.23,0,5111293,gallons
+2005,Transportation,Public Transportation,Ferry,Transportation,Waterborne Navigation - Ferry,Diesel,87646.93,0,8635124.17,gallons
+2005,Buildings,Commercial & Industrial,PG&E Commercial & Industrial,Stationary,Commercial & Institutional Buildings and Facilities,Natural Gas,506726.44,0,97150960.36,Therm
+2005,Buildings,Residential,PG&E Residential,Stationary,Residential Buildings,Natural Gas,771444.54,0,148260510.3,Therm
+2005,Municipal,Municipal Buildings,PG&E Municipal Buildings,Stationary,Commercial & Institutional Buildings and Facilities,Natural Gas,122997.42,0,24895257.9,Therm
+2005,Buildings,Residential,PG&E Residential Natural Gas Distribution Fugitive Emissions Downstream Leaks,Stationary,Fugitive Emissions from Oil and Natural Gas Systems,Natural Gas,145424.94,0,2683515.24,Therm
+2005,Buildings,Residential,PG&E Residential Natural Gas Distribution Fugitive Emissions Upstream Leaks,Stationary,Fugitive Emissions from Oil and Natural Gas Systems,Natural Gas,217735.68,0,4017859.83,Therm
+2005,Municipal,Municipal Buildings,PG&E Municipal Buildings Natural Gas Distribution Fugitive Emissions Downstream Leaks,Stationary,Fugitive Emissions from Oil and Natural Gas Systems,Natural Gas,23186.23,0,450604.17,Therm
+2005,Municipal,Municipal Buildings,PG&E Municipal Buildings Natural Gas Distribution Fugitive Emissions Upstream Leaks,Stationary,Fugitive Emissions from Oil and Natural Gas Systems,Natural Gas,34715.3,0,674661.49,Therm
+2005,Buildings,Commercial & Industrial,PG&E Commercial & Industrial Natural Gas Distribution Fugitive Emissions Downstream Leaks,Stationary,Fugitive Emissions from Oil and Natural Gas Systems,Natural Gas,106717.63,0,1758432.38,Therm
+2005,Buildings,Commercial & Industrial,PG&E Commercial & Industrial Natural Gas Distribution Fugitive Emissions Upstream Leaks,Stationary,Fugitive Emissions from Oil and Natural Gas Systems,Natural Gas,159781.65,0,2632791.03,Therm
+2005,Buildings,Residential,PG&E Residential Electric Power Transmission & Distribution Loss,Stationary,Residential Buildings,Electricity,42997.11,0,142726221.3,kWh
+2005,Transportation,Public Transportation,Rail - BART,Transportation,Railways - Bay Area Rapid Transit Traction,Electricity,56657.63,0,281021740,kWh
+2005,Transportation,Public Transportation,MUNI,Transportation,On-road Transportation - MUNI Buses,Electricity,6522.97,0,95047340,kWh
+2005,Buildings,Residential,PG&E Residential,Stationary,Residential Buildings,Electricity,422908.35,0,1403818011,kWh
+2005,Buildings,Direct Access,PG&E Direct Access Electric Power Transmission & Distribution Loss,Stationary,Commercial & Institutional Buildings and Facilities,Electricity,16400.57,0,19713841.05,kWh
+2005,Buildings,Direct Access,PG&E Direct Access,Stationary,Commercial & Institutional Buildings and Facilities,Electricity,296306.56,0,356166956.7,kWh
+2005,Buildings,Commercial & Industrial,PG&E Commercial & Industrial Electric Power Transmission & Distribution Loss,Stationary,Commercial & Institutional Buildings and Facilities,Electricity,89338.28,0,311398331.8,kWh
+2005,Buildings,Commercial & Industrial,PG&E Commercial & Industrial,Stationary,Commercial & Institutional Buildings and Facilities,Electricity,878708.11,0,3062833043,kWh
+2005,Municipal,Municipal Buildings,SFPUC Municipal Buildings,Stationary,Commercial & Institutional Buildings and Facilities,Electricity,56865.75,0,828601268,kWh
+2005,Wastewater,Wastewater (Digester Gas),Wastewater (Digester Gas),Stationary,Commercial & Institutional Buildings and Facilities,Sludge gas,95.16,16594.41,304751.51,MMBTU
+2010,Buildings,Residential,CleanPowerSF Residential SuperGreen Product,Stationary,Residential Buildings,Electricity,0,0,0,kWh
+2010,Transportation,Public Transportation,MUNI,Transportation,On-road Transportation - MUNI Buses,B5,0,0,0,gallons
+2010,Buildings,Commercial & Industrial,PG&E District,Stationary,Commercial & Institutional Buildings and Facilities,Natural Gas,0,0,0,Therm
+2010,Buildings,Commercial & Industrial,PG&E District Natural Gas Distribution Fugitive Emissions Downstream Leaks,Stationary,Fugitive Emissions from Oil and Natural Gas Systems,Natural Gas,0,0,0,Therm
+2010,Buildings,Commercial & Industrial,PG&E District Natural Gas Distribution Fugitive Emissions Upstream Leaks,Stationary,Fugitive Emissions from Oil and Natural Gas Systems,Natural Gas,0,0,0,Therm
+2010,Transportation,Public Transportation,Bus - Caltrain,Transportation,On-Road Transportation - Caltrain Buses,CNG,0,0,0,gallons
+2010,Municipal,Municipal Buildings,PG&E Municipal Buildings Electric Power Transmission & Distribution Loss,Stationary,Commercial & Institutional Buildings and Facilities,Electricity,0,0,0,kWh
+2010,Transportation,Public Transportation,MUNI,Transportation,On-road Transportation - MUNI Buses,B20,0,0,0,gallons
+2010,Transportation,Public Transportation,Rail - BART,Transportation,Railways - Bay Area Rapid Transit PG&E,Electricity,0,0,0,kWh
+2010,Buildings,Commercial & Industrial,CleanPowerSF Commercial SuperGreen Product,Stationary,Commercial & Institutional Buildings and Facilities,Electricity,0,0,0,kWh
+2010,Buildings,Residential,CleanPowerSF Residential Green Product Electric Power Transmission & Distribution Loss,Stationary,Residential Buildings,Electricity,0,0,0,kWh
+2010,Municipal,Municipal Buildings,PG&E Municipal Buildings,Stationary,Commercial & Institutional Buildings and Facilities,Electricity,0,0,0,kWh
+2010,Municipal,Municipal Fleet,Municipal Fleet,Transportation,On-road Transportation - Municipal Fleet,Renewable CNG,0,0,0,gallons
+2010,Buildings,Commercial & Industrial,PG&E District Electric Power Transmission & Distribution Loss,Stationary,Commercial & Institutional Buildings and Facilities,Electricity,0,0,0,kWh
+2010,Buildings,Residential,CleanPowerSF Residential Green Product,Stationary,Residential Buildings,Electricity,0,0,0,kWh
+2010,Buildings,Commercial & Industrial,PG&E District,Stationary,Commercial & Institutional Buildings and Facilities,Electricity,0,0,0,kWh
+2010,Buildings,Commercial & Industrial,CleanPowerSF Commercial Green Product Electric Power Transmission & Distribution Loss,Stationary,Commercial & Institutional Buildings and Facilities,Electricity,0,0,0,kWh
+2010,Buildings,Commercial & Industrial,CleanPowerSF Commercial Green Product,Stationary,Commercial & Institutional Buildings and Facilities,Electricity,0,0,0,kWh
+2010,Transportation,Public Transportation,Rail - BART,Transportation,Railways - Bay Area Rapid Transit Other Power Contracts,Electricity,0,0,0,kWh
+2010,Transportation,Public Transportation,Bus - Golden Gate Transit,Transportation,On-Road Transportation - Golden Gate Transit Buses,Renewable Diesel,0,0,0,gallons
+2010,Municipal,Municipal Fleet,Municipal Fleet,Transportation,On-road Transportation - Municipal Fleet,Renewable Diesel,0,0,0,gallons
+2010,Transportation,Public Transportation,MUNI,Transportation,On-road Transportation - MUNI Buses,Renewable Diesel,0,0,0,gallons
+2010,Agriculture,Agriculture/Farming,Agriculture/Farming,Stationary,"Agriculture, Forestry and Fishing Activities",Other Unspecified Fuels,109,0,0,mtCO2e
+2010,Buildings,Commercial & Industrial,Additional Stationary Sources,Stationary,Energy Industries,Gas Oil,70.5,0,0,mtCO2e
+2010,Agriculture,Agriculture/Farming,Agriculture/Farming,"Agriculture, Forestry and Other Land Use",Land,Other Unspecified Fuels,5346.9,0,0,mtCO2e
+2010,Transportation,Diesel - Ships and Boats (non-Ferry),Diesel - Ships and Boats (non-Ferry),Transportation,Waterborne Navigation - non-Ferry,Diesel,406414.36,0,0,mtCO2e
+2010,Buildings,Residential,Other Residential Fuel Usage,Stationary,Commercial & Institutional Buildings and Facilities,"LPGas, Liquid fuel, solid fuel",23655,0,0,mtCO2e
+2010,Agriculture,Agriculture/Farming,Agriculture/Farming,"Agriculture, Forestry and Other Land Use",Land,Animal Waste,81034.44,0,0,mtCO2e
+2010,Transportation,Off-Road Equipment,Off-Road Equipment,Stationary,Non-specified Sources,Other Unspecified Fuels,144053.22,0,0,mtCO2e
+2010,Transportation,Cars & Trucks,Cars & Trucks,Transportation,On-road Transportation - Cars and Trucks,Gasoline,2085257.45,0,3910784576,miles
+2010,Landfilled Organics,Landfilled Organics,Landfilled Organics,Waste,Solid Waste Disposal,Solid Waste,244625.03,0,444398,tons
+2010,Buildings,Commercial & Industrial,Steam - NRG,Stationary,Commercial & Institutional Buildings and Facilities,Steam,64223.61,0,12101591.25,Therm
+2010,Wastewater,Wastewater (Fugitive),Wastewater (Fugitive),Waste,Wastewater Treatment and Discharge,Fugitive Emissions,3845.22,0,10119.67,Avg kgN/day
+2010,Wastewater,Wastewater (Process),Wastewater (Process),Waste,Wastewater Treatment and Discharge,Process Emissions,852.98,0,805235,people
+2010,Municipal,Municipal Fleet,Municipal Fleet,Transportation,On-road Transportation - Municipal Fleet,Propane,91.37,0,15441.69,gallons
+2010,Transportation,Public Transportation,Bus - Caltrain,Transportation,On-Road Transportation - Caltrain Buses,Diesel,58.44,0,5721.52,gallons
+2010,Transportation,Public Transportation,Bus - Caltrain,Transportation,On-Road Transportation - Caltrain Buses,Gasoline,242.77,0,27607.58,gallons
+2010,Transportation,Public Transportation,Rail - Caltrain,Transportation,Railways - Caltrain,Diesel,12033.9,0,1185600,gallons
+2010,Transportation,Public Transportation,Ferry,Transportation,Waterborne Navigation - Ferry,Diesel,34103.47,0,3359932,gallons
+2010,Transportation,Public Transportation,Bus - Golden Gate Transit,Transportation,On-Road Transportation - Golden Gate Transit Buses,Diesel,3320.19,0,325054.5,gallons
+2010,Municipal,Municipal Fleet,Municipal Fleet,Transportation,On-road Transportation - Municipal Fleet,Gasoline,20413.44,0,2267835.81,gallons
+2010,Municipal,Municipal Fleet,Municipal Fleet,Transportation,On-road Transportation - Municipal Fleet,Diesel,10478.76,0,286655.19,gallons
+2010,Transportation,Public Transportation,MUNI,Transportation,On-road Transportation - MUNI Buses,Diesel,43830.6,0,4292751,gallons
+2010,Municipal,Municipal Fleet,Municipal Fleet,Transportation,On-road Transportation - Municipal Fleet,CNG,2622.06,0,420263.12,gallons
+2010,Buildings,Commercial & Industrial,PG&E Commercial & Industrial,Stationary,Commercial & Institutional Buildings and Facilities,Natural Gas,502633.35,0,96848329.26,Therm
+2010,Buildings,Residential,PG&E Residential,Stationary,Residential Buildings,Natural Gas,793057.12,0,149473334.7,Therm
+2010,Municipal,Municipal Buildings,PG&E Municipal Buildings,Stationary,Commercial & Institutional Buildings and Facilities,Natural Gas,122718.52,0,23129666.11,Therm
+2010,Buildings,Residential,PG&E Residential Natural Gas Distribution Fugitive Emissions Upstream Leaks,Stationary,Fugitive Emissions from Oil and Natural Gas Systems,Natural Gas,223835.7,0,4050727.37,Therm
+2010,Buildings,Residential,PG&E Residential Natural Gas Distribution Fugitive Emissions Downstream Leaks,Stationary,Fugitive Emissions from Oil and Natural Gas Systems,Natural Gas,149499.12,0,2705467.36,Therm
+2010,Municipal,Municipal Buildings,PG&E Municipal Buildings Natural Gas Distribution Fugitive Emissions Downstream Leaks,Stationary,Fugitive Emissions from Oil and Natural Gas Systems,Natural Gas,23133.66,0,418646.96,Therm
+2010,Municipal,Municipal Buildings,PG&E Municipal Buildings Natural Gas Distribution Fugitive Emissions Upstream Leaks,Stationary,Fugitive Emissions from Oil and Natural Gas Systems,Natural Gas,34636.58,0,626813.95,Therm
+2010,Buildings,Commercial & Industrial,PG&E Commercial & Industrial Natural Gas Distribution Fugitive Emissions Upstream Leaks,Stationary,Fugitive Emissions from Oil and Natural Gas Systems,Natural Gas,158491.01,0,2624589.72,Therm
+2010,Buildings,Commercial & Industrial,PG&E Commercial & Industrial Natural Gas Distribution Fugitive Emissions Downstream Leaks,Stationary,Fugitive Emissions from Oil and Natural Gas Systems,Natural Gas,105855.62,0,1752954.76,Therm
+2010,Transportation,Public Transportation,MUNI,Transportation,On-road Transportation - MUNI Buses,Electricity,1479.32,0,100658624,kWh
+2010,Transportation,Public Transportation,Rail - BART,Transportation,Railways - Bay Area Rapid Transit Traction,Electricity,56011.68,0,304121391.2,kWh
+2010,Buildings,Residential,PG&E Residential,Stationary,Residential Buildings,Electricity,339695.14,0,1437149703,kWh
+2010,Buildings,Residential,PG&E Residential Electric Power Transmission & Distribution Loss,Stationary,Residential Buildings,Electricity,34536.82,0,146115055.4,kWh
+2010,Municipal,Municipal Buildings,SFPUC Municipal Buildings,Stationary,Commercial & Institutional Buildings and Facilities,Electricity,12489.08,0,849804897,kWh
+2010,Buildings,Commercial & Industrial,PG&E Commercial & Industrial Electric Power Transmission & Distribution Loss,Stationary,Commercial & Institutional Buildings and Facilities,Electricity,73961.88,0,312910847.2,kWh
+2010,Buildings,Commercial & Industrial,PG&E Commercial & Industrial,Stationary,Commercial & Institutional Buildings and Facilities,Electricity,727469.84,0,3077709753,kWh
+2010,Buildings,Direct Access,PG&E Direct Access Electric Power Transmission & Distribution Loss,Stationary,Commercial & Institutional Buildings and Facilities,Electricity,12161.15,0,21382103.53,kWh
+2010,Buildings,Direct Access,PG&E Direct Access,Stationary,Commercial & Institutional Buildings and Facilities,Electricity,219713.69,0,386307200.1,kWh
+2010,Transportation,Public Transportation,MUNI,Transportation,On-road Transportation - MUNI Buses,B100,40.85,3975.69,420707.8,gallons
+2010,Municipal,Municipal Fleet,Municipal Fleet,Transportation,On-road Transportation - Municipal Fleet,B5,1.84,83.73,8860.72,gallons
+2010,Wastewater,Wastewater (Digester Gas),Wastewater (Digester Gas),Stationary,Commercial & Institutional Buildings and Facilities,Sludge gas,100.5,17524.52,321832.77,MMBTU
+2010,Municipal,Municipal Fleet,Municipal Fleet,Transportation,On-road Transportation - Municipal Fleet,B20,29.38,1335.44,141316.9,gallons
+2012,Buildings,Commercial & Industrial,CleanPowerSF Commercial Green Product,Stationary,Commercial & Institutional Buildings and Facilities,Electricity,0,0,0,kWh
+2012,Transportation,Public Transportation,Rail - BART,Transportation,Railways - Bay Area Rapid Transit PG&E,Electricity,0,0,0,kWh
+2012,Transportation,Public Transportation,Rail - BART,Transportation,Railways - Bay Area Rapid Transit Other Power Contracts,Electricity,0,0,0,kWh
+2012,Transportation,Public Transportation,Bus - Caltrain,Transportation,On-Road Transportation - Caltrain Buses,CNG,0,0,0,gallons
+2012,Buildings,Residential,CleanPowerSF Residential SuperGreen Product,Stationary,Residential Buildings,Electricity,0,0,0,kWh
+2012,Municipal,Municipal Fleet,Municipal Fleet,Transportation,On-road Transportation - Municipal Fleet,Renewable CNG,0,0,0,gallons
+2012,Buildings,Commercial & Industrial,CleanPowerSF Commercial SuperGreen Product,Stationary,Commercial & Institutional Buildings and Facilities,Electricity,0,0,0,kWh
+2012,Buildings,Commercial & Industrial,CleanPowerSF Commercial Green Product Electric Power Transmission & Distribution Loss,Stationary,Commercial & Institutional Buildings and Facilities,Electricity,0,0,0,kWh
+2012,Buildings,Residential,CleanPowerSF Residential Green Product,Stationary,Residential Buildings,Electricity,0,0,0,kWh
+2012,Buildings,Residential,CleanPowerSF Residential Green Product Electric Power Transmission & Distribution Loss,Stationary,Residential Buildings,Electricity,0,0,0,kWh
+2012,Transportation,Public Transportation,Bus - Golden Gate Transit,Transportation,On-Road Transportation - Golden Gate Transit Buses,Renewable Diesel,0,0,0,gallons
+2012,Transportation,Public Transportation,MUNI,Transportation,On-road Transportation - MUNI Buses,Renewable Diesel,0,0,0,gallons
+2012,Municipal,Municipal Fleet,Municipal Fleet,Transportation,On-road Transportation - Municipal Fleet,Renewable Diesel,0,0,0,gallons
+2012,Buildings,Residential,Other Residential Fuel Usage,Stationary,Commercial & Institutional Buildings and Facilities,"LPGas, Liquid fuel, solid fuel",23655,0,0,mtCO2e
+2012,Transportation,Off-Road Equipment,Off-Road Equipment,Stationary,Non-specified Sources,Other Unspecified Fuels,169081,0,0,mtCO2e
+2012,Agriculture,Agriculture/Farming,Agriculture/Farming,"Agriculture, Forestry and Other Land Use",Land,Other Unspecified Fuels,5346.9,0,0,mtCO2e
+2012,Agriculture,Agriculture/Farming,Agriculture/Farming,"Agriculture, Forestry and Other Land Use",Land,Animal Waste,83157.54,0,0,mtCO2e
+2012,Agriculture,Agriculture/Farming,Agriculture/Farming,Stationary,"Agriculture, Forestry and Fishing Activities",Other Unspecified Fuels,109,0,0,mtCO2e
+2012,Transportation,Diesel - Ships and Boats (non-Ferry),Diesel - Ships and Boats (non-Ferry),Transportation,Waterborne Navigation - non-Ferry,Diesel,537425.07,0,0,mtCO2e
+2012,Buildings,Commercial & Industrial,Additional Stationary Sources,Stationary,Energy Industries,Gas Oil,70.5,0,0,mtCO2e
+2012,Transportation,Cars & Trucks,Cars & Trucks,Transportation,On-road Transportation - Cars and Trucks,Gasoline,1897760.25,0,3935735774,miles
+2012,Landfilled Organics,Landfilled Organics,Landfilled Organics,Waste,Solid Waste Disposal,Solid Waste,180397.53,0,428048,tons
+2012,Buildings,Commercial & Industrial,Steam - NRG,Stationary,Commercial & Institutional Buildings and Facilities,Steam,64223.61,0,12101591.25,Therm
+2012,Wastewater,Wastewater (Fugitive),Wastewater (Fugitive),Waste,Wastewater Treatment and Discharge,Fugitive Emissions,3953.8,0,10405.43,Avg kgN/day
+2012,Wastewater,Wastewater (Process),Wastewater (Process),Waste,Wastewater Treatment and Discharge,Process Emissions,877.06,0,827420,people
+2012,Transportation,Public Transportation,Bus - Caltrain,Transportation,On-Road Transportation - Caltrain Buses,Diesel,58.44,0,5721.52,gallons
+2012,Transportation,Public Transportation,Ferry,Transportation,Waterborne Navigation - Ferry,Diesel,17235.93,0,1665312.5,gallons
+2012,Municipal,Municipal Fleet,Municipal Fleet,Transportation,On-road Transportation - Municipal Fleet,Gasoline,18952.83,0,2112169.18,gallons
+2012,Transportation,Public Transportation,MUNI,Transportation,On-road Transportation - MUNI Buses,Diesel,42026.31,0,4114480.3,gallons
+2012,Municipal,Municipal Fleet,Municipal Fleet,Transportation,On-road Transportation - Municipal Fleet,Diesel,9400.15,0,93159.1,gallons
+2012,Transportation,Public Transportation,Bus - Golden Gate Transit,Transportation,On-Road Transportation - Golden Gate Transit Buses,Diesel,3320.19,0,325054.5,gallons
+2012,Transportation,Public Transportation,Bus - Caltrain,Transportation,On-Road Transportation - Caltrain Buses,Gasoline,242.77,0,27607.58,gallons
+2012,Transportation,Public Transportation,Rail - Caltrain,Transportation,Railways - Caltrain,Diesel,11521.72,0,1118472.36,gallons
+2012,Municipal,Municipal Fleet,Municipal Fleet,Transportation,On-road Transportation - Municipal Fleet,Propane,97.81,0,17119.91,gallons
+2012,Municipal,Municipal Fleet,Municipal Fleet,Transportation,On-road Transportation - Municipal Fleet,CNG,2653.71,0,429418.74,gallons
+2012,Municipal,Municipal Buildings,PG&E Municipal Buildings,Stationary,Commercial & Institutional Buildings and Facilities,Natural Gas,114212.03,0,21473875.73,Therm
+2012,Buildings,Residential,PG&E Residential,Stationary,Residential Buildings,Natural Gas,777331.1,0,146151956,Therm
+2012,Buildings,Commercial & Industrial,PG&E Commercial & Industrial,Stationary,Commercial & Institutional Buildings and Facilities,Natural Gas,451911.36,0,97042477,Therm
+2012,Buildings,Commercial & Industrial,PG&E District,Stationary,Commercial & Institutional Buildings and Facilities,Natural Gas,1108.56,0,208428,Therm
+2012,Buildings,Residential,PG&E Residential Natural Gas Distribution Fugitive Emissions Upstream Leaks,Stationary,Fugitive Emissions from Oil and Natural Gas Systems,Natural Gas,219397.12,0,3960718.01,Therm
+2012,Municipal,Municipal Buildings,PG&E Municipal Buildings Natural Gas Distribution Fugitive Emissions Downstream Leaks,Stationary,Fugitive Emissions from Oil and Natural Gas Systems,Natural Gas,21530.1,0,388677.15,Therm
+2012,Municipal,Municipal Buildings,PG&E Municipal Buildings Natural Gas Distribution Fugitive Emissions Upstream Leaks,Stationary,Fugitive Emissions from Oil and Natural Gas Systems,Natural Gas,32235.67,0,581942.03,Therm
+2012,Buildings,Commercial & Industrial,PG&E Commercial & Industrial Natural Gas Distribution Fugitive Emissions Downstream Leaks,Stationary,Fugitive Emissions from Oil and Natural Gas Systems,Natural Gas,95173.46,0,1756468.83,Therm
+2012,Buildings,Commercial & Industrial,PG&E District Natural Gas Distribution Fugitive Emissions Downstream Leaks,Stationary,Fugitive Emissions from Oil and Natural Gas Systems,Natural Gas,208.97,0,3772.55,Therm
+2012,Buildings,Residential,PG&E Residential Natural Gas Distribution Fugitive Emissions Downstream Leaks,Stationary,Fugitive Emissions from Oil and Natural Gas Systems,Natural Gas,146534.61,0,2645350.4,Therm
+2012,Buildings,Commercial & Industrial,PG&E District Natural Gas Distribution Fugitive Emissions Upstream Leaks,Stationary,Fugitive Emissions from Oil and Natural Gas Systems,Natural Gas,312.88,0,5648.4,Therm
+2012,Buildings,Commercial & Industrial,PG&E Commercial & Industrial Natural Gas Distribution Fugitive Emissions Upstream Leaks,Stationary,Fugitive Emissions from Oil and Natural Gas Systems,Natural Gas,142497.28,0,2629851.13,Therm
+2012,Transportation,Public Transportation,MUNI,Transportation,On-road Transportation - MUNI Buses,Electricity,0,0,92948433,kWh
+2012,Buildings,Residential,PG&E Residential,Stationary,Residential Buildings,Electricity,286880.31,0,1413639819,kWh
+2012,Transportation,Public Transportation,Rail - BART,Transportation,Railways - Bay Area Rapid Transit Traction,Electricity,57103.41,0,283962261.8,kWh
+2012,Buildings,Residential,PG&E Residential Electric Power Transmission & Distribution Loss,Stationary,Residential Buildings,Electricity,26895.42,0,96692963.62,kWh
+2012,Buildings,Commercial & Industrial,PG&E Commercial & Industrial,Stationary,Commercial & Institutional Buildings and Facilities,Electricity,585075.96,0,2883037446,kWh
+2012,Buildings,Direct Access,PG&E Direct Access,Stationary,Commercial & Institutional Buildings and Facilities,Electricity,153396.32,0,551482202.5,kWh
+2012,Buildings,Commercial & Industrial,PG&E Commercial & Industrial Electric Power Transmission & Distribution Loss,Stationary,Commercial & Institutional Buildings and Facilities,Electricity,54851.67,0,197199761.3,kWh
+2012,Municipal,Municipal Buildings,PG&E Municipal Buildings Electric Power Transmission & Distribution Loss,Stationary,Commercial & Institutional Buildings and Facilities,Electricity,12.31,0,44245.63,kWh
+2012,Municipal,Municipal Buildings,SFPUC Municipal Buildings,Stationary,Commercial & Institutional Buildings and Facilities,Electricity,0,0,867309595,kWh
+2012,Buildings,Commercial & Industrial,PG&E District,Stationary,Commercial & Institutional Buildings and Facilities,Electricity,15252.74,0,75159843,kWh
+2012,Municipal,Municipal Buildings,PG&E Municipal Buildings,Stationary,Commercial & Institutional Buildings and Facilities,Electricity,176.67,0,646866,kWh
+2012,Buildings,Direct Access,PG&E Direct Access Electric Power Transmission & Distribution Loss,Stationary,Commercial & Institutional Buildings and Facilities,Electricity,170.37,0,37721382.65,kWh
+2012,Buildings,Commercial & Industrial,PG&E District Electric Power Transmission & Distribution Loss,Stationary,Commercial & Institutional Buildings and Facilities,Electricity,1429.96,0,5140933.26,kWh
+2012,Transportation,Public Transportation,MUNI,Transportation,On-road Transportation - MUNI Buses,B20,97.85,4447.67,470653.2,gallons
+2012,Municipal,Municipal Fleet,Municipal Fleet,Transportation,On-road Transportation - Municipal Fleet,B5,5.53,251.14,26575.58,gallons
+2012,Transportation,Public Transportation,MUNI,Transportation,On-road Transportation - MUNI Buses,B5,1.09,49.41,5228.5,gallons
+2012,Transportation,Public Transportation,MUNI,Transportation,On-road Transportation - MUNI Buses,B100,32.38,3151.25,333466,gallons
+2012,Municipal,Municipal Fleet,Municipal Fleet,Transportation,On-road Transportation - Municipal Fleet,B20,16.68,758.25,80238.27,gallons
+2012,Wastewater,Wastewater (Digester Gas),Wastewater (Digester Gas),Stationary,Commercial & Institutional Buildings and Facilities,Sludge gas,103.34,18019.38,330920.67,MMBTU
+2015,Buildings,Residential,CleanPowerSF Residential Green Product,Stationary,Residential Buildings,Electricity,0,0,0,kWh
+2015,Buildings,Commercial & Industrial,CleanPowerSF Commercial Green Product Electric Power Transmission & Distribution Loss,Stationary,Commercial & Institutional Buildings and Facilities,Electricity,0,0,0,kWh
+2015,Transportation,Public Transportation,MUNI,Transportation,On-road Transportation - MUNI Buses,B100,0,0,0,gallons
+2015,Transportation,Public Transportation,MUNI,Transportation,On-road Transportation - MUNI Buses,B5,0,0,0,gallons
+2015,Buildings,Residential,CleanPowerSF Residential SuperGreen Product,Stationary,Residential Buildings,Electricity,0,0,0,kWh
+2015,Transportation,Public Transportation,Bus - Caltrain,Transportation,On-Road Transportation - Caltrain Buses,CNG,0,0,0,gallons
+2015,Buildings,Commercial & Industrial,CleanPowerSF Commercial Green Product,Stationary,Commercial & Institutional Buildings and Facilities,Electricity,0,0,0,kWh
+2015,Buildings,Commercial & Industrial,CleanPowerSF Commercial SuperGreen Product,Stationary,Commercial & Institutional Buildings and Facilities,Electricity,0,0,0,kWh
+2015,Buildings,Residential,CleanPowerSF Residential Green Product Electric Power Transmission & Distribution Loss,Stationary,Residential Buildings,Electricity,0,0,0,kWh
+2015,Municipal,Municipal Fleet,Municipal Fleet,Transportation,On-road Transportation - Municipal Fleet,Renewable CNG,0,0,0,gallons
+2015,Transportation,Public Transportation,MUNI,Transportation,On-road Transportation - MUNI Buses,Renewable Diesel,0,0,0,gallons
+2015,Municipal,Municipal Fleet,Municipal Fleet,Transportation,On-road Transportation - Municipal Fleet,Renewable Diesel,0,0,0,gallons
+2015,Transportation,Public Transportation,Bus - Golden Gate Transit,Transportation,On-Road Transportation - Golden Gate Transit Buses,Renewable Diesel,0,0,0,gallons
+2015,Agriculture,Agriculture/Farming,Agriculture/Farming,"Agriculture, Forestry and Other Land Use",Land,Other Unspecified Fuels,15759,0,0,mtCO2e
+2015,Transportation,Diesel - Ships and Boats (non-Ferry),Diesel - Ships and Boats (non-Ferry),Transportation,Waterborne Navigation - non-Ferry,Diesel,443180,0,0,mtCO2e
+2015,Transportation,Off-Road Equipment,Off-Road Equipment,Stationary,Non-specified Sources,Other Unspecified Fuels,151117,0,0,mtCO2e
+2015,Buildings,Commercial & Industrial,Additional Stationary Sources,Stationary,Energy Industries,Gas Oil,93.3,0,0,mtCO2e
+2015,Agriculture,Agriculture/Farming,Agriculture/Farming,"Agriculture, Forestry and Other Land Use",Land,Animal Waste,82817.19,0,0,mtCO2e
+2015,Buildings,Residential,Other Residential Fuel Usage,Stationary,Commercial & Institutional Buildings and Facilities,"LPGas, Liquid fuel, solid fuel",24048,0,0,mtCO2e
+2015,Agriculture,Agriculture/Farming,Agriculture/Farming,Stationary,"Agriculture, Forestry and Fishing Activities",Other Unspecified Fuels,109,0,0,mtCO2e
+2015,Transportation,Cars & Trucks,Cars & Trucks,Transportation,On-road Transportation - Cars and Trucks,Gasoline,1858616.88,0,3973162572,miles
+2015,Wastewater,Wastewater (Process),Wastewater (Process),Waste,Wastewater Treatment and Discharge,Process Emissions,916.7,0,864816,people
+2015,Wastewater,Wastewater (Fugitive),Wastewater (Fugitive),Waste,Wastewater Treatment and Discharge,Fugitive Emissions,4755.79,0,12518.34,Avg kgN/day
+2015,Landfilled Organics,Landfilled Organics,Landfilled Organics,Waste,Solid Waste Disposal,Solid Waste,287174.22,0,573491.68,tons
+2015,Buildings,Commercial & Industrial,Steam - NRG,Stationary,Commercial & Institutional Buildings and Facilities,Steam,56997.37,0,10739957.88,Therm
+2015,Transportation,Public Transportation,Bus - Caltrain,Transportation,On-Road Transportation - Caltrain Buses,Gasoline,242.77,0,27607.58,gallons
+2015,Municipal,Municipal Fleet,Municipal Fleet,Transportation,On-road Transportation - Municipal Fleet,CNG,3772.97,0,610535.53,gallons
+2015,Municipal,Municipal Fleet,Municipal Fleet,Transportation,On-road Transportation - Municipal Fleet,Gasoline,19259.65,0,2146362.51,gallons
+2015,Transportation,Public Transportation,Ferry,Transportation,Waterborne Navigation - Ferry,Diesel,22640.5,0,2187493.78,gallons
+2015,Municipal,Municipal Fleet,Municipal Fleet,Transportation,On-road Transportation - Municipal Fleet,Propane,72.35,0,12664.1,gallons
+2015,Transportation,Public Transportation,Rail - Caltrain,Transportation,Railways - Caltrain,Diesel,13369.53,0,1297848.86,gallons
+2015,Transportation,Public Transportation,MUNI,Transportation,On-road Transportation - MUNI Buses,Diesel,38613.23,0,3780331.2,gallons
+2015,Transportation,Public Transportation,Bus - Caltrain,Transportation,On-Road Transportation - Caltrain Buses,Diesel,58.44,0,5721.52,gallons
+2015,Transportation,Public Transportation,Bus - Golden Gate Transit,Transportation,On-Road Transportation - Golden Gate Transit Buses,Diesel,3320.19,0,325054.5,gallons
+2015,Municipal,Municipal Fleet,Municipal Fleet,Transportation,On-road Transportation - Municipal Fleet,Diesel,12749.67,0,1221862.75,gallons
+2015,Buildings,Commercial & Industrial,PG&E District,Stationary,Commercial & Institutional Buildings and Facilities,Natural Gas,412.41,0,77540,Therm
+2015,Municipal,Municipal Buildings,PG&E Municipal Buildings,Stationary,Commercial & Institutional Buildings and Facilities,Natural Gas,88409.1,0,16622469.97,Therm
+2015,Buildings,Commercial & Industrial,PG&E Commercial & Industrial,Stationary,Commercial & Institutional Buildings and Facilities,Natural Gas,418277.55,0,89360067,Therm
+2015,Buildings,Residential,PG&E Residential,Stationary,Residential Buildings,Natural Gas,627949.76,0,118065630,Therm
+2015,Municipal,Municipal Buildings,PG&E Municipal Buildings Natural Gas Distribution Fugitive Emissions Downstream Leaks,Stationary,Fugitive Emissions from Oil and Natural Gas Systems,Natural Gas,16665.99,0,300866.71,Therm
+2015,Buildings,Commercial & Industrial,PG&E District Natural Gas Distribution Fugitive Emissions Upstream Leaks,Stationary,Fugitive Emissions from Oil and Natural Gas Systems,Natural Gas,116.4,0,2101.33,Therm
+2015,Buildings,Commercial & Industrial,PG&E District Natural Gas Distribution Fugitive Emissions Downstream Leaks,Stationary,Fugitive Emissions from Oil and Natural Gas Systems,Natural Gas,77.74,0,1403.47,Therm
+2015,Municipal,Municipal Buildings,PG&E Municipal Buildings Natural Gas Distribution Fugitive Emissions Upstream Leaks,Stationary,Fugitive Emissions from Oil and Natural Gas Systems,Natural Gas,24952.95,0,450468.94,Therm
+2015,Buildings,Commercial & Industrial,PG&E Commercial & Industrial Natural Gas Distribution Fugitive Emissions Downstream Leaks,Stationary,Fugitive Emissions from Oil and Natural Gas Systems,Natural Gas,88067.14,0,1617417.21,Therm
+2015,Buildings,Commercial & Industrial,PG&E Commercial & Industrial Natural Gas Distribution Fugitive Emissions Upstream Leaks,Stationary,Fugitive Emissions from Oil and Natural Gas Systems,Natural Gas,131857.43,0,2421657.82,Therm
+2015,Buildings,Residential,PG&E Residential Natural Gas Distribution Fugitive Emissions Upstream Leaks,Stationary,Fugitive Emissions from Oil and Natural Gas Systems,Natural Gas,177235.12,0,3199578.57,Therm
+2015,Buildings,Residential,PG&E Residential Natural Gas Distribution Fugitive Emissions Downstream Leaks,Stationary,Fugitive Emissions from Oil and Natural Gas Systems,Natural Gas,118374.75,0,2136987.9,Therm
+2015,Transportation,Public Transportation,MUNI,Transportation,On-road Transportation - MUNI Buses,Electricity,0,0,70573413,kWh
+2015,Buildings,Residential,PG&E Residential,Stationary,Residential Buildings,Electricity,238751.87,0,1292062067,kWh
+2015,Buildings,Residential,PG&E Residential Electric Power Transmission & Distribution Loss,Stationary,Residential Buildings,Electricity,26164.51,0,88377045.38,kWh
+2015,Transportation,Public Transportation,Rail - BART,Transportation,Railways - Bay Area Rapid Transit PG&E,Electricity,79.6,0,430779.02,kWh
+2015,Transportation,Public Transportation,Rail - BART,Transportation,Railways - Bay Area Rapid Transit Other Power Contracts,Electricity,20321.28,0,60378300,kWh
+2015,Transportation,Public Transportation,Rail - BART,Transportation,Railways - Bay Area Rapid Transit Traction,Electricity,75646.64,0,224760193.1,kWh
+2015,Municipal,Municipal Buildings,SFPUC Municipal Buildings,Stationary,Commercial & Institutional Buildings and Facilities,Electricity,0,0,1033705862,kWh
+2015,Buildings,Commercial & Industrial,PG&E District Electric Power Transmission & Distribution Loss,Stationary,Commercial & Institutional Buildings and Facilities,Electricity,1264.6,0,4271501.68,kWh
+2015,Buildings,Direct Access,PG&E Direct Access,Stationary,Commercial & Institutional Buildings and Facilities,Electricity,120212.94,0,406048677.9,kWh
+2015,Buildings,Commercial & Industrial,PG&E Commercial & Industrial,Stationary,Commercial & Institutional Buildings and Facilities,Electricity,534898.32,0,2894728412,kWh
+2015,Buildings,Commercial & Industrial,PG&E District,Stationary,Commercial & Institutional Buildings and Facilities,Electricity,11539.52,0,62364837.98,kWh
+2015,Municipal,Municipal Buildings,PG&E Municipal Buildings,Stationary,Commercial & Institutional Buildings and Facilities,Electricity,236.46,0,1279664,kWh
+2015,Municipal,Municipal Buildings,PG&E Municipal Buildings Electric Power Transmission & Distribution Loss,Stationary,Commercial & Institutional Buildings and Facilities,Electricity,25.91,0,87529.02,kWh
+2015,Buildings,Commercial & Industrial,PG&E Commercial & Industrial Electric Power Transmission & Distribution Loss,Stationary,Commercial & Institutional Buildings and Facilities,Electricity,58618.81,0,197999423.4,kWh
+2015,Buildings,Direct Access,PG&E Direct Access Electric Power Transmission & Distribution Loss,Stationary,Commercial & Institutional Buildings and Facilities,Electricity,8222.56,0,27773729.57,kWh
+2015,Municipal,Municipal Fleet,Municipal Fleet,Transportation,On-road Transportation - Municipal Fleet,B5,6.45,293.2,31026.14,gallons
+2015,Transportation,Public Transportation,MUNI,Transportation,On-road Transportation - MUNI Buses,B20,84.76,8249.79,872993.8,gallons
+2015,Wastewater,Wastewater (Digester Gas),Wastewater (Digester Gas),Stationary,Commercial & Institutional Buildings and Facilities,Sludge gas,118.2,23989.57,460717.64,MMBTU
+2015,Municipal,Municipal Fleet,Municipal Fleet,Transportation,On-road Transportation - Municipal Fleet,B20,9.05,411.46,43540.25,gallons
+2016,Agriculture,Agriculture/Farming,Agriculture/Farming,"Agriculture, Forestry and Other Land Use",Land,Other Unspecified Fuels,0,0,0,mtCO2e
+2016,Buildings,Residential,Other Residential Fuel Usage,Stationary,Commercial & Institutional Buildings and Facilities,"LPGas, Liquid fuel, solid fuel",23763,0,0,mtCO2e
+2016,Buildings,Commercial & Industrial,Additional Stationary Sources,Stationary,Energy Industries,Gas Oil,88,0,0,mtCO2e
+2016,Agriculture,Agriculture/Farming,Agriculture/Farming,Stationary,"Agriculture, Forestry and Fishing Activities",Other Unspecified Fuels,108,0,0,mtCO2e
+2016,Transportation,Off-Road Equipment,Off-Road Equipment,Stationary,Non-specified Sources,Other Unspecified Fuels,150681,0,0,mtCO2e
+2016,Transportation,Diesel - Ships and Boats (non-Ferry),Diesel - Ships and Boats (non-Ferry),Transportation,Waterborne Navigation - non-Ferry,Diesel,444837,0,0,mtCO2e
+2016,Agriculture,Agriculture/Farming,Agriculture/Farming,"Agriculture, Forestry and Other Land Use",Land,Other Unspecified Fuels,80062,0,0,mtCO2e
+2016,Agriculture,Agriculture/Farming,Agriculture/Farming,"Agriculture, Forestry and Other Land Use",Land,Other Unspecified Fuels,15,0,0,mtCO2e
+2016,Wastewater,Wastewater (Fugitive),Wastewater (Fugitive),Waste,Wastewater Treatment and Discharge,Fugitive Emissions,4113.42,0,10827.47,Avg kgN/day
+2016,Landfilled Organics,Landfilled Organics,Landfilled Organics,Waste,Solid Waste Disposal,Solid Waste,290929.98,0,580992,tons
+2016,Wastewater,Wastewater (Process),Wastewater (Process),Waste,Wastewater Treatment and Discharge,Process Emissions,923.14,0,870887,people
+2016,Buildings,Commercial & Industrial,Steam - NRG,Stationary,Commercial & Institutional Buildings and Facilities,Steam,58607.71,0,11043391.37,Therm
+2016,Transportation,Cars & Trucks,Cars & Trucks,Transportation,On-road Transportation - Cars and Trucks,Gasoline,1801810.61,0,4010619620,miles
+2016,Transportation,Public Transportation,Bus - Caltrain,Transportation,On-Road Transportation - Caltrain Buses,CNG,15.92,0,2506.69,gallons
+2016,Municipal,Municipal Fleet,Municipal Fleet,Transportation,On-road Transportation - Municipal Fleet,CNG,32.1,0,5046.82,gallons
+2016,Transportation,Public Transportation,Bus - Caltrain,Transportation,On-Road Transportation - Caltrain Buses,Diesel,58.44,0,5721.52,gallons
+2016,Municipal,Municipal Fleet,Municipal Fleet,Transportation,On-road Transportation - Municipal Fleet,Propane,76.33,0,13360.78,gallons
+2016,Transportation,Public Transportation,Bus - Caltrain,Transportation,On-Road Transportation - Caltrain Buses,Gasoline,242.77,0,27607.58,gallons
+2016,Transportation,Public Transportation,Ferry,Transportation,Waterborne Navigation - Ferry,Diesel,641.7,0,62000,gallons
+2016,Municipal,Municipal Fleet,Municipal Fleet,Transportation,On-road Transportation - Municipal Fleet,CNG,518.14,0,83845.3,gallons
+2016,Municipal,Municipal Fleet,Municipal Fleet,Transportation,On-road Transportation - Municipal Fleet,Gasoline,1553.71,0,172868.04,gallons
+2016,Municipal,Municipal Fleet,Municipal Fleet,Transportation,On-road Transportation - Municipal Fleet,Diesel,2593.22,0,251595.3,gallons
+2016,Transportation,Public Transportation,Bus - Golden Gate Transit,Transportation,On-Road Transportation - Golden Gate Transit Buses,Diesel,3320.19,0,325054.5,gallons
+2016,Municipal,Municipal Fleet,Municipal Fleet,Transportation,On-road Transportation - Municipal Fleet,Diesel,3602.25,0,345220.78,gallons
+2016,Transportation,Public Transportation,Rail - Caltrain,Transportation,Railways - Caltrain,Diesel,12856.03,0,1248001.18,gallons
+2016,Transportation,Public Transportation,MUNI,Transportation,On-road Transportation - MUNI Buses,Diesel,19957.25,0,1953864.6,gallons
+2016,Transportation,Public Transportation,Ferry,Transportation,Waterborne Navigation - Ferry,Diesel,21923.37,0,2118206.19,gallons
+2016,Municipal,Municipal Fleet,Municipal Fleet,Transportation,On-road Transportation - Municipal Fleet,Gasoline,19078.31,0,2126153.05,gallons
+2016,Buildings,Commercial & Industrial,PG&E District,Stationary,Commercial & Institutional Buildings and Facilities,Natural Gas,421.07,0,79169,Therm
+2016,Municipal,Municipal Buildings,PG&E Municipal Buildings,Stationary,Commercial & Institutional Buildings and Facilities,Natural Gas,92808.9,0,17449710.78,Therm
+2016,Buildings,Commercial & Industrial,PG&E Commercial & Industrial,Stationary,Commercial & Institutional Buildings and Facilities,Natural Gas,442294.54,0,94178456,Therm
+2016,Buildings,Residential,PG&E Residential,Stationary,Residential Buildings,Natural Gas,667894.43,0,125575932,Therm
+2016,Buildings,Commercial & Industrial,PG&E District Natural Gas Distribution Fugitive Emissions Downstream Leaks,Stationary,Fugitive Emissions from Oil and Natural Gas Systems,Natural Gas,79.38,0,1432.96,Therm
+2016,Buildings,Commercial & Industrial,PG&E District Natural Gas Distribution Fugitive Emissions Upstream Leaks,Stationary,Fugitive Emissions from Oil and Natural Gas Systems,Natural Gas,118.85,0,2145.48,Therm
+2016,Municipal,Municipal Buildings,PG&E Municipal Buildings Natural Gas Distribution Fugitive Emissions Downstream Leaks,Stationary,Fugitive Emissions from Oil and Natural Gas Systems,Natural Gas,17495.4,0,315839.77,Therm
+2016,Municipal,Municipal Buildings,PG&E Municipal Buildings Natural Gas Distribution Fugitive Emissions Upstream Leaks,Stationary,Fugitive Emissions from Oil and Natural Gas Systems,Natural Gas,26194.77,0,472887.16,Therm
+2016,Buildings,Commercial & Industrial,PG&E Commercial & Industrial Natural Gas Distribution Fugitive Emissions Downstream Leaks,Stationary,Fugitive Emissions from Oil and Natural Gas Systems,Natural Gas,94425.03,0,1704630.05,Therm
+2016,Buildings,Residential,PG&E Residential Natural Gas Distribution Fugitive Emissions Downstream Leaks,Stationary,Fugitive Emissions from Oil and Natural Gas Systems,Natural Gas,125904.71,0,2272924.37,Therm
+2016,Buildings,Commercial & Industrial,PG&E Commercial & Industrial Natural Gas Distribution Fugitive Emissions Upstream Leaks,Stationary,Fugitive Emissions from Oil and Natural Gas Systems,Natural Gas,141376.71,0,2552236.16,Therm
+2016,Buildings,Residential,PG&E Residential Natural Gas Distribution Fugitive Emissions Upstream Leaks,Stationary,Fugitive Emissions from Oil and Natural Gas Systems,Natural Gas,188509.27,0,3403107.76,Therm
+2016,Buildings,Residential,CleanPowerSF Residential SuperGreen Product Electric Power Transmission & Distribution Loss,Stationary,Residential Buildings,Electricity,0,0,51775.2,kWh
+2016,Transportation,Public Transportation,Rail - BART,Transportation,Railways - Bay Area Rapid Transit PG&E,Electricity,72.19,0,537682.1,kWh
+2016,Buildings,Residential,CleanPowerSF Residential SuperGreen Product,Stationary,Residential Buildings,Electricity,0,0,1224000,kWh
+2016,Buildings,Residential,CleanPowerSF Residential Green Product Electric Power Transmission & Distribution Loss,Stationary,Residential Buildings,Electricity,112.44,0,1330208.1,kWh
+2016,Buildings,Residential,CleanPowerSF Residential Green Product,Stationary,Residential Buildings,Electricity,2658.14,0,31447000,kWh
+2016,Buildings,Residential,PG&E Residential Electric Power Transmission & Distribution Loss,Stationary,Residential Buildings,Electricity,12965.96,0,53949178.81,kWh
+2016,Transportation,Public Transportation,Rail - BART,Transportation,Railways - Bay Area Rapid Transit Other Power Contracts,Electricity,18706.83,0,60422587.84,kWh
+2016,Transportation,Public Transportation,MUNI,Transportation,On-road Transportation - MUNI Buses,Electricity,0,0,72828834,kWh
+2016,Transportation,Public Transportation,Rail - BART,Transportation,Railways - Bay Area Rapid Transit Traction,Electricity,72046.59,0,232708629.3,kWh
+2016,Buildings,Residential,PG&E Residential,Stationary,Residential Buildings,Electricity,171231.2,0,1275394298,kWh
+2016,Buildings,Commercial & Industrial,CleanPowerSF Commercial SuperGreen Product Electric Power Transmission & Distribution Loss,Stationary,Commercial & Institutional Buildings and Facilities,Electricity,0,0,48137.4,kWh
+2016,Municipal,Municipal Buildings,PG&E Municipal Buildings Electric Power Transmission & Distribution Loss,Stationary,Commercial & Institutional Buildings and Facilities,Electricity,11.83,0,49239.82,kWh
+2016,Buildings,Commercial & Industrial,CleanPowerSF Commercial SuperGreen Product,Stationary,Commercial & Institutional Buildings and Facilities,Electricity,0,0,1138000,kWh
+2016,Municipal,Municipal Buildings,PG&E Municipal Buildings,Stationary,Commercial & Institutional Buildings and Facilities,Electricity,156.28,0,1164062,kWh
+2016,Buildings,Commercial & Industrial,PG&E District Electric Power Transmission & Distribution Loss,Stationary,Commercial & Institutional Buildings and Facilities,Electricity,511.35,0,2127638.52,kWh
+2016,Buildings,Commercial & Industrial,CleanPowerSF Commercial Green Product Electric Power Transmission & Distribution Loss,Stationary,Commercial & Institutional Buildings and Facilities,Electricity,685.58,0,8110728.9,kWh
+2016,Buildings,Commercial & Industrial,PG&E Direct Access Electric Power Transmission & Distribution Loss,Stationary,Commercial & Institutional Buildings and Facilities,Electricity,2685.86,0,11175412.84,kWh
+2016,Buildings,Commercial & Industrial,PG&E District,Stationary,Commercial & Institutional Buildings and Facilities,Electricity,6752.99,0,50298782.9,kWh
+2016,Buildings,Commercial & Industrial,PG&E Commercial & Industrial Electric Power Transmission & Distribution Loss,Stationary,Commercial & Institutional Buildings and Facilities,Electricity,26890.78,0,111888017.7,kWh
+2016,Buildings,Commercial & Industrial,CleanPowerSF Commercial Green Product,Stationary,Commercial & Institutional Buildings and Facilities,Electricity,16207.59,0,191743000,kWh
+2016,Buildings,Direct Access,PG&E Direct Access,Stationary,Commercial & Institutional Buildings and Facilities,Electricity,63495.52,0,264194156.9,kWh
+2016,Municipal,Municipal Buildings,SFPUC Municipal Buildings,Stationary,Commercial & Institutional Buildings and Facilities,Electricity,0,0,1053319303,kWh
+2016,Buildings,Commercial & Industrial,PG&E Commercial & Industrial,Stationary,Commercial & Institutional Buildings and Facilities,Electricity,355125.32,0,2645106801,kWh
+2016,Municipal,Municipal Fleet,Municipal Fleet,Transportation,On-road Transportation - Municipal Fleet,B5,1.05,47.81,5059.62,gallons
+2016,Municipal,Municipal Fleet,Municipal Fleet,Transportation,On-road Transportation - Municipal Fleet,B20,3.04,138.22,14626.48,gallons
+2016,Municipal,Municipal Fleet,Municipal Fleet,Transportation,On-road Transportation - Municipal Fleet,Renewable Diesel,3.58,309.44,33075.54,gallons
+2016,Municipal,Municipal Fleet,Municipal Fleet,Transportation,On-road Transportation - Municipal Fleet,Renewable CNG,11.49,522.38,86390.23,gallons
+2016,Transportation,Public Transportation,Bus - Golden Gate Transit,Transportation,On-Road Transportation - Golden Gate Transit Buses,Renewable Diesel,34.57,3041.05,325054.5,gallons
+2016,Wastewater,Wastewater (Digester Gas),Wastewater (Digester Gas),Stationary,Commercial & Institutional Buildings and Facilities,Sludge gas,100.87,20472.19,393166.72,MMBTU
+2016,Transportation,Public Transportation,MUNI,Transportation,On-road Transportation - MUNI Buses,B20,39.59,3853.05,407730.4,gallons
+2016,Municipal,Municipal Fleet,Municipal Fleet,Transportation,On-road Transportation - Municipal Fleet,Renewable CNG,138.84,2670.08,441574.29,gallons
+2016,Municipal,Municipal Fleet,Municipal Fleet,Transportation,On-road Transportation - Municipal Fleet,Renewable Diesel,107.76,4849.19,518325.01,gallons
+2016,Transportation,Public Transportation,MUNI,Transportation,On-road Transportation - MUNI Buses,Renewable Diesel,279.92,24625.37,2632181,gallons
+2017,Agriculture,Agriculture/Farming,Agriculture/Farming,"Agriculture, Forestry and Other Land Use",Land,Other Unspecified Fuels,0,0,0,mtCO2e
+2017,Agriculture,Agriculture/Farming,Agriculture/Farming,Stationary,"Agriculture, Forestry and Fishing Activities",Other Unspecified Fuels,112.73,0,0,mtCO2e
+2017,Buildings,Residential,Other Residential Fuel Usage,Stationary,Commercial & Institutional Buildings and Facilities,"LPGas, Liquid fuel, solid fuel",20741.17,0,0,mtCO2e
+2017,Buildings,Commercial & Industrial,Additional Stationary Sources,Stationary,Energy Industries,Gas Oil,91.6,0,0,mtCO2e
+2017,Agriculture,Agriculture/Farming,Agriculture/Farming,"Agriculture, Forestry and Other Land Use",Land,Other Unspecified Fuels,83497.88,0,0,mtCO2e
+2017,Agriculture,Agriculture/Farming,Agriculture/Farming,"Agriculture, Forestry and Other Land Use",Land,Other Unspecified Fuels,14.81,0,0,mtCO2e
+2017,Transportation,Off-Road Equipment,Off-Road Equipment,Stationary,Non-specified Sources,Other Unspecified Fuels,145248,0,0,mtCO2e
+2017,Transportation,Diesel - Ships and Boats (non-Ferry),Diesel - Ships and Boats (non-Ferry),Transportation,Waterborne Navigation - non-Ferry,Diesel,427148,0,0,mtCO2e
+2017,Buildings,Commercial & Industrial,Steam - NRG,Stationary,Commercial & Institutional Buildings and Facilities,Steam,58962.71,0,11110283.66,Therm
+2017,Transportation,Cars & Trucks,Cars & Trucks,Transportation,On-road Transportation - Cars and Trucks,Gasoline,1666352.67,0,4093897091,miles
+2017,Landfilled Organics,Landfilled Organics,Landfilled Organics,Waste,Solid Waste Disposal,Solid Waste,305586.7,0,610261.72,tons
+2017,Wastewater,Wastewater (Process),Wastewater (Process),Waste,Wastewater Treatment and Discharge,Process Emissions,937.42,0,884363,people
+2017,Wastewater,Wastewater (Fugitive),Wastewater (Fugitive),Waste,Wastewater Treatment and Discharge,Fugitive Emissions,3615.35,0,9516.45,Avg kgN/day
+2017,Transportation,Public Transportation,Bus - Caltrain,Transportation,On-Road Transportation - Caltrain Buses,Diesel,44.93,0,4398.35,gallons
+2017,Transportation,Public Transportation,Bus - Caltrain,Transportation,On-Road Transportation - Caltrain Buses,CNG,14.67,0,2309.53,gallons
+2017,Transportation,Public Transportation,Bus - Caltrain,Transportation,On-Road Transportation - Caltrain Buses,Gasoline,260.3,0,29601.03,gallons
+2017,Transportation,Public Transportation,Bus - Golden Gate Transit,Transportation,On-Road Transportation - Golden Gate Transit Buses,Diesel,3853.07,0,377225.5,gallons
+2017,Transportation,Public Transportation,MUNI,Transportation,On-road Transportation - MUNI Buses,Diesel,262.37,0,25687,gallons
+2017,Municipal,Municipal Fleet,Municipal Fleet,Transportation,On-road Transportation - Municipal Fleet,Gasoline,18726.58,0,2086954.55,gallons
+2017,Municipal,Municipal Fleet,Municipal Fleet,Transportation,On-road Transportation - Municipal Fleet,Diesel,84.97,0,8143,gallons
+2017,Municipal,Municipal Fleet,Municipal Fleet,Transportation,On-road Transportation - Municipal Fleet,Renewable CNG,66.32,0,498557.92,gallons
+2017,Municipal,Municipal Fleet,Municipal Fleet,Transportation,On-road Transportation - Municipal Fleet,Propane,69.46,0,12157.8,gallons
+2017,Municipal,Municipal Fleet,Municipal Fleet,Transportation,On-road Transportation - Municipal Fleet,Gasoline,2995.47,0,333280,gallons
+2017,Municipal,Municipal Fleet,Municipal Fleet,Transportation,On-road Transportation - Municipal Fleet,Diesel,1258.23,0,122074.1,gallons
+2017,Municipal,Municipal Fleet,Municipal Fleet,Transportation,On-road Transportation - Municipal Fleet,CNG,29.86,0,4694.76,gallons
+2017,Transportation,Public Transportation,Rail - Caltrain,Transportation,Railways - Caltrain,Diesel,12940.76,0,1256225.51,gallons
+2017,Transportation,Public Transportation,Ferry,Transportation,Waterborne Navigation - Ferry,Diesel,24883.25,0,2404185.96,gallons
+2017,Transportation,Public Transportation,Ferry,Transportation,Waterborne Navigation - Ferry,Diesel,543.37,0,52500,gallons
+2017,Buildings,Commercial & Industrial,PG&E Commercial & Industrial,Stationary,Commercial & Institutional Buildings and Facilities,Natural Gas,423503.01,0,90712063,Therm
+2017,Municipal,Municipal Buildings,PG&E Municipal Buildings,Stationary,Commercial & Institutional Buildings and Facilities,Natural Gas,89822.97,0,16888302.1,Therm
+2017,Buildings,Commercial & Industrial,PG&E District,Stationary,Commercial & Institutional Buildings and Facilities,Natural Gas,455.02,0,85551,Therm
+2017,Buildings,Residential,PG&E Residential,Stationary,Residential Buildings,Natural Gas,669761.38,0,125926952,Therm
+2017,Buildings,Residential,PG&E Residential Natural Gas Distribution Fugitive Emissions Downstream Leaks,Stationary,Fugitive Emissions from Oil and Natural Gas Systems,Natural Gas,126256.65,0,2279277.83,Therm
+2017,Buildings,Commercial & Industrial,PG&E Commercial & Industrial Natural Gas Distribution Fugitive Emissions Downstream Leaks,Stationary,Fugitive Emissions from Oil and Natural Gas Systems,Natural Gas,90949.57,0,1641888.34,Therm
+2017,Municipal,Municipal Buildings,PG&E Municipal Buildings Natural Gas Distribution Fugitive Emissions Downstream Leaks,Stationary,Fugitive Emissions from Oil and Natural Gas Systems,Natural Gas,16932.52,0,305678.27,Therm
+2017,Buildings,Commercial & Industrial,PG&E District Natural Gas Distribution Fugitive Emissions Downstream Leaks,Stationary,Fugitive Emissions from Oil and Natural Gas Systems,Natural Gas,85.77,0,1548.47,Therm
+2017,Buildings,Residential,PG&E Residential Natural Gas Distribution Fugitive Emissions Upstream Leaks,Stationary,Fugitive Emissions from Oil and Natural Gas Systems,Natural Gas,189036.21,0,3412620.4,Therm
+2017,Buildings,Commercial & Industrial,PG&E Commercial & Industrial Natural Gas Distribution Fugitive Emissions Upstream Leaks,Stationary,Fugitive Emissions from Oil and Natural Gas Systems,Natural Gas,136173.11,0,2458296.91,Therm
+2017,Municipal,Municipal Buildings,PG&E Municipal Buildings Natural Gas Distribution Fugitive Emissions Upstream Leaks,Stationary,Fugitive Emissions from Oil and Natural Gas Systems,Natural Gas,25352,0,457672.99,Therm
+2017,Buildings,Commercial & Industrial,PG&E District Natural Gas Distribution Fugitive Emissions Upstream Leaks,Stationary,Fugitive Emissions from Oil and Natural Gas Systems,Natural Gas,128.43,0,2318.43,Therm
+2017,Transportation,Public Transportation,MUNI,Transportation,On-road Transportation - MUNI Buses,Electricity,0,0,72164929,kWh
+2017,Transportation,Public Transportation,Rail - BART,Transportation,Railways - Bay Area Rapid Transit Other Power Contracts,Electricity,1666.98,0,66149812.69,kWh
+2017,Transportation,Public Transportation,Rail - BART,Transportation,Railways - Bay Area Rapid Transit PG&E,Electricity,46276.93,0,481272.72,kWh
+2017,Transportation,Public Transportation,Rail - BART,Transportation,Railways - Bay Area Rapid Transit Traction,Electricity,6410.35,0,254378859.8,kWh
+2017,Buildings,Residential,PG&E Residential,Stationary,Residential Buildings,Electricity,102920.39,0,1070355700,kWh
+2017,Buildings,Residential,CleanPowerSF Residential Green Product,Stationary,Residential Buildings,Electricity,0,0,219423700,kWh
+2017,Buildings,Residential,CleanPowerSF Residential SuperGreen Product,Stationary,Residential Buildings,Electricity,0,0,8072910,kWh
+2017,Buildings,Residential,PG&E Residential Electric Power Transmission & Distribution Loss,Stationary,Residential Buildings,Electricity,10881.49,0,45276046.11,kWh
+2017,Buildings,Residential,CleanPowerSF Residential Green Product Electric Power Transmission & Distribution Loss,Stationary,Residential Buildings,Electricity,0,0,9281622.51,kWh
+2017,Buildings,Residential,CleanPowerSF Residential SuperGreen Product Electric Power Transmission & Distribution Loss,Stationary,Residential Buildings,Electricity,0,0,341484.09,kWh
+2017,Buildings,Commercial & Industrial,PG&E Commercial & Industrial,Stationary,Commercial & Institutional Buildings and Facilities,Electricity,240065.22,0,2496640289,kWh
+2017,Buildings,Direct Access,PG&E Direct Access,Stationary,Commercial & Institutional Buildings and Facilities,Electricity,54096.98,0,225088426.6,kWh
+2017,Buildings,Commercial & Industrial,PG&E District,Stationary,Commercial & Institutional Buildings and Facilities,Electricity,5805.61,0,60377454.28,kWh
+2017,Municipal,Municipal Buildings,PG&E Municipal Buildings,Stationary,Commercial & Institutional Buildings and Facilities,Electricity,111.82,0,1162899,kWh
+2017,Municipal,Municipal Buildings,SFPUC Municipal Buildings,Stationary,Commercial & Institutional Buildings and Facilities,Electricity,0,0,1030431367,kWh
+2017,Buildings,Commercial & Industrial,CleanPowerSF Commercial Green Product,Stationary,Commercial & Institutional Buildings and Facilities,Electricity,0,0,292063650,kWh
+2017,Buildings,Commercial & Industrial,CleanPowerSF Commercial SuperGreen Product,Stationary,Commercial & Institutional Buildings and Facilities,Electricity,0,0,14481860,kWh
+2017,Buildings,Commercial & Industrial,PG&E Commercial & Industrial Electric Power Transmission & Distribution Loss,Stationary,Commercial & Institutional Buildings and Facilities,Electricity,25381.44,0,105607884.2,kWh
+2017,Buildings,Commercial & Industrial,PG&E Direct Access Electric Power Transmission & Distribution Loss,Stationary,Commercial & Institutional Buildings and Facilities,Electricity,2288.3,0,9521240.44,kWh
+2017,Buildings,Commercial & Industrial,PG&E District Electric Power Transmission & Distribution Loss,Stationary,Commercial & Institutional Buildings and Facilities,Electricity,613.81,0,2553966.32,kWh
+2017,Municipal,Municipal Buildings,PG&E Municipal Buildings Electric Power Transmission & Distribution Loss,Stationary,Commercial & Institutional Buildings and Facilities,Electricity,11.82,0,49190.63,kWh
+2017,Buildings,Commercial & Industrial,CleanPowerSF Commercial Green Product Electric Power Transmission & Distribution Loss,Stationary,Commercial & Institutional Buildings and Facilities,Electricity,0,0,12354292.4,kWh
+2017,Buildings,Commercial & Industrial,CleanPowerSF Commercial SuperGreen Product Electric Power Transmission & Distribution Loss,Stationary,Commercial & Institutional Buildings and Facilities,Electricity,0,0,612582.68,kWh
+2017,Wastewater,Wastewater (Digester Gas),Wastewater (Digester Gas),Stationary,Commercial & Institutional Buildings and Facilities,Sludge gas,98.59,20009.41,384279,MMBTU
+2017,Transportation,Public Transportation,Bus - Golden Gate Transit,Transportation,On-Road Transportation - Golden Gate Transit Buses,Renewable Diesel,40.12,3529.13,377225.5,gallons
+2017,Transportation,Public Transportation,MUNI,Transportation,On-road Transportation - MUNI Buses,Renewable Diesel,478.72,42114.69,4501597,gallons
+2017,Municipal,Municipal Fleet,Municipal Fleet,Transportation,On-road Transportation - Municipal Fleet,CNG,471.32,461.18,76268.78,gallons
+2017,Municipal,Municipal Fleet,Municipal Fleet,Transportation,On-road Transportation - Municipal Fleet,Renewable Diesel,272.56,12389.24,1324273.87,gallons
+2017,Municipal,Municipal Fleet,Municipal Fleet,Transportation,On-road Transportation - Municipal Fleet,Renewable CNG,129.15,2483.82,410771.05,gallons
+2017,Municipal,Municipal Fleet,Municipal Fleet,Transportation,On-road Transportation - Municipal Fleet,Renewable Diesel,3.65,315.54,33727.56,gallons
+2017,Transportation,Public Transportation,Ferry,Transportation,Waterborne Navigation - Ferry,Renewable Diesel,2.54,98.23,10500,gallons
+2018,Transportation,Public Transportation,MUNI,Transportation,On-road Transportation - MUNI Buses,Diesel,0,0,0,gallons
+2018,Municipal,Municipal Fleet,Municipal Fleet,Transportation,On-road Transportation - Municipal Fleet,CNG,0,0,0,gallons
+2018,Transportation,Public Transportation,Ferry,Transportation,Waterborne Navigation - Ferry,Diesel,0,0,0,gallons
+2018,Agriculture,Agriculture/Farming,Agriculture/Farming,"Agriculture, Forestry and Other Land Use",Land,Other Unspecified Fuels,0,0,0,mtCO2e
+2018,Buildings,Residential,Other Residential Fuel Usage,Stationary,Commercial & Institutional Buildings and Facilities,"LPGas, Liquid fuel, solid fuel",20630.61,0,0,mtCO2e
+2018,Buildings,Commercial & Industrial,Additional Stationary Sources,Stationary,Energy Industries,Gas Oil,42.1,0,0,mtCO2e
+2018,Agriculture,Agriculture/Farming,Agriculture/Farming,Stationary,"Agriculture, Forestry and Fishing Activities",Other Unspecified Fuels,113.11,0,0,mtCO2e
+2018,Transportation,Off-Road Equipment,Off-Road Equipment,Stationary,Non-specified Sources,Other Unspecified Fuels,142729,0,0,mtCO2e
+2018,Transportation,Diesel - Ships and Boats (non-Ferry),Diesel - Ships and Boats (non-Ferry),Transportation,Waterborne Navigation - non-Ferry,Diesel,420763.37,0,0,mtCO2e
+2018,Agriculture,Agriculture/Farming,Agriculture/Farming,"Agriculture, Forestry and Other Land Use",Land,Other Unspecified Fuels,83838.87,0,0,mtCO2e
+2018,Agriculture,Agriculture/Farming,Agriculture/Farming,"Agriculture, Forestry and Other Land Use",Land,Other Unspecified Fuels,14.44,0,0,mtCO2e
+2018,Buildings,Commercial & Industrial,Steam - NRG,Stationary,Commercial & Institutional Buildings and Facilities,Steam,60241.59,0,11351263.49,Therm
+2018,Transportation,Cars & Trucks,Cars & Trucks,Transportation,On-road Transportation - Cars and Trucks,Gasoline,1661092.95,0,4181776208,miles
+2018,Landfilled Organics,Landfilled Organics,Landfilled Organics,Waste,Solid Waste Disposal,Solid Waste,328623.81,0,656267.2,tons
+2018,Wastewater,Wastewater (Process),Wastewater (Process),Waste,Wastewater Treatment and Discharge,Process Emissions,936.3,0,883305,people
+2018,Wastewater,Wastewater (Fugitive),Wastewater (Fugitive),Waste,Wastewater Treatment and Discharge,Fugitive Emissions,3816.91,0,10047,Avg kgN/day
+2018,Transportation,Public Transportation,Bus - Caltrain,Transportation,On-Road Transportation - Caltrain Buses,Diesel,44.09,0,4316.73,gallons
+2018,Transportation,Public Transportation,Bus - Caltrain,Transportation,On-Road Transportation - Caltrain Buses,CNG,11.25,0,1771.86,gallons
+2018,Transportation,Public Transportation,Bus - Caltrain,Transportation,On-Road Transportation - Caltrain Buses,Gasoline,244.91,0,27851.52,gallons
+2018,Transportation,Public Transportation,Bus - Golden Gate Transit,Transportation,On-Road Transportation - Golden Gate Transit Buses,Diesel,3381.69,0,331076.25,gallons
+2018,Municipal,Municipal Fleet,Municipal Fleet,Transportation,On-road Transportation - Municipal Fleet,Gasoline,19016.37,0,2119250,gallons
+2018,Municipal,Municipal Fleet,Municipal Fleet,Transportation,On-road Transportation - Municipal Fleet,Diesel,49.59,0,4752,gallons
+2018,Municipal,Municipal Fleet,Municipal Fleet,Transportation,On-road Transportation - Municipal Fleet,CNG,358.63,0,58033,gallons
+2018,Municipal,Municipal Fleet,Municipal Fleet,Transportation,On-road Transportation - Municipal Fleet,Propane,75.25,0,13171,gallons
+2018,Municipal,Municipal Fleet,Municipal Fleet,Transportation,On-road Transportation - Municipal Fleet,Gasoline,2895.93,0,322206,gallons
+2018,Municipal,Municipal Fleet,Municipal Fleet,Transportation,On-road Transportation - Municipal Fleet,Diesel,1291.2,0,125273,gallons
+2018,Transportation,Public Transportation,Rail - Caltrain,Transportation,Railways - Caltrain,Diesel,12178.27,0,1182207.07,gallons
+2018,Transportation,Public Transportation,Ferry,Transportation,Waterborne Navigation - Ferry,Diesel,25491.86,0,2462988.59,gallons
+2018,Buildings,Residential,PG&E Residential,Stationary,Residential Buildings,Natural Gas,684936.7,0,128780180,Therm
+2018,Buildings,Commercial & Industrial,PG&E Commercial & Industrial,Stationary,Commercial & Institutional Buildings and Facilities,Natural Gas,438842.23,0,82510078,Therm
+2018,Municipal,Municipal Buildings,PG&E Municipal Buildings,Stationary,Commercial & Institutional Buildings and Facilities,Natural Gas,88724.69,0,16681806.95,Therm
+2018,Buildings,Commercial & Industrial,PG&E District,Stationary,Commercial & Institutional Buildings and Facilities,Natural Gas,388.13,0,72976,Therm
+2018,Buildings,Residential,PG&E Residential Natural Gas Distribution Fugitive Emissions Downstream Leaks,Stationary,Fugitive Emissions from Oil and Natural Gas Systems,Natural Gas,129117.35,0,2330921.26,Therm
+2018,Buildings,Commercial & Industrial,PG&E Commercial & Industrial Natural Gas Distribution Fugitive Emissions Downstream Leaks,Stationary,Fugitive Emissions from Oil and Natural Gas Systems,Natural Gas,82726.11,0,1493432.41,Therm
+2018,Municipal,Municipal Buildings,PG&E Municipal Buildings Natural Gas Distribution Fugitive Emissions Downstream Leaks,Stationary,Fugitive Emissions from Oil and Natural Gas Systems,Natural Gas,16725.48,0,301940.71,Therm
+2018,Buildings,Commercial & Industrial,PG&E District Natural Gas Distribution Fugitive Emissions Downstream Leaks,Stationary,Fugitive Emissions from Oil and Natural Gas Systems,Natural Gas,73.17,0,1320.87,Therm
+2018,Buildings,Residential,PG&E Residential Natural Gas Distribution Fugitive Emissions Upstream Leaks,Stationary,Fugitive Emissions from Oil and Natural Gas Systems,Natural Gas,193319.35,0,3489942.88,Therm
+2018,Buildings,Commercial & Industrial,PG&E Commercial & Industrial Natural Gas Distribution Fugitive Emissions Upstream Leaks,Stationary,Fugitive Emissions from Oil and Natural Gas Systems,Natural Gas,123860.63,0,2236023.11,Therm
+2018,Municipal,Municipal Buildings,PG&E Municipal Buildings Natural Gas Distribution Fugitive Emissions Upstream Leaks,Stationary,Fugitive Emissions from Oil and Natural Gas Systems,Natural Gas,25042.02,0,452076.97,Therm
+2018,Buildings,Commercial & Industrial,PG&E District Natural Gas Distribution Fugitive Emissions Upstream Leaks,Stationary,Fugitive Emissions from Oil and Natural Gas Systems,Natural Gas,109.55,0,1977.65,Therm
+2018,Buildings,Residential,PG&E Residential,Stationary,Residential Buildings,Electricity,99412.88,0,1053761971,kWh
+2018,Buildings,Residential,CleanPowerSF Residential Green Product,Stationary,Residential Buildings,Electricity,11509.91,0,229790000,kWh
+2018,Buildings,Residential,CleanPowerSF Residential SuperGreen Product,Stationary,Residential Buildings,Electricity,0,0,10588000,kWh
+2018,Buildings,Residential,PG&E Residential Electric Power Transmission & Distribution Loss,Stationary,Residential Buildings,Electricity,10079.26,0,44574131.37,kWh
+2018,Buildings,Residential,CleanPowerSF Residential Green Product Electric Power Transmission & Distribution Loss,Stationary,Residential Buildings,Electricity,486.87,0,9720117,kWh
+2018,Buildings,Residential,CleanPowerSF Residential SuperGreen Product Electric Power Transmission & Distribution Loss,Stationary,Residential Buildings,Electricity,0,0,447872.4,kWh
+2018,Transportation,Public Transportation,MUNI,Transportation,On-road Transportation - MUNI Buses,Electricity,0,0,70051548,kWh
+2018,Transportation,Public Transportation,Rail - BART,Transportation,Railways - Bay Area Rapid Transit Traction,Electricity,7381.07,0,256287144.7,kWh
+2018,Transportation,Public Transportation,Rail - BART,Transportation,Railways - Bay Area Rapid Transit Other Power Contracts,Electricity,1957.96,0,67984810.92,kWh
+2018,Transportation,Public Transportation,Rail - BART,Transportation,Railways - Bay Area Rapid Transit PG&E,Electricity,42324.41,0,448632.58,kWh
+2018,Buildings,Commercial & Industrial,PG&E Commercial & Industrial,Stationary,Commercial & Institutional Buildings and Facilities,Electricity,161027.82,0,1706871406,kWh
+2018,Buildings,Direct Access,PG&E Direct Access,Stationary,Commercial & Institutional Buildings and Facilities,Electricity,75994.46,0,336074931.2,kWh
+2018,Buildings,Commercial & Industrial,PG&E District,Stationary,Commercial & Institutional Buildings and Facilities,Electricity,7538.21,0,79903875.42,kWh
+2018,Municipal,Municipal Buildings,PG&E Municipal Buildings,Stationary,Commercial & Institutional Buildings and Facilities,Electricity,64.64,0,685155,kWh
+2018,Municipal,Municipal Buildings,SFPUC Municipal Buildings,Stationary,Commercial & Institutional Buildings and Facilities,Electricity,0,0,1006340113,kWh
+2018,Buildings,Commercial & Industrial,CleanPowerSF Commercial Green Product,Stationary,Commercial & Institutional Buildings and Facilities,Electricity,47894.79,0,956197000,kWh
+2018,Buildings,Commercial & Industrial,CleanPowerSF Commercial SuperGreen Product,Stationary,Commercial & Institutional Buildings and Facilities,Electricity,0,0,45604000,kWh
+2018,Buildings,Commercial & Industrial,PG&E Commercial & Industrial Electric Power Transmission & Distribution Loss,Stationary,Commercial & Institutional Buildings and Facilities,Electricity,16326.27,0,72200660.47,kWh
+2018,Buildings,Commercial & Industrial,PG&E Direct Access Electric Power Transmission & Distribution Loss,Stationary,Commercial & Institutional Buildings and Facilities,Electricity,3214.57,0,14215969.59,kWh
+2018,Buildings,Commercial & Industrial,PG&E District Electric Power Transmission & Distribution Loss,Stationary,Commercial & Institutional Buildings and Facilities,Electricity,764.28,0,3379933.93,kWh
+2018,Municipal,Municipal Buildings,PG&E Municipal Buildings Electric Power Transmission & Distribution Loss,Stationary,Commercial & Institutional Buildings and Facilities,Electricity,6.55,0,28982.06,kWh
+2018,Buildings,Commercial & Industrial,CleanPowerSF Commercial Green Product Electric Power Transmission & Distribution Loss,Stationary,Commercial & Institutional Buildings and Facilities,Electricity,2025.95,0,40447133.1,kWh
+2018,Buildings,Commercial & Industrial,CleanPowerSF Commercial SuperGreen Product Electric Power Transmission & Distribution Loss,Stationary,Commercial & Institutional Buildings and Facilities,Electricity,0,0,1929049.2,kWh
+2018,Wastewater,Wastewater (Digester Gas),Wastewater (Digester Gas),Stationary,Commercial & Institutional Buildings and Facilities,Sludge gas,113.7,23077.48,443201,MMBTU
+2018,Transportation,Public Transportation,Bus - Golden Gate Transit,Transportation,On-Road Transportation - Golden Gate Transit Buses,Renewable Diesel,35.21,3097.38,331076.25,gallons
+2018,Municipal,Municipal Fleet,Municipal Fleet,Transportation,On-road Transportation - Municipal Fleet,Renewable CNG,65.47,2975.78,492130,gallons
+2018,Municipal,Municipal Fleet,Municipal Fleet,Transportation,On-road Transportation - Municipal Fleet,Renewable Diesel,218.71,9941.17,1062602,gallons
+2018,Transportation,Public Transportation,MUNI,Transportation,On-road Transportation - MUNI Buses,Renewable Diesel,470.1,41356.43,4420547,gallons
+2018,Municipal,Municipal Fleet,Municipal Fleet,Transportation,On-road Transportation - Municipal Fleet,Renewable CNG,115.66,2427.95,401530,gallons
+2018,Municipal,Municipal Fleet,Municipal Fleet,Transportation,On-road Transportation - Municipal Fleet,Renewable Diesel,2.97,258.07,27585,gallons
+2018,Transportation,Public Transportation,Ferry,Transportation,Waterborne Navigation - Ferry,Renewable Diesel,11.38,439.71,47000,gallons
+2019,Buildings,Residential,Other Residential Fuel Usage,Stationary,Commercial & Institutional Buildings and Facilities,"LPGas, Liquid fuel, solid fuel",20500.78,0,0,mtCO2e
+2019,Buildings,Commercial & Industrial,Steam - NRG,Stationary,Commercial & Institutional Buildings and Facilities,Steam,,0,0,mtCO2e
+2019,Buildings,Commercial & Industrial,,Stationary,Commercial & Institutional Buildings and Facilities,Electricity,,0,0,mtCO2e
+2019,Buildings,Commercial & Industrial,Additional Stationary Sources,Stationary,Energy Industries,Gas Oil,130.6,0,0,mtCO2e
+2019,Agriculture,Agriculture/Farming,Agriculture/Farming,Stationary,"Agriculture, Forestry and Fishing Activities",Other Unspecified Fuels,113.49,0,0,mtCO2e
+2019,Transportation,Off-Road Equipment,Off-Road Equipment,Stationary,Non-specified Sources,Other Unspecified Fuels,140021.82,0,0,mtCO2e
+2019,Agriculture,Agriculture/Farming,Agriculture/Farming,"Agriculture, Forestry and Other Land Use",Land,Other Unspecified Fuels,84179.17,0,0,mtCO2e
+2019,Agriculture,Agriculture/Farming,Agriculture/Farming,"Agriculture, Forestry and Other Land Use",Land,Other Unspecified Fuels,14.07,0,0,mtCO2e
+2019,Agriculture,Agriculture/Farming,Agriculture/Farming,"Agriculture, Forestry and Other Land Use",Land,Other Unspecified Fuels,,0,0,mtCO2e
+2019,Buildings,Commercial & Industrial,Steam - NRG,Stationary,Commercial & Institutional Buildings and Facilities,Steam,60921.71,0,11479421.46,Therm
+2019,Landfilled Organics,Landfilled Organics,Landfilled Organics,Waste,Solid Waste Disposal,Solid Waste,307605.35,0,614293,tons
+2019,Wastewater,Wastewater (Process),Wastewater (Process),Waste,Wastewater Treatment and Discharge,Process Emissions,934.44,0,881549,people
+2019,Wastewater,Wastewater (Fugitive),Wastewater (Fugitive),Waste,Wastewater Treatment and Discharge,Fugitive Emissions,4372.33,0,11509,Avg kgN/day
+2019,Buildings,Residential,PG&E Residential,Stationary,Residential Buildings,Natural Gas,686234.06,0,128924620,Therm
+2019,Buildings,Commercial & Industrial,PG&E Commercial & Industrial,Stationary,Commercial & Institutional Buildings and Facilities,Natural Gas,433238.84,0,81393734,Therm
+2019,Municipal,Municipal Buildings,PG&E Municipal Buildings,Stationary,Commercial & Institutional Buildings and Facilities,Natural Gas,90943.22,0,17085745.32,Therm
+2019,Buildings,Commercial & Industrial,PG&E District,Stationary,Commercial & Institutional Buildings and Facilities,Natural Gas,336.03,0,63131,Therm
+2019,Buildings,Residential,PG&E Residential Natural Gas Distribution Fugitive Emissions Downstream Leaks,Stationary,Fugitive Emissions from Oil and Natural Gas Systems,Natural Gas,129262.17,0,2333535.62,Therm
+2019,Buildings,Commercial & Industrial,PG&E Commercial & Industrial Natural Gas Distribution Fugitive Emissions Downstream Leaks,Stationary,Fugitive Emissions from Oil and Natural Gas Systems,Natural Gas,81606.84,0,1473226.59,Therm
+2019,Municipal,Municipal Buildings,PG&E Municipal Buildings Natural Gas Distribution Fugitive Emissions Downstream Leaks,Stationary,Fugitive Emissions from Oil and Natural Gas Systems,Natural Gas,17130.48,0,309251.99,Therm
+2019,Buildings,Commercial & Industrial,PG&E District Natural Gas Distribution Fugitive Emissions Downstream Leaks,Stationary,Fugitive Emissions from Oil and Natural Gas Systems,Natural Gas,63.3,0,1142.67,Therm
+2019,Buildings,Residential,PG&E Residential,Stationary,Residential Buildings,Electricity,824.92,0,389924676,kWh
+2019,Buildings,Residential,CleanPowerSF Residential Green Product,Stationary,Residential Buildings,Electricity,18571.12,0,883511000,kWh
+2019,Buildings,Residential,CleanPowerSF Residential SuperGreen Product,Stationary,Residential Buildings,Electricity,0,0,18036000,kWh
+2019,Buildings,Residential,PG&E Residential Electric Power Transmission & Distribution Loss,Stationary,Residential Buildings,Electricity,4105.98,0,19886158.48,kWh
+2019,Buildings,Residential,CleanPowerSF Residential Green Product,Stationary,Residential Buildings,Electricity,785.56,0,37372515.3,kWh
+2019,Buildings,Residential,CleanPowerSF Residential SuperGreen Product,Stationary,Residential Buildings,Electricity,0,0,762922.8,kWh
+2019,Buildings,Commercial & Industrial,PG&E Commercial & Industrial,Stationary,Commercial & Institutional Buildings and Facilities,Electricity,1926.6,0,910675520,kWh
+2019,Buildings,Direct Access,PG&E Direct Access,Stationary,Commercial & Institutional Buildings and Facilities,Electricity,78922.22,0,382237689.6,kWh
+2019,Buildings,Commercial & Industrial,PG&E District,Stationary,Commercial & Institutional Buildings and Facilities,Electricity,158.08,0,74722629.94,kWh
+2019,Municipal,Municipal Buildings,PG&E Municipal Buildings,Stationary,Commercial & Institutional Buildings and Facilities,Electricity,3.51,0,1659364,kWh
+2019,Municipal,Municipal Buildings,SFPUC Municipal Buildings,Stationary,Commercial & Institutional Buildings and Facilities,Electricity,0,0,986446489,kWh
+2019,Buildings,Commercial & Industrial,CleanPowerSF Commercial Green Product,Stationary,Commercial & Institutional Buildings and Facilities,Electricity,35593.85,0,1693358000,kWh
+2019,Buildings,Commercial & Industrial,CleanPowerSF Commercial SuperGreen Product,Stationary,Commercial & Institutional Buildings and Facilities,Electricity,0,0,110966000,kWh
+2019,Buildings,Commercial & Industrial,PG&E Commercial & Industrial Electric Power Transmission & Distribution Loss,Stationary,Commercial & Institutional Buildings and Facilities,Electricity,9589.58,0,46444451.52,kWh
+2019,Buildings,Commercial & Industrial,PG&E Direct Access Electric Power Transmission & Distribution Loss,Stationary,Commercial & Institutional Buildings and Facilities,Electricity,4025.03,0,19494122.17,kWh
+2019,Buildings,Commercial & Industrial,PG&E District Electric Power Transmission & Distribution Loss,Stationary,Commercial & Institutional Buildings and Facilities,Electricity,786.84,0,3810854.13,kWh
+2019,Municipal,Municipal Buildings,PG&E Municipal Buildings Electric Power Transmission & Distribution Loss,Stationary,Commercial & Institutional Buildings and Facilities,Electricity,17.47,0,84627.56,kWh
+2019,Buildings,Commercial & Industrial,CleanPowerSF Commercial Green Product Electric Power Transmission & Distribution Loss,Stationary,Commercial & Institutional Buildings and Facilities,Electricity,1815.29,0,86361258,kWh
+2019,Buildings,Commercial & Industrial,CleanPowerSF Commercial SuperGreen Product Electric Power Transmission & Distribution Loss,Stationary,Commercial & Institutional Buildings and Facilities,Electricity,0,0,5659266,kWh
+2019,Transportation,Public Transportation,Bus - Caltrain,Transportation,On-Road Transportation - Caltrain Buses,Diesel,53.06,0,5194.73,gallons
+2019,Transportation,Public Transportation,Bus - Caltrain,Transportation,On-Road Transportation - Caltrain Buses,CNG,3.33,0,524.66,gallons
+2019,Transportation,Public Transportation,Bus - Caltrain,Transportation,On-Road Transportation - Caltrain Buses,Gasoline,291.37,0,33158.01,gallons
+2019,Transportation,Cars & Trucks,Cars & Trucks,Transportation,On-road Transportation - Cars and Trucks,Gasoline,1590469.6,0,3987958059,miles
+2019,Municipal,Municipal Fleet,Municipal Fleet,Transportation,On-road Transportation - Municipal Fleet,Gasoline,17672.27,0,1969459,gallons
+2019,Municipal,Municipal Fleet,Municipal Fleet,Transportation,On-road Transportation - Municipal Fleet,Diesel,7.97,0,764,gallons
+2019,Municipal,Municipal Fleet,Municipal Fleet,Transportation,On-road Transportation - Municipal Fleet,CNG,217.27,0,35159,gallons
+2019,Municipal,Municipal Fleet,Municipal Fleet,Transportation,On-road Transportation - Municipal Fleet,Propane,82.67,0,14470,gallons
+2019,Municipal,Municipal Fleet,Municipal Fleet,Transportation,On-road Transportation - Municipal Fleet,Gasoline,2692.99,0,299626,gallons
+2019,Municipal,Municipal Fleet,Municipal Fleet,Transportation,On-road Transportation - Municipal Fleet,Diesel,1190.68,0,115520,gallons
+2019,Transportation,Public Transportation,MUNI,Transportation,On-road Transportation - MUNI Buses,Diesel,0,0,0,gallons
+2019,Municipal,Municipal Fleet,Municipal Fleet,Transportation,On-road Transportation - Municipal Fleet,CNG,0,0,0,gallons
+2019,Transportation,Public Transportation,MUNI,Transportation,On-road Transportation - MUNI Buses,Electricity,0,0,70027872,kWh
+2019,Transportation,Public Transportation,Rail - Caltrain,Transportation,Railways - Caltrain,Diesel,14711.87,0,1428347.83,gallons
+2019,Transportation,Public Transportation,Rail - BART,Transportation,Railways - Bay Area Rapid Transit Traction,Electricity,8454.35,0,260936598.8,kWh
+2019,Transportation,Public Transportation,Rail - BART,Transportation,Railways - Bay Area Rapid Transit Other Power Contracts,Electricity,2010.37,0,62048547.41,kWh
+2019,Transportation,Public Transportation,Rail - BART,Transportation,Railways - Bay Area Rapid Transit PG&E,Electricity,1336.25,0,631626.06,kWh
+2019,Transportation,Public Transportation,Ferry,Transportation,Waterborne Navigation - Ferry,Diesel,30612.33,0,2972094.54,gallons
+2019,Transportation,Public Transportation,Ferry,Transportation,Waterborne Navigation - Ferry,Diesel,0,0,0,gallons
+2019,Transportation,Diesel - Ships and Boats (non-Ferry),Diesel - Ships and Boats (non-Ferry),Transportation,Waterborne Navigation - non-Ferry,Diesel,413626.19,0,0,mtCO2e
+2019,Buildings,Residential,PG&E Residential Natural Gas Distribution Fugitive Emissions Upstream Leaks,Stationary,Fugitive Emissions from Oil and Natural Gas Systems,Natural Gas,193536.18,0,3493857.2,Therm
+2019,Buildings,Commercial & Industrial,PG&E Commercial & Industrial Natural Gas Distribution Fugitive Emissions Upstream Leaks,Stationary,Fugitive Emissions from Oil and Natural Gas Systems,Natural Gas,122184.83,0,2205770.19,Therm
+2019,Municipal,Municipal Buildings,PG&E Municipal Buildings Natural Gas Distribution Fugitive Emissions Upstream Leaks,Stationary,Fugitive Emissions from Oil and Natural Gas Systems,Natural Gas,25648.4,0,463023.7,Therm
+2019,Buildings,Commercial & Industrial,PG&E District Natural Gas Distribution Fugitive Emissions Upstream Leaks,Stationary,Fugitive Emissions from Oil and Natural Gas Systems,Natural Gas,94.77,0,1710.85,Therm
+2019,Wastewater,Wastewater (Digester Gas),Wastewater (Digester Gas),Stationary,Commercial & Institutional Buildings and Facilities,Sludge gas,126.48,25670.09,492992,MMBTU
+2019,Transportation,Public Transportation,Bus - Golden Gate Transit,Transportation,On-Road Transportation - Golden Gate Transit Buses,Diesel,,,0,gallons
+2019,Transportation,Public Transportation,Bus - Golden Gate Transit,Transportation,On-Road Transportation - Golden Gate Transit Buses,Renewable Diesel,68.66,6040.08,645618.5,gallons
+2019,Municipal,Municipal Fleet,Municipal Fleet,Transportation,On-road Transportation - Municipal Fleet,Renewable CNG,67.43,3064.83,506857,gallons
+2019,Municipal,Municipal Fleet,Municipal Fleet,Transportation,On-road Transportation - Municipal Fleet,Renewable Diesel,263.72,11987.45,1281327,gallons
+2019,Transportation,Public Transportation,MUNI,Transportation,On-road Transportation - MUNI Buses,Renewable Diesel,366.62,32253.26,3447519,gallons
+2019,Municipal,Municipal Fleet,Municipal Fleet,Transportation,On-road Transportation - Municipal Fleet,Renewable CNG,132.74,2569.4,424923,gallons
+2019,Municipal,Municipal Fleet,Municipal Fleet,Transportation,On-road Transportation - Municipal Fleet,Renewable Diesel,3.93,339.68,36308,gallons
+2019,Transportation,Public Transportation,Ferry,Transportation,Waterborne Navigation - Ferry,Diesel,,,0,mtCO2e
+2019,Transportation,Public Transportation,Ferry,Transportation,Waterborne Navigation - Ferry,Renewable Diesel,14.28,551.97,59000,gallons
