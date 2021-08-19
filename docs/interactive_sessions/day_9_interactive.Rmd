@@ -13,10 +13,10 @@ library(tidyverse)
 library(palmerpenguins)
 library(lubridate)
 library(kableExtra)
-
+library(janitor)
 ```
 
-# Part 0: Setup
+## Part 0: Setup
 
 - Create a new version-controlled R Project called `eds221-m2021-day9-interactive`
 - Install the `kableExtra` package
@@ -24,6 +24,145 @@ library(kableExtra)
 - Attach the following packages in the setup chunk: 
     - `tidyverse`
     - `kableExtra`
-    
-# Part 1: Data wrangling refresher
 
+## 1. A few new wrangling tools (`dplyr::across()`, `janitor::get_dupes()`)
+
+### janitor::get_dupes() to check for duplicates
+
+```{r, results = 'hide'}
+dupes <- get_dupes(starwars) # Across all variables (exact match across all columns?)
+
+# Check for duplicate values in the `2000` column
+dupes_2 <- starwars %>% 
+  get_dupes(homeworld)
+
+# Check for duplicates in the homeworld and species column
+dupes_3 <- starwars %>% 
+  get_dupes(homeworld, species)
+```
+
+### dplyr::across() - operations across columns
+
+Mutate across multiple columns: 
+```{r, results = 'hide'}
+starwars %>% 
+  mutate(across(where(is.character), tolower))
+```
+
+You can use it within `group_by() + summarize()`:
+```{r, results = 'hide'}
+starwars %>% 
+  group_by(homeworld) %>% 
+  summarise(across(where(is.numeric), mean, na.rm = TRUE), count = n())
+```
+
+Another example: 
+```{r, results = 'hide'}
+mtcars %>% 
+  group_by(cyl) %>% 
+  summarize(across(drat:qsec, mean))
+```
+
+## 2. Basics - troubleshooting practice & tips
+
+### Read the error message (and think about what it's telling you)
+
+```{r, error = TRUE}
+starwars %>% 
+  filter(homeworld = "Naboo")
+```
+
+```{r, error = TRUE}
+starwars %>% 
+  filter(Homeworld == "Naboo")
+```
+
+```{r, error = TRUE}
+starwars %>%
+  separate(skin_color, into = c("col_1", "col_2"), by = ",")
+```
+
+```{r, error = TRUE}
+starwars %>% 
+  mutate(name = to_lower(name))
+```
+
+```{r, error = TRUE}
+ggplot(data = starwars, aes(x = height, y = mass)) %>%
+  geom_point()
+```
+
+### Run sequences line by line 
+
+```{r, error = TRUE}
+ggplot(data = penguins, aes(x = flipper_length_mm, y = body_mass_g)) +
+  geom_point(aes(color = species, shape = species)) +
+  scale_x_continuous(limits = c(150, 250)) +
+  scale_y_continuous(limits = c(2500, 6500)) +
+  scale_color_manual(values = c("orange", "blue")) +
+  theme(panel.grid = element_blank()) +
+  theme_bw()
+```
+
+```{r, error = TRUE}
+penguins %>% 
+  mutate(across(where(is.numeric), as.character)) %>% 
+  mutate(island = fct_relevel(island, c("Dream", "Biscoe", "Torgersen"))) %>% 
+  unite(island_yr, c(island, year), sep = "_") %>% 
+  filter(species %in% c("Adelie", "Chinstrap")) %>% 
+  relocate(year, .after = species) %>%
+  group_by(island_yr, species) %>% 
+  summarize(mean_flip = mean(flipper_length_mm, na.rm = TRUE),
+            sd_flip = sd(flipper_length_mm, na.rm = TRUE))
+  
+```
+
+## 3. Making a reproducible example ({reprex})
+
+Making a minimum viable example is often the best way to troubleshoot problematic code when you can't figure out a solution quickly -- and is *definitely* the best way to share an example of something you're struggling with so you're most likely to get help. If people can't run or play with your code, it's much less likely they'll be able to offer a solution. 
+
+You probably already have {reprex} (part of the tidyverse). Copy code to clipboard and run `reprex()` to make one! 
+
+Some guidelines:
+ 
+- Ruthlessly simplify
+- Consider using a subset of data (possibly w/ datapasta)
+- Include library calls (e.g. `library(janitor)` in the reprex)
+- Make the minimum viable example of the thing that's not working
+
+See more: 
+
+- https://community.rstudio.com/t/faq-how-to-do-a-minimal-reproducible-example-reprex-for-beginners/23061
+- https://reprex.tidyverse.org/articles/reprex-dos-and-donts.html
+
+## 4. Tables with {kable} and {kableExtra}
+
+We can produce finalized tables in R Markdown in a number of ways - see a bunch of them in David Keyes' post [*How to make beautiful tables in R.*](https://rfortherestofus.com/2019/11/how-to-make-beautiful-tables-in-r/)
+
+We'll just use one tool: `kable` + `kableExtra` to make nice html tables.
+
+Try it out of the box (knit to see the table): 
+```{r}
+penguins %>% 
+  group_by(species, island) %>% 
+  summarize(mean_mass = mean(body_mass_g, na.rm = TRUE)) %>% 
+  kable(col.names = c("Species", "Island", "Body mass (g)")) %>% 
+  kable_styling(bootstrap_options = "striped", full_width = FALSE)
+```
+
+
+## 5. Alt-text, and adding it in R Markdown
+
+Add alt-text to R Markdown, include a code chunk option `fig.alt = "alt text here"`.
+
+Then, check the output by inspecting element > accessibility in your browser. 
+```{r, fig.alt = "A scatterplot of penguin flipper length (mm) versus body mass (grams) for penguins measured at islands near Palmer Archipelago, Antarctica. The variables are positively correlated and the relationship appears linear."}
+
+ggplot(data = penguins, aes(x = flipper_length_mm, y = body_mass_g)) +
+  geom_point()
+```
+
+Let's read more about alt-text! See the links on the EDS 221 home page, or below: 
+
+- An [Introduction to Accessible Data Visualization](https://fossheim.io/writing/posts/accessible-dataviz-design/) by Sarah Fossheim
+- [Introduction to alt-text](https://accessibility.huit.harvard.edu/describe-content-images) from Harvard University IT

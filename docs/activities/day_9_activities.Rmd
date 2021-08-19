@@ -10,24 +10,29 @@ output:
 
 ## Setup
 
-- Fork and clone [this repo]
+- Fork [this repo](https://github.com/allisonhorst/eds221-day9-activities)
+- In your fork, under 'Settings', check the box next to Issues (this is so you'll be able to submit issues to yourself containing reprex)
+- Clone to create a version-controlled R Project
 - Explore the contents a bit to familiarize yourself with the structure
 
-## Task 1: SOS - Save our script! 
+## Task 1: SOS - Save this script
 
 - Open the `busted_birds.Rmd` file
-- Try to knit it. Not happening! 
+- Try to knit it. Not happening.
+- **Make a copy** of the file (in the project root) called `fixed_birds.Rmd`
 - Work through the code from the top line down, fixing errors where indicated and using the hints for what the code is actually trying to do. 
 
 **Note:** It's not enough to just get the code to run. You need to actually make sure it's doing what you expect it to do by checking and understanding the outputs of *each line*. 
 
-## Task 2: Help a friend by making a `reprex`
+## Task 2: Help a friend by making some `reprex`
 
-- Open the `make_a_reprex.Rmd` file
-- There are three separate code chunks in the .Rmd. None of them will run.
+- Open the `reprex_practice.Rmd` file
+- There are two separate code chunks in the .Rmd, neither run.
 - First, try to figure out what the code in each chunk is trying to do.
 - Then, determine where the code breaks (there is only one breaking point for each chunk)
-- Then, for each **create a reprex** that provides a minimal out-of-the-box reproducible example of the thing in the code that isn't working. Create your reprex in a separate code chunk below each example. Use `{reprex}` to send your examples to your neighbor on Slack. 
+- Then, for each **create a reprex** that provides a minimal out-of-the-box reproducible *working* example of the thing in the code that isn't working. Create your reprex in a separate code chunk below each broken example. Use `{reprex}` to render your reproducible example for sharing on GitHub. Add your reprexes as issues to your forked GitHub repo for the day 9 activities. 
+
+### End Day 9 activities
 
 <!--
 ## Task 1
@@ -156,8 +161,6 @@ ggplot(data = selected_parks, aes(y = common_name, x = total_count)) +
 ggsave(here("activities", "bird_counts.jpg"), height = 6, width = 12)
 ```
 
---->
-
 ## Task 2: Reprex! 
 
 ```{r, include = FALSE}
@@ -175,7 +178,7 @@ Data package title: Aquatic Vertebrate Population Study in Mack Creek, Andrews E
 mack_creek_vertebrates <- read_csv(here("activities", "AS00601.csv"))
 ```
 
-```{r}
+```{r, eval = FALSE}
 # Example 1: 
 mack_creek_lengths <- mack_creek_vertebrates %>% 
   clean_names() %>% 
@@ -189,7 +192,7 @@ mack_creek_lengths <- mack_creek_vertebrates %>%
   ungroup()
 ```
 
-```{r}
+```{r, eval = FALSE}
 # Example 2:
 mack_creek_vertebrates %>% 
   clean_names() %>% 
@@ -202,11 +205,11 @@ mack_creek_vertebrates %>%
 ```
 
 
-```{r}
+```{r, eval = FALSE}
 # Example 3: 
 mack_factors <- mack_creek_vertebrates %>% 
   drop_na(SPECIES) %>% 
   fct_relevel(SPECIES, levels = c("DITE", "ONCL", "RHOL"))
 ```
 
-
+--->
