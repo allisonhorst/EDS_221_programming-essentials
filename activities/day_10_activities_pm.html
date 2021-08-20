@@ -259,14 +259,15 @@ div.tocify {
 <li><p>Create a new version-controlled R Project</p></li>
 <li><p>In a single R Markdown document:</p>
 <ul>
-<li><p>Read in both files (ice cover duration and meteorological data)</p></li>
-<li><p>Find the mean ice cover duration in Madison Lake Area by year. Understanding check: what are you finding the mean of here? Why are there multiple observations for each year?)</p></li>
+<li><p>Read in both files (ice cover duration and meteorological data). Note that the ice cover data has some NA values stored as -999.</p></li>
+<li><p>Create a visualization that compares ice duration across different lakes in the Madison Lake Area. Include both the actual ice duration values <em>and</em> some representation of summary statistics for each lake. Careful if you use a boxplot over a jitter or beeswarm - what values might be doubly represented? Can you find an argument that would help you remove those from the boxplot?</p></li>
+<li><p>Find the mean ice cover duration in Madison Lake Area by year (i.e., you’ll only be grouping by the year variable here). Understanding check: what are you finding the mean of here? Why are there multiple observations for each year?)</p></li>
 <li><p>Create an exploratory visualization of mean ice cover duration by year for the Madison Lake Area. Add a sentence or two below this exploratory graph describing the overall trend(s) you observe.</p></li>
 <li><p>Find the mean air temperature (using the daily average air temperature - adjusted) in Madison Lake Area <strong>by year</strong> using <strong>only observations from winter months (December, January, February)</strong></p></li>
 <li><p>Create an exploratory visualization of mean winter temperatures for the Madison Lake Area. Add a sentence or two below this exploratory graph describing the overall trend(s) you observe.</p></li>
 <li><p>Join the mean winter air temperatures to the mean ice cover duration data you found above</p></li>
 <li><p>Create an exploratory scatterplot of mean winter temperatures versus mean ice duration. Add a sentence or two below this exploratory graph describing the overall trend(s) you observe.</p></li>
-<li><p>Explore thaw dates since 1925. Create a subset of the ice cover duration data since 1925, then convert the <code>ice_off</code> column to a <code>Date</code>. Use <code>lubridate::yday()</code> to pull the numeric <em>day of the year</em> from that Date. Create an exploratory plot of the ice off day (numeric day-of-the-year) from 1925 - present. Add a sentence or two below this exploratory graph describing the overall trend(s) you observe.</p></li>
+<li><p>Explore thaw dates since 1970. Create a subset of the ice cover duration data since 1970 (ok to include 1970), then convert the <code>ice_off</code> column to a <code>Date</code>. Use <code>lubridate::yday()</code> to pull the numeric <em>day of the year</em> from that Date. Create an exploratory plot of the ice off day (numeric day-of-the-year) from 1970 - present. Add a sentence or two below this exploratory graph describing the overall trend(s) you observe.</p></li>
 </ul></li>
 </ul>
 <div id="end-task" class="section level3">
