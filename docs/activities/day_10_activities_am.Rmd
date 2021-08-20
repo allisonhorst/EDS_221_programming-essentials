@@ -1,0 +1,102 @@
+---
+title: "Fiddler crabs and Bergmann's rule"
+output: 
+  html_document:
+    css: activity_theme.css
+    toc: true
+    toc_float: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(skimr)
+library(lubridate)
+library(here)
+library(kableExtra)
+```
+
+
+![Yellow fiddler crab waving it's large claw. From Wikipedia.](https://upload.wikimedia.org/wikipedia/commons/0/08/Uca_perplexa_male_waving.gif)
+
+## Setup: 
+
+- Partner up, then decide who is Partner 1 & who is Partner 2 for this activity
+- **You should be working together on all of this activity, even though it is split up into "Partner 1" and "Partner 2" sections**
+
+### Partner 1:
+
+- Create a new repo on GitHub named `fiddler-crab-sizes` (with a ReadMe)
+- Clone to make a version controlled R Project
+- Create subfolders `data` and `docs` in your R Project
+- Download the Fiddler Crab body size data (the CSV) [here](https://portal.edirepository.org/nis/mapbrowse?packageid=knb-lter-pie.540.1)
+- Copy the CSV into your `data` folder
+- Create a new .Rmd. Attach packages as necessary.
+- Read in the data & take a look at it
+- Spend 5 - 10 minutes talking with your partner about the data contains, the shape, variables, and why it was collected
+- Push your changes back to GitHub
+- Add your partner as a collaborator
+
+```{r, include = FALSE}
+fiddler_crab <- read_csv(here("activities", "fiddler_crab.csv"))
+```
+
+### Partner 2: 
+
+- Accept the invitation to collaborate, & clone the repo
+- Create a plot of fiddler crab carapace widths observed at the different latitudes
+- **Finalize your figure**, include a title and updated axis labels, add alt-text, and add a figure caption (you can either do this in the code chunk options or just in plain markdown text below your figure). Update code chunk options so that only your finalized graph and figure caption show up in your knitted report (i.e., no code should show up, or you can use code folding)
+- Push your updates
+
+```{r, include = FALSE}
+ggplot(data = fiddler_crab) +
+  geom_point(aes(y = Latitude, x = carapace_width))
+```
+
+### Partner 1: 
+
+- Pull changes
+- Create a summary table containing the mean, standard deviation, and sample size of fiddler crab carapace widths by site (tip: use `round(mean(), 2)` to round a value to 2 decimal places)
+- Make a nice table (that looks polished when you knit), including with updated column names (including units as relevant). Update code chunk options so that only your finalized table and caption show up in your knitted report (i.e., no code should show up, or you can use code folding)
+- Push your changes
+
+```{r, include = FALSE}
+fiddler_summary <- fiddler_crab %>% 
+  drop_na(carapace_width) %>% 
+  group_by(Site) %>% 
+  summarize(mean_carapace = round(mean(carapace_width), 2),
+            sd_carapace = round(sd(carapace_width), 2),
+            n = n()) 
+
+fiddler_summary %>% 
+  kable(col.names = c("Site code", "Mean carapace width (mm)", "Standard deviation (mm)", "Sample size")) %>% 
+  kable_styling(full_width = FALSE)
+```
+
+### Partner 2: 
+
+- Pull to get remote updates 
+- Create a scatterplot of mean annual water temperature by mean carapace width (you decide how you want to wrangle / create data to do this)
+- Finalize your plot, add alt-text and a caption
+- Update code chunk options as above (so only finalized outputs appear in the knitted document)
+- Push your updates
+
+### Partner 1: 
+
+- Pull & check for updates
+- Work with your partner to write a short introduction to the figures in your knitted document (e.g. so that if it were shared as a blog post, someone would understand what they were looking at)
+- Add any necessary citations for the data at the end of the document
+
+## Done with morning task
+
+```{r, include = FALSE}
+meansize_airtemp <- fiddler_crab %>% 
+  group_by(Latitude) %>% 
+  summarize(mean_size = mean(carapace_width),
+            mean_water = mean(MATW))
+
+ggplot(data = meansize_airtemp, aes(x = mean_water, y = mean_size)) +
+  geom_point()
+```
+
+

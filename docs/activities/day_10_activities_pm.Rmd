@@ -1,0 +1,101 @@
+---
+title: "Long-term ice cover duration: North Temperate Lakes LTER"
+output: 
+  html_document:
+    css: activity_theme.css
+    toc: true
+    toc_float: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, include = FALSE)
+library(tidyverse)
+library(skimr)
+library(lubridate)
+library(here)
+library(kableExtra)
+```
+
+In this activity, you'll explore ice cover duration for lakes in the Madison Lake Area (long term data, 1853 - present), then further explore trends in mean air temperature from a second dataset. 
+
+The datasets are here to download: 
+
+- [Madison Lake Area - ice duration data](https://portal.edirepository.org/nis/mapbrowse?packageid=knb-lter-ntl.33.35)
+- [Madison, Wisconsin meteorological data](https://portal.edirepository.org/nis/mapbrowse?packageid=knb-lter-ntl.20.32)
+
+## Your task: 
+
+- Download both datasets
+
+- Explore the metadata for each to ensure you know what they contain, variables, units, etc. **NOTE:** How are missing values stored in the ice duration variable?
+
+- Create a new version-controlled R Project 
+
+- In a single R Markdown document:
+
+  - Read in both files (ice cover duration and meteorological data)
+  
+  - Find the mean ice cover duration in Madison Lake Area by year. Understanding check: what are you finding the mean of here? Why are there multiple observations for each year?)
+  
+  - Create an exploratory visualization of mean ice cover duration by year for the Madison Lake Area. Add a sentence or two below this exploratory graph describing the overall trend(s) you observe. 
+  
+  - Find the mean air temperature (using the daily average air temperature - adjusted) in Madison Lake Area **by year** using **only observations from winter months (December, January, February)**
+  
+  - Create an exploratory visualization of mean winter temperatures for the Madison Lake Area. Add a sentence or two below this exploratory graph describing the overall trend(s) you observe.
+  
+  - Join the mean winter air temperatures to the mean ice cover duration data you found above
+  
+  - Create an exploratory scatterplot of mean winter temperatures versus mean ice duration. Add a sentence or two below this exploratory graph describing the overall trend(s) you observe. 
+  
+  - Explore thaw dates since 1925. Create a subset of the ice cover duration data since 1925, then convert the `ice_off` column to a `Date`. Use `lubridate::yday()` to pull the numeric *day of the year* from that Date. Create an exploratory plot of the ice off day (numeric day-of-the-year) from 1925 - present. Add a sentence or two below this exploratory graph describing the overall trend(s) you observe. 
+  
+### End task
+  
+  
+```{r}
+icecover <- read_csv(here("activities", "ntl33_v7.csv"), na = "-999")
+weather <- read_csv(here("activities", "ntl20_v6.csv"))
+```
+
+```{r}
+mean_duration <- icecover %>% 
+  group_by(year4) %>% 
+  summarize(mean_duration = mean(ice_duration, na.rm = TRUE))
+
+ggplot(data = mean_duration, aes(x = year4, y = mean_duration)) +
+  geom_line()
+
+```
+
+
+```{r}
+weather_summary <- weather %>% 
+  filter(month %in% c(12, 1, 2)) %>% 
+  group_by(year4) %>% 
+  summarize(mean_temp = mean(ave_air_temp_adjusted, na.rm = TRUE))
+```
+
+```{r}
+ggplot(data = weather_summary, aes(x = year4, y = mean_temp)) +
+  geom_line()
+```
+
+```{r}
+ice_weather_join <- mean_duration %>% 
+  full_join(weather_summary)
+```
+
+```{r}
+ggplot(data = ice_weather_join, aes(x = mean_temp, y = mean_duration)) +
+  geom_point()
+```
+```{r}
+thaw_dates <- icecover %>% 
+  filter(year4 >= 1925) %>% 
+  mutate(ice_off = lubridate::mdy(ice_off)) %>% 
+  mutate(day_ice_off = lubridate::yday(ice_off))
+
+ggplot(data = thaw_dates, aes(x = year4, y = day_ice_off)) +
+  geom_point()
+```
+

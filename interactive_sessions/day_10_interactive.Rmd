@@ -1,6 +1,6 @@
 ---
-title: "Benthic Coral"
-subtitle: "An environmental data mini-project"
+title: "Day 10 Interactive Sessions"
+subtitle: "Updating our R packages, kable tables, a first git collaboration"
 output: 
   html_document:
     css: comp_session_theme.css
@@ -13,53 +13,198 @@ knitr::opts_chunk$set(echo = TRUE)
 library(tidyverse)
 library(skimr)
 library(lubridate)
+library(kableExtra)
+library(palmerpenguins)
 ```
 
-The following activity is updated from the [*Tidy Coral*](https://nceas.github.io/crescynt-training/tidy_coral) workshop by Dr. Julia Lowndes and Dr. Jeanette Clark, with gratitude. 
+## 0. Setup
 
-## Overview
+- Create new repo on GitHub named `eds221-day10-comp`
+- Clone to make a local version-controlled R Project
 
-You will work in groups of 2 to prepare a polished mini-report on coral reef assessment data, with corresponding ocean buoy data. From the [project metadata](https://www.ncei.noaa.gov/access/metadata/landing-page/bin/iso?id=gov.noaa.nodc:0104255): "This dataset consists of benthic data from the Hawaii Coral Reef Assessment and Monitoring Program (CRAMP) taken 2008-2010 from 24 sites on within 5 main Hawaiian Islands (Kauai, Oahu, Molokai, Maui, and Hawaii)."
+## 1. Make a ggplot theme
 
-**Citation:** 2015. Hawaii Coral Reef Assessment and Monitoring Program (CRAMP): benthic data from digital still images made in 2008-2010 on Kauai, Oahu, Molokai, Maui, and Hawaii (NODC Accession 0104255). NOAA NCEI Oceanographic Data Archive.
+- Add a new R Markdown document, saved in your project root as `my_ggplot_theme.Rmd`
+- Attach the `tidyverse` and `palmerpenguins` packages
+- Create a plot from the data (whatever type you want)
+- Highly customize the `theme()` component (you can make it as bright / awful as you want - this is going to become a ggplot theme you can share with the world, so it's up to you)
+- Keep this project OPEN (you'll copy your custom theme in the next step...)
 
-The data lives [here](https://www.nodc.noaa.gov/archive/arc0054/0104255/1.1/data/0-data/cd08/), and additional metadata is [here](https://www.coris.noaa.gov/metadata/records/html/FGDC_RSEmetadata_0104255.html).
-
-## Set-up
-
-- Designate Partner A & Partner B for your group
-- Partner A: create a repo on GitHub called `eds221-hawaii-coral`
-- Fork and clone to create a version controlled R Project
-- Add an .Rmd in the project root, saved as `coral_report.Rmd`
-- Remove everything below the setup chunk, attach the `tidyverse`, `janitor`, `here`, and `skimr` packages, then save
-- Stage, commit, & push updates 
-- Invite your partner(s) as contributors on GitHub (Settings > Manage Access > Invite a Collaborator)
-
-## Part 1 (Partner A): Read in, look at, tidy up the coral data
-
-You can read in a CSV directly from a URL with `read_csv()`, for example:
+Here's something awful just to remind you of what this can look like:
 
 ```{r, eval = FALSE}
-my_data <- read_csv("https://www.data.gov/some/data/set.csv")
+
+ggplot(data = penguins, aes(x = flipper_length_mm, y = body_mass_g)) +
+  geom_point() +
+  theme(title = element_text(size = 16, color = "purple"),
+        plot.background = element_rect(fill = "black"),
+        panel.background = element_rect(fill = "gray20"),
+        axis.text = element_text(color = "yellow"),
+        panel.grid.major = element_line(color = "blue"),
+        panel.grid.minor = element_line(color = "cyan")
+        )
+
 ```
 
-The URL for the coral data you'll use today is: 
+## 2. Updating our R package
 
-https://www.nodc.noaa.gov/archive/arc0054/0104255/1.1/data/0-data/cd08/100308OaAla03m.CSV
+- In a new session (so your existing project stays open), reopen the R Project for your R package you created last week
+- Install and Restart your package (this should also attach your package)
+- Remind yourself of what functions exist in the package (one way: in the Packages tab, click on your package name to see a list)
+- Create a new R script (.R )
+- Copy and paste just the `theme()` component of your customized ggplot graph that you just made into your empty R script. For the example above, that would just be: 
 
+```{r, eval = FALSE}
+theme(title = element_text(size = 16, color = "purple"),
+        plot.background = element_rect(fill = "black"),
+        panel.background = element_rect(fill = "gray20"),
+        axis.text = element_text(color = "yellow"),
+        panel.grid.major = element_line(color = "blue"),
+        panel.grid.minor = element_line(color = "cyan")
+        )
+```
+
+- Put that theme inside of a function, and assign it a name. For example: 
+
+```{r, eval = FALSE}
+theme_eighties <- function() {theme(title = element_text(size = 16, color = "purple"),
+      plot.background = element_rect(fill = "black"),
+      panel.background = element_rect(fill = "gray20"),
+      axis.text = element_text(color = "yellow"),
+      panel.grid.major = element_line(color = "blue"),
+      panel.grid.minor = element_line(color = "cyan")
+)
+}
+```
+
+- Save your script **using the same name as the function** in the `R` folder (e.g. this one would be `theme_eighties.R`)
+- Add a Roxygen skeleton (recall: click within your function > Code > Insert Roxygen skeleton), and update the title (note that there aren't any arguments / params)
+- `devtools::document()` to produce the R documentation for your new function
+- Install & restart
+- Try it out! Back in your *other* project, attach your package (which you just reinstalled), then make a plot that uses your custom theme from your package! 
+
+For example, if mine is called `tacopika`: 
+
+```{r, eval = FALSE}
+library(tacopika)
+
+ggplot(data = penguins, aes(x = flipper_length_mm, y = body_mass_g)) +
+  geom_point() +
+  theme_eighties()
+```
+
+- Stage, commit, & push changes back to your GitHub repo
+- Share your repo information (username/reponame) with your neighbor so they can install your package from GitHub! Recall: `devtools::install_github("username/reponame")`
+- Test your neighbors new & improved R package and try out their custom theme! 
+
+## 3.  Making some nice tables in R
+
+We've made a number of ggplot graphs, but we haven't made any tables. Let's learn one way! 
+
+- Back in your `eds221-day10-comp` R Project, create a new R Markdown document
+- In the setup chunk, attach the `tidyverse` & `kableExtra` (note: there are a *bunch* of ways to make nice tables in R - see David Keyes' post on [*How to make beautiful tables in R*](https://rfortherestofus.com/2019/11/how-to-make-beautiful-tables-in-r/) for more options)
+- Copy the contents of the table below to the clipboard, the use the `datapasta` Add-in to create a tibble stored as `whale_sightings`
+
+```{r, echo = FALSE}
+
+dt <- tribble(
+  ~date, ~site, ~spp, ~dist_m, ~behavior,
+  "8/12/2014", "channel", "unknown", 400, "breach",
+  "8/13/2014","channel", "gray", 200, "spout",
+  "8/15/2014","harbor", "gray", 60, "spout",
+  "8/16/2014","channel", "humpback", 300, "feeding",
+  "8/16/2014","channel", "gray", 150, "feeding"
+)
+
+whale_sightings <- dt
+
+dt %>% 
+  kable() %>% 
+  kable_styling(full_width = FALSE)
+```
+
+#### Let's make some nice looking tables
+
+With `kableExtra`: 
 ```{r}
-coral <- read_csv("https://www.nodc.noaa.gov/archive/arc0054/0104255/1.1/data/0-data/cd08/100308OaAla03m.CSV")
+# Bootstrap theme
+dt %>% 
+  kable(col.names = c("Date", "Site", "Species", "Distance (m)", "Behavior")) %>% 
+  kable_styling(full_width = FALSE, bootstrap_options = "striped")
+
+# Paper theme
+dt %>% 
+  kable() %>% 
+  kable_classic()
 ```
 
-- Read in the coral data as `coral` and take a look (see Entity and Attribute metadata [here](https://www.coris.noaa.gov/metadata/records/html/FGDC_RSEmetadata_0104255.html))
-- Do some basic exploration (`skimr::skim()`, `names()`, etc.). Update code chunk options so that this exploratory analysis does NOT show up in your knitted document. 
-- Convert all column names to lower snake case
-- Narrow your data to only columns for ID Name and ID Date
-- Get rid of # characters in that column (see `stringr::str_remove_all()`). *Note: `stringr` is part of the tidyverse*.
-- Convert the date to class `Date`
-- Stage, commit, pull & push changes
+Check out some other themes and try them out! 
+https://cran.r-project.org/web/packages/kableExtra/vignettes/awesome_table_in_html.html
 
-## 
+A bit more customization: 
+```{r}
+dt %>% 
+  kable(col.names = c("Date", "Site", "Species", "Distance (m)", "Behavior")) %>% 
+  kable_classic() %>% 
+  column_spec(1, bold = TRUE, background = "yellow") %>% 
+  column_spec(2, italic = TRUE, background = "orange") %>% 
+  add_header_above(c(" " = 1, "One header" = 2, "Another header" = 2)) %>% 
+  scroll_box(height = "100px", width = "500px")
+```
 
+See also: `DT`, `reactable`, `gt`, and more! 
 
+### 4. Git collaboration: both pushing to main
+
+- Find a partner. Designate who is "Starter" and who is "Collaborator". 
+
+#### Starter: Create a new version controlled R Project, make & push an update
+
+- Create a new repo called eds221-day10-collab (with a ReadMe)
+- Clone, create a new version-controlled R Project
+- Create a new .Rmd in the root (`git_test.Rmd`), delete everything below the first code chunk
+- Add a line of text in your .Rmd like “Hi partner!”
+- Stage, commit & push all changes back to your GitHub repo
+
+#### Starter: Add a contributor
+
+- Go back to your eds221-day10-collab repo on GitHub
+- Go to Settings > Manage access > (Enter password if requested) > Invite collaborator > Enter Collaborator’s username or email
+
+#### Collaborator: Accept invitation & clone repo, make an update
+
+- Check your email. You should receive the invitation to join the repo. Accept.
+- Clone (do NOT fork first) and create your own local R project
+- Pull just in case (this should say already up to date)
+- Open the git_test.Rmd 
+- Add a new line to the .Rmd with a nice note below the line your partner added
+- Save the .Rmd, then stage, commit, pull & push 
+- Check that the updates show up on GitHub
+
+#### Starter: Pull & add something new to the .Rmd
+
+- PULL to get remote updates locally in RStudio
+- Open git_test.Rmd and see updated text from your partner
+- Add a new line of text to the .Rmd
+- Stage, commit, pull, then push
+
+#### Collaborator: Pull & add something new to the .Rmd
+
+- PULL to get remote updates
+- Open git_test.Rmd and see updated text
+- Add a new line of text to the .Rmd
+- Stage, commit, pull, then push
+
+### Where goes what now on GitHub?
+
+- Both partners, go back to the repo on github for your collaboration
+- Go exploring (especially History & Blame)
+
+### Submit a new issue that references specific line(s) in your files
+
+- Still in GitHub, click on the git_test.Rmd file
+- Find a line that your partner wrote
+- Click the row number to the left of the line (or hold shift to select a range a lines) - the selected lines will turn yellow, and you should see a three dot menu button appear to the left of the code. Click on it, and choose "Reference in new issue"
+- Add a title and some text for your issue, and submit
+- Once you both have submitted an issue to your shared repo, check your partner's issue, respond and close (resolve) the issue
 

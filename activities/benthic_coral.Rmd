@@ -1,0 +1,60 @@
+---
+title: "benthic coral"
+author: "Allison Horst"
+date: "8/19/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(skimr)
+library(lubridate)
+```
+
+The following activity is updated from the [*Tidy Coral*](https://nceas.github.io/crescynt-training/tidy_coral) workshop by Dr. Julia Lowndes and Dr. Jeanette Clark, with gratitude. 
+
+## Overview
+
+You will work in groups of 2 to prepare a polished mini-report on coral reef assessment data, with corresponding ocean buoy data. From the [project metadata](https://www.ncei.noaa.gov/access/metadata/landing-page/bin/iso?id=gov.noaa.nodc:0104255): "This dataset consists of benthic data from the Hawaii Coral Reef Assessment and Monitoring Program (CRAMP) taken 2008-2010 from 24 sites on within 5 main Hawaiian Islands (Kauai, Oahu, Molokai, Maui, and Hawaii)."
+
+**Citation:** 2015. Hawaii Coral Reef Assessment and Monitoring Program (CRAMP): benthic data from digital still images made in 2008-2010 on Kauai, Oahu, Molokai, Maui, and Hawaii (NODC Accession 0104255). NOAA NCEI Oceanographic Data Archive.
+
+The data lives [here](https://www.nodc.noaa.gov/archive/arc0054/0104255/1.1/data/0-data/cd08/), and additional metadata is [here](https://www.coris.noaa.gov/metadata/records/html/FGDC_RSEmetadata_0104255.html).
+
+## Set-up
+
+- Designate Partner A & Partner B for your group
+- Partner A: create a repo on GitHub called `eds221-hawaii-coral`
+- Fork and clone to create a version controlled R Project
+- Add an .Rmd in the project root, saved as `coral_report.Rmd`
+- Remove everything below the setup chunk, attach the `tidyverse`, `janitor`, `here`, and `skimr` packages, then save
+- Stage, commit, & push updates 
+- Invite your partner(s) as contributors on GitHub (Settings > Manage Access > Invite a Collaborator)
+
+## Part 1 (Partner A): Read in, look at, tidy up the coral data
+
+You can read in a CSV directly from a URL with `read_csv()`, for example:
+
+```{r, eval = FALSE}
+my_data <- read_csv("https://www.data.gov/some/data/set.csv")
+```
+
+The URL for the coral data you'll use today is: 
+
+https://www.nodc.noaa.gov/archive/arc0054/0104255/1.1/data/0-data/cd08/100308OaAla03m.CSV
+
+```{r}
+coral <- read_csv("https://www.nodc.noaa.gov/archive/arc0054/0104255/1.1/data/0-data/cd08/100308OaAla03m.CSV")
+```
+
+- Read in the coral data as `coral` and take a look (see Entity and Attribute metadata [here](https://www.coris.noaa.gov/metadata/records/html/FGDC_RSEmetadata_0104255.html))
+- Do some basic exploration (`skimr::skim()`, `names()`, etc.). Update code chunk options so that this exploratory analysis does NOT show up in your knitted document. 
+- Convert all column names to lower snake case
+- Narrow your data to only columns for ID Name and ID Date
+- Get rid of # characters in that column (see `stringr::str_remove_all()`). *Note: `stringr` is part of the tidyverse*.
+- Convert the date to class `Date`
+- Stage, commit, pull & push changes
+
+## 
+

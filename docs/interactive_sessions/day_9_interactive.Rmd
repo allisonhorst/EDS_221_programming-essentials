@@ -150,8 +150,7 @@ penguins %>%
   kable_styling(bootstrap_options = "striped", full_width = FALSE)
 ```
 
-
-## 5. Alt-text, and adding it in R Markdown
+## 4. Alt-text, and adding it in R Markdown
 
 Add alt-text to R Markdown, include a code chunk option `fig.alt = "alt text here"`.
 
