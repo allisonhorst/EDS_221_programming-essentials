@@ -56,7 +56,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }
 code span.al { color: #ad0000; } /* Alert */
 code span.an { color: #5e5e5e; } /* Annotation */
-code span.at { color: #20794d; } /* Attribute */
+code span.at { } /* Attribute */
 code span.bn { color: #ad0000; } /* BaseN */
 code span.bu { } /* BuiltIn */
 code span.cf { color: #007ba5; } /* ControlFlow */
@@ -77,13 +77,14 @@ code span.kw { color: #007ba5; } /* Keyword */
 code span.op { color: #5e5e5e; } /* Operator */
 code span.ot { color: #007ba5; } /* Other */
 code span.pp { color: #ad0000; } /* Preprocessor */
-code span.sc { color: #20794d; } /* SpecialChar */
+code span.sc { color: #5e5e5e; } /* SpecialChar */
 code span.ss { color: #20794d; } /* SpecialString */
 code span.st { color: #20794d; } /* String */
 code span.va { color: #111111; } /* Variable */
 code span.vs { color: #20794d; } /* VerbatimString */
 code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </style>
+
 
   <!--radix_placeholder_meta_tags-->
   <title>EDS 221: EDS 221: Scientific programming essentials</title>
@@ -455,7 +456,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
   </style>
 
-  <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+  <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
   <link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet"/>
   <link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet"/>
   <script src="site_libs/headroom-0.9.4/headroom.min.js"></script>
@@ -1862,7 +1863,10 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
       // hoverable references
       $('span.citation[data-cites]').each(function() {
-        var refHtml = $('#ref-' + $(this).attr('data-cites')).html();
+        var refs = $(this).attr('data-cites').split(" ");
+        var refHtml = refs.map(function(ref) {
+          return "<p>" + $('#ref-' + ref).html() + "</p>";
+        }).join("\n");
         window.tippy(this, {
           allowHTML: true,
           content: refHtml,
@@ -2442,7 +2446,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     color: var(--hover-color, white);
   }</style>
   <!--/radix_placeholder_distill-->
-  <script src="site_libs/header-attrs-2.9/header-attrs.js"></script>
+  <script src="site_libs/header-attrs-2.12.1/header-attrs.js"></script>
   <script src="site_libs/popper-2.6.0/popper.min.js"></script>
   <link href="site_libs/tippy-6.2.7/tippy.css" rel="stylesheet" />
   <link href="site_libs/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
@@ -2519,11 +2523,14 @@ Daily materials
 <h3>Contents</h3>
 <ul>
 <li><a href="#instructor">Instructor</a></li>
+<li><a href="#teaching-assistant">Teaching Assistant</a></li>
 <li><a href="#important-links">Important links</a></li>
 <li><a href="#course-description">Course description</a></li>
 <li><a href="#learning-objectives">Learning objectives</a></li>
-<li><a href="#predictable-daily-schedule">Predictable daily schedule</a></li>
-<li><a href="#expected-sessions-subject-to-change">Expected sessions (subject to change)</a></li>
+<li><a href="#predictable-daily-schedule">Predictable daily
+schedule</a></li>
+<li><a href="#expected-sessions-subject-to-change">Expected sessions
+(subject to change)</a></li>
 <li><a href="#course-requirements">Course requirements</a>
 <ul>
 <li><a href="#computing">Computing</a></li>
@@ -2537,32 +2544,60 @@ Daily materials
 </div>
 <center>
 <p style="color:gray; font-size:15px;">
-<p><i>Honeycomb hex patterns. Photo by <a href="https://unsplash.com/@laughvender?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Shilo Labelle</a> on <a href="https://unsplash.com/s/photos/hexagons?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>.</i></p>
+<p><i>Honeycomb hex patterns. Photo by
+<a href="https://unsplash.com/@laughvender?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Shilo
+Labelle</a> on
+<a href="https://unsplash.com/s/photos/hexagons?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>.</i></p>
 </p>
 </center>
 <h2 id="instructor">Instructor</h2>
 <p>Allison Horst (ahorst@ucsb.edu)</p>
+<h2 id="teaching-assistant">Teaching Assistant</h2>
+<p>Casey O’Hara (cohara@bren.ucsb.edu)</p>
 <h2 id="important-links">Important links</h2>
 <ul>
-<li><a href="https://docs.google.com/document/d/1OGbc6U3STKdsThUKd9Nj5UgzeB7djgM130ku1UUH1gU/edit?usp=sharing">Course syllabus</a></li>
+<li><a
+href="https://docs.google.com/document/d/1OGbc6U3STKdsThUKd9Nj5UgzeB7djgM130ku1UUH1gU/edit?usp=sharing">Course
+syllabus</a></li>
 <li><a href="code_of_conduct.html">Code of Conduct</a></li>
 </ul>
 <h2 id="course-description">Course description</h2>
-<p>In EDS 221, students will build key scientific programming skills essential for environmental data analysis and problem solving. Topics include structured programming and algorithm development, iteration, conditionals, functions and objects, documentation, testing and troubleshooting, tidy data structure, and an introduction to data wrangling and visualization. The course will be taught in R and Python.</p>
+<p>In EDS 221, students will build key scientific programming skills
+essential for environmental data analysis and problem solving in R.
+Topics include structured programming and algorithm development,
+iteration, conditionals, functions and objects, documentation, testing
+and troubleshooting, tidy data structure, and an introduction to data
+wrangling and visualization.</p>
 <h2 id="learning-objectives">Learning objectives</h2>
 <p>By the end of EDS 221, students should be able to:</p>
 <ul>
-<li><p><strong>Understand, create, and work with different data structures</strong> (e.g. vectors, data frames, lists) <strong>and types</strong> (e.g. numeric, character, factor, logical, date-times)</p></li>
-<li><p><strong>Design, implement, test and document functions</strong> (including functions with iteration, conditionals, messages and warnings) in R and Python</p></li>
-<li><p><strong>Use basic (non-collaborative) project-oriented workflows</strong> with reproducible code (R scripts, R Markdown, and Jupyter Notebooks) and version control (git/GitHub basics)</p></li>
-<li><p><strong>Perform basic data wrangling and visualization</strong> with real world environmental data with tidyverse packages (in R) and pandas/seaborn (in Python)</p></li>
-<li><p><strong>Employ troubleshooting and debugging strategies</strong> (tools, mindsets, strategies, resources)</p></li>
+<li><p><strong>Understand, create, and work with different data
+structures</strong> (e.g. vectors, data frames, lists) <strong>and
+types</strong> (e.g. numeric, character, factor, logical,
+date-times)</p></li>
+<li><p><strong>Design, implement, test and document functions</strong>
+(including functions with iteration, conditionals, messages and
+warnings) in R</p></li>
+<li><p><strong>Use basic (non-collaborative) project-oriented
+workflows</strong> with reproducible code (R scripts, R Markdown, Quarto
+documents) and version control (git/GitHub basics)</p></li>
+<li><p><strong>Perform basic data wrangling and visualization</strong>
+with real world environmental data with tidyverse packages (in
+R)</p></li>
+<li><p><strong>Employ troubleshooting and debugging strategies</strong>
+(tools, mindsets, strategies, resources)</p></li>
 </ul>
 <h2 id="predictable-daily-schedule">Predictable daily schedule</h2>
-<p><strong>Course dates:</strong> Monday (2021-08-09) - Friday (2021-08-20)</p>
-<p>EDS 221 is an intensive 2-week long 4-unit course. Students should plan to attend all scheduled sessions. All course requirements will be completed between 8am and 5pm PST (M - F), i.e. you are not expected to do additional work for EDS 221 outside of those hours, unless you are working with the Teaching Assistant in student hours.</p>
+<p><strong>Course dates:</strong> Monday (2021-08-08) - Friday
+(2021-08-19)</p>
+<p>EDS 221 is an intensive 2-week long 4-unit course. Students should
+plan to attend all scheduled sessions. All course requirements will be
+completed between 9am and 5pm PST (M - F), i.e. you are not expected to
+do additional work for EDS 221 outside of those hours, unless you are
+working with the Teaching Assistant in student hours.</p>
 <div style="color: teal;">
-<p><em><strong>Note:</strong> For EDS 212 and 221, we will start Wednesdays at 10:00am (instead of 8:00am).</em></p>
+<p><em><strong>Note:</strong> For EDS 212 and 221, we will start
+Wednesdays at 10:00am.</em></p>
 </div>
 <p>Tentative daily schedule (subject to change):</p>
 <table>
@@ -2575,47 +2610,46 @@ Daily materials
 <tbody>
 <tr class="odd">
 <td>9:00am - 10:00am</td>
-<td><em>Lecture 1 (60 min)</em></td>
+<td><em>Lecture 1</em></td>
 </tr>
 <tr class="even">
 <td>10:00am - 11:00am</td>
-<td><em>Interactive Session 1 (60 min)</em></td>
+<td><em>Interactive Session 1</em></td>
 </tr>
 <tr class="odd">
-<td>11:00am - 11:10am</td>
-<td><em>Break (10 min)</em></td>
+<td>11:00am - 12:00pm</td>
+<td><em>Flex time</em></td>
 </tr>
 <tr class="even">
-<td>11:10am - 12:00pm</td>
-<td><em>Flex time (50 min)</em></td>
-</tr>
-<tr class="odd">
 <td>12:00pm - 1:15pm</td>
-<td><em>Lunch (75 min)</em></td>
-</tr>
-<tr class="even">
-<td>1:15pm - 2:15pm</td>
-<td><em>Lecture 2 (60 min)</em></td>
+<td><em>Lunch</em></td>
 </tr>
 <tr class="odd">
-<td>2:15pm - 3:15pm</td>
-<td><em>Interactive Session 2 (45 min)</em></td>
+<td>1:15pm - 2:15pm</td>
+<td><em>Lecture 2</em></td>
 </tr>
 <tr class="even">
+<td>2:15pm - 3:15pm</td>
+<td><em>Interactive Session 2</em></td>
+</tr>
+<tr class="odd">
 <td>3:15pm - 5:00pm</td>
-<td><em>Group &amp; individual tasks (90 min)</em></td>
+<td><em>Group &amp; individual tasks</em></td>
 </tr>
 </tbody>
 </table>
-<h2 id="expected-sessions-subject-to-change">Expected sessions (subject to change)</h2>
-<p><strong>Note:</strong> lectures and flex sessions will also often include interactive live-coding. You should bring your computer and charger to all sessions in EDS 221.</p>
-<table style="width:100%;">
+<h2 id="expected-sessions-subject-to-change">Expected sessions (subject
+to change)</h2>
+<p><strong>Note:</strong> lectures and flex sessions will also often
+include interactive live-coding. You should bring your computer and
+charger to all sessions in EDS 221.</p>
+<table>
 <colgroup>
 <col style="width: 4%" />
-<col style="width: 32%" />
-<col style="width: 27%" />
-<col style="width: 28%" />
-<col style="width: 7%" />
+<col style="width: 38%" />
+<col style="width: 31%" />
+<col style="width: 16%" />
+<col style="width: 8%" />
 </colgroup>
 <thead>
 <tr class="header">
@@ -2628,201 +2662,300 @@ Daily materials
 </thead>
 <tbody>
 <tr class="odd">
-<td>Monday 8/9: morning</td>
+<td>Monday 8/8: morning</td>
 <td><ol type="1">
-<li><a href="https://docs.google.com/presentation/d/e/2PACX-1vQ9-fDLw5exrrp6tteMXld4ds2aT8dze9XrzgEMuAwgMo-onIVO4lI_vIaE0xXIckacWB1fqXMOF3hl/pub?start=false&amp;loop=false&amp;delayms=3000">“Hello, world”: course introduction, programming in EDS, meet our tools</a></li>
+<li><a
+href="https://docs.google.com/presentation/d/e/2PACX-1vQ9-fDLw5exrrp6tteMXld4ds2aT8dze9XrzgEMuAwgMo-onIVO4lI_vIaE0xXIckacWB1fqXMOF3hl/pub?start=false&amp;loop=false&amp;delayms=3000">“Hello,
+world”: course introduction, programming in EDS, meet our tools</a></li>
 </ol></td>
-<td>Capstone Project Proposal Kickoff &amp; Professional Bio with Jamie!</td>
-<td>(continued)</td>
+<td><a href="interactive_sessions/day_1_interactive.html">Meet
+<code>here</code> , project organization, adding data import to our
+workflow</a></td>
+<td>Writing a professional bio (Kimberly)</td>
 <td>N/A</td>
 </tr>
 <tr class="even">
-<td>Monday 8/9: afternoon</td>
+<td>Monday 8/8: afternoon</td>
 <td><ol start="2" type="1">
-<li><a href="https://docs.google.com/presentation/d/e/2PACX-1vTRRof4Xrv-cRnthwB2xPK6rtaAFS0WlaCxj4lo3kker2UQnwr9aEB1hiAEiTwfy7NDHXuhCA8wgBQ5/pub?start=false&amp;loop=false&amp;delayms=3000">Project oriented workflows, file paths, naming things,</a>good habits from the <a href="https://style.tidyverse.org/">tidyverse style guide</a></li>
+<li><a
+href="https://docs.google.com/presentation/d/e/2PACX-1vTRRof4Xrv-cRnthwB2xPK6rtaAFS0WlaCxj4lo3kker2UQnwr9aEB1hiAEiTwfy7NDHXuhCA8wgBQ5/pub?start=false&amp;loop=false&amp;delayms=3000">Project
+oriented workflows, file paths, naming things,</a>good habits from the
+<a href="https://style.tidyverse.org/">tidyverse style guide</a></li>
 </ol></td>
-<td><a href="interactive_sessions/day_1_interactive.html">Meet <code>here</code> , project organization, adding data import to our workflow</a></td>
+<td>Don’t fear the Terminal - some commands, navigation, and git outside
+of RStudio</td>
 <td>N/A</td>
-<td><a href="activities/day_1_activities.html">Day 1 Activities - Handout</a></td>
+<td><a href="activities/day_1_activities.html">Day 1 Activities -
+Handout</a></td>
 </tr>
 <tr class="odd">
-<td>Tuesday 8/10: morning</td>
+<td>Tuesday 8/9: morning</td>
 <td><ol start="3" type="1">
-<li><a href="https://docs.google.com/presentation/d/e/2PACX-1vS5v0KiGyFHu5ThBFYtYS2ObBK_jH94-IQL7cKPWr_SoibKteogW0jSm_vTIXLLsx3sr3Ic9RqiukI3/pub?start=false&amp;loop=false&amp;delayms=3000">Data representation and types</a></li>
+<li><a
+href="https://docs.google.com/presentation/d/e/2PACX-1vS5v0KiGyFHu5ThBFYtYS2ObBK_jH94-IQL7cKPWr_SoibKteogW0jSm_vTIXLLsx3sr3Ic9RqiukI3/pub?start=false&amp;loop=false&amp;delayms=3000">Data
+representation and types</a></li>
 </ol></td>
-<td><a href="interactive_sessions/day_2_interactive.html">Creating and indexing with different data types</a></td>
-<td>Continue updating your website in {distill}: add a blog, check out the <a href="https://distillery.rbind.io/showcase.html">distillery</a></td>
+<td><a href="interactive_sessions/day_2_interactive.html">Creating and
+indexing with different data types</a></td>
+<td>Continue updating your website in {distill}: add a blog, check out
+the <a
+href="https://distillery.rbind.io/showcase.html">distillery</a></td>
 <td>N/A</td>
 </tr>
 <tr class="even">
-<td>Tuesday 8/10: afternoon</td>
+<td>Tuesday 8/9: afternoon</td>
 <td><ol start="4" type="1">
-<li><a href="https://docs.google.com/presentation/d/e/2PACX-1vQyyk6f975Uraua3mKrjgip7v5tTwgm3-mN5kE5HaOBL3rlBaw_JaB_c64M4H3hLkCdUJE17BGqDpqG/pub?start=false&amp;loop=false&amp;delayms=3000">Common data types and structures in EDS</a></li>
+<li><a
+href="https://docs.google.com/presentation/d/e/2PACX-1vQyyk6f975Uraua3mKrjgip7v5tTwgm3-mN5kE5HaOBL3rlBaw_JaB_c64M4H3hLkCdUJE17BGqDpqG/pub?start=false&amp;loop=false&amp;delayms=3000">Common
+data types and structures in EDS</a></li>
 </ol></td>
-<td>Data in <a href="https://jakevdp.github.io/PythonDataScienceHandbook/03.02-data-indexing-and-selection.html">Python</a> and <a href="http://adv-r.had.co.nz/Subsetting.html">R</a>, accessing / updating elements &amp; casting continued</td>
-<td>Mini-flex: our first little Rmd customization with css (and inspecting an html)</td>
-<td><a href="activities/day_2_activities.html">Day 2 Activities - Handout</a></td>
+<td>Data in <a
+href="https://jakevdp.github.io/PythonDataScienceHandbook/03.02-data-indexing-and-selection.html">Python</a>
+and <a href="http://adv-r.had.co.nz/Subsetting.html">R</a>, accessing /
+updating elements &amp; casting continued</td>
+<td>Mini-flex: our first little Rmd customization with css (and
+inspecting an html)</td>
+<td><a href="activities/day_2_activities.html">Day 2 Activities -
+Handout</a></td>
 </tr>
 <tr class="odd">
-<td>Wednesday 8/11: morning (late start)</td>
+<td>Wednesday 8/10: morning (late start)</td>
 <td><ol start="5" type="1">
-<li><a href="https://docs.google.com/presentation/d/e/2PACX-1vSaVG1shsD0XcHavYIhPJ7aUKUPurCy4bsBEcLdFPjeRtZv3SNnnPsklcUDwswveOQlFcXXbrYRvmFR/pub?start=false&amp;loop=false&amp;delayms=3000">Conditionals and logical operations, intro to for loops</a></li>
+<li><a
+href="https://docs.google.com/presentation/d/e/2PACX-1vSaVG1shsD0XcHavYIhPJ7aUKUPurCy4bsBEcLdFPjeRtZv3SNnnPsklcUDwswveOQlFcXXbrYRvmFR/pub?start=false&amp;loop=false&amp;delayms=3000">Conditionals
+and logical operations, intro to for loops</a></li>
 </ol></td>
-<td><a href="interactive_sessions/day_3_interactive.html">Refresh logical operations, write basic for loops in R &amp; Python</a></td>
+<td><a href="interactive_sessions/day_3_interactive.html">Refresh
+logical operations, write basic for loops in R &amp; Python</a></td>
 <td><em>No flex sessions - Wednesday late start</em></td>
 <td>N/A</td>
 </tr>
 <tr class="even">
-<td>Wednesday 8/11: afternoon</td>
+<td>Wednesday 8/10: afternoon</td>
 <td><ol start="6" type="1">
-<li><a href="https://docs.google.com/presentation/d/e/2PACX-1vThIFBj2Bkjs9eYbO3tnrJ8GCd0RBzfHTR9CCq1WWcji6SyXmdW36m8n4ToSPf2nSpj-NtDX4yWJTgR/pub?start=false&amp;loop=false&amp;delayms=3000">Loops continued - and functions to help</a></li>
+<li><a
+href="https://docs.google.com/presentation/d/e/2PACX-1vThIFBj2Bkjs9eYbO3tnrJ8GCd0RBzfHTR9CCq1WWcji6SyXmdW36m8n4ToSPf2nSpj-NtDX4yWJTgR/pub?start=false&amp;loop=false&amp;delayms=3000">Loops
+continued - and functions to help</a></li>
 </ol></td>
-<td><a href="interactive_sessions/day_3_interactive.html">For loops with conditions, <code>apply()</code> functions, and <code>across()</code></a><br />
+<td><a href="interactive_sessions/day_3_interactive.html">For loops with
+conditions, <code>apply()</code> functions, and
+<code>across()</code></a><br />
 <br />
 </td>
 <td><em>No flex sessions - Wednesday late start</em></td>
-<td><a href="activities/day_3_activities.html">Day 3 Activities - Handout</a></td>
+<td><a href="activities/day_3_activities.html">Day 3 Activities -
+Handout</a></td>
 </tr>
 <tr class="odd">
-<td>Thursday 8/12: morning</td>
+<td>Thursday 8/11: morning</td>
 <td><ol start="7" type="1">
-<li><a href="https://docs.google.com/presentation/d/e/2PACX-1vQI2_jMfAiH4hAVXO8AYE5g8w6iC_N3LIZhZwYYQI5vRRRCwD6_517EkzUU0zwCM2a-BcZvx3YOLyno/pub?start=false&amp;loop=false&amp;delayms=3000">Introduction to writing functions in R and Python</a></li>
+<li><a
+href="https://docs.google.com/presentation/d/e/2PACX-1vQI2_jMfAiH4hAVXO8AYE5g8w6iC_N3LIZhZwYYQI5vRRRCwD6_517EkzUU0zwCM2a-BcZvx3YOLyno/pub?start=false&amp;loop=false&amp;delayms=3000">Introduction
+to writing functions in R and Python</a></li>
 </ol></td>
-<td><a href="interactive_sessions/day_4_interactive.html">Functions 101: basics</a></td>
-<td>Customize your {distill} website</td>
+<td><a href="interactive_sessions/day_4_interactive.html">Functions 101:
+basics</a></td>
+<td>Capstone Kick-off with Emily</td>
 <td>N/A</td>
 </tr>
 <tr class="even">
-<td>Thursday 8/12: afternoon</td>
+<td>Thursday 8/11: afternoon</td>
 <td><ol start="8" type="1">
-<li><a href="https://docs.google.com/presentation/d/e/2PACX-1vQE29VZuyRqlbj8F4K-uIyybhmz1_V4ZkHTYj8xW0Xoy6lHLTnclDqb6BXOBnY0YVq1zjgWPnSr-OyZ/pub?start=false&amp;loop=false&amp;delayms=3000">Functions continued: planning, adding useful messages, more advanced functions and outputs</a></li>
+<li><a
+href="https://docs.google.com/presentation/d/e/2PACX-1vQE29VZuyRqlbj8F4K-uIyybhmz1_V4ZkHTYj8xW0Xoy6lHLTnclDqb6BXOBnY0YVq1zjgWPnSr-OyZ/pub?start=false&amp;loop=false&amp;delayms=3000">Functions
+continued: planning, adding useful messages, more advanced functions and
+outputs</a></li>
 </ol></td>
-<td><a href="interactive_sessions/day_4_interactive.html">Functions 102: beyond basics (functions with conditions, iteration, messages)</a></td>
+<td><a href="interactive_sessions/day_4_interactive.html">Functions 102:
+beyond basics (functions with conditions, iteration, messages)</a></td>
 <td><em>N/A</em></td>
-<td><a href="activities/day_4_activities.html">Day 4 Activities - Handout</a></td>
+<td><a href="activities/day_4_activities.html">Day 4 Activities -
+Handout</a></td>
 </tr>
 <tr class="odd">
-<td>Friday 8/13: morning</td>
+<td>Friday 8/12: morning</td>
 <td><ol start="9" type="1">
-<li><a href="https://docs.google.com/presentation/d/e/2PACX-1vS8CQzC_y4PsFmB_33FX3AW2TkteXIerAiClkaO_TUnAxs4aaDCQ6kAz53pgdtA7AIKhTRWI9uHDFfo/pub?start=false&amp;loop=false&amp;delayms=3000">Functions continued: testing, documentation, sharing</a></li>
+<li><a
+href="https://docs.google.com/presentation/d/e/2PACX-1vS8CQzC_y4PsFmB_33FX3AW2TkteXIerAiClkaO_TUnAxs4aaDCQ6kAz53pgdtA7AIKhTRWI9uHDFfo/pub?start=false&amp;loop=false&amp;delayms=3000">Functions
+continued: testing, documentation, sharing</a></li>
 </ol></td>
-<td><a href="interactive_sessions/day_5_interactive.html">Functions 103: testing &amp; documenting functions, making your first package</a></td>
+<td><a href="interactive_sessions/day_5_interactive.html">Functions 103:
+testing &amp; documenting functions, making your first package</a></td>
 <td>Functions, continued</td>
 <td>N/A</td>
 </tr>
 <tr class="even">
-<td>Friday 8/13: afternoon</td>
+<td>Friday 8/12: afternoon</td>
 <td><ol start="10" type="1">
-<li><a href="https://docs.google.com/presentation/d/e/2PACX-1vRiEkcimIxqblQ4j2vhnp9ys1J5zoEjls7eGZuwUPa46NNYqJlT9FO2GfDuU5o3v96tYJMGeMbviUR0/pub?start=false&amp;loop=false&amp;delayms=3000">Finding &amp; using external packages</a></li>
+<li><a
+href="https://docs.google.com/presentation/d/e/2PACX-1vRiEkcimIxqblQ4j2vhnp9ys1J5zoEjls7eGZuwUPa46NNYqJlT9FO2GfDuU5o3v96tYJMGeMbviUR0/pub?start=false&amp;loop=false&amp;delayms=3000">Finding
+&amp; using external packages</a></li>
 </ol></td>
-<td><a href="interactive_sessions/day_5_interactive.html">Find &amp; explore packages, documentation, accessing from repos</a></td>
+<td><a href="interactive_sessions/day_5_interactive.html">Find &amp;
+explore packages, documentation, accessing from repos</a></td>
 <td>N/A</td>
-<td><a href="activities/day_5_activities.html">Day 5 Activities - Handout</a></td>
+<td><a href="activities/day_5_activities.html">Day 5 Activities -
+Handout</a></td>
 </tr>
 <tr class="odd">
-<td>Monday 8/16: morning</td>
+<td>Monday 8/15: morning</td>
 <td><ol start="11" type="1">
-<li><a href="https://docs.google.com/presentation/d/e/2PACX-1vRWyQuDd6xnppypSe3jrfpJXiG4eWrfeU2kvCg5ACDO-QWpd-rZI1QR3B-HsBZcQxjK6iVjJzjuXiQq/pub?start=false&amp;loop=false&amp;delayms=3000">Tidy data: what, why, how?</a></li>
+<li><a
+href="https://docs.google.com/presentation/d/e/2PACX-1vRWyQuDd6xnppypSe3jrfpJXiG4eWrfeU2kvCg5ACDO-QWpd-rZI1QR3B-HsBZcQxjK6iVjJzjuXiQq/pub?start=false&amp;loop=false&amp;delayms=3000">Tidy
+data: what, why, how?</a></li>
 </ol></td>
-<td><a href="interactive_sessions/day_6_interactive.html">Tidying data (pivot, separate) basics with <code>tidyr</code> and <code>pandas</code></a></td>
+<td><a href="interactive_sessions/day_6_interactive.html">Tidying data
+(pivot, separate) basics with <code>tidyr</code> and
+<code>pandas</code></a></td>
 <td>Data wrangling continued</td>
 <td>N/A</td>
 </tr>
 <tr class="even">
-<td>Monday 8/16: afternoon</td>
+<td>Monday 8/15: afternoon</td>
 <td><ol start="12" type="1">
-<li><a href="https://docs.google.com/presentation/d/e/2PACX-1vQzpRoRVgTkOiyIuwTlH2I0plPD8ELFGou_JXez2o67w9brhXI_mlImcarJhJYY6SbLtxvUsxlQdsoe/pub?start=false&amp;loop=false&amp;delayms=3000">Data tidying and wrangling continued: <code>dplyr</code> and <code>pandas</code></a></li>
+<li><a
+href="https://docs.google.com/presentation/d/e/2PACX-1vQzpRoRVgTkOiyIuwTlH2I0plPD8ELFGou_JXez2o67w9brhXI_mlImcarJhJYY6SbLtxvUsxlQdsoe/pub?start=false&amp;loop=false&amp;delayms=3000">Data
+tidying and wrangling continued: <code>dplyr</code> and
+<code>pandas</code></a></li>
 </ol></td>
-<td><a href="interactive_sessions/day_6_interactive.html">Data wrangling continued - <code>dplyr</code> and <code>pandas</code></a></td>
+<td><a href="interactive_sessions/day_6_interactive.html">Data wrangling
+continued - <code>dplyr</code> and <code>pandas</code></a></td>
 <td>N/A</td>
-<td><a href="activities/day_6_activities.html">Day 6 Activities - Handout</a></td>
+<td><a href="activities/day_6_activities.html">Day 6 Activities -
+Handout</a></td>
 </tr>
 <tr class="odd">
-<td>Tuesday 8/17: morning</td>
+<td>Tuesday 8/16: morning</td>
 <td><ol start="13" type="1">
-<li><a href="https://docs.google.com/presentation/d/e/2PACX-1vTXGSmMDyPisd8hsAOm6qImorlHOrqQMF0VjZPaWTP65Eb9gmB7xLC7-WZjpq_warkNN0RiY_D_fRHh/pub?start=false&amp;loop=false&amp;delayms=3000">Data wrangling continued - more tidying, relational data &amp; types of joins</a></li>
+<li><a
+href="https://docs.google.com/presentation/d/e/2PACX-1vTXGSmMDyPisd8hsAOm6qImorlHOrqQMF0VjZPaWTP65Eb9gmB7xLC7-WZjpq_warkNN0RiY_D_fRHh/pub?start=false&amp;loop=false&amp;delayms=3000">Data
+wrangling continued - more tidying, relational data &amp; types of
+joins</a></li>
 </ol></td>
-<td><a href="interactive_sessions/day_7_interactive.html">Data wrangling continued: joins</a></td>
-<td>Group read &amp; report back: <a href="https://fossheim.io/writing/posts/accessible-dataviz-design/">An introduction to designing accessible data visualizations</a> by Sarah L. Fossheim</td>
+<td><a href="interactive_sessions/day_7_interactive.html">Data wrangling
+continued: joins</a></td>
+<td>Meet your next instructor: Dr. Julien Brun</td>
 <td>N/A</td>
 </tr>
 <tr class="even">
-<td>Tuesday 8/17: afternoon</td>
+<td>Tuesday 8/16: afternoon</td>
 <td><ol start="14" type="1">
-<li><a href="https://docs.google.com/presentation/d/e/2PACX-1vRrM6QW1C-xjU_8e6Uuy5ZlCXtWsXZAkK7BzQdEWuq93ac_Y8oaKaL1VAbP4fJBfQr41fGpoBsfZcqI/pub?start=false&amp;loop=false&amp;delayms=3000">Data wrangling continued - working with dates &amp; times, wrangling strings</a></li>
+<li><a
+href="https://docs.google.com/presentation/d/e/2PACX-1vRrM6QW1C-xjU_8e6Uuy5ZlCXtWsXZAkK7BzQdEWuq93ac_Y8oaKaL1VAbP4fJBfQr41fGpoBsfZcqI/pub?start=false&amp;loop=false&amp;delayms=3000">Data
+wrangling continued - working with dates &amp; times, wrangling
+strings</a></li>
 </ol></td>
-<td><a href="interactive_sessions/day_7_interactive.html">Data wrangling continued: dates, times, strings</a></td>
+<td><a href="interactive_sessions/day_7_interactive.html">Data wrangling
+continued: dates, times, strings</a></td>
 <td>Meet your next instructor: Welcome Dr. Julien Brun!</td>
-<td><a href="activities/day_7_activities.html">Day 7 Activities - Handout</a></td>
+<td><a href="activities/day_7_activities.html">Day 7 Activities -
+Handout</a></td>
 </tr>
 <tr class="odd">
-<td>Wednesday 8/18: morning (late start)</td>
+<td>Wednesday 8/17: morning (late start)</td>
 <td><ol start="15" type="1">
-<li><a href="https://docs.google.com/presentation/d/e/2PACX-1vSpUdai7BTXprh3dwSNBpJymNGUIOFhEgQn5XbQWZhWy8EpUyd64Lem08YK_kc6tP0iyoJ5wRAVvSYe/pub?start=false&amp;loop=false&amp;delayms=3000">The grammar of graphics &amp; basic graph considerations</a></li>
+<li><a
+href="https://docs.google.com/presentation/d/e/2PACX-1vSpUdai7BTXprh3dwSNBpJymNGUIOFhEgQn5XbQWZhWy8EpUyd64Lem08YK_kc6tP0iyoJ5wRAVvSYe/pub?start=false&amp;loop=false&amp;delayms=3000">The
+grammar of graphics &amp; basic graph considerations</a></li>
 </ol></td>
-<td><p><a href="https://github.com/allisonhorst/eds221-day8-comp">Fork this repo</a> to follow along with <a href="https://allisonhorst.github.io/eds221-day8-comp/data_viz.html">Data visualization in <code>ggplot2</code></a></p>
-<p>See also: Ced Scherer’s <a href="https://www.cedricscherer.com/2019/08/05/a-ggplot2-tutorial-for-beautiful-plotting-in-r/">ggplot2 tutorial</a>, and Yan Holtz’ <a href="https://www.data-to-viz.com/">From Data to Vis</a> and <a href="https://www.r-graph-gallery.com/">R Graph Gallery</a></p></td>
+<td><p><a href="https://github.com/allisonhorst/eds221-day8-comp">Fork
+this repo</a> to follow along with <a
+href="https://allisonhorst.github.io/eds221-day8-comp/data_viz.html">Data
+visualization in <code>ggplot2</code></a></p>
+<p>See also: Ced Scherer’s <a
+href="https://www.cedricscherer.com/2019/08/05/a-ggplot2-tutorial-for-beautiful-plotting-in-r/">ggplot2
+tutorial</a>, and Yan Holtz’ <a href="https://www.data-to-viz.com/">From
+Data to Vis</a> and <a href="https://www.r-graph-gallery.com/">R Graph
+Gallery</a></p></td>
 <td><em>No flex session - Wednesday late start</em></td>
 <td>N/A</td>
 </tr>
 <tr class="even">
-<td>Wednesday 8/18: afternoon</td>
+<td>Wednesday 8/17: afternoon</td>
 <td><ol start="16" type="1">
-<li><a href="https://docs.google.com/presentation/d/e/2PACX-1vR1QB0S3AfBfdJZ1nnhUw2iKSxV83GDc5l9BYPC6yQhxBdnzRpAAZ2lh7QWhX4kY65Uf_q0yK9FtHmW/pub?start=false&amp;loop=false&amp;delayms=3000">Data visualization basics - responsible, clear, awesome</a></li>
+<li><a
+href="https://docs.google.com/presentation/d/e/2PACX-1vR1QB0S3AfBfdJZ1nnhUw2iKSxV83GDc5l9BYPC6yQhxBdnzRpAAZ2lh7QWhX4kY65Uf_q0yK9FtHmW/pub?start=false&amp;loop=false&amp;delayms=3000">Data
+visualization basics - responsible, clear, awesome</a></li>
 </ol></td>
-<td><a href="https://allisonhorst.github.io/rice-data-viz/">Data viz continued</a></td>
+<td><a href="https://allisonhorst.github.io/rice-data-viz/">Data viz
+continued</a></td>
 <td><em>No flex session - Wednesday late start</em></td>
-<td><a href="activities/day_8_activities.html">Day 8 Activities - Handout</a></td>
+<td><a href="activities/day_8_activities.html">Day 8 Activities -
+Handout</a></td>
 </tr>
 <tr class="odd">
-<td>Thursday 8/19: morning</td>
+<td>Thursday 8/18: morning</td>
 <td><ol start="17" type="1">
-<li><a href="https://docs.google.com/presentation/d/e/2PACX-1vTBFWVMCbPQ3TSU7_K301-5oAmPr8mePtcBVyoqq5mnt1CA8AgSToqt03LykTd21w-4EenJFw4sRUHX/pub?start=false&amp;loop=false&amp;delayms=3000">Troubleshooting (exploring, Googling, getting help, helping yourself)</a></li>
+<li><a
+href="https://docs.google.com/presentation/d/e/2PACX-1vTBFWVMCbPQ3TSU7_K301-5oAmPr8mePtcBVyoqq5mnt1CA8AgSToqt03LykTd21w-4EenJFw4sRUHX/pub?start=false&amp;loop=false&amp;delayms=3000">Troubleshooting
+(exploring, Googling, getting help, helping yourself)</a></li>
 </ol></td>
 <td>Data viz continued</td>
-<td>Reading: Read <a href="https://fossheim.io/writing/posts/accessible-dataviz-design/">An Introduction to Accessible Data Visualization by</a> Sarah Fossheim and this <a href="https://accessibility.huit.harvard.edu/describe-content-images">introduction to alt-text</a> from Harvard University IT</td>
+<td></td>
 <td>N/A</td>
 </tr>
 <tr class="even">
-<td>Thursday 8/19: afternoon</td>
+<td>Thursday 8/18: afternoon</td>
 <td><ol start="18" type="1">
 <li>reprex, kable tables, and alt-text</li>
 </ol></td>
-<td><a href="interactive_sessions/day_9_interactive.html">More wrangling tools and practice, kable tables</a></td>
-<td>Panel discussion with leaders from SB data science communities</td>
-<td><a href="activities/day_9_activities.html">Day 9 Activities - Handout</a></td>
+<td><a href="interactive_sessions/day_9_interactive.html">More wrangling
+tools and practice, kable tables</a></td>
+<td>N/A</td>
+<td><a href="activities/day_9_activities.html">Day 9 Activities -
+Handout</a></td>
 </tr>
 <tr class="odd">
-<td>Friday 8/20: morning</td>
-<td><a href="interactive_sessions/day_10_interactive.html">R package revisited, tables in R, a taste of git collaboration</a></td>
-<td>N/A</td>
-<td>N/A</td>
-<td><a href="activities/day_10_activities_am.html">Morning activity - handout</a></td>
+<td>Friday 8/19: morning</td>
+<td><a href="interactive_sessions/day_10_interactive.html">R package
+revisited, tables in R, a taste of git collaboration</a></td>
+<td>.N/A</td>
+<td>Writing a Capstone Proposal</td>
+<td><a href="activities/day_10_activities_am.html">Morning activity -
+handout</a></td>
 </tr>
 <tr class="even">
-<td>Friday 8/20: afternoon</td>
-<td><a href="https://docs.google.com/presentation/d/e/2PACX-1vQwaE1Mghmz95a-P87iJmsBSGiHjOHh4w6D3pstzbdQjkaUplQqyrW2GUVdpJl_iiK2oc4WU9St2pac/pub?start=false&amp;loop=false&amp;delayms=3000">Course wrap-up</a></td>
+<td>Friday 8/19: afternoon</td>
+<td><a
+href="https://docs.google.com/presentation/d/e/2PACX-1vQwaE1Mghmz95a-P87iJmsBSGiHjOHh4w6D3pstzbdQjkaUplQqyrW2GUVdpJl_iiK2oc4WU9St2pac/pub?start=false&amp;loop=false&amp;delayms=3000">Course
+wrap-up</a></td>
 <td>N/A</td>
 <td>N/A</td>
-<td><a href="activities/day_10_activities_pm.html">Afternoon Activity - handout</a></td>
+<td><a href="activities/day_10_activities_pm.html">Afternoon Activity -
+handout</a></td>
 </tr>
 </tbody>
 </table>
 <h2 id="course-requirements">Course requirements</h2>
 <h3 id="computing">Computing</h3>
 <ul>
-<li><p>Minimum <a href="https://ucsb-meds.github.io/computer_reqs.html">MEDS device requirements</a> (bring to all sessions + charger!)</p></li>
+<li><p>Minimum <a
+href="https://ucsb-meds.github.io/computer_reqs.html">MEDS device
+requirements</a> (bring to all sessions + charger!)</p></li>
 <li><p>R version 4.0.2 (or higher)</p></li>
-<li><p>RStudio version 1.4.1103 (or higher)</p></li>
+<li><p>RStudio version 2022.02.1 (or higher)</p></li>
 </ul>
 <h2 id="about-this-website">About this website</h2>
-<p>This website was created with gratitude using <a href="https://rstudio.github.io/distill/">distill</a> from <a href="https://www.rstudio.com/">RStudio</a> by JJ Allaire, Rich Iannone, Alison Presmanes Hill, and Yihui Xie.</p>
-<p>This website is one piece of the EDS 221 course materials in addition to lectures, computational activities, discussions, and individual and group tasks, and important materials may exist partially or not at all on this site. While this website is public, it is not meant as a standalone online course.</p>
+<p>This website was created with gratitude using <a
+href="https://rstudio.github.io/distill/">distill</a> from <a
+href="https://www.rstudio.com/">RStudio</a> by JJ Allaire, Rich Iannone,
+Alison Presmanes Hill, and Yihui Xie.</p>
+<p>This website is one piece of the EDS 221 course materials in addition
+to lectures, computational activities, discussions, and individual and
+group tasks, and important materials may exist partially or not at all
+on this site. While this website is public, it is not meant as a
+standalone online course.</p>
 <p>Other packages used to create this website:</p>
 <ul>
-<li><code>rmarkdown</code> for…pretty much everything: JJ Allaire and Yihui Xie and Jonathan McPherson and Javier Luraschi and Kevin Ushey and Aron Atkins and Hadley Wickham and Joe Cheng and Winston Chang and Richard Iannone (2021). rmarkdown: Dynamic Documents for R. R package version 2.7. URL <a href="https://rmarkdown.rstudio.com" class="uri">https://rmarkdown.rstudio.com</a></li>
+<li><code>rmarkdown</code> for…pretty much everything: JJ Allaire and
+Yihui Xie and Jonathan McPherson and Javier Luraschi and Kevin Ushey and
+Aron Atkins and Hadley Wickham and Joe Cheng and Winston Chang and
+Richard Iannone (2021). rmarkdown: Dynamic Documents for R. R package
+version 2.7. URL <a href="https://rmarkdown.rstudio.com"
+class="uri">https://rmarkdown.rstudio.com</a></li>
 </ul>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>

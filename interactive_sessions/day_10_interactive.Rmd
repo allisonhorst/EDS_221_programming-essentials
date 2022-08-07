@@ -154,7 +154,7 @@ dt %>%
 
 See also: `DT`, `reactable`, `gt`, and more! 
 
-### 4. Git collaboration: both pushing to main
+## 4. Git collaboration: both pushing to main
 
 - Find a partner. Designate who is "Starter" and who is "Collaborator". 
 
