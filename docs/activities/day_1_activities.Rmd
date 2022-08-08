@@ -57,7 +57,7 @@ In your .qmd:
 - Customize by updating several aesthetics (e.g. size, opacity (see `alpha = `), color, etc.)
 - Store the scatterplot as `stl_lead_plot`
 - Have the scatterplot returned in the knitted html - customize the size that it appears when knitted
-- Also save a .png of the scatterplot to `figs`, with dimensions of (6 x 5) (width x height)
+- Also save a .png of the scatterplot to `figs`, with dimensions of (6" x 5") (width x height)
 - In text above or below the scatterplot, write 1 - 2 sentences describing the overall trend that you observe from your graph
 
 ### Create a histogram
