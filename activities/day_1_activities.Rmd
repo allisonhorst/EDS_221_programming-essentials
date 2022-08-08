@@ -19,7 +19,9 @@ library(here)
 
 ### Get the data
  
-```{r, echo = FALSE, message = FALSE, warning = FALSE}
+NOTE FOR 2023: just slack the file from activities (activities/stl_blood_lead.csv) bc the `download_this` option below makes all commas into semi colons (!???).
+
+```{r, eval = FALSE, echo = FALSE, message = FALSE, warning = FALSE}
 stl_blood_lead <- read_csv(here::here("activities","stl_blood_lead.csv"))
 
 stl_blood_lead %>%
