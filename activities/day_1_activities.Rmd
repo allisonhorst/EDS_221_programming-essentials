@@ -33,19 +33,21 @@ stl_blood_lead %>%
   )
 ```
 
-Read more about the data [here](https://github.com/slu-soc1120/STL_HEALTH_Lead)
+Read more about the data [here](https://github.com/slu-soc1120/STL_HEALTH_Lead).
   
-### Create your R Project
+### Create a version-controlled R Project
 
-- Create a new repository on GitHub named `stl_lead_yourname` (mine would be `stl_lead_allison`)
-- Clone to create version-controlled R Project
+- Create a new version-controlled R Project named `stl-lead-yourinitials` (for example, mine would be `stl-lead-ah`). Remember: there are multiple ways to set up a version controlled project, either through RStudio or starting with a new repo on GitHub & cloning.
 - Add three subfolders to your R project: `data`, `docs` and `figs`
 - Copy the dataset you download above into the `data` folder of your project
-- Create and save a new .Rmd as `stl_lead_inequity.Rmd` in the `docs` folder
+- Create and save a new Quarto document as `stl_lead_inequity.qmd` in the `docs` folder
 
 ### Read in & explore the data
 
-- Read in the `stl_blood_lead.csv` data as `stl_lead` in your R Markdown
+In your .qmd: 
+
+- Attach the `tidyverse` and `janitor` packages in a new code chunk
+- Read in the `stl_blood_lead.csv` data as `stl_lead`
 - Do some basic exploration of the dataset, and `janitor::clean_names()` if useful
 - In a new code chunk, from `stl_lead` create a new data frame called `stl_lead_prop` that has one additional column called `prop_white` that returns the percent of each census tract identifying as white (variable `white` in the dataset divided by variable `totalPop`, times 100). You may need to do some Googling. Hint: `dplyr::mutate(new_col = col_a / col_b)` will create a new column `new_col` that contains the value of `col_a / col_b`
 
@@ -60,21 +62,21 @@ Read more about the data [here](https://github.com/slu-soc1120/STL_HEALTH_Lead)
 
 ### Create a histogram
 
-- Create a histogram of only the `pctElevated` column in the data frame
+- Create a histogram of only the `pctElevated` column in the data frame (remember, this will only take one variable - the frequency is calculated for you by `geom_histogram`)
 - Customize the fill, color, and size aesthetics - test some stuff! Feel free to make it awful. 
 - Once you've played around with customization, export the histogram as a .jpg to the `figs` folder
 - Make sure the histogram also shows up in your knitted html (customize the size)
 
-### Knit
+### Render & push
 
-- Knit your document
+- Render your document
 - Stage, commit, pull then push changes
 
 ### Share & test
 
 - Share the link to your public GitHub repo with a neighbor
-- Fork the repo your neighbor shared, then clone to get set up locally in RStudio
-- Navigate to their .Rmd
+- **Fork** the repo your neighbor shared, then clone to get set up locally in RStudio
+- Navigate to their .qmd
 - Knit - does everything work? Cool, your neighbor made a reproducible project with file paths you can use too! 
 
 ## End activity
