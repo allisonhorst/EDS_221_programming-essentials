@@ -1619,8 +1619,9 @@ data</h3>
 <li>Clone to create a version controlled R Project</li>
 <li>Create subfolders called <code>docs</code>, <code>data</code>, and
 <code>figs</code></li>
-<li>Create a Quarto document, save in the <code>docs</code> subfolder as
-<code>r_data_types.qmd</code></li>
+<li>Create an R Markdown or Quarto document, save in the
+<code>docs</code> subfolder as <code>r_data_types.qmd</code> (or
+.Rmd)</li>
 </ul>
 </div>
 <div id="create-some-data-check-the-classes-index" class="section level3">
@@ -1738,14 +1739,14 @@ Salamanders (species <em>Dicamptodon tenebrosus</em>, stored in
 <code>dplyr::filter()</code>!</li>
 </ul>
 </div>
-<div id="make-a-scatterplot" class="section level4">
-<h4>Make a scatterplot</h4>
+<div id="make-a-scatterplot-of-salamander-length-x-weight" class="section level4">
+<h4>Make a scatterplot of salamander length x weight</h4>
 <ul>
 <li><p>Create a scatterplot of length1 (snout-vent length in
-millimeters) versus weight (grams) for all salamanders in the dataset.
-Update axis labels, title, subtitle, and add a caption with the data
-source. Customize point color and size, possibly opacity, and
-theme.</p></li>
+millimeters) versus weight (grams) for all salamanders in the subset you
+created above, <code>mc_salamanders</code>. Update axis labels, title,
+subtitle, and add a caption with the data source. Customize point color
+and size, possibly opacity, and theme.</p></li>
 <li><p>Export your scatterplot as <code>salamander_size.png</code> to
 your figs folder.</p></li>
 </ul>
@@ -1754,7 +1755,7 @@ your figs folder.</p></li>
 <h4>Make a cutthroat plot</h4>
 <ul>
 <li>Similar to above, make a subset called <code>mc_trout</code> that
-only contains observations for cutthroat trout</li>
+only contains observations for cutthroat trout (species “ONCL”)</li>
 <li>Create a scatterplot of length1 by weight for all trout in the
 dataset</li>
 <li>Customize so that the point color depends on <em>reach</em></li>
@@ -1772,7 +1773,7 @@ dataset</li>
 <li>Make sure your changes are safely stored by pushing to GitHub</li>
 <li>Close your project locally</li>
 <li>Reopen your project locally</li>
-<li>Reopen your .qmd for the salamander &amp; cutthroat work</li>
+<li>Reopen your .qmd or .Rmd for the activities you did today.</li>
 <li>Render. Does it work? Done.</li>
 </ul>
 </div>

@@ -22,7 +22,7 @@ library(janitor)
 - Create a new repo on GitHub called `eds221-day2-activities`
 - Clone to create a version controlled R Project 
 - Create subfolders called `docs`, `data`, and `figs`
-- Create a Quarto document, save in the `docs` subfolder as `r_data_types.qmd`
+- Create an R Markdown or Quarto document, save in the `docs` subfolder as `r_data_types.qmd` (or .Rmd)
 
 ### Create some data, check the classes, index!
 
@@ -154,9 +154,9 @@ mc_salamanders <- mack_verts %>%
   filter(species == "DITE")
 ```
 
-#### Make a scatterplot
+#### Make a scatterplot of salamander length x weight
 
-- Create a scatterplot of length1 (snout-vent length in millimeters) versus weight (grams) for all salamanders in the dataset. Update axis labels, title, subtitle, and add a caption with the data source. Customize point color and size, possibly opacity, and theme. 
+- Create a scatterplot of length1 (snout-vent length in millimeters) versus weight (grams) for all salamanders in the subset you created above, `mc_salamanders`. Update axis labels, title, subtitle, and add a caption with the data source. Customize point color and size, possibly opacity, and theme. 
 
 ```{r, include = FALSE}
 salamander_plot <- ggplot(data = mc_salamanders, aes(x = length1, y = weight)) + 
@@ -174,7 +174,7 @@ ggsave(here::here("activities", "salamander_size.png"), plot = salamander_plot)
 
 #### Make a cutthroat plot
 
-- Similar to above, make a subset called `mc_trout` that only contains observations for cutthroat trout
+- Similar to above, make a subset called `mc_trout` that only contains observations for cutthroat trout (species "ONCL")
 - Create a scatterplot of length1 by weight for all trout in the dataset
 - Customize so that the point color depends on *reach* 
 - Customize your color scheme (e.g. `scale_color_manual()`)
@@ -199,7 +199,7 @@ ggsave(here("activities", "cutthroat_size.png"))
 - Make sure your changes are safely stored by pushing to GitHub
 - Close your project locally
 - Reopen your project locally
-- Reopen your .qmd for the salamander & cutthroat work
+- Reopen your .qmd or .Rmd for the activities you did today.
 - Render. Does it work? Done. 
 
 ## End Day 2 activities
