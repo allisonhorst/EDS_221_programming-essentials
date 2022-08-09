@@ -1,6 +1,6 @@
 ---
 title: "Day 2 Activities"
-subtitle: "Bits & bytes, indexing data, import & plot data"
+subtitle: "Data types, indexing data, import & plot data"
 output: 
   html_document:
     css: activity_theme.css
@@ -15,42 +15,20 @@ library(here)
 library(janitor)
 ```
 
-## Part 1: Bits & bytes
-
-### Convert the following binary to decimal values: 
-
-- 0010 0111
-- 0101 0000
-- 0001 1110
-
-### Convert the following decimal values to binary: 
-
-- 243
-- 12
-- 840
-
-### What does the following (ASCII) spell?
-
-(Use the table from lecture 3) 
-
-110,99,101,97,115
-
-Check your answer using this ascii to text converter: https://convert.town/ascii-to-text
-
-## Part 2. Checking data types
+## Part 1. Checking data types
 
 ### Setup
 
 - Create a new repo on GitHub called `eds221-day2-activities`
 - Clone to create a version controlled R Project 
 - Create subfolders called `docs`, `data`, and `figs`
-- Create an R Markdown document, save in the `docs` subfolder as `r_data_types.Rmd`
+- Create a Quarto document, save in the `docs` subfolder as `r_data_types.qmd`
 
 ### Create some data, check the classes, index!
 
 #### Vectors, lists & data frames
 
-In your R Markdown document: 
+In your Quarto document: 
 
 1. Create a vector called `vec_1`containing the following: 
 
@@ -83,7 +61,7 @@ Check the following for that vector:
 
 `vec_2` should contained *named* elements, where `town = "Santa Barbara`, `location = "Rincon"`, `swell = "south"`
 
-```{r}
+```{r, include = FALSE}
 vec_2 <- c(town = "Santa Barbara", location = "Rincon", swell = "south")
 
 class(vec_2)
@@ -92,7 +70,6 @@ typeof(vec_2)
 vec_2[2]
 
 vec_2["location"]
-
 
 ```
 
@@ -119,19 +96,21 @@ max_count <- max(df_1$count)
 - Find the maximum value of the `count()` column, store as `max_count`
 
 
-## Part 3. Wild data
+## Part 2. Wild data
 
 #### Set-up
 
 - Visit the EDI site to learn about Mack Creek salamander & cutthroat trout data you'll be using here: [data package](https://portal.edirepository.org/nis/mapbrowse?packageid=knb-lter-and.4027.14)
 
-- Download the *first CSV* listed (`AS00601.csv`), and take a look at it (outside of R is fine as a first step)
+- Download the *first CSV* listed (`AS00601.csv`), and take a look at it (outside of R is fine as a first step, e.g. you can open the CSV in Excel)
 
 - Explore the metadata (see View Full Metadata in the [Resources section](https://portal.edirepository.org/nis/mapbrowse?packageid=knb-lter-and.4027.14) of the data website)
 
 - What does each column contain? What are the units of each? What is the study overall about? 
 
-- Create a new R Markdown document and save it in your `docs` folder. Attach the `tidyverse`, `here` and `janitor` packages in the setup chunk
+- Create a new Quarto document and save it in your `docs` folder. Attach the `tidyverse`, `here` and `janitor` packages in the setup chunk (you choose the file name)
+
+- Set global options in the YAML so that messages and warnings do NOT show up in the rendered document
 
 - Save the `AS00601.csv` in your `data` folder of your project
 
@@ -150,8 +129,6 @@ mack_verts <- read_csv(here("activities","AS00601.csv"))
 
 ```{r, include = FALSE}
 mack_verts <- clean_names(mack_verts)
-
-# Or
 ```
 
 - In a new code chunk, practice accessing individual pieces of the data frame (there is no real functionality to this, but just to reinforce stuff we learned in our interactive session): 
@@ -203,7 +180,7 @@ ggsave(here::here("activities", "salamander_size.png"), plot = salamander_plot)
 - Customize your color scheme (e.g. `scale_color_manual()`)
 - Facet your plot by creek reach (`facet_wrap(~...)`)
 - Update graph axis labels and title
-- Export your graph as `cutthroat_size.png` to figs
+- Export your graph as `cutthroat_size.png` to the `figs` folder
 
 ```{r, include = FALSE}
 mc_trout <- mack_verts %>% filter(species == "ONCL")
@@ -220,9 +197,9 @@ ggsave(here("activities", "cutthroat_size.png"))
 ### Stage, commit, pull, push
 
 - Make sure your changes are safely stored by pushing to GitHub
-- Close your project completely
-- Reopen your project
-- Reopen your .Rmd for the salamander & cutthroat work
-- Knit. Does it work? Done. 
+- Close your project locally
+- Reopen your project locally
+- Reopen your .qmd for the salamander & cutthroat work
+- Render. Does it work? Done. 
 
 ## End Day 2 activities
