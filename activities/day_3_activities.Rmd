@@ -152,11 +152,10 @@ inlet_biochem <- toolik_biochem %>%
   select(p_h, doc_u_m, tdn_u_m)
 ```
 
-8. Find the mean value of each column 3 different ways: 
+8. Find the mean value of each column in `inlet_biochem` 3 different ways: 
 
-a. Write a for loop by hand to calculate the mean for each
-b. Use the `apply()` function to find the mean
-d. Use the `purrr::map_df()` function to find the mean of each
+a. Write a for loop from scratch to calculate the mean for each
+b. Use *one other method* (e.g. `apply`, `across`, or `purrr::map_df`) to find the mean for each column.
 
 ```{r, include = FALSE}
 # Strategy a:
@@ -169,7 +168,7 @@ for (i in seq_along(inlet_biochem)) {
 apply(X = inlet_biochem, MARGIN = 2, FUN = mean, na.rm = TRUE)
 
 # Strategy c: 
-purrr::map_df(.x = inlet_biochem, .f = mean, na.rm = TRUE)
+# purrr::map_df(.x = inlet_biochem, .f = mean, na.rm = TRUE)
 ```
 ### Save, stage, commit, pull, push!
 
