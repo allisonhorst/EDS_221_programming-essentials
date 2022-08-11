@@ -65,7 +65,7 @@ force(100, 2.9)
 ```
 
 
-### Task 3
+<!-- ### Task 3
 
 Write a function called `name_column` that, given a data frame name and a number, will return the column name associated with that column number. Add an error message if the column number is < 1, or if the number exceeds the number of columns in the data frame. Test the function using the `mtcars` data frame.
 
@@ -78,7 +78,9 @@ name_column <- function(df, col_no) {
 }
 ```
 
-### Task 4
+-->
+
+### Task 3
 
 The length:weight relationship for fish is: $W=aL^b$, where where L is total fish length (centimeters), W is the expected fish weight (grams), and a and b are species-dependent parameter values (shown below for several fish from Peyton et al. 2016).
 
@@ -118,7 +120,7 @@ lengths_vector <- seq(from = 0, to = 100, by = 1)
 milkfish_weights <- fish_weight(fish_name = "Milkfish", tot_length = lengths_vector)
 ```
 
-### Task 5
+### Task 4
 
 Wave power (more accurately wave energy flux) in deep water is approximated by: 
 
@@ -142,7 +144,7 @@ wave_power(wave_height = wave_heights, wave_period = 8)
 
 ```
 
-### Task 6
+### Task 5
 
 The wave energy equation changes based on ocean depth. Along the coast of Brenville, which has a very sharp shelf as the wave approaches the coast, wave energy is approximated using the deep ocean equation (the one you used above) for depths > 12 meters, and a shallow equation for depths <= 12 meters. The Brenville team estimates shallow wave power by:
 
