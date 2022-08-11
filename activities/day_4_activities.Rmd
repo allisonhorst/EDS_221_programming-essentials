@@ -144,7 +144,7 @@ wave_power(wave_height = wave_heights, wave_period = 8)
 
 ```
 
-### Task 5
+### Task 5 (OPTIONAL)
 
 The wave energy equation changes based on ocean depth. Along the coast of Brenville, which has a very sharp shelf as the wave approaches the coast, wave energy is approximated using the deep ocean equation (the one you used above) for depths > 12 meters, and a shallow equation for depths <= 12 meters. The Brenville team estimates shallow wave power by:
 
