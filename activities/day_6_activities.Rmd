@@ -35,8 +35,8 @@ Questions:
 - Clone to create a version controlled R project
 - Add subfolders `data` and `docs`
 - Download the California Spiny lobster abundance data from this [SBC LTER data package](https://portal.edirepository.org/nis/mapbrowse?packageid=knb-lter-sbc.77.6). Familiarize yourself with the metadata. Save the CSV containing lobster abundance data in your `data` subfolder.
-- In `docs`, create a new .Rmd saved as `lobster_exploration.Rmd`
-- Within your .Rmd, write organized and well-annotated code to do the following: 
+- In `docs`, create a new .Rmd or .qmd saved with file prefix `lobster_exploration` 
+- Within your notebook, write organized and well-annotated code to do the following: 
   - Read in and take a look at the data in the `data/Lobster_Abundance_All_Years_20210412.csv` file. Take note of values that can be considered `NA` (see metadata) and update your import line to convert those to `NA` values
   - Convert column names to lower snake case
   - Convert the data from *frequency* to *case* format using `dplyr::uncount()` on the existing `count` column. **What did this do?** Add annotation in your code explaining `dplyr::uncount()`
@@ -192,17 +192,3 @@ ex_k <- lobsters %>%
                                  TRUE ~ "not MPA"))
 ```
 
-
-## Task 4: Clean up your personal website, and add a blog post
-
-We've been playing around a bit with your personal website to try out different things. For this task, you should:
-
-- Spend some time updating your theme, fonts, pages, etc. to make it professional and containing real content
-- Then, add one professional blog post to your website that describes:
-  - One function we've learned (with an example of how to use it)
-  - One concept we've learned (e.g. tidy data, version control, reproducibility, etc.)
-  - One thing you've learned about learning or doing data science (mindset, strategies, approaches, collaborating, helping, etc.)
-  - Add a preview image to your post
-  - Remember you need to KNIT MANUALLY for your blog post to exist in your listings
-- Delete any "toy" blog posts that existed from our setup last week
-  - Build & push your site - confirm your updated post is on your revamped page live, then show it to Allison, Jamie or Sam to get checked off before you leave
