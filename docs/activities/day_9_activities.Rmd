@@ -30,7 +30,7 @@ output:
 - There are two separate code chunks in the .Rmd, neither run.
 - First, try to figure out what the code in each chunk is trying to do.
 - Then, determine where the code breaks (there is only one breaking point for each chunk)
-- Then, for each **create a reprex** that provides a minimal out-of-the-box reproducible *working* example of the thing in the code that isn't working. Create your reprex in a separate code chunk below each broken example. Use `{reprex}` to render your reproducible example for sharing on GitHub. Add your reprexes as issues to your forked GitHub repo for the day 9 activities. 
+- Then, for each **create a reprex** that provides a minimal out-of-the-box reproducible *working* example of the thing in the code that isn't working. Create your reprex in a separate code chunk below each broken example. Use `{reprex}` to render your reproducible example for sharing on GitHub. Add your reprexes as issues to one of your neighbor's GitHub repo for the day 9 activities to help them out! (you'll need to ask what they're username is so you can find their repo on GitHub at `username/eds221-day9-activities`) 
 
 ### End Day 9 activities
 

@@ -34,9 +34,11 @@ You probably already have {reprex} (part of the tidyverse). Copy code to clipboa
 Some guidelines:
  
 - Ruthlessly simplify
-- Consider using a subset of data (possibly w/ datapasta)
+- Consider using or making a subset of data (possibly w/ datapasta, tribble)
 - Include library calls (e.g. `library(janitor)` in the reprex)
 - Make the minimum viable example of the thing that's not working
+- Copy to clipboard
+- Run `reprex()` to create markdown-formatted (e.g. for GitHub issues) or `reprex(venue = "slack")` if posting to Slack (click "Add formatting" or Cmd-Shift-F for formatting)
 
 See more: 
 
