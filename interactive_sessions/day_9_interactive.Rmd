@@ -1,6 +1,6 @@
 ---
 title: "Day 9 Interactive Session Materials"
-subtitle: "Troubleshooting, tables, more wrangling"
+subtitle: "reprex, tables and a ggtheme package"
 output: 
   html_document:
     css: comp_session_theme.css
@@ -18,14 +18,33 @@ library(janitor)
 
 ## Part 0: Setup
 
-- Create a new version-controlled R Project called `eds221-m2021-day9-interactive`
+- Create a new version-controlled R Project called `eds221-m2021-day9-interactive` from Terminal / git bash
 - Install the `kableExtra` package
 - Create a new R Markdown document in the project
 - Attach the following packages in the setup chunk: 
     - `tidyverse`
     - `kableExtra`
+    
+## 1. Making a reproducible example ({reprex})
 
-## 1. A few new wrangling tools (`dplyr::across()`, `janitor::get_dupes()`)
+Making a minimum viable example is often the best way to troubleshoot problematic code when you can't figure out a solution quickly -- and is *definitely* the best way to share an example of something you're struggling with so you're most likely to get help. If people can't run or play with your code, it's much less likely they'll be able to offer a solution. 
+
+You probably already have {reprex} (part of the tidyverse). Copy code to clipboard and run `reprex()` to make one! 
+
+Some guidelines:
+ 
+- Ruthlessly simplify
+- Consider using a subset of data (possibly w/ datapasta)
+- Include library calls (e.g. `library(janitor)` in the reprex)
+- Make the minimum viable example of the thing that's not working
+
+See more: 
+
+- https://community.rstudio.com/t/faq-how-to-do-a-minimal-reproducible-example-reprex-for-beginners/23061
+- https://reprex.tidyverse.org/articles/reprex-dos-and-donts.html
+
+
+## 2. A few new wrangling tools (`dplyr::across()`, `janitor::get_dupes()`)
 
 ### janitor::get_dupes() to check for duplicates
 
@@ -63,79 +82,8 @@ mtcars %>%
   summarize(across(drat:qsec, mean))
 ```
 
-## 2. Basics - troubleshooting practice & tips
 
-### Read the error message (and think about what it's telling you)
-
-```{r, error = TRUE}
-starwars %>% 
-  filter(homeworld = "Naboo")
-```
-
-```{r, error = TRUE}
-starwars %>% 
-  filter(Homeworld == "Naboo")
-```
-
-```{r, error = TRUE}
-starwars %>%
-  separate(skin_color, into = c("col_1", "col_2"), by = ",")
-```
-
-```{r, error = TRUE}
-starwars %>% 
-  mutate(name = to_lower(name))
-```
-
-```{r, error = TRUE}
-ggplot(data = starwars, aes(x = height, y = mass)) %>%
-  geom_point()
-```
-
-### Run sequences line by line 
-
-```{r, error = TRUE}
-ggplot(data = penguins, aes(x = flipper_length_mm, y = body_mass_g)) +
-  geom_point(aes(color = species, shape = species)) +
-  scale_x_continuous(limits = c(150, 250)) +
-  scale_y_continuous(limits = c(2500, 6500)) +
-  scale_color_manual(values = c("orange", "blue")) +
-  theme(panel.grid = element_blank()) +
-  theme_bw()
-```
-
-```{r, error = TRUE}
-penguins %>% 
-  mutate(across(where(is.numeric), as.character)) %>% 
-  mutate(island = fct_relevel(island, c("Dream", "Biscoe", "Torgersen"))) %>% 
-  unite(island_yr, c(island, year), sep = "_") %>% 
-  filter(species %in% c("Adelie", "Chinstrap")) %>% 
-  relocate(year, .after = species) %>%
-  group_by(island_yr, species) %>% 
-  summarize(mean_flip = mean(flipper_length_mm, na.rm = TRUE),
-            sd_flip = sd(flipper_length_mm, na.rm = TRUE))
-  
-```
-
-## 3. Making a reproducible example ({reprex})
-
-Making a minimum viable example is often the best way to troubleshoot problematic code when you can't figure out a solution quickly -- and is *definitely* the best way to share an example of something you're struggling with so you're most likely to get help. If people can't run or play with your code, it's much less likely they'll be able to offer a solution. 
-
-You probably already have {reprex} (part of the tidyverse). Copy code to clipboard and run `reprex()` to make one! 
-
-Some guidelines:
- 
-- Ruthlessly simplify
-- Consider using a subset of data (possibly w/ datapasta)
-- Include library calls (e.g. `library(janitor)` in the reprex)
-- Make the minimum viable example of the thing that's not working
-
-See more: 
-
-- https://community.rstudio.com/t/faq-how-to-do-a-minimal-reproducible-example-reprex-for-beginners/23061
-- https://reprex.tidyverse.org/articles/reprex-dos-and-donts.html
-
-## 4. Tables with {kable} and {kableExtra}
+## 3. Tables with {kable} and {kableExtra}
 
 We can produce finalized tables in R Markdown in a number of ways - see a bunch of them in David Keyes' post [*How to make beautiful tables in R.*](https://rfortherestofus.com/2019/11/how-to-make-beautiful-tables-in-r/)
 
@@ -150,18 +98,48 @@ penguins %>%
   kable_styling(bootstrap_options = "striped", full_width = FALSE)
 ```
 
-## 4. Alt-text, and adding it in R Markdown
+## 4. A package for your ggplot theme
 
-Add alt-text to R Markdown, include a code chunk option `fig.alt = "alt text here"`.
+### Creating a package
 
-Then, check the output by inspecting element > accessibility in your browser. 
-```{r, fig.alt = "A scatterplot of penguin flipper length (mm) versus body mass (grams) for penguins measured at islands near Palmer Archipelago, Antarctica. The variables are positively correlated and the relationship appears linear."}
+a. In RStudio, create a new R Project that is an R Package (New Project > New directory > R Package). Make your package name something specific to you, e.g. `themes_yourname` (like `themes_teddy`). Make it a version controlled repo by running `usethis::use_git()` and `usethis::use_github()` (or w/ CLI). 
 
-ggplot(data = penguins, aes(x = flipper_length_mm, y = body_mass_g)) +
-  geom_point()
+
+b. Check out the existing infrastructure for your R package, which currently contains a single function hello(), which prints “Hello, world!” Check out the R/hello.R file to see where that function is created.  
+
+c. In the Build tab, click Install and Restart. You should see that the package is automatically attached in the Console. 
+
+d. Run the hello() function in the Console, to see that it works. 
+
+e. Create a new R **script** (.R). Copy and paste the following placeholder code into your R script. Then update the colors (in quotations) to colors that R will recognize (or hexidecimals) and change the function name to **theme_yourname** (e.g. theme_allison). You can also add other options within `theme()` to further customize your theme.
+
+``` 
+my_theme <- function() {
+  theme(
+    panel.background = element_rect(fill = "yellow"),
+    panel.grid.major.x = element_line(colour = "purple", linetype = 3, size = 0.5),
+    panel.grid.minor.x = element_blank(),
+    panel.grid.major.y =  element_line(colour = "cyan4", linetype = 3, size = 0.5),
+    axis.text = element_text(colour = "red"),
+    axis.title = element_text(colour = "orange")
+  )
+}
 ```
 
-Let's read more about alt-text! See the links on the EDS 221 home page, or below: 
+Save the R script in to the R/ folder (with the file name matching the function name). 
 
-- An [Introduction to Accessible Data Visualization](https://fossheim.io/writing/posts/accessible-dataviz-design/) by Sarah Fossheim
-- [Introduction to alt-text](https://accessibility.huit.harvard.edu/describe-content-images) from Harvard University IT
+f. Put your cursor anywhere in the function code within your R script. In the top menu of RStudio, select Code > Insert Roxygen skeleton. The information added is important - it specifies the params (arguments of the function) and more that will appear in the documentation, which we’ll create next. Save the .R file, which now contains your function and the Roxygen information. 
+
+g. Document the function by running `devtools::document()` in the Console. This will create a new .Rd file in the man/ folder, containing important documentation information about your function. 
+
+h. Press `Build > Install and Restart`. In the Console, run ?function_name, replacing function_name there instead. It will bring up the documentation, and let you know your function exists! Now go ahead and try to *use* your function by making a graph in the Console. 
+
+```
+library(tidyverse)
+
+ggplot(data = msleep, aes(x = sleep_total, y = sleep_rem)) +
+  geom_point() 
+  + THEME_NAME()
+```
+
+i. Once you confirm it's working, push your changes back to your repo on GitHub. Share your repo "username/reponame" with your neighbor so they can install your package from GitHub (recall: using `remotes::install_github("username/reponame")`). Install your neighbor's theming package, check which functions exist by running `help(package = "packagename")` in the Console, then make a ggplot graph that uses your *neighbor's* ggplot theme. Done!
