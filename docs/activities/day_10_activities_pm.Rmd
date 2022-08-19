@@ -31,7 +31,7 @@ The datasets are here to download:
 
 - Create a new version-controlled R Project 
 
-- In a single R Markdown document:
+- In a single R Markdown (or Quarto) document:
 
   - Read in both files (ice cover duration and meteorological data). Note that the ice cover data has some NA values stored as -999. 
   

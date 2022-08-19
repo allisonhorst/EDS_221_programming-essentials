@@ -14,6 +14,7 @@ library(skimr)
 library(lubridate)
 library(here)
 library(kableExtra)
+library(lterdatasampler)
 ```
 
 
@@ -26,16 +27,12 @@ library(kableExtra)
 
 ### Partner 1:
 
-- Create a new repo on GitHub named `fiddler-crab-sizes` (with a ReadMe)
-- Clone to make a version controlled R Project
-- Create subfolders `data` and `docs` in your R Project
-- Download the Fiddler Crab body size data (the CSV) [here](https://portal.edirepository.org/nis/mapbrowse?packageid=knb-lter-pie.540.1)
-- Copy the CSV into your `data` folder
-- Create a new .Rmd. Attach packages as necessary.
-- Read in the data & take a look at it
-- Spend 5 - 10 minutes talking with your partner about the data contains, the shape, variables, and why it was collected
-- Push your changes back to GitHub
-- Add your partner as a collaborator
+- Create a new version-controlled R Project named `fiddler-crab-sizes`
+- In a new Quarto document, attach the `lterdatasampler` package
+- Read through the documentation for the `pie_crab` data sample, and spend ~5 minutes talking with your partner about the data contains, the shape, variables, and why it was collected. See more information and examples with the data [here](https://lter.github.io/lterdatasampler/articles/pie_crab_vignette.html).
+- Save your document
+- Push your changes back to GitHub (you don't need to work in a branch for this step -- push straight to `main`)
+- Add your partner as a collaborator to the repo
 
 ```{r, include = FALSE}
 fiddler_crab <- read_csv(here("activities", "fiddler_crab.csv"))
@@ -43,10 +40,11 @@ fiddler_crab <- read_csv(here("activities", "fiddler_crab.csv"))
 
 ### Partner 2: 
 
-- Accept the invitation to collaborate, & clone the repo
-- Create a plot of fiddler crab carapace widths observed at the different latitudes
-- **Finalize your figure**, include a title and updated axis labels, add alt-text, and add a figure caption (you can either do this in the code chunk options or just in plain markdown text below your figure). Update code chunk options so that only your finalized graph and figure caption show up in your knitted report (i.e., no code should show up, or you can use code folding)
+- Accept the invitation to collaborate (check your email) & clone the repo
+- Create a NEW BRANCH to work in
+- In the Quarto doc, create an exploratory (unfinalized) plot of fiddler crab carapace widths observed at the different latitudes
 - Push your updates
+- Submit a Pull Request through GitHub
 
 ```{r, include = FALSE}
 ggplot(data = fiddler_crab) +
@@ -55,10 +53,13 @@ ggplot(data = fiddler_crab) +
 
 ### Partner 1: 
 
-- Pull changes
-- Create a summary table containing the mean, standard deviation, and sample size of fiddler crab carapace widths by site (tip: use `round(mean(), 2)` to round a value to 2 decimal places)
-- Make a nice table (that looks polished when you knit), including with updated column names (including units as relevant). Update code chunk options so that only your finalized table and caption show up in your knitted report (i.e., no code should show up, or you can use code folding)
+- Merge in the Pull Request
+- Pull changes into `main`
+- Switch over into a NEW BRANCH
+- **Finalize the figure**. Add a figure caption using `#| fig-cap: "this is my caption"` in the code chunk where the graph is created. Update code chunk options (hint: `execute: ` in YAML) so that only your finalized graph and figure caption show up in your knitted report (i.e., no code should show up)
+- To your document, add an unfinalized summary table containing the mean, standard deviation, and sample size of fiddler crab carapace widths by site (tip: use `round(mean(), 2)` to round a value to 2 decimal places)
 - Push your changes
+- Submit a Pull Request in GitHub
 
 ```{r, include = FALSE}
 fiddler_summary <- fiddler_crab %>% 
@@ -75,17 +76,29 @@ fiddler_summary %>%
 
 ### Partner 2: 
 
-- Pull to get remote updates 
-- Create a scatterplot of mean annual water temperature by mean carapace width (you decide how you want to wrangle / create data to do this)
-- Finalize your plot, add alt-text and a caption
-- Update code chunk options as above (so only finalized outputs appear in the knitted document)
-- Push your updates
+- Merge in the Pull Request
+- Go back to your `main` branch locally, and pull down changes
+- Create and checkout a NEW BRANCH
+- **Finalize the summary table** a bit so that it looks more polished when rendered, including with updated column names (including units as relevant). 
+- Push your updates, submit a PR on GitHub
 
 ### Partner 1: 
 
-- Pull & check for updates
-- Work with your partner to write a short introduction to the figures in your knitted document (e.g. so that if it were shared as a blog post, someone would understand what they were looking at)
+- Merge in the PR
+- Switch over to your `main` branch locally, pull in changes
+- Create and checkout a NEW BRANCH
+- Work with your partner to write a short introduction to the figures in your knitted document (e.g. so that if it were shared as a short blog post, someone would understand what they were looking at)
 - Add any necessary citations for the data at the end of the document
+- Push your changes and submit a PR on GitHub
+
+### Partner 2: 
+
+- Merge in the PR
+
+### Both partners:
+
+- Move back over into your `main` local branch
+- Pull down changes
 
 ## Done with morning task
 
