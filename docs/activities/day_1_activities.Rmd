@@ -11,7 +11,6 @@ output:
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 library(tidyverse)
-library(downloadthis)
 library(here)
 ```
 
@@ -19,29 +18,15 @@ library(here)
 
 ### Get the data
  
-NOTE FOR 2023: just slack the file from activities (activities/stl_blood_lead.csv) bc the `download_this` option below makes all commas into semi colons (!???).
+We will send you the file you'll use, `stl_lead.csv` (a comma-separated value file) in Slack.
 
-```{r, eval = FALSE, echo = FALSE, message = FALSE, warning = FALSE}
-stl_blood_lead <- read_csv(here::here("activities","stl_blood_lead.csv"))
-
-stl_blood_lead %>%
-  download_this(
-    output_name = "stl_blood_lead",
-    output_extension = ".csv",
-    button_label = "Click to download CSV",
-    button_type = "warning",
-    has_icon = TRUE,
-    icon = "fa fa-save"
-  )
-```
-
-Read more about the data [here](https://github.com/slu-soc1120/STL_HEALTH_Lead).
+Before you move on, read more about the data [here](https://github.com/slu-soc1120/STL_HEALTH_Lead).
   
 ### Create a version-controlled R Project
 
-- Create a new version-controlled R Project named `stl-lead-yourinitials` (for example, mine would be `stl-lead-ah`). Remember: there are multiple ways to set up a version controlled project, either through RStudio or starting with a new repo on GitHub & cloning.
+- Create a new version-controlled R Project named `stl-lead-yourinitials` (for example, mine would be `stl-lead-ah`). Remember: there are multiple ways to set up a version controlled project, either through RStudio or starting with a new repo on GitHub then cloning.
 - Add three subfolders to your R project: `data`, `docs` and `figs`
-- Copy the dataset you download above into the `data` folder of your project
+- Copy the data you downloaded above into the `data` folder of your project
 - Create and save a new Quarto document as `stl_lead_inequity.qmd` in the `docs` folder
 
 ### Read in & explore the data
@@ -49,9 +34,35 @@ Read more about the data [here](https://github.com/slu-soc1120/STL_HEALTH_Lead).
 In your .qmd: 
 
 - Attach the `tidyverse` and `janitor` packages in a new code chunk
-- Read in the `stl_blood_lead.csv` data as `stl_lead`
-- Do some basic exploration of the dataset, and `janitor::clean_names()` if useful
+- Read in the `stl_blood_lead.csv` data as `stl_lead` and use janitor::clean_names to convert all variable names to lower snake case
+
+```{r, include = FALSE}
+stl_lead <- read_csv(here::here("activities","stl_blood_lead.csv")) |> # Note that their path will be here::here("data", "stl_blood_lead.csv) instead
+  janitor::clean_names()
+```
+
+- Do some basic exploration of the dataset (e.g. using summary, data visualizations and summary statistics). 
+
+```{r, include = FALSE}
+# Many options here...as long as they're doing some exploration
+summary(stl_lead)
+
+ggplot(data = stl_lead, aes(x = pct_elevated)) +
+  geom_histogram()
+
+# As long as they do one or two visualizations and use summarize that's fine.
+```
+
+
 - In a new code chunk, from `stl_lead` create a new data frame called `stl_lead_prop` that has one additional column called `prop_white` that returns the percent of each census tract identifying as white (variable `white` in the dataset divided by variable `totalPop`, times 100). You may need to do some Googling. Hint: `dplyr::mutate(new_col = col_a / col_b)` will create a new column `new_col` that contains the value of `col_a / col_b`
+
+```{r, include = FALSE}
+
+stl_lead_prop = stl_lead |> 
+  mutate(prop_white = white / total_pop)
+
+```
+
 
 ### Create a scatterplot
 
@@ -62,23 +73,34 @@ In your .qmd:
 - Also save a .png of the scatterplot to `figs`, with dimensions of (6" x 5") (width x height)
 - In text above or below the scatterplot, write 1 - 2 sentences describing the overall trend that you observe from your graph
 
+```{r, include = FALSE}
+ggplot(data = stl_lead_prop, aes(x = prop_white, y = pct_elevated)) +
+  geom_point() # Then they can do a bit of customization here
+```
+
 ### Create a histogram
 
 - Create a histogram of only the `pctElevated` column in the data frame (remember, this will only take one variable - the frequency is calculated for you by `geom_histogram`)
 - Customize the fill, color, and size aesthetics - test some stuff! Feel free to make it awful. 
 - Once you've played around with customization, export the histogram as a .jpg to the `figs` folder
-- Make sure the histogram also shows up in your knitted html (customize the size)
+- Make sure the histogram also shows up in your rendered html 
+
+```{r, include = FALSE}
+# Example code for saving ggplot:
+# ggsave(myPlot, here::here("figs", "myPlot.csv"))
+```
+
 
 ### Render & push
 
-- Render your document
-- Stage, commit, pull then push changes
+- Render your .qmd
+- Stage, commit, pull then push changes using the command line
 
 ### Share & test
 
 - Share the link to your public GitHub repo with a neighbor
 - **Fork** the repo your neighbor shared, then clone to get set up locally in RStudio
 - Navigate to their .qmd
-- Knit - does everything work? Cool, your neighbor made a reproducible project with file paths you can use too! 
+- Render - does everything work? Cool, your neighbor made a reproducible project with file paths you can use too! 
 
 ## End activity

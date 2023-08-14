@@ -22,17 +22,17 @@ library(tidyverse)
 
 - We'll run through each line in the `toolik_airtemp_summary.Rmd` to understand where it's pointing, what it's doing, and add a few more tools to our coding toolkit (`readr::read_csv()`, `janitor::clean_names()`, `%>%`)
 
-- Similarly, we'll create from scratch & work through one more example from scratch to read in another dataset while learning more wrangling skills 
+- Similarly, we'll create from scratch & work through one more exampleto read in another dataset while learning more wrangling skills 
 Our second example will be to: 
 
 - Read in the chlorophyll data
-- explore the imported data
-- clean up the dataset names
-- create a plot of chlorophyll concentration at varying measurement depth, do some customization
-- export the graph to /figs
+- Explore the imported data
+- Clean up the dataset names
+- Create a plot of chlorophyll concentration at varying measurement depth, do some customization
+- Export the graph to /figs
 
 
-## Data sources: 
+## Data sources 
 
 All datasets are collected and provided by scientists with the [Toolik Station Long Term Ecological Research](https://www.uaf.edu/toolik/) (LTER) site, Alaska.
 
