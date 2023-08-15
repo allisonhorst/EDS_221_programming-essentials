@@ -19,10 +19,10 @@ library(janitor)
 
 ### Setup
 
-- Create a new repo on GitHub called `eds221-day2-activities`
+- Create a new repo on GitHub for today's activities
 - Clone to create a version controlled R Project 
 - Create subfolders called `docs`, `data`, and `figs`
-- Create an R Markdown or Quarto document, save in the `docs` subfolder as `r_data_types.qmd` (or .Rmd)
+- Create a Quarto document, save in the `docs` subfolder as `r_data_types.qmd` 
 
 ### Create some data, check the classes, index!
 
@@ -121,17 +121,17 @@ max_count <- max(df_1$count)
 mack_verts <- read_csv(here("activities","AS00601.csv"))
 ```
 
-- Look at what you've read in
+- Look at what you've read in (e.g. with view())
 
 #### A bit of wrangling & exploring
 
-- Update the names to lower_snake_case
+- Update the variable names in mack_verts to lower snake case
 
 ```{r, include = FALSE}
 mack_verts <- clean_names(mack_verts)
 ```
 
-- In a new code chunk, practice accessing individual pieces of the data frame (there is no real functionality to this, but just to reinforce stuff we learned in our interactive session): 
+- In a new code chunk, practice accessing individual pieces of the data frame (there is no real functionality to this right now, but just to reinforce stuff we learned in our interactive session): 
 
   - Store the 5th value in column "WEIGHT" as `mc_wt_5`. Check by looking at your data frame to confirm.
   - Store the 8th - 20th value in the "LENGTH1" column as `mc_length_8_20`. Check by looking at your data frame to confirm. 
@@ -199,7 +199,7 @@ ggsave(here("activities", "cutthroat_size.png"))
 - Make sure your changes are safely stored by pushing to GitHub
 - Close your project locally
 - Reopen your project locally
-- Reopen your .qmd or .Rmd for the activities you did today.
+- Reopen your .qmd files for the activities you did today.
 - Render. Does it work? Done. 
 
 ## End Day 2 activities
