@@ -23,7 +23,7 @@ library(janitor)
 
 ## Part 1. Conditional statements & for loops
 
-*Create a new R Markdown document in your docs folder, saved as `conditionals_loops.Rmd`. Complete all tasks for Part 1 in this .Rmd.*
+*Create a new Quarto document in your docs folder, saved as `conditionals_loops.qmd`. Complete all tasks for Part 1 in this .qmd.*
 
 *Complete each of the following in a separate code chunk.*
 
@@ -61,7 +61,7 @@ if (str_detect(species, "whale")) {
 }
 ```
 
-#### Task 3
+<!-- #### Task 3
 
 Create a vector stored as `max_airtemp_c` with a value of 24.1. Write an `if else` statement that will print "Temperature too high" if `max_airtemp_c` is greater than 27, or "Temperature OK" if temperature is less than or equal to 27. 
 ```{r, include = FALSE}
@@ -73,10 +73,11 @@ if (max_airtemp_c > 27) {
   print("Temperature OK")
 }
 ```
+-->
 
-#### Task 4
+#### Task 3
 
-Store the base price of a burrito as `base_burrito` with a value of 6.50. Store `main_ingredent` with a starting string of "veggie." Write a statement that will return the price of a burrito based on what a user specifies as "main_ingredient" (either "veggie", "chicken" or "steak") given the following: 
+Store the base price of a burrito as `base_burrito` with a value of 6.50. Store `main_ingredient` with a starting string of "veggie." Write a statement that will return the price of a burrito based on what a user specifies as "main_ingredient" (either "veggie", "chicken" or "steak") given the following: 
 
 - A veggie burrito is the cost of a base burrito
 - A chicken burrito costs 3.00 more than a base burrito
@@ -101,7 +102,7 @@ print(price)
 
 *Complete each of the following in a separate code chunk.*
 
-#### Task 5
+#### Task 4
 
 Create a new vector called `fish` that contains the values `8, 10, 12, 23` representing counts of different fish types in a fish tank (goldfish, tetras, guppies, and mollies, respectively). Write a for loop that iterates through `fish`, and returns what proportion of total fish in the tank are that species. Assume that these counts represent all fish in the tank. 
 
@@ -114,7 +115,7 @@ for (i in seq_along(fish)) {
 }
 ```
 
-#### Task 6
+#### Task 5
 
 There is an existing vector in R called `month.name` that contains all month names (just ry running `month.name` in the Console to check it out). **Write a for loop** that iterates over all months in `month.name` and prints "January is month 1," "February is month 2", etc. 
 
@@ -125,9 +126,10 @@ for (i in seq_along(month.name)) {
   print(paste(month.name[i], "is month", i))
 }
 ```
+
 ## Part 2. Real data
 
-*You will complete Part 3 in a separate .Rmd.*
+*You will complete Part 3 in a separate .qmd.*
 
 Explore this [data package](https://portal.edirepository.org/nis/mapbrowse?packageid=knb-lter-arc.10341.5) from EDI, which contains a "Data file describing the biogeochemistry of samples collected at various sites near Toolik Lake, North Slope of Alaska". Familiarize yourself with the metadata (particularly, View full metadata > expand 'Data entities' to learn more about the variables in the dataset). 
 
@@ -136,7 +138,7 @@ Explore this [data package](https://portal.edirepository.org/nis/mapbrowse?packa
 1. Download the CSV containing the Toolik biogeochemistry data
 2. Take a look at it - how are missing values stored? Keep that in mind. 
 3. Drop the CSV into your data folder of your project
-4. Create a new R Markdown document, save in docs as `toolik_chem.Rmd`
+4. Create a new Quarto document, save in docs as `toolik_chem.qmd`
 5. Attach the `tidyverse`, `here`, and `janitor` packages in your setup code chunk
 6. Read in the data as `toolik_biochem`. Remember, you'll want to specify here how `NA` values are stored. Pipe directly into `janitor::clean_names()` following your import code to get all column names into lower snake case.
 
@@ -144,7 +146,7 @@ Explore this [data package](https://portal.edirepository.org/nis/mapbrowse?packa
 toolik_biochem <- read_csv(here("activities", "2011_Kling_Akchem.csv"), na = ".") %>% clean_names()
 ```
 
-7. Create a subset of the data that contains only observations from the "Toolik Inlet" site, and that only contains the variables (columns) for pH, dissolved organic carbon (DOC), and total dissolved nitrogen (TDN) (**hint:** see `dplyr::select()`). Store this subset as `inlet_biochem`. Make sure to LOOK AT the subset you've created. 
+7. Create a subset of the data that contains only observations from the "Toolik Inlet" site, and that only contains the variables (columns) for pH, dissolved organic carbon (DOC), and total dissolved nitrogen (TDN) (**hint:** see `dplyr::select()`). Store this subset as `inlet_biochem`. Make sure to look at the subset you've created. 
 
 ```{r, include = FALSE}
 inlet_biochem <- toolik_biochem %>% 

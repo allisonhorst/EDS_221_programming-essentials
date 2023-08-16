@@ -178,7 +178,7 @@ ggsave(here::here("activities", "salamander_size.png"), plot = salamander_plot)
 - Create a scatterplot of length1 by weight for all trout in the dataset
 - Customize so that the point color depends on *reach* 
 - Customize your color scheme (e.g. `scale_color_manual()`)
-- Facet your plot by creek reach (`facet_wrap(~...)`)
+- Facet your plot by creek reach (hint: `facet_wrap(~...)`)
 - Update graph axis labels and title
 - Export your graph as `cutthroat_size.png` to the `figs` folder
 
@@ -203,3 +203,7 @@ ggsave(here("activities", "cutthroat_size.png"))
 - Render. Does it work? Done. 
 
 ## End Day 2 activities
+
+penguins |>  
+     group_by(species) |>  
+     summarize(across(where(is.numeric), ~ mean(.x, na.rm = TRUE)))
