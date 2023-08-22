@@ -29,7 +29,7 @@ library(kableExtra)
 
 In this section, you'll test and explore a number of different joins. 
 
-- Create a new .Rmd in your `R` folder saved as `bird_joins.Rmd`
+- Create a new .qmd in your `R` folder saved as `bird_joins.qmd`
 - Read in the data sets and store the data frames as `bird_observations`, `sites`, `surveys`, and `taxalist` (it should be clear from the raw file names which is which)
 - Create a subset of `bird_observations` called `birds_subset` that only contains observations for birds with species id "BHCO" and "RWBL", and from sites with site ID "LI-W" and "NU-C"
 
@@ -64,27 +64,9 @@ birds_full <- birds_subset %>%
   full_join(sites, by = "site_id")
 ```
 
-### Inner join practice
-
-- First, answer: what do you expect an `inner_join()` between `birds_subset` and `taxalist` to contain? 
-
-- Write code to `inner_join()` the `birds_subset` and `taxalist`, called `birds_inner`. Include an argument for what variable you'll be joining by. 
-
-```{r, include = FALSE}
-birds_inner <- birds_subset %>% 
-  inner_join(taxalist, join_by = "species_id")
-```
-
-- What would you get if instead of `inner_join()` you'd used `left_join()` for this example? Try it out & check. Why does that make sense for this scenario? It what case would you expect the outcome to differ from an `inner_join()`?
-
-```{r, include = FALSE}
-birds_left_example <- birds_subset %>% 
-  left_join(taxalist, join_by = "species_id")
-```
-
 ## Task 2: Data wrangling and visualization with birds
 
-Continue in your same .Rmd that you created for Task 1
+Continue in your same .qmd that you created for Task 1
 
 - Starting with your `birds` object, rename the `notes` column to `bird_obs_notes` (so this doesn't conflict with `notes` in the `surveys` dataset
 - Then, create a subset that contains *all observations* in the `birds` dataset, joins the taxonomic, site and survey information to it, and is finally limited to only columns `survey_date`, `common_name`, `park_name`, and `bird_count`. You can decide the order that you want to create this in (e.g. limit the columns first, then join, or the other way around).
@@ -123,9 +105,7 @@ birds_park_month <- birds_df %>%
 
 ## Task 3: Practice with strings
 
-- Install the `datapasta` package (if you don't have it already)
-- Restart R
-- Create a new .Rmd in your `R` folder called `string_practice.Rmd`
+- Create a new .qmd in your `R` folder called `string_practice.qmd`
 - Copy all contents of the html table below to your clipboard: 
 
 ```{r, echo = FALSE}
