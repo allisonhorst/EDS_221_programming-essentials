@@ -18,7 +18,7 @@ output:
 ## Task 1: SOS - Save this script
 
 - Open the `busted_birds.Rmd` file
-- Try to knit it. Not happening.
+- Try to knit it (R Markdown's version of rendering). Not happening.
 - **Make a copy** of the file (in the project root) called `fixed_birds.Rmd`
 - Work through the code from the top line down, fixing errors where indicated and using the hints for what the code is actually trying to do. 
 
